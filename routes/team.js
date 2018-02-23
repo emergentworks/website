@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET program page. */
 router.get('/team', function(req, res, next) {
-    res.render('team');
+    res.render('team', { title: 'team - the code cooperative'});
 });
 
 module.exports = router;
