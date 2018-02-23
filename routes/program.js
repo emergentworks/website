@@ -3,7 +3,6 @@ var router = express.Router();
 
 /* GET program page. */
 router.get('/program', function(req, res, next) {
-  console.log('hi');
   res.render('program', { title: 'our program' });
 });
 
