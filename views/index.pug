@@ -1,0 +1,57 @@
+//- extends layout
+
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    //- meta(name='description' content='The Code Cooperative facilitates prisoner reentry
+    //- by teaching formerly incarcerated individuals valuable, practical, and applicable
+    //- skills in computer literacy, technology, and programming.')
+    meta(name='author' content='Alex Qin')
+    meta(name='viewport' content='width=device-width')
+    style
+      include ../public/stylesheets/style.css
+    link(href='https://fonts.googleapis.com/css?family=Karla|Space+Mono' rel='stylesheet')
+    title the code cooperative
+  body
+    block header
+      include header.pug
+    block content
+      .container 
+        .title
+          h1                     
+            | the 
+            span code coop
+            | erative
+        .section
+          h3 
+            | The Code Cooperative facilitates prisoner reentry by teaching 
+            | formerly incarcerated individuals valuable, practical, and 
+            | applicable skills in computer literacy, technology, and programming.
+          p
+            span &gt;
+            |  We believe in access to tech education as a pathway to 
+            span equity
+            |.
+            br 
+            span &gt;
+            |  We 
+            span empower 
+            | our students to take part in building solutions to the problems
+            | that affect them
+            |.
+            br
+            span &gt;
+            |  We foster a diverse, collaborative, and engaged student 
+            span community
+            |.
+            br
+            span &gt;
+            |  We connect our students with mentors from the tech industry to 
+            | develop meaningful and lasting relationships based on 
+            span empathy
+            |.
+          p
+            a.button.margin-right(href='program') Learn About Our Program
+            a.button(href='support') Get Involved
+    block footer
+      include footer.pug

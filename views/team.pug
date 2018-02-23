@@ -1,0 +1,51 @@
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    //- meta(name='description' content='The Code Cooperative facilitates prisoner reentry
+    //- by teaching formerly incarcerated individuals valuable, practical, and applicable
+    //- skills in computer literacy, technology, and programming.')
+    meta(name='author' content='Alex Qin')
+    meta(name='viewport' content='width=device-width')
+    style
+      include ../public/stylesheets/style.css
+    link(href='https://fonts.googleapis.com/css?family=Karla|Space+Mono' rel='stylesheet')
+    title our program - the code cooperative
+    body
+        block header
+            include header.pug
+        block content
+            .title
+                h1 our team
+            .section
+                img.team-image(src='../images/alex.jpg' alt='Alex Qin')
+                h2 -- Alex Qin --
+                p
+                    a(href='http://twitter.com/alexqin') Alex Qin
+                    | the founder and lead teacher of the Code Cooperative. She 
+                    | is a Brooklyn based software engineer and educator. 
+                    | She cares deeply about access to computer science education, 
+                    | and about leveraging technology to create positive social change. 
+                    | She is the Director of Technology at 
+                    a(href='http://gakkoproject.com/afterschool') Gakko 
+                    | , a global education organization that builds spaces, experiences, 
+                    | &amp; tools to reclaim the magic of learning, and recently opened 
+                    a(href='http://gakkoproject.com/afterschool') Gakko NYC
+                    | , a school for the coders and musicians of tomorrow. Prior to 
+                    | joining Gakko, she was the Web Engineering Team Lead at 
+                    a(href='http://skillshare.com') Skillshare 
+                    | and the Curriculum Director at 
+                    a(href='http://c4q.nyc') Coalition for Queens
+                    | . She holds a B.S. in Computer Science from New York University.
+                h2 -- Gaby Marraro --
+                p
+                    | Gaby Marraro is the COO and teacher at the Code Cooperative. 
+                    | She is a self-taught programmer who rediscovered her love for 
+                    | learning through coding. She is currently an instructor at 
+                    a(href='http://thecodingspace.com') The Coding Space 
+                    | , and has led introductory coding workshops for incarcerated women
+                    | on Rikers Island. Using her background in psychology, education, 
+                    | and crisis response, she is passionate about creating the intersection 
+                    | between coding and humanist values. She is working towards a B.A. 
+                    | in Psychology at Barnard College.
+        block footer
+            include footer.pug
