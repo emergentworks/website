@@ -10,11 +10,11 @@ router.get('/program', function(req, res, next) {
 });
 
 router.get('/support', function(req, res, next) {
-    res.render('get-involved', { title: 'get involved - the code cooperative'});
+  res.render('get-involved', { title: 'get involved - the code cooperative' });
 });
 
 router.get('/team', function(req, res, next) {
-    res.render('team', { title: 'team - the code cooperative'});
+  res.render('team', { title: 'team - the code cooperative' });
 });
 
 module.exports = router;
