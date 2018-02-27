@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  .container
+    .title
+      h1 get
+      h1 involved
+    #donate.section
+      img.team-image(src='../images/donations.jpg' alt='Laptop donations')
+      h2 -- Donate --
+      p
+        | Access to a computer and the Internet is crucial to
+        | learning to code, which is why we are seeking laptop
+        | donations from New York based companies. Laptops would
+        | be donated to the Code Cooperative
+        | and loaned to participants for the duration of the program.
+        | Supporters of the Code Cooperative will be featured on our
+        | website and mentioned in emails and social media.
+      p 
+        a.button(href='https://docs.google.com/forms/d/e/1FAIpQLSekRlaBYt0ILYZP90bJUiXfTf9fCl0brJwamNAgUoH1hIsZdg/viewform' target='_blank') 
+          | Donate a Laptop
+      p
+        | We are also accepting monetary donations via Paypal to support
+        | purchases for the following:
+        br
+        span &gt;
+        |  Public transportation to help our students get to class
+        br
+        span &gt;
+        |  Laptop chargers
+        br
+        span &gt;
+        |  Software subscriptions
+        br
+        span &gt;
+        |  Notebooks and other classroom materials
+        br
+        span &gt;
+        |  Miscellaneous operational costs
+        br
+      p
+        a.button.paypal(href='http://paypal.me/alexqin' target='_blank') 
+          | Donate via Paypal
+    .section
+      h2 -- Get Involved --
+      p       
+        | We are continually seeking to expand our community of
+        | partners, mentors, and volunteers.
+        | Join our mailing list to receive updates about our
+        | program and find out about ways to get involved.
+      p
+        a.button(href='https://docs.google.com/forms/d/e/1FAIpQLSe27UAurEdxz2w_qJfRIHR_lohR7il0TRQ2OddrVC8pzIJ5_A/viewform' target='_blank')
+          | Join Our Mailing List
+    .section
+      include sponsors
+      
