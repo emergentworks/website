@@ -1,16 +1,17 @@
 header
   .navigation
     ul
-      li 
+      li
         a.logo(href='/')
-          | the 
-          span code coop
-          | erative  
-      li.hide-mobile  | 
+          | the
+          span  code coop
+          | erative
+      li.hide-mobile  |
       li
-        a(href='program') our program
+        a(href='program' class={active: url === '/program'}) our program
       li
-        a(href='support') get involved
+        a(href='support' class={active: url === '/support'}) get involved
       li
-        a(href='team') team
+        a(href='team' class={active: url === '/team'}) team
+  a.button.floating-button(href="../program") Join Our Class
 img.header-image(src='images/laptop.jpg', alt='')
