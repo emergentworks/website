@@ -182,6 +182,10 @@ footer a {
   border-bottom: 1px solid #fff;
 }
 
+.active {
+  border-bottom: 1px solid #fff !important;
+}
+
 .navigation .logo:hover {
   border-bottom: 0;
 }

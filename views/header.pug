@@ -5,12 +5,13 @@ header
         a.logo(href='/')
           | the 
           span code coop
-          | erative  
+          | erative 
       li.hide-mobile  | 
       li
-        a(href='program') our program
+        a(href='program' class={active: url === '/program'}) our program
       li
-        a(href='support') get involved
+        a(href='support' class={active: url === '/support'}) get involved
       li
-        a(href='team') team
+        a(href='team' class={active: url === '/team'}) team
+  a.button.floating-button(href="../support") Donate
 img.header-image(src='images/laptop.jpg', alt='')
