@@ -182,7 +182,7 @@ footer a {
   border-bottom: 1px solid #fff;
 }
 
-.active {
+.navigation a.active {
   border-bottom: 1px solid #fff;
 }
 
