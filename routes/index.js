@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/program', function(req, res, next) {
-  res.render('program', { title: 'our program', url: req.path });
+  res.render('program', { title: 'our program - the code cooperative', url: req.path });
 });
 
 router.get('/support', function(req, res, next) {
