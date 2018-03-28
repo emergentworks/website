@@ -5,8 +5,7 @@ block content
     .title.program-header
       h1 our
       h1 program
-      a.button.margin-right(href="https://docs.google.com/forms/d/e/1FAIpQLSfNxVXkoHtk7tlsU2puHs4-9bkyhIbS13fGl2VKwk-D0SPinw/viewform" target="_blank") Join Our Class
-      a.button(href='../pdfs/partnerships-flyer.pdf' target='_blank') Download Our Brochure
+      include join-buttons
     .section
       h2 Our Philosophy
       p
@@ -25,13 +24,24 @@ block content
       img.team-image(src='../images/program.jpg' alt='Our program')
       h2 -- Program Details --
       p
+        | Our next class will start in 
+        span.pink June 2018
+        | .
+        br
+        | The deadline to fill out our 
+        a(href="https://docs.google.com/forms/d/e/1FAIpQLSfNxVXkoHtk7tlsU2puHs4-9bkyhIbS13fGl2VKwk-D0SPinw/viewform" target="_blank") student interest form
+        |  is 
+        span.pink April 20th 2018
+        | .
+        br
+        br
         span Time Commitment
         br
         | 10 weeks
         br
         | 5 hours / week for class
         br
-        | 5 hours / week for Office Hours (optional)
+        | 5 hours / week for office hours (optional)
         br
         br
         span Location
@@ -46,6 +56,9 @@ block content
         | Our program is completely free.
         br
         | We subsidize transportation costs if needed.
+        br
+        br
+        include join-buttons
     .section
       h2 -- Curriculum Overview --
       p
@@ -129,5 +142,4 @@ block content
         | relationships.
       div
         br
-        a.button.margin-right(href="https://docs.google.com/forms/d/e/1FAIpQLSfNxVXkoHtk7tlsU2puHs4-9bkyhIbS13fGl2VKwk-D0SPinw/viewform" target="_blank") Join Our Class
-        a.button(href='../pdfs/partnerships-flyer.pdf' target='_blank') Download Our Brochure
+        include join-buttons
