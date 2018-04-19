@@ -200,6 +200,21 @@ footer a {
   width: 100%;
 }
 
+.banner-container {
+  background: blue;
+  color: #fff;
+  margin-top: -5px;
+}
+
+.banner {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.banner a {
+  color: #fff;
+}
+
 @media (max-width: 650px) {
   .container {
     margin: 50px 20px;

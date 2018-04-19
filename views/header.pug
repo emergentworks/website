@@ -1,3 +1,5 @@
+- let formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSePRX9Ih26FshKOh9kAcb6gWpSGj-OpzZ9wns-aZi-04LvQzA/viewform'
+
 header
   .navigation
     ul
@@ -13,5 +15,12 @@ header
         a(href='support' class={active: url === '/support'}) get involved
       li
         a(href='team' class={active: url === '/team'}) team
-  a.button.floating-button(href="../program") Join Our Class
+  a.button.floating-button(href=formUrl target="_blank") Join Our Class
 img.header-image(src='images/laptop.jpg', alt='')
+.banner-container
+  .banner
+    | Fill out our 
+    a(href=formUrl target="_blank") student interest form 
+    | or text 
+    a(href="tel:9178180476") +1 (917) 818-0476 
+    | to join our next class!
