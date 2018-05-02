@@ -215,6 +215,10 @@ footer a {
   color: #fff;
 }
 
+.margin-top {
+  margin-top: 50px;
+}
+
 @media (max-width: 650px) {
   .container {
     margin: 50px 20px;
