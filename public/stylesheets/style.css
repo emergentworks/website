@@ -220,6 +220,12 @@ footer a {
   margin-top: 50px;
 }
 
+.dollars {
+  display: inline-block;
+  width: 50px;
+  padding-right: 10px;
+}
+
 @media (max-width: 650px) {
   .container {
     margin: 50px 20px;
