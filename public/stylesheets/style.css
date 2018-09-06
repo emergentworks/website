@@ -224,6 +224,10 @@ footer a {
   padding-right: 10px;
 }
 
+.video-section {
+  margin-top: 30px;
+}
+
 @media (max-width: 650px) {
   .container {
     margin: 50px 20px;
