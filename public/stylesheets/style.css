@@ -195,8 +195,8 @@ footer a {
 }
 
 .team-image {
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
+  /* filter: grayscale(1); */
+  /* -webkit-filter: grayscale(1); */
   margin-bottom: -25px;
   width: 100%;
 }
