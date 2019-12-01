@@ -1,14 +1,10 @@
 $font: (
-  base: #{"geomanist-regular",
+  base: #{"ibmPlexSans-Regular",
   sans-serif},
-  light: #{"geomanist-light",
+  medium: #{"ibmPlexSans-Medium",
   sans-serif},
-  book: #{"geomanist-book",
+  semiBold: #{"ibmPlexSans-SemiBold",
   sans-serif},
-  medium: #{"geomanist-medium",
-  sans-serif},
-  black: #{"geomanist-black",
-  sans-serif}
 );
 
 // Font Size
@@ -18,15 +14,14 @@ $fs: (
   m: 1.125rem,
   l: 1.5rem,
   xl: 2rem,
-  xxl: 5.5rem,
-  xxxl: 7.5rem
+  xxl: 4.5rem,
 );
 
 // Font weight
 $fw: (
   heavy: 300,
   heavier: 400,
-  heaviest: 600
+  heaviest: 600,
 );
 
 // Breakpoint
@@ -35,13 +30,13 @@ $bp: (
   med: 36rem,
   lg: 51.5rem,
   xl: 67rem,
-  xxl: 82.5rem
+  xxl: 82.5rem,
 );
 
 // Line Height
 $lh: (
   loose: 1.2,
-  base: 1.5
+  base: 1.5,
 );
 
 // Spacing
@@ -51,7 +46,7 @@ $spacing: (
   tight: 0.5rem,
   base: 1rem,
   loose: 2rem,
-  looser: 3rem
+  looser: 3rem,
 );
 $z: (
   0: inherit,
@@ -60,7 +55,7 @@ $z: (
   3: 100,
   4: 1000,
   5: 10000,
-  6: 100000
+  6: 100000,
 );
 
 // Animation
@@ -68,11 +63,11 @@ $z: (
 $timing: (
   quick: 0.15s,
   base: 0.3s,
-  long: 0.5s
+  long: 0.5s,
 );
 $anim: (
   base: linear,
-  easeInOut: ease-in-out
+  easeInOut: ease-in-out,
 );
 
 // Border
