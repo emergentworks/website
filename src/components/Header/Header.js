@@ -17,11 +17,13 @@ export const Header = () => {
     <header className="mainHeader">
       <div className="mainHeader-inner content">
         <div className="mainHeader-logoGroup">
-          <img
-            className="logo--outline"
-            src={logo}
-            alt="the code cooperative"
-          />
+          <Link to="/">
+            <img
+              className="logo--outline"
+              src={logo}
+              alt="the code cooperative"
+            />
+          </Link>
         </div>
         <button
           type="button"

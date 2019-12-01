@@ -4,17 +4,32 @@ import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 // import Image from "../components/image"
 import SEO from '../components/seo'
+import logo from '../_assets/images/logo--stacked.svg'
 
 const IndexPage = () => (
-  <Layout>
+  <Layout className="home">
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      {/* <Image /> */}
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <section className="homepage-hero">
+      <div className="homepage-heroInner content">
+        <div className="heroLogo-group">
+          <img
+            className="heroLogo"
+            src={logo}
+            alt="The code cooperative logo"
+          />
+        </div>
+        <div className="heroContent-group">
+          <p className="heroLogo-content">
+            The Code Cooperative is a community of people who learn, use, and
+            build technology to create life changing possibilities for
+            individuals and communities impacted by incarceration.
+          </p>
+          <Link to="/about" className="btn btn-primary">
+            Learn More
+          </Link>
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 

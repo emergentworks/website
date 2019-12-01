@@ -14,7 +14,7 @@ import Footer from '../Footer'
 import './layout.scss'
 import '../../_assets/css/style.scss'
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, className }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,14 +22,18 @@ export const Layout = ({ children }) => {
           title
         }
       }
+      sitePage {
+        path
+      }
     }
   `)
+  console.log(className)
 
   return (
     <>
       <Header />
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div>
+      <div className={`sitePage sitePage-${className}`}>
         <main>{children}</main>
       </div>
       <Footer />

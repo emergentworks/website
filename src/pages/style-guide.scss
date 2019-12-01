@@ -7,6 +7,16 @@
   }
 }
 
+.color-swatch__group,
+.styleGuide-buttons {
+  display: grid;
+  gap: spacing(base);
+
+  @include bp(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .color-swatch__item {
   border: white 5px solid;
   height: 6em;

@@ -2,15 +2,17 @@ import React from 'react'
 import './style-guide.scss'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
 
 const StyleGuide = () => (
   <Layout>
+    <SEO title="Style Guide" />
     <div className="content">
       <section>
         <div className="style-guide grid col-2 gap-looser">
           <section className="grid-item">
             <h4>Color</h4>
-            <div className="color-swatch__group grid col-4 gap-base f-regular">
+            <div className="color-swatch__group f-regular">
               <div className="color-swatch__item blue500 fc--white500"></div>
               <div className="color-swatch__item green500"></div>
               <div className="color-swatch__item purple500 fc--white500"></div>
@@ -19,7 +21,7 @@ const StyleGuide = () => (
               <div className="color-swatch__item gray500 fc--white500"></div>
             </div>
             <h4 className="mtbase fs-m f-regular mtloose mbbase">Button</h4>
-            <p className="grid col-4 gap-base">
+            <p className="styleGuide-buttons ">
               <button type="button" className="btn btn-primary">
                 Primary
               </button>
@@ -96,10 +98,10 @@ const StyleGuide = () => (
               </div>
             </div>
             <hgroup>
-              <h1 className="h1">H1</h1>
-              <h2 className="h2">H2</h2>
-              <h3 className="h3">H3</h3>
-              <h4 className="h4">H4</h4>
+              <h1 className="h1">h1 - title</h1>
+              <h2 className="h2">h2 - sub-title</h2>
+              <h3 className="h3">h3 - section-title</h3>
+              <h4 className="h4">h4 - label</h4>
             </hgroup>
             <p>
               <Link to="#">This is an example of a Text link</Link>

@@ -10,26 +10,29 @@ body {
 h1,
 .h1 {
   font-family: map-get($font, medium);
-  font-size: fs(xxxl);
+  font-size: fs(xxl);
   margin-top: spacing(base);
   margin-bottom: spacing(base);
-  line-height: auto;
+  line-height: lh(base);
+  font-weight: normal;
 }
 
 h2,
 .h2 {
   font-family: map-get($font, medium);
-  font-size: fs(xxl);
+  font-size: fs(xl);
   margin-top: spacing(base);
   margin-bottom: spacing(base);
+  font-weight: normal;
 }
 
 h3,
 .h3 {
   font-family: map-get($font, medium);
-  font-size: fs(xl);
+  font-size: fs(l);
   margin-top: spacing(base);
   margin-bottom: spacing(base);
+  font-weight: normal;
 }
 
 h4,
@@ -39,15 +42,25 @@ h4,
   text-transform: uppercase;
   margin-top: spacing(base);
   margin-bottom: spacing(base);
+  font-weight: normal;
 }
 
 a:not([class]),
 .link {
-  color: color(secondary500);
+  color: color(blue500);
   text-decoration: none;
+  @include trans();
 
   &:hover {
-    color: color(secondary200);
+    color: #c5c5e9;
+  }
+
+  &:hover:not(:disabled) {
+    color: color(blue600);
+  }
+
+  &:active {
+    text-decoration: underline;
   }
 }
 
