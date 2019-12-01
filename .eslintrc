@@ -1,0 +1,14 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "react/prop-types": "off"
+  },
+  "overrides": [
+    {
+      "files": ["v1"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
+}
