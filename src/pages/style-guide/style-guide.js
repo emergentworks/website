@@ -1,7 +1,7 @@
 import React from 'react'
 import './style-guide.scss'
 import { Link } from 'gatsby'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 
 export const StyleGuide = () => (
   <Layout>
@@ -122,21 +122,6 @@ export const StyleGuide = () => (
             </p>
           </section>
         </div>
-      </section>
-      <section>
-        <h4>Quote</h4>
-        <blockquote className="blockquote-group">
-          <p className="blockquote-message  blockquote--bgCircle">
-            “Adekunle worked for me and I found him to be a great employee. He
-            was very knowledgeable, responsible and professional.”
-          </p>
-          <figcaption className="blockquote-caption">
-            <span className="blockquote-captionName"> Kathi Homenick</span>
-            <span className="blockquote-captionOrg">
-              Director of Marketing AT Vendome Group
-            </span>
-          </figcaption>
-        </blockquote>
       </section>
     </div>
   </Layout>
