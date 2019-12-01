@@ -1,1 +1,41 @@
 @import "../../_assets/css/abstracts/1-abstracts";
+
+.style-guide {
+  @media (min-width: 0) and (max-width: map-get($bp,med)) {
+    grid-template-columns: initial;
+    grid-gap: spacing(tight);
+  }
+}
+
+.color-swatch__item {
+  border: white 5px solid;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.217816);
+
+  @each $key, $val in $colors {
+    &.#{$key} {
+      background: $val;
+      &::before {
+        content: "#{$key} \A #{$val}";
+        white-space: pre-wrap;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.pattern__item {
+  border: white 5px solid;
+  height: 6em;
+}
+
+.typefaceDemo-title {
+  font-size: fs(xxl);
+}
+
+.typefaceDemo-name {
+  font-size: 1rem;
+}

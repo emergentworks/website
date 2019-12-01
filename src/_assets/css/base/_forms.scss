@@ -72,22 +72,25 @@ input[input="email"],
 input[input="search"] {
   @include trans();
   background-color: transparent;
-  border-color: color(gray500);
+  border-color: color(gray400);
   border-style: solid;
-  border-width: 3px;
-  color: color(white500);
-  font-size: fs(l);
-  font-family: font(medium);
+  border-width: 2px;
+  color: color(gray500);
+  font-size: fs(base);
   outline: none;
-  padding: spacing(base) spacing(loose);
+  padding: spacing(tight) spacing(base);
 
   &:not(:placeholder-shown) {
-    border-color: color(gray900);
+    border-color: color(gray500);
+  }
+
+  &::placeholder {
+    color: color(gray400);
   }
 
   &:focus {
     // border-width: 5px;
-    border-color: color(secondary200);
+    border-color: color(blue600);
   }
 }
 

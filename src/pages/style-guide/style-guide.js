@@ -10,14 +10,16 @@ export const StyleGuide = () => (
         <div className="style-guide grid col-2 gap-looser">
           <section className="grid-item">
             <h4>Color</h4>
-            <div className="color-swatch__group grid col-4 gap-tight f-regular">
-              <div className="color-swatch__item primary500 fc--white500"></div>
-              <div className="color-swatch__item secondary500"></div>
-              <div className="color-swatch__item tertiary500"></div>
-              <div className="color-swatch__item gray500"></div>
+            <div className="color-swatch__group grid col-4 gap-base f-regular">
+              <div className="color-swatch__item blue500 fc--white500"></div>
+              <div className="color-swatch__item green500"></div>
+              <div className="color-swatch__item purple500 fc--white500"></div>
+              <div className="color-swatch__item yellow500"></div>
+              <div className="color-swatch__item white500"></div>
+              <div className="color-swatch__item gray500 fc--white500"></div>
             </div>
             <h4 className="mtbase fs-m f-regular mtloose mbbase">Button</h4>
-            <p>
+            <p className="grid col-4 gap-base">
               <button type="button" className="btn btn-primary">
                 Primary
               </button>
@@ -39,7 +41,7 @@ export const StyleGuide = () => (
                 rows="10"
                 placeholder="Say hello"
               ></textarea>
-              <form>
+              {/* <form>
                 <fieldset>
                   <legend className="h4">
                     Please select your preferred contact method:
@@ -68,25 +70,27 @@ export const StyleGuide = () => (
                     </label>
                   </div>
                 </fieldset>
-              </form>
+              </form> */}
             </div>
           </section>
           <section className="grid-item">
             <h4>Typography</h4>
-            <div className="typefaceDemo-group grid col-4 gap-loose">
+            <div className="typefaceDemo-group grid col-3 gap-looser">
               <div className="typefaceDemo">
                 <div className="typefaceDemo-title font-base">Aa</div>
                 <span className="typefaceDemo-name">IBM Plex Sans Regular</span>
               </div>
 
               <div className="typefaceDemo">
-                <div className="typefaceDemo-title font-light">Aa</div>
-                <span className="typefaceDemo-name">IBM Plex Sans Medium</span>
+                <div className="typefaceDemo-title font-medium">Aa</div>
+                <span className="typefaceDemo-name font-medium">
+                  IBM Plex Sans Medium
+                </span>
               </div>
 
               <div className="typefaceDemo">
-                <div className="typefaceDemo-title font-book">Aa</div>
-                <span className="typefaceDemo-name">
+                <div className="typefaceDemo-title font-semiBold">Aa</div>
+                <span className="typefaceDemo-name font-semiBold">
                   IBM Plex Sans SemiBold
                 </span>
               </div>
