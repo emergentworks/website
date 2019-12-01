@@ -5,27 +5,25 @@
  */
 
 $colors: (
-  primary500: #c01b00,
-  primary100: #ca4f3d,
-  primary200: #a61600,
-  primary600: #a61600,
-  secondary500: #7bbd6a,
-  secondary100: #b1c8ac,
-  secondary200: #598a4d,
-  secondary600: #363d35,
-  tertiary500: #135793,
-  tertiary100: #60a5e0,
-  tertiary200: #1d85e0,
-  tertiary600: #0b3254,
-  white500: #fbfbfb,
-  gray100: #f2f2f2,
-  gray200: #e8e9e9,
-  gray300: #d1d3d4,
-  gray500: #babdbf,
-  gray700: #808488,
-  gray800: #666a6d,
-  gray900: #4d5052,
-  black500: #212122
+  blue500: #3333ff,
+  blue600: #191980,
+  green500: #66e271,
+  purple500: #9761ff,
+  yellow500: #fff42c,
+  white500: #f2efe4,
+  gray300: #f3f3f3,
+  gray400: #d9d5c7,
+  gray500: #3f3b3c,
+  // white500: #fbfbfb,
+    // gray100: #f2f2f2,
+    // gray200: #e8e9e9,
+    // gray300: #d1d3d4,
+    // // gray500: #babdbf,
+    // gray500: #babdbf,
+    // gray700: #808488,
+    // gray800: #666a6d,
+    // gray900: #4d5052,
+    // black500: #212122,,,
 );
 
 /* 
@@ -34,6 +32,6 @@ $colors: (
  *
  */
 
-@function color($color: red500) {
+@function color($color: yellow500) {
   @return map-get($colors, $color);
 }
