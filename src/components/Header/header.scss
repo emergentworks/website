@@ -2,14 +2,16 @@
 
 .mainHeader {
   background-color: color(blue500);
-  padding-top: spacing(base);
-  padding-bottom: spacing(base);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  .mainHeader-inner {
+    padding-top: spacing(base);
+    padding-bottom: spacing(base);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .mainHeader-logoGroup {
-  // display: inline-block;
   align-self: center;
 }
 
@@ -21,6 +23,14 @@
 
   &.is-active {
     display: block;
+  }
+
+  @include bp(lg) {
+    display: block;
+    grid-column-start: initial;
+    grid-column: initial;
+    padding-top: initial;
+    justify-self: right;
   }
 }
 
@@ -36,6 +46,16 @@
   &:last-child {
     padding-bottom: 0;
   }
+
+  @include bp(lg) {
+    display: inline-block;
+    padding-top: initial;
+    padding-bottom: initial;
+
+    &:not(:last-child) {
+      margin-right: spacing(loose);
+    }
+  }
 }
 
 .primaryNav-link {
@@ -49,17 +69,28 @@
     text-transform: capitalize;
     font-size: fs(l);
   }
+
+  @include bp(lg) {
+    font-size: fs(base);
+
+    &.btn {
+      font-size: fs(base);
+    }
+  }
 }
 
 // Menu Icon
 
 .mainHeader-navIcon {
-  // margin: 1rem;
   width: 40px;
   background-color: transparent;
   border: none;
   padding: 0;
   justify-self: end;
+
+  @include bp(lg) {
+    display: none;
+  }
 }
 
 .mainHeader-navIcon:after,
