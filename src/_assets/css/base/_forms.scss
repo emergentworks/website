@@ -12,11 +12,14 @@
   border: none;
   cursor: pointer;
   padding: spacing(tight) spacing(loose);
-  font-family: font(base);
   font-size: fs(m);
   font-family: font(medium);
   text-transform: uppercase;
   transition: all 0.3s;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 
   & + & {
     margin-left: spacing(base);
@@ -24,11 +27,15 @@
 }
 
 .btn-primary {
-  background-color: color(secondary500);
+  background-color: color(blue500);
   color: color(white500);
 
-  &:hover {
-    background-color: color(secondary200);
+  &:disabled {
+    background-color: #c5c5e9;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: color(blue600);
   }
 }
 
@@ -36,17 +43,25 @@
   background-color: color(white500);
   color: color(black500);
 
-  &:hover {
+  &:disabled {
     background-color: color(gray300);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: color(gray400);
   }
 }
 
 .btn-tertiary {
-  background-color: transparent;
-  color: color(secondary500);
+  background-color: color(yellow500);
+  color: color(gray500);
 
-  &:hover {
-    color: color(secondary200);
+  &:disabled {
+    background-color: #fffbb0;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #f0e523;
   }
 }
 
