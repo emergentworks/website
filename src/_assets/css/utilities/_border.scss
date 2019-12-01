@@ -1,0 +1,38 @@
+@import "../abstracts/color";
+
+// Border Width
+.ba {
+  border-style: solid;
+  border-width: 1px;
+}
+.bt {
+  border-top-style: solid;
+  border-width: 1px;
+}
+.br {
+  border-right-style: solid;
+  border-width: 1px;
+}
+.bb {
+  border-bottom-style: solid;
+  border-width: 1px;
+}
+.bl {
+  border-left-style: solid;
+  border-width: 1px;
+}
+
+// Border Color
+@each $key, $value in $colors {
+  .b--#{$key} {
+    border-color: $value;
+  }
+}
+
+// Border Radius
+.brad1 {
+  border-radius: 2px;
+}
+.brad100 {
+  border-radius: 100%;
+}

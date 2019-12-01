@@ -1,0 +1,109 @@
+@import "../abstracts/variables";
+@import "../abstracts/color";
+
+/* 
+*
+* Input styles
+*
+*/
+
+// Button base and variants
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: spacing(tight) spacing(loose);
+  font-family: font(base);
+  font-size: fs(m);
+  font-family: font(medium);
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  & + & {
+    margin-left: spacing(base);
+  }
+}
+
+.btn-primary {
+  background-color: color(secondary500);
+  color: color(white500);
+
+  &:hover {
+    background-color: color(secondary200);
+  }
+}
+
+.btn-secondary {
+  background-color: color(white500);
+  color: color(black500);
+
+  &:hover {
+    background-color: color(gray300);
+  }
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: color(secondary500);
+
+  &:hover {
+    color: color(secondary200);
+  }
+}
+
+// Input field base styles
+.input-field,
+textarea,
+input[input="email"],
+input[input="search"] {
+  @include trans();
+  background-color: transparent;
+  border-color: color(gray500);
+  border-style: solid;
+  border-width: 3px;
+  color: color(white500);
+  font-size: fs(l);
+  font-family: font(medium);
+  outline: none;
+  padding: spacing(base) spacing(loose);
+
+  &:not(:placeholder-shown) {
+    border-color: color(gray900);
+  }
+
+  &:focus {
+    // border-width: 5px;
+    border-color: color(secondary200);
+  }
+}
+
+// Checkbox base styles
+.input-checkBox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid color(gray500);
+  @include trans();
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+
+  &:checked {
+    border: 2px solid color(gray100);
+    background-color: color(secondary500);
+  }
+}
+
+// labels for inputs
+.input-label {
+  font-size: fs(l);
+  font-family: font(medium);
+
+  & + & {
+    margin-left: spacing(base);
+  }
+}

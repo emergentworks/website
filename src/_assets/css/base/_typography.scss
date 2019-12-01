@@ -1,0 +1,112 @@
+@import "../abstracts/variables";
+@import "../abstracts/color";
+
+// Font Family
+body {
+  font-family: map-get($font, base);
+  font-size: fs(m);
+}
+
+h1,
+.h1 {
+  font-family: map-get($font, medium);
+  font-size: fs(xxxl);
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+  line-height: auto;
+}
+
+h2,
+.h2 {
+  font-family: map-get($font, medium);
+  font-size: fs(xxl);
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+}
+
+h3,
+.h3 {
+  font-family: map-get($font, medium);
+  font-size: fs(xl);
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+}
+
+h4,
+.h4 {
+  font-family: map-get($font, medium);
+  font-size: fs(base);
+  text-transform: uppercase;
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+}
+
+a:not([class]),
+.link {
+  color: color(secondary500);
+  text-decoration: none;
+
+  &:hover {
+    color: color(secondary200);
+  }
+}
+
+p {
+  font-size: fs(m);
+  line-height: lh(loose);
+}
+
+.lead-in:first-line {
+  font-family: font(medium);
+  text-transform: uppercase;
+}
+
+.drop-cap:first-letter {
+  color: color(primary500);
+  float: left;
+  // font-family: Georgia;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+// Block quotes
+.blockquote-group {
+  position: relative;
+}
+
+.blockquote-message {
+  margin-top: 0;
+  margin-bottom: spacing(base);
+  font-size: 2.5rem;
+  font-family: font(book);
+}
+
+.blockquote-caption {
+  text-transform: uppercase;
+}
+
+.blockquote-captionName,
+.blockquote-captionOrg {
+  display: block;
+  font-family: font(book);
+  font-size: fs(m);
+  color: color(gray500);
+}
+
+.blockquote--bgCircle {
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -4rem;
+    left: -5rem;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    background: rgba(color(primary100), 0.05);
+    z-index: -100;
+  }
+}

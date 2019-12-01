@@ -1,0 +1,55 @@
+@import "../abstracts/variables";
+@import "../abstracts/color";
+
+.font {
+  font-family: map-get($font, serif);
+}
+
+// Font Family
+@each $key, $value in $font {
+  .font-#{$key} {
+    font-family: $value;
+  }
+}
+
+// Typography scale
+@each $key, $value in $fs {
+  .f#{$key} {
+    font-size: $value;
+  }
+}
+
+// Text weight
+@each $key, $value in $fw {
+  .fw#{$key} {
+    font-weight: $value;
+  }
+}
+
+// Text colors
+@each $key, $value in $colors {
+  .fc--#{$key} {
+    color: $value;
+  }
+}
+
+// Alignment
+.tl {
+  text-align: left;
+}
+.tr {
+  text-align: right;
+}
+.tc {
+  text-align: center;
+}
+
+// variants
+.link {
+  color: color(blue500);
+  text-decoration: none;
+}
+
+.fhl {
+  background-color: colors(yellow100);
+}

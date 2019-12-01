@@ -1,0 +1,79 @@
+$font: (
+  base: #{"geomanist-regular",
+  sans-serif},
+  light: #{"geomanist-light",
+  sans-serif},
+  book: #{"geomanist-book",
+  sans-serif},
+  medium: #{"geomanist-medium",
+  sans-serif},
+  black: #{"geomanist-black",
+  sans-serif}
+);
+
+// Font Size
+$fs: (
+  sm: 0.5rem,
+  base: 1rem,
+  m: 1.125rem,
+  l: 1.5rem,
+  xl: 2rem,
+  xxl: 5.5rem,
+  xxxl: 7.5rem
+);
+
+// Font weight
+$fw: (
+  heavy: 300,
+  heavier: 400,
+  heaviest: 600
+);
+
+// Breakpoint
+$bp: (
+  sm: 20rem,
+  med: 36rem,
+  lg: 51.5rem,
+  xl: 67rem,
+  xxl: 82.5rem
+);
+
+// Line Height
+$lh: (
+  loose: 1.2,
+  base: 1.5
+);
+
+// Spacing
+$spacing: (
+  none: 0,
+  tighter: 0.25rem,
+  tight: 0.5rem,
+  base: 1rem,
+  loose: 2rem,
+  looser: 3rem
+);
+$z: (
+  0: inherit,
+  1: 1,
+  2: 10,
+  3: 100,
+  4: 1000,
+  5: 10000,
+  6: 100000
+);
+
+// Animation
+
+$timing: (
+  quick: 0.15s,
+  base: 0.3s,
+  long: 0.5s
+);
+$anim: (
+  base: linear,
+  easeInOut: ease-in-out
+);
+
+// Border
+$border-radius: 2px;
