@@ -1,9 +1,9 @@
 import React from 'react'
 import './style-guide.scss'
 import { Link } from 'gatsby'
-import Layout from '../../components/Layout'
+import Layout from '../components/Layout'
 
-export const StyleGuide = () => (
+const StyleGuide = () => (
   <Layout>
     <div className="content">
       <section>
@@ -127,3 +127,5 @@ export const StyleGuide = () => (
     </div>
   </Layout>
 )
+
+export default StyleGuide
