@@ -76,22 +76,19 @@ export const StyleGuide = () => (
             <div className="typefaceDemo-group grid col-4 gap-loose">
               <div className="typefaceDemo">
                 <div className="typefaceDemo-title font-base">Aa</div>
-                <span className="typefaceDemo-name">Geomanist Regular</span>
+                <span className="typefaceDemo-name">IBM Plex Sans Regular</span>
               </div>
 
               <div className="typefaceDemo">
                 <div className="typefaceDemo-title font-light">Aa</div>
-                <span className="typefaceDemo-name">Geomanist Light</span>
+                <span className="typefaceDemo-name">IBM Plex Sans Medium</span>
               </div>
 
               <div className="typefaceDemo">
                 <div className="typefaceDemo-title font-book">Aa</div>
-                <span className="typefaceDemo-name">Geomanist Book</span>
-              </div>
-
-              <div className="typefaceDemo">
-                <div className="typefaceDemo-title font-medium">Aa</div>
-                <span className="typefaceDemo-name">Geomanist Medium</span>
+                <span className="typefaceDemo-name">
+                  IBM Plex Sans SemiBold
+                </span>
               </div>
             </div>
             <hgroup>
@@ -112,7 +109,7 @@ export const StyleGuide = () => (
               unde vitae, quam et aperiam!
             </p>
 
-            <p className="drop-cap lead-in">
+            <p className="lead-in">
               This is a Lead Lorem ipsum dolor sit amet, consectetur adipisicing
               elit. Ut error excepturi at nobis mollitia sunt. Consequatur eos
               iure blanditiis,tempora, asperiores placeat nisi officia, nam
