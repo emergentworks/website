@@ -11,11 +11,15 @@
 .btn {
   border: none;
   cursor: pointer;
-  padding: spacing(tight) spacing(loose);
+  padding: spacing(base) spacing(loose);
   font-size: fs(m);
   font-family: font(medium);
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
 
   &:disabled {
     cursor: not-allowed;

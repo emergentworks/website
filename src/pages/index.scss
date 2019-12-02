@@ -1,0 +1,110 @@
+@import "../_assets/css/abstracts/1-abstracts";
+
+.homepage-hero {
+  // background-color: rgba(color(green500), 0.7);
+  background-color: #a3eeaa;
+
+  @include bp(lg) {
+    padding-bottom: 6rem;
+  }
+}
+
+.homepage-heroInner {
+  padding-top: spacing(loose);
+  padding-bottom: spacing(loose);
+
+  @include bp(lg) {
+    display: grid;
+    gap: spacing(looser);
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: spacing(looser) * 1.5;
+    padding-bottom: spacing(looser) * 1.5;
+  }
+}
+
+.heroLogo-group {
+  position: relative;
+  z-index: (z(1));
+
+  &:after {
+    position: absolute;
+    content: " ";
+    bottom: -(spacing(base));
+    left: -(spacing(tight));
+    width: 150px;
+    height: 150px;
+    background-color: color(white500);
+    border-radius: 50%;
+    z-index: -(z(1));
+
+    @include bp(lg) {
+      width: 270px;
+      height: 270px;
+      left: -(spacing(loose));
+      bottom: (spacing(loose));
+    }
+  }
+}
+
+.heroLogo {
+  z-index: (z(2));
+
+  // @include bp(lg) {
+  //   position: absolute;
+  // }
+}
+
+.heroLogo-content {
+  @include bp(lg) {
+    margin-top: 0;
+    font-size: fs(l);
+    font-family: font(medium);
+  }
+}
+
+// Card Group
+.homepage-cardGroup {
+  display: grid;
+  gap: spacing(base);
+  margin-top: spacing(base);
+
+  @include bp(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: -90px;
+  }
+}
+
+// Photo Card
+.card--photoCard {
+  border: 3px solid white;
+  padding: spacing(base);
+  color: color(white500);
+  background-blend-mode: multiply;
+}
+
+.photoCard--card-1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(color(blue500), 0.75) 0%,
+      rgba(color(blue600), 0.95) 100%
+    ),
+    url("../_assets/images/photo-group-1-50.png");
+}
+
+.photoCard--card-2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(#aa9f00, 0.8) 0%,
+      rgba(#3c3800, 0.95) 100%
+    ),
+    url("../_assets/images/photo-group-1-50.png");
+}
+
+.photoCard--card-3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(#16b121, 0.8) 0%,
+      rgba(#233124, 0.95) 100%
+    ),
+    url("../_assets/images/photo-group-1-50.png");
+}
