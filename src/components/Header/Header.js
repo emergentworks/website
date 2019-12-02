@@ -5,14 +5,14 @@ import logo from '../../_assets/images/logo--horizontal.svg'
 
 export const Header = () => {
   const [navVisibility, setNavVisibility] = useState(false)
-  const toggleVisibility = navVisibility ? 'is-visible' : 'is-hidden'
-  const activeMenu = e => {
-    setNavVisibility(!navVisibility)
-  }
+  // const toggleVisibility = navVisibility ? 'is-visible' : 'is-hidden'
+  // const activeMenu = e => {
+  //   setNavVisibility(!navVisibility)
+  // }
 
-  function handleChange(newValue) {
-    setNavVisibility(newValue)
-  }
+  // function handleChange(newValue) {
+  //   setNavVisibility(newValue)
+  // }
   return (
     <header className="mainHeader">
       <div className="mainHeader-inner content">

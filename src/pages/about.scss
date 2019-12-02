@@ -1,0 +1,177 @@
+@import "../_assets/css/abstracts/1-abstracts";
+
+/* 
+ *
+ * Hero
+ *
+ */
+
+.pageHero-inner {
+  display: grid;
+
+  @include bp(lg) {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    grid-template-columns: 2fr 3fr;
+    gap: spacing(looser);
+  }
+}
+
+.pageHero-title {
+  border-top: 5px solid color(purple500);
+  padding-top: spacing(base);
+}
+
+.pageHero-imgGroup {
+  display: none;
+  position: relative;
+  z-index: (z(1));
+
+  @include bp(med) {
+    display: initial;
+  }
+
+  &:after {
+    position: absolute;
+    content: " ";
+    bottom: -(spacing(base));
+    right: -(spacing(base));
+    width: 300px;
+    height: 300px;
+    background-color: color(green500);
+    z-index: -(z(1));
+  }
+}
+
+.pageHero-img {
+}
+
+/* 
+ *
+ * Our Vision Banner
+ *
+ */
+
+.pageBanner {
+  background-color: color(white500);
+  color: color(gray500);
+  position: relative;
+}
+
+.pageBanner-inner {
+  padding-top: spacing(base);
+  padding-bottom: spacing(base);
+  font-size: fs();
+
+  @include bp(med) {
+    max-width: 50rem;
+  }
+}
+
+.pageBanner-content {
+  @include bp(med) {
+    font-size: fs(l);
+  }
+}
+
+.pageBanner-shape {
+  display: none;
+
+  @include bp(lg) {
+    display: initial;
+    position: absolute;
+    right: 13rem;
+    top: 12rem;
+    width: 6rem;
+  }
+}
+
+/* 
+ *
+ * Our Values
+ *
+ */
+
+.ourValues-group {
+  display: grid;
+  gap: spacing(tight);
+
+  @include bp(med) {
+    padding-top: spacing(base);
+    gap: spacing(loose);
+  }
+}
+
+.ourValues-item {
+  &:nth-child(2n) {
+    justify-self: right;
+  }
+}
+
+.ourValues-inner {
+  @include bp(med) {
+    padding-top: spacing(loose);
+  }
+}
+
+.ourValues-groupTitle {
+  margin-bottom: 0;
+}
+
+.ourValues-title {
+  @include bp(med) {
+    margin-top: 0;
+    font-size: 3rem;
+  }
+}
+
+.ourValues-content {
+  @include bp(med) {
+    max-width: 28rem;
+  }
+}
+
+/* 
+ *
+ * Our Team
+ *
+ */
+
+.ourTeam-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(base);
+
+  @include bp(med) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: spacing(loose);
+  }
+}
+
+.ourTeam-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: spacing(base);
+}
+
+.ourTeam-imageGroup {
+  background-color: rgba($color: color(green500), $alpha: 0.5);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 6px rgba($color: color(gray500), $alpha: 0.7);
+}
+
+.ourTeam-image {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+}
+
+.ourTeam-content {
+  align-self: center;
+}
+
+.ourTeam-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: fs(l);
+}

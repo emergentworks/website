@@ -10,11 +10,15 @@ body {
 h1,
 .h1 {
   font-family: map-get($font, medium);
-  font-size: fs(xxl);
+  font-size: 3rem;
   margin-top: spacing(base);
   margin-bottom: spacing(base);
   line-height: lh(base);
   font-weight: normal;
+
+  @include bp(med) {
+    font-size: fs(xxl);
+  }
 }
 
 h2,

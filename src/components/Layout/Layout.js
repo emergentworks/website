@@ -27,7 +27,6 @@ export const Layout = ({ children, className }) => {
       }
     }
   `)
-  console.log(className)
 
   return (
     <>
