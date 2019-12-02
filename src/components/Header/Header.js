@@ -6,13 +6,10 @@ import logo from '../../_assets/images/logo--horizontal.svg'
 export const Header = () => {
   const [navVisibility, setNavVisibility] = useState(false)
   // const toggleVisibility = navVisibility ? 'is-visible' : 'is-hidden'
-  // const activeMenu = e => {
-  //   setNavVisibility(!navVisibility)
-  // }
+  const activeMenu = () => {
+    setNavVisibility(!navVisibility)
+  }
 
-  // function handleChange(newValue) {
-  //   setNavVisibility(newValue)
-  // }
   return (
     <header className="mainHeader">
       <div className="mainHeader-inner content">
@@ -39,22 +36,22 @@ export const Header = () => {
         >
           <ul className="primaryNav-linkGroup">
             <li className="primaryNav-linkItem">
-              <Link className="primaryNav-link" to="#">
+              <Link className="primaryNav-link" to="/about">
                 About us
               </Link>
             </li>
             <li className="primaryNav-linkItem">
-              <Link className="primaryNav-link" to="#">
+              <Link className="primaryNav-link" to="/volunteer">
                 Volunteer
               </Link>
             </li>
             <li className="primaryNav-linkItem">
-              <Link className="primaryNav-link" to="#">
+              <Link className="primaryNav-link" to="/contact">
                 Contact
               </Link>
             </li>
             <li className="primaryNav-linkItem">
-              <Link className="btn btn-tertiary primaryNav-link" to="#">
+              <Link className="btn btn-tertiary primaryNav-link" to="/donate">
                 Donate
               </Link>
             </li>

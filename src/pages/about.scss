@@ -6,6 +6,21 @@
  *
  */
 
+.pageHero--contentRight {
+  @include bp(lg) {
+    .pageHero-inner {
+      grid-template-columns: 3fr 2fr;
+
+      .pageHero-contentGroup {
+        order: 2;
+      }
+      .pageHero-imgGroup {
+        order: 1;
+      }
+    }
+  }
+}
+
 .pageHero-inner {
   display: grid;
 

@@ -114,8 +114,9 @@ const AboutPage = () => {
               const getImgSrc = data.teamPics.nodes.filter(image => {
                 const [firstName] = teamMember.name.toLowerCase().split(' ')
 
-                if (image.name.includes(firstName))
+                if (image.name.includes(firstName)) {
                   return image.childImageSharp.fluid
+                }
               })
 
               return (
