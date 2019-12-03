@@ -31,11 +31,19 @@
 
 .donation-section {
   background-color: color(blue500);
-  padding-top: spacing(loose);
-  padding-bottom: spacing(loose);
+  padding-top: spacing(base);
+  padding-bottom: spacing(base);
   color: color(white500);
+
+  @include bp(lg) {
+    padding-top: spacing(loose);
+    padding-bottom: spacing(loose);
+  }
 }
 
+.donation-title {
+  margin-top: 0;
+}
 .donation-inner {
   display: grid;
   gap: spacing(loose);
