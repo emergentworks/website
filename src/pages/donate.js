@@ -15,40 +15,30 @@ import {
 import HeroImg from '../_assets/images/we-are-the-code-coop.jpg'
 
 const DonatePage = () => (
-  // const data = useStaticQuery(graphql`
-  //   query MyQuery {
-  //     teamPics: allFile(filter: { relativeDirectory: { eq: "team" } }) {
-  //       nodes {
-  //         name
-  //         id
-  //         childImageSharp {
-  //           fluid {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //     teamData: allTeamJson {
-  //       edges {
-  //         node {
-  //           id
-  //           name
-  //           img
-  //           twitter
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   <Layout className="donate">
     <SEO title="Donate" />
     <Hero contentPlacement="right">
       <HeroContentGroup>
         <HeroTitle>Make a donation</HeroTitle>
         <HeroContent>
-          Help us reach our goal to raise <span className="bold">$50,000</span>{' '}
-          for our next program.
+          <p>
+            Help us reach our goal to raise{' '}
+            <span className="bold">$50,000</span> for our next program.
+          </p>
+          <p>
+            We also happily take donated laptops. They will be loaned to
+            participants for the duration of the program. Supporters of the Code
+            Cooperative will be featured on our website and mentioned in emails
+            and social media.
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSekRlaBYt0ILYZP90bJUiXfTf9fCl0brJwamNAgUoH1hIsZdg/viewform"
+            className="btn btn-secondary w-100 mtbase"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate a Laptop
+          </a>
         </HeroContent>
       </HeroContentGroup>
       <HeroImgGroup>
@@ -85,7 +75,7 @@ const DonatePage = () => (
         <div className="donation-donorboxGroup">
           <script
             src="https://donorbox.org/widget.js"
-            paypalExpress="false"
+            paypalexpress="false"
           ></script>
           <iframe
             allowpaymentrequest=""

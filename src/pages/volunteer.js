@@ -15,32 +15,6 @@ import {
 import HeroImg from '../_assets/images/mentoring-at-code-coop.jpg'
 
 const VolunteerPage = () => (
-  // const data = useStaticQuery(graphql`
-  //   query MyQuery {
-  //     teamPics: allFile(filter: { relativeDirectory: { eq: "team" } }) {
-  //       nodes {
-  //         name
-  //         id
-  //         childImageSharp {
-  //           fluid {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //     teamData: allTeamJson {
-  //       edges {
-  //         node {
-  //           id
-  //           name
-  //           img
-  //           twitter
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   <Layout className="volunteer">
     <SEO title="Volunteer" />
     <Hero>
@@ -162,7 +136,7 @@ const VolunteerPage = () => (
         <div className="volunteer-donorboxGroup">
           <script
             src="https://donorbox.org/widget.js"
-            paypalExpress="false"
+            paypalexpress="false"
           ></script>
           <iframe
             allowpaymentrequest=""

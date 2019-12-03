@@ -46,7 +46,7 @@
 }
 .donation-inner {
   display: grid;
-  gap: spacing(loose);
+  gap: spacing(looser);
 
   @include bp(lg) {
     grid-template-columns: repeat(2, 1fr);

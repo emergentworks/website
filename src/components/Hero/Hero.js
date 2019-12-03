@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './hero.scss'
 
 export const HeroContent = ({ children }) => (
-  <p className="hero-content">{children}</p>
+  <div className="hero-content">{children}</div>
 )
 
 export const HeroTitle = ({ children }) => (
