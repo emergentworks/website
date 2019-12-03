@@ -18,7 +18,6 @@ const IndexPage = () => (
             src={logo}
             alt="The code cooperative logo"
           />
-          {/* <div className="heroLogo-shape"></div> */}
         </div>
         <div className="heroContent-group">
           <p className="heroLogo-content">
@@ -26,7 +25,22 @@ const IndexPage = () => (
             build technology to create life changing possibilities for
             individuals and communities impacted by incarceration.
           </p>
-          <Link to="/about" className="btn btn-primary w-100">
+          <section className="home-videoSection">
+            <div className="home-videoInner">
+              {/* <h2 className="home-videoTitle">What is the Code Cooperative?</h2> */}
+
+              <iframe
+                src="https://player.vimeo.com/video/335249244"
+                // width="640"
+                // height="360"
+                frameBorder="0"
+                allowFullScreen
+                title="What is the Code Cooperative?"
+                className="home-video"
+              ></iframe>
+            </div>
+          </section>
+          <Link to="/about" className="btn btn-primary w-100 mtbase">
             Learn More
           </Link>
         </div>

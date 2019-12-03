@@ -23,6 +23,13 @@
 //   }
 // }
 
+.sitePage-donate .hero-imgGroup {
+  &:after {
+    bottom: 6rem;
+    right: -(spacing(base));
+  }
+}
+
 /* 
  *
  * Donation Section

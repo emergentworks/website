@@ -23,23 +23,27 @@
 
 .hero-inner {
   display: grid;
+  padding-bottom: spacing(loose);
+  padding-top: spacing(loose);
 
   @include bp(lg) {
     padding-top: 4rem;
     padding-bottom: 5rem;
     grid-template-columns: 2fr 3fr;
-    gap: 6rem;
+    gap: spacing(looser);
+  }
+}
+
+.hero-contentGroup {
+  @include bp(med) {
+    padding-bottom: spacing(loose);
   }
 }
 
 .hero-title {
   border-top: 5px solid color(purple500);
   padding-top: spacing(base);
-  margin-top: spacing(loose);
-
-  @include bp(lg) {
-    margin-top: spacing(none);
-  }
+  margin-top: spacing(none);
 }
 
 .hero-imgGroup {

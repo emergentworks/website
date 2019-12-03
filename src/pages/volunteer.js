@@ -69,7 +69,7 @@ const VolunteerPage = () => (
           </h3>
           <div className="volunteerFaq-itemContent">
             <p>We look for mentors that are:</p>
-            <ul>
+            <ul className="bullet-list">
               <li>
                 Passionate about working with Justice-Involved individuals
               </li>
@@ -90,7 +90,7 @@ const VolunteerPage = () => (
               Time commitment depends on the time of year and how many fellows
               we get but a typical semester looks like:
             </p>
-            <ul>
+            <ul className="bullet-list">
               <li>16 weeks starting </li>
               <li>Classes are on Saturday 9am – 5pm</li>
               <li>Office hours are Tuesdays 6pm – 8pm</li>
@@ -107,15 +107,20 @@ const VolunteerPage = () => (
               Within a week, someone from our team will get in touch with you.
               The process will look like this:
             </p>
-            <ol className="mbnone">
+            <ol className="mbnone bullet-list">
               <li>Phone interview</li>
               <li>In-person interview</li>
               <li>Invitation to become a mentor</li>
               <li>Mentorship training</li>
             </ol>
-            <button type="button" className="btn btn-primary mtbase">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc7qxJ6HhsJBs7nZPUuTFW2wIDLtwlffpT7NzNR9SaDt7cfOg/viewform"
+              className="btn btn-primary mtbase"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Become a Mentor
-            </button>
+            </a>
           </div>
         </article>
       </div>

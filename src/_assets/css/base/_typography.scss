@@ -76,3 +76,9 @@ p {
 .bold {
   font-family: map-get($font, medium);
 }
+
+.bullet-list {
+  li:not(:first-child) {
+    margin-top: spacing(tight);
+  }
+}

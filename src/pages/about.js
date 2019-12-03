@@ -13,6 +13,8 @@ import {
   HeroImgGroup,
 } from '../components/Hero'
 import HeroImg from '../_assets/images/we-are-the-code-coop.jpg'
+import Mark from '../_assets/images/mark.jpg'
+import Classroom from '../_assets/images/classroom.jpg'
 import Rectangle from '../_assets/images/shape-rectangle.svg'
 
 const AboutPage = () => {
@@ -64,7 +66,7 @@ const AboutPage = () => {
       </Hero>
       <section className="pageBanner">
         <div className="pageBanner-inner content">
-          <h2 className="pageBanner-title">Our Vision</h2>
+          <h2 className="pageBanner-title mtnone">Our Vision</h2>
           <p className="pageBanner-content">
             The Code Cooperative is a community of people who learn, use, and
             build technology to create life changing possibilities for
@@ -73,7 +75,41 @@ const AboutPage = () => {
         </div>
         <img className="pageBanner-shape" src={Rectangle} alt="" />
       </section>
-      <section className="ourValue">
+      <section className="aboutUs-section">
+        <div className="aboutUs-inner content">
+          <div className="aboutUs-topGroup aboutUs-photo">
+            <img
+              className="topGroup-img"
+              src={Mark}
+              alt="We are the code coop"
+            />
+          </div>
+          <div className="aboutUs-contentGroup">
+            <p className="aboutUs-content">
+              <span className="bold">
+                We are a community of people who dare to dream of healed worlds.
+                We are a collective of passionate volunteers.
+              </span>{' '}
+              We see a problem that we want to address. The tech industry is a
+              closed and homogenous group that builds things that serve some
+              people and not others. Things that harm a lot of people. We want
+              to democratize access to tech education and teach our most
+              vulnerable populations highly valuable skills that will allow us
+              to have access to more opportunities, to create opportunities for
+              ourselves, and to build technology that solves real problems that
+              we have identified and experienced.
+            </p>
+          </div>
+          <div className="aboutUs-bottomGroup aboutUs-photo">
+            <img
+              className="bottomGroup-img"
+              src={Classroom}
+              alt="We are the code coop"
+            />
+          </div>
+        </div>
+      </section>
+      {/* <section className="ourValue">
         <div className="ourValues-inner content">
           <h2 className="ourValues-groupTitle">Our Values</h2>
 
@@ -107,7 +143,7 @@ const AboutPage = () => {
             </article>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="ourTeam-section">
         <div className="ourTeam-groupInner content">
           <h2 className="ourValues-title">Our Team</h2>

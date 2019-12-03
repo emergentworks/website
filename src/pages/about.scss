@@ -2,64 +2,6 @@
 
 /* 
  *
- * Hero
- *
- */
-
-.pageHero--contentRight {
-  @include bp(lg) {
-    .pageHero-inner {
-      grid-template-columns: 3fr 2fr;
-
-      .pageHero-contentGroup {
-        order: 2;
-      }
-      .pageHero-imgGroup {
-        order: 1;
-      }
-    }
-  }
-}
-
-.pageHero-inner {
-  display: grid;
-
-  @include bp(lg) {
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-    grid-template-columns: 2fr 3fr;
-    gap: spacing(looser);
-  }
-}
-
-.pageHero-title {
-  border-top: 5px solid color(purple500);
-  padding-top: spacing(base);
-}
-
-.pageHero-imgGroup {
-  display: none;
-  position: relative;
-  z-index: (z(1));
-
-  @include bp(med) {
-    display: initial;
-  }
-
-  &:after {
-    position: absolute;
-    content: " ";
-    bottom: -(spacing(base));
-    right: -(spacing(base));
-    width: 300px;
-    height: 300px;
-    background-color: color(green500);
-    z-index: -(z(1));
-  }
-}
-
-/* 
- *
  * Our Vision Banner
  *
  */
@@ -73,10 +15,15 @@
 .pageBanner-inner {
   padding-top: spacing(base);
   padding-bottom: spacing(base);
-  font-size: fs();
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 
   @include bp(med) {
     max-width: 50rem;
+    padding-top: spacing(loose);
+    padding-bottom: spacing(loose);
   }
 }
 
@@ -145,9 +92,43 @@
 
 /* 
  *
+ * About Us
+ *
+ */
+
+.aboutUs-inner {
+  padding-top: spacing(looser);
+  display: grid;
+  gap: spacing(base);
+
+  @include bp(med) {
+    gap: spacing(looser);
+  }
+}
+
+.aboutUs-content {
+  // font-size: 1.35rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 32rem;
+
+  @include bp(lg) {
+    font-size: fs(med);
+  }
+}
+
+/* 
+ *
  * Our Team
  *
  */
+
+.ourTeam-section {
+  @include bp(med) {
+    // grid-template-columns: repeat(3, 1fr);
+    padding-top: spacing(base);
+  }
+}
 
 .ourTeam-group {
   display: grid;
@@ -160,6 +141,11 @@
   }
 }
 
+.bottomGroup-img {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+}
+
 .ourTeam-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -167,13 +153,13 @@
 }
 
 .ourTeam-imageGroup {
-  background-color: rgba($color: color(green500), $alpha: 0.5);
+  // background-color: rgba($color: color(green500), $alpha: 0.5);
   border-radius: 50%;
   box-shadow: inset 0px 0px 6px rgba($color: color(gray500), $alpha: 0.7);
 }
 
 .ourTeam-image {
-  filter: grayscale(1);
+  // filter: grayscale(1);
   mix-blend-mode: multiply;
   border-radius: 50%;
 }

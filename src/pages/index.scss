@@ -5,13 +5,13 @@
   background-color: #a3eeaa;
 
   @include bp(lg) {
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
   }
 }
 
 .homepage-heroInner {
-  padding-top: spacing(loose);
-  padding-bottom: spacing(loose);
+  padding-top: spacing(base);
+  padding-bottom: spacing(base);
 
   @include bp(lg) {
     display: grid;
@@ -23,8 +23,10 @@
 }
 
 .heroLogo-group {
+  display: none;
   position: relative;
   z-index: (z(1));
+  max-height: 16rem;
 
   &:after {
     position: absolute;
@@ -44,6 +46,10 @@
       bottom: (spacing(loose));
     }
   }
+
+  @include bp(lg) {
+    display: block;
+  }
 }
 
 .heroLogo {
@@ -55,6 +61,10 @@
 }
 
 .heroLogo-content {
+  font-size: 1.35rem;
+  // font-family: font(medium);
+  margin-top: 0;
+
   @include bp(lg) {
     margin-top: 0;
     font-size: fs(l);
@@ -74,12 +84,30 @@
   }
 }
 
+/* 
+ *
+ * Home Video
+ *
+ */
+
+.home-video {
+  max-width: 100%;
+  width: 480px;
+  // height: 240px;
+
+  @include bp(med) {
+    width: 640px;
+    height: 285px;
+  }
+}
+
 // Photo Card
 .card--photoCard {
   border: 3px solid white;
   padding: spacing(base);
   color: color(white500);
   background-blend-mode: multiply;
+  background-size: cover;
 }
 
 .photoCard--card-1 {
@@ -97,7 +125,7 @@
       rgba(#aa9f00, 0.8) 0%,
       rgba(#3c3800, 0.95) 100%
     ),
-    url("../_assets/images/photo-group-1-50.png");
+    url("../_assets/images/photo-group-2-50.png");
 }
 
 .photoCard--card-3 {
@@ -106,5 +134,5 @@
       rgba(#16b121, 0.8) 0%,
       rgba(#233124, 0.95) 100%
     ),
-    url("../_assets/images/photo-group-1-50.png");
+    url("../_assets/images/photo-group-3-50.png");
 }
