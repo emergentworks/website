@@ -1,1 +1,7 @@
-export { Hero, HeroContent, HeroTitle } from './Hero'
+export {
+  Hero,
+  HeroContent,
+  HeroTitle,
+  HeroContentGroup,
+  HeroImgGroup,
+} from './Hero'

@@ -1,34 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './page-hero.scss'
+import './hero.scss'
 
-export const HeroContent = ({ children }) => {
-  const getYear = new Date().getFullYear()
+export const HeroContent = ({ children }) => (
+  <p className="hero-content">{children}</p>
+)
 
-  return <p className="pageHero-content">{children}</p>
-}
+export const HeroTitle = ({ children }) => (
+  <h1 className="hero-title">{children}</h1>
+)
 
-export const HeroTitle = ({ children }) => {
-  const getYear = new Date().getFullYear()
+export const HeroContentGroup = ({ children }) => (
+  <div className="hero-contentGroup">{children}</div>
+)
 
-  return <h1 className="pageHero-title">{children}</h1>
-}
+export const HeroImgGroup = ({ children }) => (
+  <div className="hero-imgGroup">{children}</div>
+)
 
-export const Hero = ({ children, contentPlacement }) => {
-  const getYear = new Date().getFullYear()
-
-  return (
-    <section
-      className={`pageHero ${
-        contentPlacement === 'right' ? 'pageHero--contentRight' : ''
-      }`}
-    >
-      <div className="pageHero-inner content">{children}</div>
-    </section>
-  )
-}
+export const Hero = ({ children, contentPlacement }) => (
+  <section
+    className={`hero ${
+      contentPlacement === 'right' ? 'hero--contentRight' : ''
+    }`}
+  >
+    <div className="hero-inner content">{children}</div>
+  </section>
+)
 
 HeroContent.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+HeroContentGroup.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+HeroImgGroup.propTypes = {
   children: PropTypes.node.isRequired,
 }
 

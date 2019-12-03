@@ -1,46 +1,60 @@
 @import "../../_assets/css/abstracts/1-abstracts";
 
-.mainFooter {
-  margin-top: spacing(looser);
-}
+/* 
+ *
+ * Hero
+ *
+ */
 
-.mainFooter-inner {
-  border-top: 1px solid color(gray500);
-  padding-top: spacing(tight);
-  padding-bottom: spacing(tight);
-  // font-size: fs(sm);
+.hero--contentRight {
+  @include bp(lg) {
+    .hero-inner {
+      grid-template-columns: 3fr 2fr;
 
-  display: grid;
-  gap: spacing(tight);
-  @include bp(med) {
-    grid-template-columns: repeat((3, 1fr));
-  }
-}
-.mainFooter-copyRight {
-  justify-self: center;
-  @include bp(med) {
-    justify-self: left;
-    padding-left: spacing(tight);
-  }
-}
-
-.mainFooter-emailGroup {
-  justify-self: center;
-  @include bp(med) {
-    justify-self: center;
-  }
-}
-
-.mainFooter-socialMediaGroup {
-  justify-self: center;
-
-  @include bp(med) {
-    justify-self: right;
-    padding-right: spacing(tight);
-  }
-  .socialMedia-item {
-    &:not(:last-child) {
-      margin-right: spacing(base);
+      .hero-contentGroup {
+        order: 2;
+      }
+      .hero-imgGroup {
+        order: 1;
+      }
     }
+  }
+}
+
+.hero-inner {
+  display: grid;
+
+  @include bp(lg) {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    grid-template-columns: 2fr 3fr;
+    gap: spacing(looser);
+  }
+}
+
+.hero-title {
+  border-top: 5px solid color(purple500);
+  padding-top: spacing(base);
+  margin-top: spacing(none);
+}
+
+.hero-imgGroup {
+  display: none;
+  position: relative;
+  z-index: (z(1));
+
+  @include bp(med) {
+    display: initial;
+  }
+
+  &:after {
+    position: absolute;
+    content: " ";
+    bottom: -(spacing(base));
+    right: -(spacing(base));
+    width: 300px;
+    height: 300px;
+    background-color: color(green500);
+    z-index: -(z(1));
   }
 }
