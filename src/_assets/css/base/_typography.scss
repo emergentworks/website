@@ -72,3 +72,7 @@ p {
   font-size: fs(m);
   line-height: lh(loose);
 }
+
+.bold {
+  font-family: map-get($font, medium);
+}

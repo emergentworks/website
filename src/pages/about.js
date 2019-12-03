@@ -5,6 +5,13 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import './about.scss'
+import {
+  Hero,
+  HeroContent,
+  HeroTitle,
+  HeroContentGroup,
+  HeroImgGroup,
+} from '../components/Hero'
 import HeroImg from '../_assets/images/we-are-the-code-coop.jpg'
 import Rectangle from '../_assets/images/shape-rectangle.svg'
 
@@ -38,25 +45,23 @@ const AboutPage = () => {
   return (
     <Layout className="about">
       <SEO title="About" />
-      <section className="pageHero pageHero--contentRight">
-        <div className="pageHero-inner content">
-          <div className="pageHero-contentGroup">
-            <h1 className="pageHero-title">Who we are</h1>
-            <p className="pageHero-content">
-              The Code Cooperative is a community of people who learn, use, and
-              build technology to create life changing possibilities for
-              individuals and communities impacted by incarceration.
-            </p>
-          </div>
-          <div className="pageHero-imgGroup">
-            <img
-              className="pageHero-img"
-              src={HeroImg}
-              alt="We are the code coop"
-            />
-          </div>
-        </div>
-      </section>
+      <Hero contentPlacement="right">
+        <HeroContentGroup>
+          <HeroTitle>Who we are</HeroTitle>
+          <HeroContent>
+            The Code Cooperative is a community of people who learn, use, and
+            build technology to create life changing possibilities for
+            individuals and communities impacted by incarceration.
+          </HeroContent>
+        </HeroContentGroup>
+        <HeroImgGroup>
+          <img
+            className="pageHero-img"
+            src={HeroImg}
+            alt="We are the code coop"
+          />
+        </HeroImgGroup>
+      </Hero>
       <section className="pageBanner">
         <div className="pageBanner-inner content">
           <h2 className="pageBanner-title">Our Vision</h2>
@@ -117,6 +122,8 @@ const AboutPage = () => {
                 if (image.name.includes(firstName)) {
                   return image.childImageSharp.fluid
                 }
+
+                return null
               })
 
               return (

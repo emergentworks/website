@@ -1,0 +1,46 @@
+@import "../_assets/css/abstracts/1-abstracts";
+
+// .donation-contentGroup {
+//   position: relative;
+//   z-index: (z(1));
+
+//   &:after {
+//     position: absolute;
+//     content: " ";
+//     bottom: -(spacing(base));
+//     left: -(spacing(tight));
+//     width: 150px;
+//     height: 150px;
+//     background-color: color(green500);
+//     z-index: -(z(1));
+
+//     @include bp(lg) {
+//       // width: 270px;
+//       // height: 270px;
+//       left: -(spacing(loose));
+//       bottom: (spacing(loose));
+//     }
+//   }
+// }
+
+/* 
+ *
+ * Donation Section
+ *
+ */
+
+.donation-section {
+  background-color: color(blue500);
+  padding-top: spacing(loose);
+  padding-bottom: spacing(loose);
+  color: color(white500);
+}
+
+.donation-inner {
+  display: grid;
+  gap: spacing(loose);
+
+  @include bp(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

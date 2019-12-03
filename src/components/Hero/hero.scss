@@ -35,7 +35,11 @@
 .hero-title {
   border-top: 5px solid color(purple500);
   padding-top: spacing(base);
-  margin-top: spacing(none);
+  margin-top: spacing(loose);
+
+  @include bp(lg) {
+    margin-top: spacing(none);
+  }
 }
 
 .hero-imgGroup {

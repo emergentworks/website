@@ -150,17 +150,38 @@ const VolunteerPage = () => (
     <section className="volunteer-support">
       <div className="volunteer-supportInner content">
         <div className="volunteer-contentGroup">
-          <h3 className="volunteer-supportTitle mtnone">
-            {' '}
+          <h2 className="volunteer-supportTitle mtnone">
             Other ways to support
-          </h3>
+          </h2>
           <p className="volunteer-supportContent">
             We all have busy lives and volunteering can be hard to fit into your
             schedule. Consider making a monetary donation to support the
             program.
           </p>
         </div>
-        <div className="volunteer-donorboxGroup">Donor Box</div>
+        <div className="volunteer-donorboxGroup">
+          <script
+            src="https://donorbox.org/widget.js"
+            paypalExpress="false"
+          ></script>
+          <iframe
+            allowpaymentrequest=""
+            className="donation-donorbox"
+            frameBorder="0"
+            name="donorbox"
+            scrolling="no"
+            height="632px"
+            seamless="seamless"
+            src="https://donorbox.org/embed/website-donation-15?hide_donation_meter=true"
+            style={{
+              maxWidth: '500px',
+              minWidth: '310px',
+              maxHeight: 'none!important',
+            }}
+            width="100%"
+            title="Donate to the Code Cooperative"
+          ></iframe>
+        </div>
       </div>
     </section>
   </Layout>

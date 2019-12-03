@@ -76,5 +76,7 @@
   @include bp(med) {
     gap: spacing(loose);
     grid-template-columns: repeat(2, 1fr);
+    padding-top: spacing(loose);
+    padding-bottom: spacing(loose);
   }
 }
