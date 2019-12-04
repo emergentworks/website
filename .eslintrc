@@ -5,7 +5,7 @@
   },
   "overrides": [
     {
-      "files": ["v1"],
+      "files": ["v1/*.js"],
       "rules": {
         "no-unused-expressions": "off"
       }
