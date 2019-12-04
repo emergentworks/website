@@ -66,11 +66,6 @@ const DonatePage = () => (
             Monetary support will help us provide Metrocards, food, hardware and
             office supplies for our fellows.
           </p>
-          <p>
-            Code cooperative could not be where it is today without donations.
-            We are a registered 501(c)(3) not-for-profit trying to bridge the
-            gap between the tech industry and those impacted by incarceration.
-          </p>
         </div>
         <div className="donation-donorboxGroup">
           <script
