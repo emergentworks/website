@@ -57,10 +57,12 @@ const DonatePage = () => (
             Our program runs on donations so that we can provide resources for
             our fellows. Access to a computer and the Internet is crucial to
             learning to code, which is why we are seeking monetary and laptop
-            donations. Code cooperative could not be where it is today without
-            donations. We are a registered 501(c)(3) not-for-profit trying to
-            bridge the gap between the tech industry and those impacted by
-            incarceration.
+            donations.
+          </p>
+          <p>
+            Code cooperative could not be where it is today without donations.
+            We are a registered 501(c)(3) not-for-profit trying to bridge the
+            gap between the tech industry and those impacted by incarceration.
           </p>
           <p>
             Monetary support will help us provide Metrocards, food, hardware and
