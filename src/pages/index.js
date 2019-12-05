@@ -53,7 +53,9 @@ const IndexPage = () => (
           We believe that providing access to computer science education to the
           most marginalized communities in our society.
         </p>
-        <Link className="card-cta btn btn-secondary w-100">Learn More</Link>
+        <Link className="card-cta btn btn-secondary w-100" to="/about">
+          Learn More
+        </Link>
       </div>
       <div className="card--photoCard photoCard--card-2">
         <h2 className="card-title">Volunteer</h2>
@@ -61,7 +63,9 @@ const IndexPage = () => (
           Our mentors work with fellows to meet their learning goals in computer
           literacy, code, and web development.
         </p>
-        <Link className="card-cta btn btn-secondary w-100">Learn More</Link>
+        <Link className="card-cta btn btn-secondary w-100" to="/volunteer">
+          Learn More
+        </Link>
       </div>
       <div className="card--photoCard photoCard--card-3">
         <h2 className="card-title">Donate</h2>
@@ -69,7 +73,9 @@ const IndexPage = () => (
           Our program runs on donations so that we can provide Metrocards, food,
           hardware and office supplies for our fellows.
         </p>
-        <Link className="card-cta btn btn-secondary w-100">Donate Now</Link>
+        <Link className="card-cta btn btn-secondary w-100" to="/donate">
+          Donate Now
+        </Link>
       </div>
     </section>
   </Layout>
