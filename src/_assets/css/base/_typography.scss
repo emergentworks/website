@@ -13,7 +13,7 @@ h1,
   font-size: 3rem;
   margin-top: spacing(base);
   margin-bottom: spacing(base);
-  line-height: lh(base);
+  line-height: 1;
   font-weight: normal;
 
   @include bp(med) {

@@ -12,7 +12,7 @@ import {
   HeroContentGroup,
   HeroImgGroup,
 } from '../components/Hero'
-import HeroImg from '../_assets/images/we-are-the-code-coop.jpg'
+import HeroImg from '../_assets/images/what-is-code.png'
 
 const DonatePage = () => (
   <Layout className="donate">

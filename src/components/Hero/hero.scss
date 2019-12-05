@@ -50,6 +50,7 @@
   display: none;
   position: relative;
   z-index: (z(1));
+  align-self: baseline;
 
   @include bp(med) {
     display: initial;
