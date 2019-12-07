@@ -1,0 +1,84 @@
+@import "../abstracts/variables";
+@import "../abstracts/color";
+
+// Font Family
+body {
+  font-family: map-get($font, base);
+  font-size: fs(m);
+}
+
+h1,
+.h1 {
+  font-family: map-get($font, medium);
+  font-size: 3rem;
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+  line-height: 1;
+  font-weight: normal;
+
+  @include bp(med) {
+    font-size: fs(xxl);
+  }
+}
+
+h2,
+.h2 {
+  font-family: map-get($font, medium);
+  font-size: fs(xl);
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+  font-weight: normal;
+}
+
+h3,
+.h3 {
+  font-family: map-get($font, medium);
+  font-size: fs(l);
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+  font-weight: normal;
+}
+
+h4,
+.h4 {
+  font-family: map-get($font, medium);
+  font-size: fs(base);
+  text-transform: uppercase;
+  margin-top: spacing(base);
+  margin-bottom: spacing(base);
+  font-weight: normal;
+}
+
+a:not([class]),
+.link {
+  color: color(blue500);
+  text-decoration: none;
+  @include trans();
+
+  &:hover {
+    color: #c5c5e9;
+  }
+
+  &:hover:not(:disabled) {
+    color: color(blue600);
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: fs(m);
+  line-height: lh(loose);
+}
+
+.bold {
+  font-family: map-get($font, medium);
+}
+
+.bullet-list {
+  li:not(:first-child) {
+    margin-top: spacing(tight);
+  }
+}

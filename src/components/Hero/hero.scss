@@ -1,0 +1,69 @@
+@import "../../_assets/css/abstracts/1-abstracts";
+
+/* 
+ *
+ * Hero
+ *
+ */
+
+.hero--contentRight {
+  @include bp(lg) {
+    .hero-inner {
+      grid-template-columns: 3fr 2fr;
+
+      .hero-contentGroup {
+        order: 2;
+      }
+      .hero-imgGroup {
+        order: 1;
+      }
+    }
+  }
+}
+
+.hero-inner {
+  display: grid;
+  padding-bottom: spacing(loose);
+  padding-top: spacing(loose);
+
+  @include bp(lg) {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    grid-template-columns: 2fr 3fr;
+    gap: spacing(looser);
+  }
+}
+
+.hero-contentGroup {
+  @include bp(med) {
+    padding-bottom: spacing(loose);
+  }
+}
+
+.hero-title {
+  border-top: 5px solid color(purple500);
+  padding-top: spacing(base);
+  margin-top: spacing(none);
+}
+
+.hero-imgGroup {
+  display: none;
+  position: relative;
+  z-index: (z(1));
+  align-self: baseline;
+
+  @include bp(med) {
+    display: initial;
+  }
+
+  &:after {
+    position: absolute;
+    content: " ";
+    bottom: -(spacing(base));
+    right: -(spacing(base));
+    width: 300px;
+    height: 300px;
+    background-color: color(green500);
+    z-index: -(z(1));
+  }
+}

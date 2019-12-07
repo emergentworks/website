@@ -1,0 +1,175 @@
+@import "../_assets/css/abstracts/1-abstracts";
+
+/* 
+ *
+ * Our Vision Banner
+ *
+ */
+
+.pageBanner {
+  background-color: color(white500);
+  color: color(gray500);
+  position: relative;
+}
+
+.pageBanner-inner {
+  padding-top: spacing(base);
+  padding-bottom: spacing(base);
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include bp(med) {
+    max-width: 50rem;
+    padding-top: spacing(loose);
+    padding-bottom: spacing(loose);
+  }
+}
+
+.pageBanner-content {
+  @include bp(med) {
+    font-size: fs(l);
+  }
+}
+
+.pageBanner-shape {
+  display: none;
+
+  @include bp(lg) {
+    display: initial;
+    position: absolute;
+    right: 13rem;
+    top: 12rem;
+    width: 6rem;
+  }
+}
+
+/* 
+ *
+ * Our Values
+ *
+ */
+
+.ourValues-group {
+  display: grid;
+  gap: spacing(tight);
+
+  @include bp(med) {
+    padding-top: spacing(base);
+    gap: spacing(loose);
+  }
+}
+
+.ourValues-item {
+  &:nth-child(2n) {
+    justify-self: right;
+  }
+}
+
+.ourValues-inner {
+  @include bp(med) {
+    padding-top: spacing(loose);
+  }
+}
+
+.ourValues-groupTitle {
+  margin-bottom: 0;
+}
+
+.ourValues-title {
+  @include bp(med) {
+    margin-top: 0;
+    font-size: 3rem;
+  }
+}
+
+.ourValues-content {
+  @include bp(med) {
+    max-width: 28rem;
+  }
+}
+
+/* 
+ *
+ * About Us
+ *
+ */
+
+.aboutUs-inner {
+  padding-top: spacing(looser);
+  display: grid;
+  gap: spacing(base);
+
+  @include bp(med) {
+    gap: spacing(looser);
+  }
+}
+
+.aboutUs-content {
+  // font-size: 1.35rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 32rem;
+
+  @include bp(lg) {
+    font-size: fs(med);
+  }
+}
+
+/* 
+ *
+ * Our Team
+ *
+ */
+
+.ourTeam-section {
+  @include bp(med) {
+    // grid-template-columns: repeat(3, 1fr);
+    padding-top: spacing(base);
+  }
+}
+
+.ourTeam-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(base);
+
+  @include bp(med) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: spacing(loose);
+  }
+}
+
+.bottomGroup-img {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+}
+
+.ourTeam-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: spacing(base);
+}
+
+.ourTeam-imageGroup {
+  // background-color: rgba($color: color(green500), $alpha: 0.5);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 6px rgba($color: color(gray500), $alpha: 0.7);
+}
+
+.ourTeam-image {
+  // filter: grayscale(1);
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+}
+
+.ourTeam-content {
+  align-self: center;
+}
+
+.ourTeam-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: fs(l);
+}

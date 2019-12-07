@@ -1,0 +1,46 @@
+/* 
+ *
+ * Sass Mixins
+ *
+ */
+
+//  Define background and font color of an element
+@mixin bg-font-color($bg-color, $f-color) {
+  background-color: $bg-color;
+  color: $f-color;
+
+  // ToDo: Conditional if $bg-color > #A3A3A3
+}
+
+@mixin bp($breakpoint: med) {
+  // Retrieves the value from the key
+  $value: map-get($bp, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin trans($timeValue: base, $animationValue: base) {
+  $time: map-get($timing, $timeValue);
+  $animation: map-get($anim, $animationValue);
+
+  transition: $time all $animation;
+}
+
+@mixin removeBullets {
+  list-style: none;
+  padding-left: 0;
+  padding: space(base);
+  margin: 0;
+}

@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    Abstracts
+\*------------------------------------*/
+@import "./abstracts/1-abstracts";
+
+/*------------------------------------*\
+    Base
+\*------------------------------------*/
+@import "./base/_1-base";
+
+/*------------------------------------*\
+    Utilities
+\*------------------------------------*/
+@import "./utilities/_1-utilities";
+
+/* 
+ *
+ * Create CSS variables for each of the color
+ *
+ */
+
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+}
+
+body {
+  color: color(gray500);
+  margin: 0;
+}
+
+.content {
+  padding-left: spacing(base);
+  padding-right: spacing(base);
+
+  @include bp() {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+img {
+  max-width: 100%;
+}

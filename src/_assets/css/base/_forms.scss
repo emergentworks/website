@@ -1,0 +1,131 @@
+@import "../abstracts/variables";
+@import "../abstracts/color";
+
+/* 
+*
+* Input styles
+*
+*/
+
+// Button base and variants
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: spacing(base) spacing(loose);
+  font-size: fs(m);
+  font-family: font(medium);
+  text-transform: capitalize;
+  transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  & + & {
+    // margin-left: spacing(base);
+  }
+}
+
+.btn-primary {
+  background-color: color(blue500);
+  color: color(white500);
+
+  &:disabled {
+    background-color: #c5c5e9;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: color(blue600);
+  }
+}
+
+.btn-secondary {
+  background-color: color(white500);
+  color: color(black500);
+
+  &:disabled {
+    background-color: color(gray300);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: color(gray400);
+  }
+}
+
+.btn-tertiary {
+  background-color: color(yellow500);
+  color: color(gray500);
+
+  &:disabled {
+    background-color: #fffbb0;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #f0e523;
+  }
+}
+
+// Input field base styles
+.input-field,
+textarea,
+input[input="email"],
+input[input="search"] {
+  @include trans();
+  background-color: transparent;
+  border-color: color(gray400);
+  border-style: solid;
+  border-width: 2px;
+  color: color(gray500);
+  font-size: fs(base);
+  outline: none;
+  padding: spacing(tight) spacing(base);
+
+  &:not(:placeholder-shown) {
+    border-color: color(gray500);
+  }
+
+  &::placeholder {
+    color: color(gray400);
+  }
+
+  &:focus {
+    // border-width: 5px;
+    border-color: color(blue600);
+  }
+}
+
+// Checkbox base styles
+.input-checkBox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid color(gray500);
+  @include trans();
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+
+  &:checked {
+    border: 2px solid color(gray100);
+    background-color: color(secondary500);
+  }
+}
+
+// labels for inputs
+.input-label {
+  font-size: fs(l);
+  font-family: font(medium);
+
+  & + & {
+    margin-left: spacing(base);
+  }
+}

@@ -1,0 +1,48 @@
+@import "../abstracts/variables";
+
+@each $key, $value in $spacing {
+  .pa#{$key} {
+    padding: $value;
+  }
+  .pt#{$key} {
+    padding-top: $value;
+  }
+  .pr#{$key} {
+    padding-right: $value;
+  }
+  .pb#{$key} {
+    padding-bottom: $value;
+  }
+  .pl#{$key} {
+    padding-left: $value;
+  }
+}
+
+@each $key, $value in $spacing {
+  .ma#{$key} {
+    margin: $value;
+  }
+  .mt#{$key} {
+    margin-top: $value;
+  }
+  .mr#{$key} {
+    margin-right: $value;
+  }
+  .mb#{$key} {
+    margin-bottom: $value;
+  }
+  .ml#{$key} {
+    margin-left: $value;
+  }
+}
+
+// Line Height
+@each $key, $value in $lh {
+  .lh#{$key} {
+    line-height: $value;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
