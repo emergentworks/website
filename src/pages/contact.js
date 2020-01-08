@@ -27,6 +27,14 @@ const ContactPage = () => (
             hello@codecooperative.org
           </a>
           .
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe27UAurEdxz2w_qJfRIHR_lohR7il0TRQ2OddrVC8pzIJ5_A/viewform"
+            className="btn btn-primary w-100 mtbase"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join Our Mailing List
+          </a>
         </HeroContent>
       </HeroContentGroup>
       <HeroImgGroup>
