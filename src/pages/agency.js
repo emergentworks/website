@@ -14,7 +14,7 @@ import {
   HeroContentGroup,
   HeroImgGroup,
 } from "../components/Hero"
-import Logos from "../_assets/images/logos.png"
+import Logos from "../_assets/images/Logos.png"
 
 import Rectangle from "../_assets/images/shape-rectangle.svg"
 
@@ -97,8 +97,6 @@ const AgencyPage = () => {
 
               const getImgSrc = data.teamPics.nodes.filter(image => {
                 const [firstName] = teamMember.name.toLowerCase().split(" ")
-                console.log(firstName)
-
                 if (image.name.includes(firstName)) {
                   return image.childImageSharp.fluid
                 }
