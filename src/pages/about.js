@@ -1,21 +1,21 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Img from 'gatsby-image'
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
-import './about.scss'
+import Img from "gatsby-image"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
+import "./about.scss"
 import {
   Hero,
   HeroContent,
   HeroTitle,
   HeroContentGroup,
   HeroImgGroup,
-} from '../components/Hero'
-import HeroImg from '../_assets/images/we-are-the-code-coop.jpg'
-import Mark from '../_assets/images/mark.jpg'
-import Classroom from '../_assets/images/classroom.jpg'
-import Rectangle from '../_assets/images/shape-rectangle.svg'
+} from "../components/Hero"
+import HeroImg from "../_assets/images/we-are-the-code-coop.jpg"
+import Mark from "../_assets/images/mark.jpg"
+import Classroom from "../_assets/images/classroom.jpg"
+import Rectangle from "../_assets/images/shape-rectangle.svg"
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -89,7 +89,7 @@ const AboutPage = () => {
               <span className="bold">
                 We are a community of people who dare to dream of healed worlds.
                 We are a collective of passionate volunteers.
-              </span>{' '}
+              </span>{" "}
               We see a problem that we want to address. The tech industry is a
               closed and homogenous group that builds things that serve some
               people and not others. Things that harm a lot of people. We want
@@ -153,7 +153,7 @@ const AboutPage = () => {
               const teamMember = nodes.node
 
               const getImgSrc = data.teamPics.nodes.filter(image => {
-                const [firstName] = teamMember.name.toLowerCase().split(' ')
+                const [firstName] = teamMember.name.toLowerCase().split(" ")
 
                 if (image.name.includes(firstName)) {
                   return image.childImageSharp.fluid

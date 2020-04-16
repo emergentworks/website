@@ -2,24 +2,47 @@
   {
     "name": "Alex Qin",
     "img": "team-alex.jpg",
-    "twitter": "alexqin"
+    "twitter": "alexqin",
+    "is_in_agency": "yes"
   },
   {
     "name": "Cassie Moy",
     "img": "team-alex.jpg",
-    "twitter": "cassie_moy"
+    "twitter": "cassie_moy",
+    "is_in_agency": "no"
   },
   {
     "name": "Savannah Lim",
-    "img": "team-savannah.jpg"
+    "img": "team-savannah.jpg",
+    "is_in_agency": "no"
   },
   {
     "name": "Esther Pong",
-    "img": "team-esther.jpg"
+    "img": "team-esther.jpg",
+    "is_in_agency": "no"
   },
   {
     "name": "Adekunle Oduye",
     "img": "team-adekunle.jpg",
-    "twitter": "adekunleoduye"
+    "twitter": "adekunleoduye",
+    "is_in_agency": "no"
+  },
+  {
+    "name": "Roberto Goizueta",
+    "img": "team-roberto.png",
+    "twitter": "",
+    "is_in_agency": "yes"
+  },
+  {
+    "name": "Giovannie Hernandez",
+    "img": "team-giovannie.png",
+    "twitter": "",
+    "is_in_agency": "yes"
+  },
+  {
+    "name": "Army Armstead",
+    "img": "team-army.png",
+    "twitter": "",
+    "is_in_agency": "yes"
   }
 ]

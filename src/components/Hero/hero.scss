@@ -21,6 +21,20 @@
   }
 }
 
+.hero--contentCenter {
+  text-size: 3em;
+  @include bp(lg) {
+    .hero-inner {
+      background-color: red;
+      grid-template-columns: 3fr 2fr;
+
+      .hero-contentGroup {
+        order: 2;
+      }
+    }
+  }
+}
+
 .hero-inner {
   display: grid;
   padding-bottom: spacing(loose);

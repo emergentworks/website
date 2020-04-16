@@ -1,0 +1,42 @@
+@import "../../_assets/css/abstracts/1-abstracts";
+
+/* 
+ *
+ * Triptych
+ *
+ */
+
+.triptych {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: 2fr;
+  gap: 6rem;
+  padding: 10px;
+  margin-bottom: 5rem;
+
+  @include bp(med) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: spacing(loose);
+  }
+}
+
+.triptych-item {
+  display: grid;
+  gap: spacing(base);
+  max-height: 40rem;
+  margin: 0 auto;
+}
+
+.triptych-title {
+  text-align: center;
+  font-size: fs(lg);
+  margin-top: 5rem;
+}
+
+.triptych-icon {
+  max-height: 10rem;
+  margin: auto;
+}
+
+.blurb {
+}

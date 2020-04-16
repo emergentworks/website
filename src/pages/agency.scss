@@ -7,9 +7,18 @@
  */
 
 .pageBanner {
-  background-color: color(white500);
-  color: color(gray500);
+  background-color: white;
   position: relative;
+}
+
+.purple-border {
+  border-top: 5px solid color(purple500);
+}
+
+.get-in-touch {
+  margin-top: spacing(base);
+  max-width: 12rem;
+  max-height: 6rem;
 }
 
 .pageBanner-inner {
@@ -21,14 +30,10 @@
   }
 
   @include bp(med) {
-    max-width: 50rem;
+    max-width: 64rem;
     padding-top: spacing(loose);
     padding-bottom: spacing(loose);
   }
-}
-
-.pageBanner-title {
-  margin: auto;
 }
 
 .pageBanner-content {
@@ -46,6 +51,16 @@
     right: 13rem;
     top: 12rem;
     width: 6rem;
+  }
+}
+
+.tagline {
+  background-color: white;
+  background-image: "../_assets/images/sample.jpg";
+  margin-top: 22rem;
+  margin-bottom: 22rem;
+  @include bp(med) {
+    font-size: fs(xl);
   }
 }
 
@@ -145,6 +160,11 @@
   }
 }
 
+.logos-img {
+  width: 50%;
+  margin: auto;
+  display: block;
+}
 .bottomGroup-img {
   filter: grayscale(1);
   mix-blend-mode: multiply;

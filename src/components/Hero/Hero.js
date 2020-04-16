@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import './hero.scss'
+import React from "react"
+import PropTypes from "prop-types"
+import "./hero.scss"
 
 export const HeroContent = ({ children }) => (
   <div className="hero-content">{children}</div>
@@ -21,7 +21,11 @@ export const HeroImgGroup = ({ children }) => (
 export const Hero = ({ children, contentPlacement }) => (
   <section
     className={`hero ${
-      contentPlacement === 'right' ? 'hero--contentRight' : ''
+      contentPlacement === "right"
+        ? contentPlacement === "center"
+          ? "hero--contentCenter"
+          : ""
+        : ""
     }`}
   >
     <div className="hero-inner content">{children}</div>
@@ -46,9 +50,9 @@ HeroTitle.propTypes = {
 
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
-  contentPlacement: PropTypes.oneOf(['right', 'left']),
+  contentPlacement: PropTypes.oneOf(["right", "left", "center"]),
 }
 
 Hero.defaultProps = {
-  contentPlacement: 'left',
+  contentPlacement: "left",
 }
