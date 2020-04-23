@@ -1,13 +1,13 @@
 @import "../_assets/css/abstracts/1-abstracts";
 
-/* 
+/*
  *
  * Our Vision Banner
  *
  */
 
 .pageBanner {
-  background-color: white;
+  background-color: transparent;
   position: relative;
 }
 
@@ -54,8 +54,27 @@
   }
 }
 
+.video-background {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+  }
+
+  iframe {
+    pointer-events: none;
+    position: absolute;
+  }
+}
+
+
+
 .tagline {
-  background-color: white;
+  color: white;
   background-image: "../_assets/images/sample.jpg";
   margin-top: 22rem;
   margin-bottom: 22rem;
@@ -64,7 +83,18 @@
   }
 }
 
-/* 
+@media (min-width: 0) and (max-width: map-get($bp,med)) {
+
+  .video-background {
+    display: none;
+  };
+
+  .tagline {
+    color: color(gray500);
+  }
+}
+
+/*
  *
  * Our Values
  *
@@ -109,7 +139,7 @@
   }
 }
 
-/* 
+/*
  *
  * About Us
  *
@@ -136,7 +166,7 @@
   }
 }
 
-/* 
+/*
  *
  * Our Team
  *
