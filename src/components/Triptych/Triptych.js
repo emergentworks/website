@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./triptych.scss"
 
 export const Triptych = props => (
-  <section className="pageBanner">
+  <section className="pageBanner space-below">
     <h2 className="triptych-title content">
       Partnering industry veterans with formerly incarcerated technologists.
     </h2>

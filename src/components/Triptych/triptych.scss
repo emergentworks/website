@@ -10,9 +10,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-columns: 2fr;
-  gap: 6rem;
+  gap: 3rem;
   padding: 10px;
-  margin-bottom: 5rem;
 
   @include bp(med) {
     grid-template-columns: repeat(3, 1fr);
@@ -20,6 +19,10 @@
   }
 }
 
+.triptych-header {
+  display: block;
+  margin: auto;
+}
 .triptych-item {
   display: grid;
   gap: spacing(base);

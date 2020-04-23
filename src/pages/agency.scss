@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.space-below {
+  margin-bottom: 6rem;
+}
+
 .purple-border {
   border-top: 5px solid color(purple500);
 }
@@ -19,6 +23,16 @@
   margin-top: spacing(base);
   max-width: 12rem;
   max-height: 6rem;
+  display: block;
+  text-align: center;
+  color: color(white500);
+  text-decoration: none;
+  font-size: fs(base);
+}
+
+.centered {
+  display: block;
+  margin: auto;
 }
 
 .pageBanner-inner {
@@ -76,8 +90,9 @@
 .tagline {
   color: white;
   background-image: "../_assets/images/sample.jpg";
-  margin-top: 22rem;
-  margin-bottom: 22rem;
+  margin-top: 13rem;
+  margin-bottom: 13rem;
+  text-align: center;
   @include bp(med) {
     font-size: fs(xl);
   }

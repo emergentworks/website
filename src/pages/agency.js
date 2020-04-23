@@ -64,36 +64,45 @@ const AgencyPage = () => {
           </video>
         </div> */}
         <div className="pageBanner-inner content">
-          <h2 className="pageBanner-title mtnone tagline">
-            We build tech for non-profits and invest in the next generation of
-            technology leaders.
-          </h2>
-          <li className="primaryNav-linkItem">
+          <div className="pageBanner-title mtnone tagline">
+            <h2>
+              We build tech for non-profits and invest in the next generation of
+              technology leaders.
+            </h2>
             <a
-              className="btn btn-primary primaryNav-link"
+              className="btn btn-primary get-in-touch centered"
               href="mailto:agency@codecooperative.org?subject=Let%27s%20chat%21"
             >
               GET IN TOUCH
             </a>
-          </li>
+          </div>
         </div>
       </section>
       <Triptych>
-        <TriptychItem url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png">
+        <TriptychItem
+          url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png"
+          header="Full Stack Website Solutions"
+        >
           <p>
             {" "}
             Our team of web developers can deliver you anything from a fully
             bespoke website, to SquareSpace customizations, to internal tooling.{" "}
           </p>
         </TriptychItem>
-        <TriptychItem url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png">
+        <TriptychItem
+          url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png"
+          header="Impact, not just code"
+        >
           <p>
             {" "}
             Experienced product leads guarantee that teams not only deliver the
             technology you want, but the business outcomes you need.{" "}
           </p>
         </TriptychItem>
-        <TriptychItem url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png">
+        <TriptychItem
+          url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png"
+          header="Investing in your community"
+        >
           <p>
             {" "}
             Through our projects, our formerly incarcerated teammates get
@@ -148,7 +157,7 @@ const AgencyPage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="space-below">
         <div className="hero-content content">
           <h2 classname="ourValues-title">
             We've built successful products for...
@@ -166,7 +175,7 @@ const AgencyPage = () => {
             love to work with you.
           </div>
           <a
-            className="btn btn-primary primaryNav-link get-in-touch"
+            className="btn btn-primary get-in-touch"
             href="mailto:agency@codecooperative.org?subject=Let%27s%20chat%21"
           >
             GET IN TOUCH
