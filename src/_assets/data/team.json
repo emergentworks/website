@@ -3,46 +3,54 @@
     "name": "Alex Qin",
     "img": "team-alex.jpg",
     "twitter": "alexqin",
-    "is_in_agency": "yes"
+    "page": ["about", "agency"],
+    "bio": "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs."
   },
   {
     "name": "Cassie Moy",
     "img": "team-alex.jpg",
     "twitter": "cassie_moy",
-    "is_in_agency": "no"
+    "page": ["about"],
+    "bio": ""
   },
   {
     "name": "Savannah Lim",
     "img": "team-savannah.jpg",
-    "is_in_agency": "no"
+    "page": ["about"],
+    "bio": ""
   },
   {
     "name": "Esther Pong",
     "img": "team-esther.jpg",
-    "is_in_agency": "no"
+    "page": ["about"],
+    "bio": ""
   },
   {
     "name": "Adekunle Oduye",
     "img": "team-adekunle.jpg",
     "twitter": "adekunleoduye",
-    "is_in_agency": "no"
-  },
-  {
-    "name": "Roberto Goizueta",
-    "img": "team-roberto.png",
-    "twitter": "",
-    "is_in_agency": "yes"
+    "page": ["about"],
+    "bio": ""
   },
   {
     "name": "Giovannie Hernandez",
-    "img": "team-giovannie.png",
+    "img": "team-giovannie.jpg",
     "twitter": "",
-    "is_in_agency": "yes"
+    "page": ["agency"],
+    "bio": "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs."
   },
   {
     "name": "Army Armstead",
-    "img": "team-army.png",
+    "img": "team-army.jpg",
     "twitter": "",
-    "is_in_agency": "yes"
+    "page": ["agency"],
+    "bio": "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs."
+  },
+  {
+    "name": "Roberto Goizueta",
+    "img": "team-roberto.jpg",
+    "twitter": "",
+    "page": ["agency"],
+    "bio": "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs."
   }
 ]

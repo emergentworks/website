@@ -190,10 +190,29 @@
   }
 }
 
+.agency-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(base);
+
+  @include bp(med) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: spacing(loose);
+  }
+}
+
+.small {
+  font-size: fs(sm);
+}
+
 .logos-img {
   width: 50%;
   margin: auto;
   display: block;
+
+  @include bp(sm) {
+    width: 100%;
+  }
 }
 .bottomGroup-img {
   filter: grayscale(1);
@@ -202,14 +221,8 @@
 
 .ourTeam-item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: spacing(base);
-}
-
-.ourTeam-imageGroup {
-  // background-color: rgba($color: color(green500), $alpha: 0.5);
-  border-radius: 50%;
-  box-shadow: inset 0px 0px 6px rgba($color: color(gray500), $alpha: 0.7);
 }
 
 .ourTeam-image {

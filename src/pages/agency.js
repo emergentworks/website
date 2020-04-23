@@ -40,6 +40,8 @@ const AgencyPage = () => {
             name
             img
             twitter
+            page
+            bio
           }
         }
       }
@@ -103,9 +105,10 @@ const AgencyPage = () => {
         <div className="ourTeam-groupInner content">
           <h2 className="ourValues-title">Our Team</h2>
 
-          <div className="ourTeam-group">
+          <div className="agency-group">
             {data.teamData.edges.map(nodes => {
               const teamMember = nodes.node
+              if (!teamMember.page.includes("agency")) return null
 
               const getImgSrc = data.teamPics.nodes.filter(image => {
                 const [firstName] = teamMember.name.toLowerCase().split(" ")
@@ -137,6 +140,7 @@ const AgencyPage = () => {
                         @{teamMember.twitter}
                       </a>
                     )}
+                    <p>{teamMember.bio}</p>
                   </div>
                 </article>
               )

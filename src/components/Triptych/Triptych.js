@@ -15,6 +15,7 @@ export const Triptych = props => (
 export const TriptychItem = props => (
   <div className="triptych-item">
     <img className="triptych-icon" src={props.url} />
-    <div classname="blurb">{props.children}</div>
+    <h4 className="triptych-header">{props.header}</h4>
+    <div className="blurb">{props.children}</div>
   </div>
 )

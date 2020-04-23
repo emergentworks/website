@@ -38,6 +38,7 @@ const AboutPage = () => {
             name
             img
             twitter
+            page
           }
         }
       }
@@ -151,6 +152,7 @@ const AboutPage = () => {
           <div className="ourTeam-group">
             {data.teamData.edges.map(nodes => {
               const teamMember = nodes.node
+              if (!teamMember.page.includes("about")) return null
 
               const getImgSrc = data.teamPics.nodes.filter(image => {
                 const [firstName] = teamMember.name.toLowerCase().split(" ")
