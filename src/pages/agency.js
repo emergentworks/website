@@ -7,8 +7,8 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "./agency.scss"
 import { Triptych, TriptychItem } from "../components/Triptych"
-import VideoImg from "../_assets/images/video-still.png"
-import Video from "../_assets/videos/agency.mp4"
+// import VideoImg from "../_assets/images/video-still.png"
+// import Video from "../_assets/videos/agency.mp4"
 import {
   Hero,
   HeroContent,
