@@ -130,7 +130,7 @@ const AgencyPage = () => {
                       alt={teamMember.name}
                     />
                   </div>
-                  <div className="ourTeam-content">
+                  <div className="ourTeam-content-top">
                     <h3 className="ourTeam-name">{teamMember.name}</h3>
                     <p>{teamMember.bio}</p>
                   </div>
