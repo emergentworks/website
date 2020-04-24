@@ -6,8 +6,8 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "./agency.scss"
 import { Triptych, TriptychItem } from "../components/Triptych"
-// import VideoImg from "../_assets/images/video-still.png"
-// import Video from "../_assets/videos/agency.mp4"
+import VideoImg from "../_assets/images/video-still.png"
+import Video from "../_assets/videos/CodeCoop.mp4"
 import {
   Hero,
   HeroContent,
@@ -52,17 +52,17 @@ const AgencyPage = () => {
     <Layout className="agency">
       <SEO title="Agency" />
       <section className="pageBanner">
-        {/* Using YouTube video for now because I don't have video file locally */}
         <div class="video-background">
-          <iframe frameborder="0" height="100%" width="100%" allowFullScreen
-            src="https://youtube.com/embed/2B_NL3XcFIw?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1">
-          </iframe>
-        </div>
-        {/* <div class="video-background">
-          <video loop muted autoPlay poster={VideoImg} class="fullscreen-bg__video">
-              <source src={Video} type="video/mp4"/>
+          <video
+            loop
+            muted
+            autoPlay
+            poster={VideoImg}
+            class="fullscreen-bg__video"
+          >
+            <source src={Video} type="video/mp4" />
           </video>
-        </div> */}
+        </div>
         <div className="pageBanner-inner content">
           <div className="pageBanner-title mtnone tagline">
             <h2>
