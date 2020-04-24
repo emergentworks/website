@@ -39,7 +39,6 @@ const AgencyPage = () => {
             id
             name
             img
-            twitter
             page
             bio
           }
@@ -79,30 +78,21 @@ const AgencyPage = () => {
         </div>
       </section>
       <Triptych>
-        <TriptychItem
-          url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png"
-          header="Full Stack Website Solutions"
-        >
+        <TriptychItem url={Webpage} header="Full Stack Web Products">
           <p>
             {" "}
             Our team of web developers can deliver you anything from a fully
             bespoke website, to SquareSpace customizations, to internal tooling.{" "}
           </p>
         </TriptychItem>
-        <TriptychItem
-          url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png"
-          header="Impact, not just code"
-        >
+        <TriptychItem url={Impact} header="Impact not just code">
           <p>
             {" "}
             Experienced product leads guarantee that teams not only deliver the
             technology you want, but the business outcomes you need.{" "}
           </p>
         </TriptychItem>
-        <TriptychItem
-          url="https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png"
-          header="Investing in your community"
-        >
+        <TriptychItem url={Jumpstart} header="Investing in your community">
           <p>
             {" "}
             Through our projects, our formerly incarcerated teammates get
@@ -110,9 +100,9 @@ const AgencyPage = () => {
           </p>
         </TriptychItem>
       </Triptych>
-      <section className="ourTeam-section">
+      <section className="space-below space-above">
         <div className="ourTeam-groupInner content">
-          <h2 className="ourValues-title">Our Team</h2>
+          <h2>Our Team</h2>
 
           <div className="agency-group">
             {data.teamData.edges.map(nodes => {
@@ -139,16 +129,6 @@ const AgencyPage = () => {
                   </div>
                   <div className="ourTeam-content">
                     <h3 className="ourTeam-name">{teamMember.name}</h3>
-                    {teamMember.twitter && (
-                      <a
-                        className="ourTeam-twitter"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        href={`https://twitter.com/${teamMember.twitter}`}
-                      >
-                        @{teamMember.twitter}
-                      </a>
-                    )}
                     <p>{teamMember.bio}</p>
                   </div>
                 </article>
@@ -157,10 +137,10 @@ const AgencyPage = () => {
           </div>
         </div>
       </section>
-      <section className="space-below">
+      <section className="space-below space-above">
         <div className="hero-content content">
           <h2 classname="ourValues-title">
-            We've built successful products for...
+            We've built successful products for
           </h2>
           <div className="aboutUs-bottomGroup aboutUs-photo">
             <img className="logos-img" src={Logos} alt="Places we've worked" />
@@ -168,14 +148,16 @@ const AgencyPage = () => {
         </div>
       </section>
       <section>
-        <div className="hero-content content">
+        <div className="hero-content content space-below-footer space-above">
           <h2 classname="ourValues-title">Let's work together.</h2>
           <div className="pagebanner-content">
-            Whether you have a project in mind, or need help defining it, we'd
-            love to work with you.
+            <p>
+              Whether you have a project in mind, or need help defining it, we'd
+              love to work with you.
+            </p>
           </div>
           <a
-            className="btn btn-primary get-in-touch"
+            className="btn btn-primary get-in-touch centered"
             href="mailto:agency@codecooperative.org?subject=Let%27s%20chat%21"
           >
             GET IN TOUCH

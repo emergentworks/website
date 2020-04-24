@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import "./triptych.scss"
 
 export const Triptych = props => (
-  <section className="pageBanner space-below">
+  <section className="pageBanner space-above space-below">
     <h2 className="triptych-title content">
-      Partnering industry veterans with formerly incarcerated technologists.
+      Partnering industry experts with formerly incarcerated technologists.
     </h2>
 
     <div className="pageBanner-inner content triptych">{props.children}</div>

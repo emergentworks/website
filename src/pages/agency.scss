@@ -12,7 +12,15 @@
 }
 
 .space-below {
-  margin-bottom: 6rem;
+  padding-bottom: 4.375rem;
+}
+
+.space-above {
+  padding-top: 4.375rem;
+}
+
+.space-below-footer {
+  padding-bottom: 1.375rem;
 }
 
 .purple-border {
@@ -85,24 +93,23 @@
   }
 }
 
-
-
 .tagline {
   color: white;
   background-image: "../_assets/images/sample.jpg";
-  margin-top: 13rem;
-  margin-bottom: 13rem;
   text-align: center;
-  @include bp(med) {
-    font-size: fs(xl);
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  @include bp(lg) {
+    margin-top: 14rem;
+    margin-bottom: 14rem;
   }
 }
 
 @media (min-width: 0) and (max-width: map-get($bp,med)) {
-
   .video-background {
     display: none;
-  };
+  }
 
   .tagline {
     color: color(gray500);
