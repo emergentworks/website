@@ -16,6 +16,9 @@ import {
   HeroImgGroup,
 } from "../components/Hero"
 import Logos from "../_assets/images/Logos.png"
+import Impact from "../_assets/images/impact.jpg"
+import Webpage from "../_assets/images/webpage.jpg"
+import Jumpstart from "../_assets/images/jumpstart.jpg"
 
 import Rectangle from "../_assets/images/shape-rectangle.svg"
 
