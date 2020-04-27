@@ -41,6 +41,11 @@ export const Header = () => {
               </Link>
             </li>
             <li className="primaryNav-linkItem">
+              <Link className="primaryNav-link" to="/agency">
+                Agency
+              </Link>
+            </li>
+            <li className="primaryNav-linkItem">
               <Link className="primaryNav-link" to="/volunteer">
                 Volunteer
               </Link>
@@ -58,6 +63,6 @@ export const Header = () => {
           </ul>
         </nav>
       </div>
-    </header>
+  </header>
   )
 }

@@ -27,6 +27,10 @@
   }
 }
 
+.pageBanner-title {
+  margin: auto;
+}
+
 .pageBanner-content {
   @include bp(med) {
     font-size: fs(l);
@@ -150,12 +154,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: spacing(base);
-}
-
-.ourTeam-imageGroup {
-  // background-color: rgba($color: color(green500), $alpha: 0.5);
-  border-radius: 50%;
-  box-shadow: inset 0px 0px 6px rgba($color: color(gray500), $alpha: 0.7);
 }
 
 .ourTeam-image {
