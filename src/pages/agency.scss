@@ -27,6 +27,12 @@
   border-top: 5px solid color(purple500);
 }
 
+.centered {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .get-in-touch {
   margin-top: spacing(base);
   max-width: 12rem;
@@ -36,12 +42,6 @@
   color: color(white500);
   text-decoration: none;
   font-size: fs(base);
-}
-
-.centered {
-  display: block;
-  margin: auto;
-  text-align: center;
 }
 
 .pageBanner-inner {
