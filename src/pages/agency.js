@@ -55,7 +55,7 @@ const AgencyPage = () => {
             <source src={Video} type="video/mp4" />
           </video>
         </div>
-        <div className="pageBanner-inner content">
+        <div className="pageBanner-inner content tagline-container">
           <div className="pageBanner-title mtnone tagline">
             <h2>
               We build tech for non-profits and invest in the next generation of
@@ -74,11 +74,11 @@ const AgencyPage = () => {
         <TriptychItem url={Webpage} header="Full Stack Web Products">
           <p>
             {" "}
-            Our team of web developers can deliver you anything from a fully
-            bespoke website, to SquareSpace customizations, to internal tooling.{" "}
+            Our team of web developers can deliver anything from a fully
+            bespoke website, to Squarespace customizations, to internal tooling.{" "}
           </p>
         </TriptychItem>
-        <TriptychItem url={Impact} header="Impact not just code">
+        <TriptychItem url={Impact} header="Impact driven">
           <p>
             {" "}
             Experienced product leads guarantee that teams not only deliver the
@@ -88,7 +88,7 @@ const AgencyPage = () => {
         <TriptychItem url={Jumpstart} header="Investing in your community">
           <p>
             {" "}
-            Through our projects, our formerly incarcerated teammates get
+            Through our projects, our formerly incarcerated apprentices get
             valuable, paid work experience to kickstart their careers in tech.{" "}
           </p>
         </TriptychItem>
@@ -131,7 +131,7 @@ const AgencyPage = () => {
         </div>
       </section>
       <section className="space-below space-above">
-        <div className="hero-content content">
+        <div className="hero-content content centered">
           <h2 classname="ourValues-title">
             We've built successful products for
           </h2>
@@ -141,9 +141,9 @@ const AgencyPage = () => {
         </div>
       </section>
       <section>
-        <div className="hero-content content space-below-footer space-above">
+        <div className="hero-content content space-below-footer space-above centered">
           <h2 classname="ourValues-title">Let's work together.</h2>
-          <div className="pagebanner-content">
+          <div className="pageBanner-content">
             <p>
               Whether you have a project in mind, or need help defining it, we'd
               love to work with you.
