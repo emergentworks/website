@@ -2,25 +2,15 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
-import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "./agency.scss"
 import { Triptych, TriptychItem } from "../components/Triptych"
 import VideoImg from "../_assets/images/video-still.png"
 import Video from "../_assets/videos/Code_coop_short_dark.mp4"
-import {
-  Hero,
-  HeroContent,
-  HeroTitle,
-  HeroContentGroup,
-  HeroImgGroup,
-} from "../components/Hero"
 import Logos from "../_assets/images/Logos.png"
 import Impact from "../_assets/images/impact.jpg"
 import Webpage from "../_assets/images/webpage.jpg"
 import Jumpstart from "../_assets/images/jumpstart.jpg"
-
-import Rectangle from "../_assets/images/shape-rectangle.svg"
 
 const AgencyPage = () => {
   const data = useStaticQuery(graphql`
