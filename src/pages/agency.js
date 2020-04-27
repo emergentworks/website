@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import "./agency.scss"
 import { Triptych, TriptychItem } from "../components/Triptych"
 import VideoImg from "../_assets/images/video-still.png"
-import Video from "../_assets/videos/Code_coop_short_dark.mp4"
+import Video from "../_assets/videos/CodeCoop.mp4"
 import {
   Hero,
   HeroContent,
