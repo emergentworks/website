@@ -104,6 +104,7 @@
   background-image: "../_assets/images/sample.jpg";
   text-align: center;
   margin-top: 10rem;
+  margin-bottom: 10rem;
 
   @include bp(lg) {
     margin-top: 14rem;
