@@ -173,7 +173,6 @@
 }
 
 .aboutUs-content {
-  // font-size: 1.35rem;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 32rem;
@@ -191,7 +190,6 @@
 
 .ourTeam-section {
   @include bp(med) {
-    // grid-template-columns: repeat(3, 1fr);
     padding-top: spacing(base);
   }
 }
@@ -243,7 +241,6 @@
 }
 
 .ourTeam-image {
-  // filter: grayscale(1);
   mix-blend-mode: multiply;
   border-radius: 50%;
 }
