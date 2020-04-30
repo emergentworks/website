@@ -74,8 +74,8 @@ const AgencyPage = () => {
         <TriptychItem url={Webpage} header="Full Stack Web Products">
           <p>
             {" "}
-            Our team of web developers can deliver anything from a fully
-            bespoke website, to Squarespace customizations, to internal tooling.{" "}
+            Our team of web developers can deliver anything from a fully bespoke
+            website, to Squarespace customizations, to internal tooling.{" "}
           </p>
         </TriptychItem>
         <TriptychItem url={Impact} header="Impact driven">
@@ -130,16 +130,18 @@ const AgencyPage = () => {
           </div>
         </div>
       </section>
-      <section className="space-below space-above">
-        <div className="hero-content content centered">
-          <h2 classname="ourValues-title">
-            We've built successful products for
-          </h2>
-          <div className="aboutUs-bottomGroup aboutUs-photo">
-            <img className="logos-img" src={Logos} alt="Places we've worked" />
-          </div>
-        </div>
-      </section>
+      {/*}
+      // <section className="space-below space-above">
+      //   <div className="hero-content content centered">
+      //     <h2 classname="ourValues-title">
+      //       We've built successful products for
+      //     </h2>
+      //     <div className="aboutUs-bottomGroup aboutUs-photo">
+      //       <img className="logos-img" src={Logos} alt="Places we've worked" />
+      //     </div>
+      //   </div>
+      // </section>
+    {*/}
       <section>
         <div className="hero-content content space-below-footer space-above centered">
           <h2 classname="ourValues-title">Let's work together.</h2>
