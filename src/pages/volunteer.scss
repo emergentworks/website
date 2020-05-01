@@ -1,6 +1,6 @@
 @import "../_assets/css/abstracts/1-abstracts";
 
-/* 
+/*
  *
  * Volunteer Videos
  *
@@ -9,7 +9,12 @@
 .volunteer-videoSection {
   background-color: color(blue500);
   padding-top: spacing(base);
-  padding-bottom: spacing(base);
+  padding-bottom: spacing(loose);
+
+  @include bp(med) {
+    padding-top: spacing(loose);
+    padding-bottom: spacing(supsloose);
+  }
 }
 
 .volunteer-videoInner {
@@ -29,7 +34,7 @@
   }
 }
 
-/* 
+/*
  *
  * Volunteer FAQ
  *
@@ -57,7 +62,7 @@
   }
 }
 
-/* 
+/*
  *
  * Volunteer Support
  *
