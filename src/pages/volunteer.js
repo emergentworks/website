@@ -28,11 +28,8 @@ const VolunteerPage = () => (
           reducing the stigma associated with prison within the tech industry.
         </p>
         <p>
-          During this difficult time, we are launching a 1-on-1 mentorship
-          program to match Code Cooperative community members with virtual
-          mentors to further their learning. This is a 3-month program in which
-          professional software engineers and designers mentor formerly incarcerated and
-          justice-involved mentees.
+        We are launching a 3-month 1-on-1 mentorship program in which professional
+        engineers and designers mentor formerly incarcerated mentees.
         </p>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSc9GW3E8zeOW-fXvdjgNlrnPsXo-19lZhc26_ShW91oY9FNIg/viewform"
