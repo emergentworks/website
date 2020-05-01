@@ -24,7 +24,7 @@ const VolunteerPage = () => (
         <p>
           The Code Cooperative creates life-changing opportunities in technology
           for people impacted by incarceration. We offer high-quality tech education
-          to formerly incarcerated people and while
+          to formerly incarcerated people while
           reducing the stigma associated with prison within the tech industry.
         </p>
         <p>
