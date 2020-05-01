@@ -125,7 +125,7 @@ const VolunteerPage = () => (
             </ol>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSc9GW3E8zeOW-fXvdjgNlrnPsXo-19lZhc26_ShW91oY9FNIg/viewform "
-              className="btn btn-primary mtbase"
+              className="btn btn-primary mtbase mentor-button"
               target="_blank"
               rel="noopener noreferrer"
             >
