@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `The Code Cooperative`,
-    description: `A community of people use technology to create life changing possibilities for individuals and communities impacted by incarceration.`,
+    title: `Code Cooperative`,
+    description: `The Code Cooperative creates life-changing opportunities in technology for people impacted by incarceration.`,
     author: `@codecooperative`,
   },
   plugins: [
