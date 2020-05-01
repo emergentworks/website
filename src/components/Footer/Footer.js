@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="mainFooter-inner">
         <div className="mainFooter-copyRight">
           {' '}
-          © {getYear}, Code Cooperative Inc.
+          © {getYear}, Code Cooperative
         </div>
         <div className="mainFooter-emailGroup">
           <a href="mailto:hello@codecooperative.org?subject=Mail from Our Site">

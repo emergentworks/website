@@ -1,6 +1,6 @@
 @import "../_assets/css/abstracts/1-abstracts";
 
-/* 
+/*
  *
  * Volunteer Videos
  *
@@ -9,7 +9,12 @@
 .volunteer-videoSection {
   background-color: color(blue500);
   padding-top: spacing(base);
-  padding-bottom: spacing(base);
+  padding-bottom: spacing(loose);
+
+  @include bp(med) {
+    padding-top: spacing(loose);
+    padding-bottom: spacing(supsloose);
+  }
 }
 
 .volunteer-videoInner {
@@ -29,7 +34,7 @@
   }
 }
 
-/* 
+/*
  *
  * Volunteer FAQ
  *
@@ -39,12 +44,20 @@
   margin-top: spacing(loose);
 
   @include bp(med) {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 32rem;
   }
 }
 
 .volunteerFaq-sectionTitle {
   margin-top: 0;
+
+  @include bp(med) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 32rem;
+  }
 }
 
 .volunteerFaq-section {
@@ -57,7 +70,15 @@
   }
 }
 
-/* 
+.mentor-button {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: spacing(loose);
+}
+
+/*
  *
  * Volunteer Support
  *

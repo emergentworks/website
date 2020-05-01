@@ -21,12 +21,18 @@ const VolunteerPage = () => (
       <HeroContentGroup>
         <HeroTitle>Become a mentor</HeroTitle>
         <HeroContent>
-          Mentors work in small groups with our fellows to meet their learning
-          goals. Supported by our core team, our mentors coach our students as
-          they learn essential skills in computer literacy, code, and web
-          development.
+        <p>
+          The Code Cooperative creates life-changing opportunities in technology
+          for people impacted by incarceration. We offer high-quality tech education
+          to formerly incarcerated people and while
+          reducing the stigma associated with prison within the tech industry.
+        </p>
+        <p>
+        We are launching a 3-month 1-on-1 mentorship program in which professional
+        engineers and designers mentor formerly incarcerated mentees.
+        </p>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSc7qxJ6HhsJBs7nZPUuTFW2wIDLtwlffpT7NzNR9SaDt7cfOg/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc9GW3E8zeOW-fXvdjgNlrnPsXo-19lZhc26_ShW91oY9FNIg/viewform"
             className="btn btn-primary w-100 mtbase"
             target="_blank"
             rel="noopener noreferrer"
@@ -46,11 +52,9 @@ const VolunteerPage = () => (
 
     <section className="volunteer-videoSection">
       <div className="volunteer-videoInner content">
-        <h2 className="volunteer-videoTitle">Meet the mentors</h2>
+        <h2 className="volunteer-videoTitle">Meet Our Mentors</h2>
         <iframe
           src="https://player.vimeo.com/video/316857444"
-          // width="640"
-          // height="360"
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
@@ -71,10 +75,10 @@ const VolunteerPage = () => (
             <p>We look for mentors that are:</p>
             <ul className="bullet-list">
               <li>
-                Passionate about working with Justice-Involved individuals
+                Passionate about working with justice-involved folks
               </li>
               <li>Highly competent with web development technologies</li>
-              <li>Empathetic, patient and adaptable</li>
+              <li>Empathetic, patient, and adaptable</li>
               <li>Extremely reliable and punctual</li>
               <li>Willing to go the extra mile to help a student</li>
               <li>Excellent communicators</li>
@@ -83,17 +87,20 @@ const VolunteerPage = () => (
         </article>
         <article className="volunteerFaq-item">
           <h3 className="volunteerFaq-itemTitle">
-            What is the time commitment?
+            What does mentorship look like?
           </h3>
           <div className="volunteerFaq-itemContent">
             <p>
-              Time commitment depends on the time of year and how many fellows
-              we get but a typical semester looks like:
+              We ask that mentors and mentees commit to weekly 2-hour
+              mentorship sessions for 3 months.
             </p>
             <ul className="bullet-list">
-              <li>16 weeks starting </li>
-              <li>Classes are on Saturday 9am – 5pm</li>
-              <li>Office hours are Tuesdays 6pm – 8pm</li>
+              <li>Meet once a week for 3 months (preferably evening or weekends)</li>
+              <li>2 hours / week</li>
+              <li>Via Zoom or Google Hangouts</li>
+              <li>Topics (HTML, CSS, Javascript, Node, React, Ruby on Rails, etc.)</li>
+              <li>Mentors help mentees design and build a project of their choosing</li>
+              <li>Our program is completely free for mentees</li>
             </ul>
           </div>
         </article>
@@ -108,14 +115,14 @@ const VolunteerPage = () => (
               The process will look like this:
             </p>
             <ol className="mbnone bullet-list">
-              <li>Phone interview</li>
-              <li>In-person interview</li>
+              <li>15-min intro call</li>
+              <li>30-min video interview</li>
               <li>Invitation to become a mentor</li>
               <li>Mentorship training</li>
             </ol>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSc7qxJ6HhsJBs7nZPUuTFW2wIDLtwlffpT7NzNR9SaDt7cfOg/viewform"
-              className="btn btn-primary mtbase"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc9GW3E8zeOW-fXvdjgNlrnPsXo-19lZhc26_ShW91oY9FNIg/viewform "
+              className="btn btn-primary mtbase mentor-button"
               target="_blank"
               rel="noopener noreferrer"
             >
