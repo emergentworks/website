@@ -52,7 +52,7 @@ const DonatePage = () => (
     <section className="donation-section">
       <div className="donation-inner content">
         <div className="donation-contentGroup">
-          <h2 className="donation-title">Donate to code cooperative</h2>
+          <h2 className="donation-title" id="donorbox">Donate to code cooperative</h2>
           <p className="donation-content">
             Our program runs on donations so that we can provide resources for
             our fellows. Access to a computer and the Internet is crucial to
