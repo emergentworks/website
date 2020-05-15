@@ -1,11 +1,12 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout"
 // import Image from "../components/image"
-import SEO from '../components/seo'
-import logo from '../_assets/images/logo--stacked.svg'
-import './index.scss'
+import SEO from "../components/seo"
+import logo from "../_assets/images/logo--stacked.svg"
+import "./index.scss"
+import "../components/fullstory.js"
 
 const IndexPage = () => (
   <Layout className="home">
