@@ -58,8 +58,8 @@ const AgencyPage = () => {
         <div className="pageBanner-inner content tagline-container">
           <div className="pageBanner-title mtnone tagline">
             <h2>
-              We build tech for non-profits and invest in the next generation of
-              technology leaders.
+              We build software for purpose-driven organizations and careers for
+              our communities.
             </h2>
             <a
               className="btn btn-primary get-in-touch centered"
