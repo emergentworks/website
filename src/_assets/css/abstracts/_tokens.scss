@@ -1,0 +1,48 @@
+
+:root {
+  --blue-500: #3333ff;
+  --blue-600: #191980;
+  --green-500: #66e271;
+  --purple-500: #9761ff;
+  --yellow-500: #fff42c;
+  --white-500: #f2efe4;
+  --gray-300: #f3f3f3;
+  --gray-400: #d9d5c7;
+  --gray-500: #3f3b3c;
+  --font-base: "ibmPlexSans-Regular", sans-serif;
+  --font-medium: "ibmPlexSans-Medium", sans-serif;
+  --font-semiBold: "ibmPlexSans-SemiBold", sans-serif;
+  --fs-sm: 0.8rem;
+  --fs-base: 1rem;
+  --fs-m: 1.125rem;
+  --fs-l: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-xxl: 4.5rem;
+  --fw-heavy: 300;
+  --fw-heavier: 400;
+  --fw-heaviest: 600;
+  --sp-none: 0;
+  --sp-tighter: 0.25rem;
+  --sp-tight: 0.5rem;
+  --sp-base: 1rem;
+  --sp-loose: 2rem;
+  --sp-looser: 3rem;
+  --lh-base: 1.2;
+  --lh-loose: 1.5;
+  --bp-sm: 20rem;
+  --bp-med: 36rem;
+  --bp-lg: 51.5rem;
+  --bp-xl: 67rem;
+  --bp-xxl: 82.5rem;
+  --z-auto: 1;
+  --z-base: 10;
+  --z-nav: 100;
+  --z-preview: 1000;
+  --z-modal: 10000;
+  --z-menus: 100000;
+  --z-reauth: 1000000;
+  --trans-quick: 0.15s;
+  --trans-base: 0.3s;
+  --trans-long: 0.5s;
+  --border-radius: 2px;
+}

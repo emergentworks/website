@@ -1,5 +1,4 @@
-@import "../abstracts/variables";
-@import "../abstracts/color";
+@use "../abstracts/tokens";
 
 /* 
 *
@@ -11,9 +10,9 @@
 .btn {
   border: none;
   cursor: pointer;
-  padding: spacing(base) spacing(loose);
-  font-size: fs(m);
-  font-family: font(medium);
+  padding: var(--sp-base) var(--sp-loose);
+  font-size: var(--fs-m);
+  font-family: var(--font-medium);
   text-transform: capitalize;
   transition: all 0.3s;
   display: inline-block;
@@ -26,25 +25,25 @@
   }
 
   & + & {
-    // margin-left: spacing(base);
+    // margin-left: var(--sp-base);
   }
 }
 
 .btn-primary {
-  background-color: color(blue500);
-  color: color(white500);
+  background-color: var(--blue-500);
+  color: var(--white-500);
 
   &:disabled {
     background-color: #c5c5e9;
   }
 
   &:hover:not(:disabled) {
-    background-color: color(blue600);
+    background-color: var(--blue-600);
   }
 }
 
 .btn-secondary {
-  background-color: color(white500);
+  background-color: var(--white-500);
   color: color(black500);
 
   &:disabled {
@@ -52,13 +51,13 @@
   }
 
   &:hover:not(:disabled) {
-    background-color: color(gray400);
+    background-color: var(--gray-400);
   }
 }
 
 .btn-tertiary {
-  background-color: color(yellow500);
-  color: color(gray500);
+  background-color: var(--yellow-500);
+  color: var(--gray-500);
 
   &:disabled {
     background-color: #fffbb0;
@@ -76,25 +75,25 @@ input[input="email"],
 input[input="search"] {
   @include trans();
   background-color: transparent;
-  border-color: color(gray400);
+  border-color: var(--gray-400);
   border-style: solid;
   border-width: 2px;
-  color: color(gray500);
-  font-size: fs(base);
+  color: var(--gray-500);
+  font-size: var(--fs-base);
   outline: none;
-  padding: spacing(tight) spacing(base);
+  padding: var(--sp-tight) var(--sp-base);
 
   &:not(:placeholder-shown) {
-    border-color: color(gray500);
+    border-color: var(--gray-500);
   }
 
   &::placeholder {
-    color: color(gray400);
+    color: var(--gray-400);
   }
 
   &:focus {
     // border-width: 5px;
-    border-color: color(blue600);
+    border-color: var(--blue-600);
   }
 }
 
@@ -107,7 +106,7 @@ input[input="search"] {
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  border: 2px solid color(gray500);
+  border: 2px solid var(--gray-500);
   @include trans();
   margin-right: 5px;
 
@@ -122,10 +121,10 @@ input[input="search"] {
 
 // labels for inputs
 .input-label {
-  font-size: fs(l);
-  font-family: font(medium);
+  font-size: var(--fs-l);
+  font-family: var(--font-medium)
 
   & + & {
-    margin-left: spacing(base);
+    margin-left: var(--sp-base);
   }
 }

@@ -4,13 +4,16 @@
  *
  */
 
-//  Define background and font color of an element
-@mixin bg-font-color($bg-color, $f-color) {
-  background-color: $bg-color;
-  color: $f-color;
 
-  // ToDo: Conditional if $bg-color > #A3A3A3
-}
+ // Breakpoint
+$bp: (
+  sm: 20rem,
+  med: 36rem,
+  lg: 51.5rem,
+  xl: 67rem,
+  xxl: 82.5rem,
+);
+
 
 @mixin bp($breakpoint: med) {
   // Retrieves the value from the key

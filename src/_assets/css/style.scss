@@ -1,17 +1,17 @@
 /*------------------------------------*\
     Abstracts
 \*------------------------------------*/
-@import "./abstracts/1-abstracts";
+@use "./abstracts/1-abstracts";
 
 /*------------------------------------*\
     Base
 \*------------------------------------*/
-@import "./base/_1-base";
+@use "./base/_1-base";
 
 /*------------------------------------*\
     Utilities
 \*------------------------------------*/
-@import "./utilities/_1-utilities";
+@use "./utilities/_1-utilities";
 
 /* 
  *
@@ -19,26 +19,20 @@
  *
  */
 
-:root {
-  @each $name, $value in $colors {
-    --#{$name}: #{$value};
-  }
-}
-
 body {
-  color: color(gray500);
+  color: var(--gray-500);
   margin: 0;
 }
 
 .content {
-  padding-left: spacing(base);
-  padding-right: spacing(base);
+  padding-left: var(--sp-base);
+  padding-right: var(--sp-base);
 
-  @include bp() {
-    max-width: 64rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  // @include bp() {
+  //   max-width: 64rem;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
 }
 
 img {

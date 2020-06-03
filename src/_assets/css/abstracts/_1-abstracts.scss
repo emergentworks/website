@@ -1,4 +1,2 @@
-@import "./variables";
-@import "./color";
-@import "./mixins";
-@import "./functions";
+@use "./tokens";
+@use "./mixins";

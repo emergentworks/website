@@ -1,5 +1,5 @@
-@import "../abstracts/variables";
-@import "../abstracts/color";
+@use "../abstracts/variables";
+@use "../abstracts/color";
 
 .font {
   font-family: map-get($font, serif);
@@ -46,7 +46,7 @@
 
 // variants
 .link {
-  color: color(blue500);
+  color: var(--blue-500);
   text-decoration: none;
 }
 
