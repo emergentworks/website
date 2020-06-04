@@ -16,17 +16,15 @@ import Jumpstart from '../_assets/images/jumpstart.jpg'
 
 import styles from './agency.module.scss'
 
-const AgencyPage = () => {
-  const data;
+const AgencyPage = () => (
+  // const data;
 
-  return (
-    <Layout className={styles.page}>
-      <SEO title="Agency" />
-      <section className={cx(styles.root, 'content')}>
-        <div className={styles.container}>Agency</div>
-      </section>
-    </Layout>
-  )
-}
+  <Layout className={styles.page}>
+    <SEO title="Agency" />
+    <section className={cx(styles.root, 'content')}>
+      <div className={styles.container}>Agency</div>
+    </section>
+  </Layout>
+)
 
 export default AgencyPage

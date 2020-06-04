@@ -6,57 +6,57 @@
  *
  */
 
-.triptych {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-columns: 2fr;
-  gap: 3rem;
-  padding: 10px;
+// .triptych {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-columns: 2fr;
+//   gap: 3rem;
+//   padding: 10px;
 
-  @include bp(med) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: spacing(loose);
-  }
-}
+//   @include bp(med) {
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: spacing(loose);
+//   }
+// }
 
-.space-below {
-  padding-bottom: 4.375rem;
-}
+// .space-below {
+//   padding-bottom: 4.375rem;
+// }
 
-.space-above {
-  padding-top: 4.375rem;
-}
+// .space-above {
+//   padding-top: 4.375rem;
+// }
 
-.triptych-header {
-  display: block;
-  margin: auto;
-  font-weight: bold;
-}
-.triptych-item {
-  display: grid;
-  gap: spacing(base);
-  max-height: 40rem;
-  margin: 0 auto;
-}
+// .triptych-header {
+//   display: block;
+//   margin: auto;
+//   font-weight: bold;
+// }
+// .triptych-item {
+//   display: grid;
+//   gap: spacing(base);
+//   max-height: 40rem;
+//   margin: 0 auto;
+// }
 
-.triptych-title {
-  text-align: center;
-  font-size: fs(lg);
-}
+// .triptych-title {
+//   text-align: center;
+//   font-size: fs(lg);
+// }
 
-.triptych-icon {
-  max-height: 10rem;
-  margin: auto;
-}
+// .triptych-icon {
+//   max-height: 10rem;
+//   margin: auto;
+// }
 
-.blurb {
-  font-size: fs(base);
-  min-height: 5rem;
-  padding-left: spacing(loose);
-  padding-right: spacing(loose);
+// .blurb {
+//   font-size: fs(base);
+//   min-height: 5rem;
+//   padding-left: spacing(loose);
+//   padding-right: spacing(loose);
 
-  @include bp(med) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+//   @include bp(med) {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
