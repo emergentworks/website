@@ -1,38 +1,29 @@
 /*------------------------------------*\
     Abstracts
 \*------------------------------------*/
-@use "./abstracts/1-abstracts";
+@import "./abstracts/1-abstracts";
 
 /*------------------------------------*\
     Base
 \*------------------------------------*/
-@use "./base/_1-base";
+@import "./base/_1-base";
 
 /*------------------------------------*\
     Utilities
 \*------------------------------------*/
 @use "./utilities/_1-utilities";
 
-/* 
- *
- * Create CSS variables for each of the color
- *
- */
-
-body {
-  color: var(--gray-500);
-  margin: 0;
-}
-
 .content {
-  padding-left: var(--sp-base);
-  padding-right: var(--sp-base);
+  @include bp("sm", "max") {
+    padding-left: var(--sp-base);
+    padding-right: var(--sp-base);
+  }
 
-  // @include bp() {
-  //   max-width: 64rem;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
+  @include bp() {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 img {
