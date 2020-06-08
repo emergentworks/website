@@ -1,0 +1,49 @@
+// ToDo: Create intent based variables
+
+// Button base and variants
+.root {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: var(--fs-m);
+  font-family: var(--font-medium);
+  text-transform: capitalize;
+  // ToDo: fix bg transition
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  .labelGroup {
+    padding: var(--sp-tight) var(--sp-base);
+    background-color: var(--white-500);
+  }
+  .iconGroup {
+    padding: 0 var(--sp-base);
+  }
+}
+
+.primary {
+  border: 2px solid var(--gray-500);
+  background-color: var(--gray-500);
+
+  &:hover:not(:disabled) {
+    .labelGroup {
+      background-color: #f2efe4;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 4px white, 0 0 0 6px var(--gray-500);
+  }
+
+  .iconGroup {
+    svg path {
+      fill: var(--white-500);
+    }
+  }
+}
