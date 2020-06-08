@@ -8,11 +8,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import cx from 'classnames'
 
 import Header from '../Header'
 import Footer from '../Footer'
-import './layout.scss'
-import '../../_assets/css/style.scss'
+
+import styles from './Layout.module.scss'
+import '_assets/css/style.scss'
 
 export const Layout = ({ children, className }) => {
   const data = useStaticQuery(graphql`
@@ -32,9 +34,9 @@ export const Layout = ({ children, className }) => {
     <>
       <Header />
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div className={`sitePage sitePage-${className}`}>
-        <main>{children}</main>
-      </div>
+      <main className={cx(`sitePage sitePage-${className}`)}>
+        <div>{children}</div>
+      </main>
       <Footer />
     </>
   )
@@ -42,4 +44,5 @@ export const Layout = ({ children, className }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 }
