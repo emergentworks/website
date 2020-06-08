@@ -1,0 +1,22 @@
+@import "../../_assets/css/abstracts/_mixins";
+
+.root {
+  display: grid;
+}
+
+.gap1 {
+  gap: var(--sp-tight);
+}
+.gap2 {
+  gap: var(--sp-base);
+}
+.gap3 {
+  gap: var(--sp-loose);
+}
+.gap4 {
+  gap: var(--sp-looser);
+}
+
+.columns {
+  grid-template-columns: repeat(auto-fit, minmax(var(--bp-xs), 1fr));
+}
