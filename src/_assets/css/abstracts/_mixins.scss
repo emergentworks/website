@@ -4,8 +4,7 @@
  *
  */
 
-
- // Breakpoint
+// Breakpoint
 $bp: (
   sm: 20rem,
   med: 36rem,
@@ -14,13 +13,17 @@ $bp: (
   xxl: 82.5rem,
 );
 
-
-@mixin bp($breakpoint: med) {
+@mixin bp($breakpoint: med, $size: min) {
   // Retrieves the value from the key
   $value: map-get($bp, $breakpoint);
 
   // If the key exists in the map
   @if $value != null {
+    @if $size != "min" {
+      @media (max-width: $value) {
+        @content;
+      }
+    }
     // Prints a media query based on the value
     @media (min-width: $value) {
       @content;
@@ -34,16 +37,15 @@ $bp: (
   }
 }
 
-@mixin trans($timeValue: base, $animationValue: base) {
-  $time: map-get($timing, $timeValue);
-  $animation: map-get($anim, $animationValue);
+// @mixin trans($timeValue: base, $animationValue: base) {
+//   $time: map-get($timing, $timeValue);
+//   $animation: map-get($anim, $animationValue);
 
-  transition: $time all $animation;
-}
+//   transition: $time all $animation;
+// }
 
 @mixin removeBullets {
   list-style: none;
   padding-left: 0;
-  padding: space(base);
   margin: 0;
 }

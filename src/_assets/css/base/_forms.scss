@@ -1,4 +1,4 @@
-@use "../abstracts/tokens";
+// @use "../abstracts/tokens";
 
 /* 
 *
@@ -6,74 +6,12 @@
 *
 */
 
-// Button base and variants
-.btn {
-  border: none;
-  cursor: pointer;
-  padding: var(--sp-base) var(--sp-loose);
-  font-size: var(--fs-m);
-  font-family: var(--font-medium);
-  text-transform: capitalize;
-  transition: all 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  box-sizing: border-box;
-  text-align: center;
-
-  &:disabled {
-    cursor: not-allowed;
-  }
-
-  & + & {
-    // margin-left: var(--sp-base);
-  }
-}
-
-.btn-primary {
-  background-color: var(--blue-500);
-  color: var(--white-500);
-
-  &:disabled {
-    background-color: #c5c5e9;
-  }
-
-  &:hover:not(:disabled) {
-    background-color: var(--blue-600);
-  }
-}
-
-.btn-secondary {
-  background-color: var(--white-500);
-  color: color(black500);
-
-  &:disabled {
-    background-color: color(gray300);
-  }
-
-  &:hover:not(:disabled) {
-    background-color: var(--gray-400);
-  }
-}
-
-.btn-tertiary {
-  background-color: var(--yellow-500);
-  color: var(--gray-500);
-
-  &:disabled {
-    background-color: #fffbb0;
-  }
-
-  &:hover:not(:disabled) {
-    background-color: #f0e523;
-  }
-}
-
 // Input field base styles
 .input-field,
 textarea,
 input[input="email"],
 input[input="search"] {
-  @include trans();
+  // @include trans();
   background-color: transparent;
   border-color: var(--gray-400);
   border-style: solid;
@@ -107,7 +45,7 @@ input[input="search"] {
   width: 16px;
   height: 16px;
   border: 2px solid var(--gray-500);
-  @include trans();
+  // @include trans();
   margin-right: 5px;
 
   position: relative;
@@ -122,9 +60,7 @@ input[input="search"] {
 // labels for inputs
 .input-label {
   font-size: var(--fs-l);
-  font-family: var(--font-medium)
-
-  & + & {
+  font-family: var(--font-medium) & + & {
     margin-left: var(--sp-base);
   }
 }

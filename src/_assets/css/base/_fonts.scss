@@ -11,6 +11,18 @@
 }
 
 @font-face {
+  font-family: "ibmPlexSans-Light";
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Light.eot");
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/IBM-Plex-Sans/IBMPlexSans-Light.woff2") format("woff2"),
+    url("../fonts/IBM-Plex-Sans/IBMPlexSans-Light.woff") format("woff"),
+    url("../fonts/IBM-Plex-Sans/IBMPlexSans-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "ibmPlexSans-Medium";
   src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.eot");
   src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.eot?#iefix")

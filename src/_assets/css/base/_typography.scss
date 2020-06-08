@@ -1,20 +1,20 @@
-@use "../abstracts/variables";
-@use "../abstracts/color";
-
 // Font Family
 body {
-  font-family: map-get($font, base);
-  font-size: var(--fs-m);
+  font-family: var(--font-base);
+  font-size: var(--fs-base);
+  color: var(--gray-500);
+  margin: 0;
 }
 
 h1,
 .h1 {
-  font-family: map-get($font, medium);
+  font-family: var(--font-light);
   font-size: 3rem;
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
   line-height: 1;
   font-weight: normal;
+  font-size: var(--fs-xl);
 
   @include bp(med) {
     font-size: var(--fs-xxl);
@@ -23,16 +23,21 @@ h1,
 
 h2,
 .h2 {
-  font-family: map-get($font, medium);
+  // font-family: map-get($font, medium);
   font-size: var(--fs-xl);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
   font-weight: normal;
+  font-size: var(--fs-l);
+
+  @include bp(med) {
+    font-size: var(--fs-xl);
+  }
 }
 
 h3,
 .h3 {
-  font-family: map-get($font, medium);
+  // font-family: map-get($font, medium);
   font-size: var(--fs-l);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
@@ -41,19 +46,19 @@ h3,
 
 h4,
 .h4 {
-  font-family: map-get($font, medium);
   font-size: var(--fs-base);
   text-transform: uppercase;
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
   font-weight: normal;
+  font-size: var(--fs-sm);
 }
 
-a:not([class]),
+a,
 .link {
-  color: var(--blue-500);
+  color: var(--link-color);
   text-decoration: none;
-  @include trans();
+  // @include trans();
 
   &:hover {
     color: #c5c5e9;
@@ -69,12 +74,11 @@ a:not([class]),
 }
 
 p {
-  font-size: var(--fs-m);
-  line-height: lh(loose);
+  line-height: var(--lh-loose);
 }
 
 .bold {
-  font-family: map-get($font, medium);
+  // font-family: map-get($font, medium);
 }
 
 .bullet-list {
