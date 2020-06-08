@@ -1,7 +1,7 @@
 {
   "extends": ["wesbos"],
   "rules": {
-    "react/prop-types": "off"
+    "react/prop-types": "warn"
   },
   "overrides": [
     {
@@ -10,5 +10,12 @@
         "no-unused-expressions": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
 }
