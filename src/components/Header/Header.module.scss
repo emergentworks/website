@@ -1,2 +1,68 @@
-@use "../../_assets/css/abstracts/1-abstracts";
+@import "../../_assets/css/abstracts/mixins";
 
+.root {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.navGroup {
+  display: grid;
+  justify-items: flex-end;
+
+  & > .nav {
+    @include bp(lg, max) {
+      visibility: hidden;
+      height: 0;
+    }
+
+    @include bp(lg) {
+      visibility: initial;
+      height: auto;
+    }
+  }
+}
+
+// Menu Icon
+
+.navButton {
+  width: 40px;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
+  justify-self: end;
+
+  @include bp(lg) {
+    display: none;
+  }
+}
+
+.navButton:after,
+.navButton:before,
+.navButton div {
+  background-color: var(--icon-fill-base);
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.navButton {
+  &.is-active {
+    &:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+    &:after {
+      transform: translateY(-10px) rotate(-135deg);
+    }
+    & div {
+      transform: scale(0);
+    }
+  }
+}
