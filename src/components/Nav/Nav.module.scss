@@ -1,0 +1,36 @@
+@import "../../_assets/css/abstracts/mixins";
+
+.root {
+  &.isActive {
+    // ToDo: Removed Important
+    visibility: initial !important;
+    height: auto !important;
+  }
+}
+
+.group {
+  @include removeBullets();
+}
+
+.item {
+  @include bp(lg) {
+    display: inline;
+
+    &:first-child {
+      padding-right: var(--sp-base);
+    }
+    &:last-child {
+      padding-left: var(--sp-base);
+    }
+    &:not(:first-child):not(:last-child) {
+      padding-right: var(--sp-base);
+      padding-left: var(--sp-base);
+    }
+  }
+}
+
+.link {
+  color: var(--font-color-base);
+  font-size: var(--fs-m);
+  font-family: var(--font-medium);
+}
