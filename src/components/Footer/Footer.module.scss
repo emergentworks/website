@@ -1,2 +1,25 @@
-@use "../../_assets/css/abstracts/1-abstracts";
+@import "../../_assets/css/abstracts/mixins";
 
+.root {
+  padding-top: var(--sp-loose);
+}
+
+.linkGroup {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.description {
+  color: var(--gray-400);
+  font-size: var(--fs-sm);
+  max-width: var(--bp-lg);
+}
+
+.nav {
+  @include bp(med, max) {
+    & li {
+      padding-top: var(--sp-tight);
+      padding-bottom: var(--sp-tight);
+    }
+  }
+}
