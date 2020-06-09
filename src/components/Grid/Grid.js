@@ -14,7 +14,6 @@ export const Grid = ({
   <div
     className={cx(styles.root, className, {
       [styles[`gap${gap}`]]: gap,
-      [styles[`col${col}`]]: col,
       [styles.columns]: col,
     })}
     {...rest}
