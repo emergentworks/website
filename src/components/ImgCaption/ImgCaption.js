@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 import cx from 'classnames'
 
 import styles from './ImgCaption.module.scss'
 
-export const ImgCaption = ({ src, alt, caption }) => (
+export const ImgCaption = ({ fluid, alt, caption }) => (
   <figure className={cx(styles.root)}>
-    <img className={cx(styles.img)} src={src} alt={alt} />
+    <Img className={cx(styles.img)} fluid={fluid} alt={alt} />
     <figcaption className={cx(styles.caption)}>{caption}</figcaption>
   </figure>
 )
 
 ImgCaption.propTypes = {
   alt: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
+  fluid: PropTypes.object,
   caption: PropTypes.string,
 }
