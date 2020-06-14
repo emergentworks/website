@@ -7,8 +7,8 @@ import SocialLinks from 'components/SocialLinks'
 import styles from './Footer.module.scss'
 
 export const Footer = () => (
-  <footer className={cx(styles.root, 'content')}>
-    <div className={styles.container}>
+  <footer className={cx(styles.root)}>
+    <div className={cx(styles.container, 'content')}>
       <div className={styles.linkGroup}>
         <div className={styles.navGroup}>
           <Nav className={styles.nav} showHomeLink showHomeEmail />
