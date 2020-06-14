@@ -40,18 +40,13 @@ export const Nav = ({
           </Link>
         </li>
         <li className={styles.item}>
-          <Link to="/about" className={styles.link}>
+          <Link to="/for-clients" className={styles.link}>
             For Clients
           </Link>
         </li>
         <li className={styles.item}>
           <Link to="/about" className={styles.link}>
             Donate
-          </Link>
-        </li>
-        <li className={styles.item}>
-          <Link to="/about" className={styles.link}>
-            Get Involved
           </Link>
         </li>
         {showHomeEmail && (
