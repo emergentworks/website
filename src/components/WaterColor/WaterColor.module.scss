@@ -1,0 +1,17 @@
+.root {
+  position: relative;
+  max-width: max-content;
+}
+
+.img {
+  z-index: var(--z-base);
+  max-width: 350px;
+}
+
+.waterColor {
+  position: absolute;
+  max-width: 400px;
+  top: -15px;
+  left: -25px;
+  opacity: 0.4;
+}
