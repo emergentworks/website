@@ -6,6 +6,7 @@ import SEO from 'components/seo'
 import Layout from 'components/Layout'
 import Grid from 'components/Grid'
 import Button from 'components/Button'
+import WaterColor from 'components/WaterColor'
 
 import styles from './style-guide.module.scss'
 
@@ -48,6 +49,7 @@ const StyleGuide = () => (
             <p>
               <Button>Become a sponsor</Button>
             </p>
+            <WaterColor alt="test" />
           </section>
           {/* Typo */}
           <section>
