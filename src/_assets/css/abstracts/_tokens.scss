@@ -13,12 +13,13 @@
   --font-light: "ibmPlexSans-Light", sans-serif;
   --font-medium: "ibmPlexSans-Medium", sans-serif;
   --font-semiBold: "ibmPlexSans-SemiBold", sans-serif;
+  --font-mono: "ibmPlexMono-Regular", sans-serif;
   --fs-sm: 0.8rem;
   --fs-m: 1rem;
   --fs-base: 1.125rem;
-  --fs-l: 1.5rem;
-  --fs-xl: 2.5rem;
-  --fs-xxl: 3rem;
+  --fs-l: 1.65rem;
+  --fs-xl: 1.75rem;
+  --fs-xxl: 2rem;
   --fw-heavy: 300;
   --fw-heavier: 400;
   --fw-heaviest: 600;
@@ -28,10 +29,11 @@
   --sp-base: 1rem;
   --sp-loose: 2rem;
   --sp-looser: 3rem;
+  --sp-max: 6rem;
   --lh-base: 1.2;
   --lh-loose: 1.5;
   --bp-xs: 14rem;
-  --bp-sm: 20rem;
+  --bp-sm: 21rem;
   --bp-med: 36rem;
   --bp-lg: 51.5rem;
   --bp-xl: 67rem;
@@ -47,6 +49,7 @@
   --trans-base: 0.3s;
   --trans-long: 0.5s;
   --border-radius: 2px;
+  --content-max-width: 37.5rem;
 }
 
 // Intent Based Variables

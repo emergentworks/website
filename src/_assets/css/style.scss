@@ -14,13 +14,14 @@
 @use "./utilities/_1-utilities";
 
 .content {
-  @include bp("sm", "max") {
-    padding-left: var(--sp-base);
-    padding-right: var(--sp-base);
+  // ToDo: Fix max width value in mixin
+  @media (max-width: 36rem) {
+    padding-left: var(--sp-loose);
+    padding-right: var(--sp-loose);
   }
 
   @include bp() {
-    max-width: 64rem;
+    max-width: 67rem;
     margin-left: auto;
     margin-right: auto;
   }

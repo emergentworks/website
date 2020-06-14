@@ -9,10 +9,9 @@ body {
 h1,
 .h1 {
   font-family: var(--font-light);
-  font-size: 3rem;
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
-  line-height: 1;
+  line-height: 1.2;
   font-weight: normal;
   font-size: var(--fs-xl);
 
@@ -24,6 +23,7 @@ h1,
 h2,
 .h2 {
   // font-family: map-get($font, medium);
+  font-family: var(--font-light);
   font-size: var(--fs-xl);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
@@ -78,11 +78,15 @@ p {
 }
 
 .bold {
-  // font-family: map-get($font, medium);
+  font-family: var(--font-semiBold);
 }
 
 .bullet-list {
   li:not(:first-child) {
     margin-top: var(--sp-tight);
   }
+}
+
+.content-max-width {
+  max-width: var(--content-max-width);
 }

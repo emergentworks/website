@@ -45,3 +45,15 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "ibmPlexMono-Regular";
+  src: url("../fonts/IBM-Plex-Mono/IBMPlexMono-Regular.eot");
+  src: url("../fonts/IBM-Plex-Mono/IBMPlexMono-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/IBM-Plex-Mono/IBMPlexMono-Regular.woff2") format("woff2"),
+    url("../fonts/IBM-Plex-Mono/IBMPlexMono-Regular.woff") format("woff"),
+    url("../fonts/IBM-Plex-Mono/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
