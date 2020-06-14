@@ -1,0 +1,23 @@
+@import "../_assets/css/abstracts/mixins";
+
+.title {
+  margin-bottom: var(--sp-looser);
+
+  @include bp(med) {
+    margin-bottom: var(--sp-max);
+  }
+}
+
+.contactUs {
+  padding-top: var(--sp-looser);
+}
+
+.servicesGroup {
+  margin-top: var(--sp-looser);
+  display: grid;
+  gap: var(--sp-looser);
+
+  @include bp(med) {
+    margin-top: var(--sp-max);
+  }
+}
