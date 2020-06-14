@@ -21,8 +21,20 @@ export const Grid = ({
     {children}
   </div>
 )
-export const GridItem = ({ children, className, ...rest }) => (
-  <div className={cx(styles.item, className)} {...rest}>
+export const GridItem = ({
+  align = 'top',
+  justify = 'left',
+  children,
+  className,
+  ...rest
+}) => (
+  <div
+    className={cx(styles.item, className, {
+      [styles[`${align}`]]: align,
+      [styles[`${justify}`]]: justify,
+    })}
+    {...rest}
+  >
     {children}
   </div>
 )
@@ -35,6 +47,8 @@ Grid.propTypes = {
 }
 
 GridItem.propTypes = {
+  align: PropTypes.oneOf(['top', 'middle', 'bottom']),
   children: PropTypes.node,
+  justify: PropTypes.oneOf(['left', 'center', 'right']),
   className: PropTypes.string,
 }
