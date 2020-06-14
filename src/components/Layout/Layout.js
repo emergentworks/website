@@ -34,8 +34,8 @@ export const Layout = ({ children, className }) => {
     <>
       <Header />
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <main className={cx(`sitePage sitePage-${className}`)}>
-        <div>{children}</div>
+      <main className={cx(styles.root, { [styles[className]]: className })}>
+        <div className={styles.container}>{children}</div>
       </main>
       <Footer />
     </>
