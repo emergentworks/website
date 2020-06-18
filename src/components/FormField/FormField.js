@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { generateUUID } from '../../helpers/form'
+import { generateUUID } from '../../helpers/dom'
 import styles from './FormField.module.scss'
 
 export const INPUT_SIZES = {

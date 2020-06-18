@@ -8,8 +8,16 @@ import Grid from 'components/Grid'
 import Button from 'components/Button'
 import WaterColor from 'components/WaterColor'
 import FormField, { INPUT_SIZES } from 'components/FormField'
+import Accordion from 'components/Accordion'
 
 import styles from './style-guide.module.scss'
+
+const multiLineText = `This here is going to be text that spans multiple lines.
+
+The reason being we have to make sure that the accordion can support this.
+
+The accordion can support this.
+`
 
 const StyleGuide = () => {
   const [inputValue, setInput] = useState('')
@@ -138,6 +146,18 @@ const StyleGuide = () => {
                 quia praesentium excepturi minus libero veritatis doloribus
                 quae, unde vitae, quam et aperiam!
               </p>
+              <Accordion
+                label="This is an example accordion"
+                content={multiLineText}
+              />
+              <Accordion
+                label="This is another example accordion"
+                content={multiLineText}
+              />
+              <Accordion
+                label="This is a third example accordion"
+                content={multiLineText}
+              />
               <h3>Form Elements</h3>
               <FormField
                 type="text"
