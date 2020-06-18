@@ -1,0 +1,59 @@
+$padding-top: 0.6em;
+$padding-left: 0.6em;
+
+.root {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--sp-tight);
+}
+
+.smallField {
+  font-size: var(--fs-sm);
+}
+
+.mediumField {
+  font-size: var(--fs-m);
+}
+
+.largeField {
+  font-size: var(--fs-l);
+}
+
+.input {
+  width: auto;
+  flex-grow: 1;
+  border: 1px solid;
+  border-color: var(--gray-500);
+  padding: ($padding-top + 0.1em) $padding-left ($padding-top - 0.1em);
+  transition: border-color 0.35s linear;
+  font-size: inherit;
+  color: var(--gray-500);
+
+  &:focus {
+    border-color: var(--blue-500);
+    outline: none;
+  }
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 0 .6em;
+  transform: translateY(-50%);
+  font-size: inherit;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  letter-spacing: .11em;
+  transition: font-size 0.35s ease, top 0.35s ease, padding 0.35s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.textHasValue, .input:focus + .text {
+  top: 1em;
+  font-size: 0.4em;
+}
