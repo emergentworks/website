@@ -4,24 +4,17 @@ import cx from 'classnames'
 import { generateUUID } from '../../helpers/dom'
 import styles from './FormField.module.scss'
 
-export const INPUT_SIZES = {
-  SMALL: styles.smallField,
-  MEDIUM: styles.mediumField,
-  LARGE: styles.largeField,
-}
-
 export const FormField = ({
   value = '',
   label = '',
   type = 'text',
-  size = INPUT_SIZES.LARGE,
   onInput = () => {},
 }) => {
   const [uuid] = useState(generateUUID())
   const textDescLocationClass = value ? styles.textHasValue : ''
 
   return (
-    <label htmlFor={uuid} className={cx(styles.root, size)}>
+    <label htmlFor={uuid} className={cx(styles.root)}>
       <input
         className={cx(styles.input)}
         type={type}
@@ -38,6 +31,5 @@ FormField.propTypes = {
   value: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
-  size: PropTypes.string,
   onInput: PropTypes.func,
 }

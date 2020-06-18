@@ -161,21 +161,6 @@ const StyleGuide = () => {
               <h3>Form Elements</h3>
               <FormField
                 type="text"
-                size={INPUT_SIZES.SMALL}
-                label="Input label goes here"
-                value={inputValue}
-                onInput={setInput}
-              />
-              <FormField
-                type="text"
-                size={INPUT_SIZES.MEDIUM}
-                label="Input label goes here"
-                value={inputValue}
-                onInput={setInput}
-              />
-              <FormField
-                type="text"
-                size={INPUT_SIZES.LARGE}
                 label="Input label goes here"
                 value={inputValue}
                 onInput={setInput}

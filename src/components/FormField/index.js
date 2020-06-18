@@ -1,1 +1,1 @@
-export { FormField as default, INPUT_SIZES } from './FormField'
+export { FormField as default } from './FormField'
