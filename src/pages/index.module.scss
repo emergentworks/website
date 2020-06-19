@@ -1,7 +1,36 @@
 @use "../_assets/css/abstracts/1-abstracts";
 
-/* 
+/*
  *
- * Home 
+ * Home
  *
  */
+.sponsorNames {
+  color: var(--gray-300);
+  letter-spacing: var(--ls-loose);
+  font-family: var(--font-mono);
+  line-height: var(--lh-loose);
+  position: absolute;
+  right: 0;
+  width: 30rem;
+}
+
+.gridContainer12 {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: var(--sp-base);
+}
+
+.gridColLeft {
+  grid-column: col-start / span 7;
+}
+
+.gridCol11 {
+  grid-column: col-start / span 11;
+}
+
+.gridColRight {
+  grid-column: col-start 8 / span 5;
+  justify-self: end;
+  align-self: end;
+}

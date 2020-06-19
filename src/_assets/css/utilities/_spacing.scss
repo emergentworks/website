@@ -1,48 +1,39 @@
-// @use "../abstracts/variables";
-
-@each $key, $value in $spacing {
-  .pa#{$key} {
-    padding: $value;
-  }
-  .pt#{$key} {
-    padding-top: $value;
-  }
-  .pr#{$key} {
-    padding-right: $value;
-  }
-  .pb#{$key} {
-    padding-bottom: $value;
-  }
-  .pl#{$key} {
-    padding-left: $value;
-  }
+.mt, .mt--md {
+  margin-top: var(--sp-base);
 }
 
-@each $key, $value in $spacing {
-  .ma#{$key} {
-    margin: $value;
-  }
-  .mt#{$key} {
-    margin-top: $value;
-  }
-  .mr#{$key} {
-    margin-right: $value;
-  }
-  .mb#{$key} {
-    margin-bottom: $value;
-  }
-  .ml#{$key} {
-    margin-left: $value;
-  }
+.mt--sm {
+  margin-top: var(--sp-tight);
 }
 
-// Line Height
-@each $key, $value in $lh {
-  .lh#{$key} {
-    line-height: $value;
-  }
+.mt--lg {
+  margin-top: var(--sp-loose);
 }
 
-.w-100 {
-  width: 100%;
+.mt--xl {
+  margin-top: var(--sp-looser);
+}
+
+.mt--xxl {
+  margin-top: var(--sp-max);
+}
+
+.mb, .mb--md {
+  margin-bottom: var(--sp-base);
+}
+
+.mb--sm {
+  margin-bottom: var(--sp-tight);
+}
+
+.mb--lg {
+  margin-bottom: var(--sp-loose);
+}
+
+.mb--xl {
+  margin-bottom: var(--sp-looser);
+}
+
+.mb--xxl {
+  margin-bottom: var(--sp-max);
 }

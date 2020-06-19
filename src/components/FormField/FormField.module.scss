@@ -31,7 +31,7 @@
   font-size: inherit;
   text-transform: uppercase;
   color: var(--gray-400);
-  letter-spacing: .11em;
+  letter-spacing: var(--ls-loose);
   transition: font-size 0.35s ease, top 0.35s ease, padding 0.35s ease;
   overflow: hidden;
   white-space: nowrap;
