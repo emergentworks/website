@@ -14,10 +14,12 @@
 @use "./utilities/_1-utilities";
 
 .content {
-  // ToDo: Fix max width value in mixin
-  @media (max-width: 36rem) {
-    padding-left: var(--sp-loose);
-    padding-right: var(--sp-loose);
+  padding-left: var(--sp-loose);
+  padding-right: var(--sp-loose);
+
+  @media (min-width: 68rem) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @include bp() {
