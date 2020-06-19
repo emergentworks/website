@@ -1,15 +1,19 @@
 @import "../../_assets/css/abstracts/mixins";
 
 .root {
-  margin-top: var(--sp-looser);
-  padding-top: var(--sp-looser);
+  margin-top: var(--sp-loose);
+  padding-top: var(--sp-loose);
   // ToDo: Research color function for CSS variables
   border-top: 1px solid #dedede;
 }
 
 .linkGroup {
   display: grid;
-  grid-template-columns: 1fr auto;
+  gap: var(--sp-base);
+
+  @include bp() {
+    grid-template-columns: 1fr auto;
+  }
 }
 
 .description {
