@@ -13,7 +13,7 @@ export const SocialLinks = ({ className, ...rest }) => {
   const getYear = new Date().getFullYear()
 
   return (
-    <div className={cx(styles.root, className, 'content')} {...rest}>
+    <div className={cx(styles.root, className)} {...rest}>
       <Link to="/" className={styles.link}>
         <Icon
           className={styles.icon}
