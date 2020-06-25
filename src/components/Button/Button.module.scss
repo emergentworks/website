@@ -10,7 +10,7 @@
   text-transform: capitalize;
   // ToDo: fix bg transition
   transition: all 0.3s;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   &:disabled {
@@ -29,8 +29,10 @@
 .primary {
   border: 2px solid var(--gray-500);
   background-color: var(--gray-500);
+  color: var(--font-color-base);
 
   &:hover:not(:disabled) {
+    color: var(--font-color-base);
     .labelGroup {
       background-color: #f2efe4;
     }
