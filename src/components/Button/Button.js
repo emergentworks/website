@@ -10,8 +10,10 @@ import styles from './Button.module.scss'
 export const Button = ({
   children,
   className,
+  labelClassName,
   to,
   onClick,
+  submit = false,
   type = 'primary',
   ...rest
 }) => {
@@ -22,7 +24,9 @@ export const Button = ({
         to={to}
         {...rest}
       >
-        <span className={styles.labelGroup}>{children}</span>
+        <span className={cx(styles.labelGroup, labelClassName)}>
+          {children}
+        </span>
         <span className={styles.iconGroup}>
           <Icon type="arrowRight" />
         </span>
@@ -31,12 +35,13 @@ export const Button = ({
   }
   return (
     <button
-      type="button"
+      // eslint-disable-next-line react/button-has-type
+      type={submit ? 'submit' : 'button'}
       className={cx(styles.root, className, { [styles[type]]: type })}
       {...rest}
       onClick={onClick}
     >
-      <span className={styles.labelGroup}>{children}</span>
+      <span className={cx(styles.labelGroup, labelClassName)}>{children}</span>
       <span className={styles.iconGroup}>
         <Icon type="arrowRight" />
       </span>
@@ -47,7 +52,9 @@ export const Button = ({
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  labelClassName: PropTypes.string,
   type: PropTypes.oneOf(['primary']),
   to: PropTypes.string,
   onClick: PropTypes.func,
+  submit: PropTypes.bool,
 }

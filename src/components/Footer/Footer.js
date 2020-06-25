@@ -3,6 +3,7 @@ import cx from 'classnames'
 
 import Nav from 'components/Nav'
 import SocialLinks from 'components/SocialLinks'
+import SubscribeForm from 'components/SubscribeForm'
 
 import styles from './Footer.module.scss'
 
@@ -12,6 +13,7 @@ export const Footer = () => {
   return (
     <footer className={cx(styles.root)}>
       <div className={cx(styles.container, 'content')}>
+        <SubscribeForm />
         <div className={styles.linkGroup}>
           <div className={styles.navGroup}>
             <Nav className={styles.nav} showHomeLink showHomeEmail />
