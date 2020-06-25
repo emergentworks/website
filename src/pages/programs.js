@@ -1,10 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import cx from 'classnames'
 
 import Layout from 'components/Layout'
 import SEO from 'components/seo'
-import Grid, { GridItem } from 'components/Grid'
 import Accordion from 'components/Accordion'
 
 import styles from './programs.module.scss'
