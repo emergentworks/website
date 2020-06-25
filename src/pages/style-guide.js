@@ -163,7 +163,7 @@ const StyleGuide = () => {
                 type="text"
                 label="Input label goes here"
                 value={inputValue}
-                onInput={setInput}
+                onChange={setInput}
               />
             </section>
           </Grid>
