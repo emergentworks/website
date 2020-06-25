@@ -1,9 +1,17 @@
-@use "../_assets/css/abstracts/1-abstracts";
-
-
 /* 
  *
  * Donation 
  *
  */
 
+.contentGroup {
+  max-width: 612px;
+  margin-top: var(--sp-loosest);
+}
+
+.contentItem {
+  & > p {
+    margin-top: var(--sp-loose);
+    margin-bottom: var(--sp-loose);
+  }
+}
