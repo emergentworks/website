@@ -24,7 +24,9 @@ export const Button = ({
         to={to}
         {...rest}
       >
-        <span className={cx(styles.labelGroup, labelClassName)}>{children}</span>
+        <span className={cx(styles.labelGroup, labelClassName)}>
+          {children}
+        </span>
         <span className={styles.iconGroup}>
           <Icon type="arrowRight" />
         </span>
@@ -34,7 +36,7 @@ export const Button = ({
   return (
     <button
       // eslint-disable-next-line react/button-has-type
-    type={submit ? 'submit' : 'button'}
+      type={submit ? 'submit' : 'button'}
       className={cx(styles.root, className, { [styles[type]]: type })}
       {...rest}
       onClick={onClick}
