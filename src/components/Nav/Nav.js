@@ -45,7 +45,7 @@ export const Nav = ({
           </Link>
         </li>
         <li className={styles.item}>
-          <Link to="/about" className={styles.link}>
+          <Link to="/donate" className={styles.link}>
             Donate
           </Link>
         </li>
