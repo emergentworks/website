@@ -11,6 +11,10 @@
   gap: var(--sp-looser);
 }
 
+.gap5 {
+  gap: var(--sp-loosest);
+}
+
 .columns {
   grid-template-columns: repeat(auto-fit, minmax(var(--bp-sm), 1fr));
 }
