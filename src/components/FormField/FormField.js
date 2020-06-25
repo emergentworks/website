@@ -8,7 +8,8 @@ export const FormField = ({
   value = '',
   label = '',
   type = 'text',
-  onInput = () => {},
+  onChange = () => {},
+  ...rest
 }) => {
   const [uuid] = useState(generateUUID())
   const textDescLocationClass = value ? styles.textHasValue : ''
@@ -20,7 +21,8 @@ export const FormField = ({
         type={type}
         value={value}
         id={uuid}
-        onInput={e => onInput(e.target.value)}
+        onChange={e => onChange(e.target.value)}
+        {...rest}
       ></input>
       <span className={cx(styles.text, textDescLocationClass)}>{label}</span>
     </label>
@@ -31,5 +33,5 @@ FormField.propTypes = {
   value: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
-  onInput: PropTypes.func,
+  onChange: PropTypes.func,
 }
