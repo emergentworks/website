@@ -18,7 +18,7 @@ export const Header = () => {
     <header className={cx(styles.root, 'content')}>
       <div className={styles.container}>
         <div className={styles.logoGroup}>
-          <Link to="/">
+          <Link to="/" class={styles.logoWrapper}>
             <img className={styles.logo} src={logo} alt="emergent works" />
           </Link>
         </div>
