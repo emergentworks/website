@@ -10,12 +10,12 @@
   margin-bottom: var(--sp-looser);
 
   iframe {
-    width: 372px;
-    height: 210px;
+    width: 100%;
+    height: auto;
 
     @include bp() {
-      width: 612px;
-      height: 360px;
+      max-width: 612px;
+      max-height: 360px;
     }
   }
 }
