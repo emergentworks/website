@@ -9,8 +9,8 @@ import styles from './Button.module.scss'
 
 export const Button = ({
   children,
-  className,
   labelClassName,
+  className,
   to,
   onClick,
   submit = false,

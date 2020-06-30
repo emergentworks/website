@@ -30,12 +30,12 @@ export const Nav = ({
           </li>
         )}
         <li className={styles.item}>
-          <Link to="/about" className={styles.link}>
+          <Link to="#" className={styles.link}>
             About
           </Link>
         </li>
         <li className={styles.item}>
-          <Link to="/about" className={styles.link}>
+          <Link to="/programs" className={styles.link}>
             Programs
           </Link>
         </li>
