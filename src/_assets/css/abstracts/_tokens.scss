@@ -8,12 +8,14 @@
   --white-200: #f2efe4;
   --gray-300: #f3f3f3;
   --gray-400: #828282;
-  --gray-500: #3f3b3c;
+  --gray-500: #747474;
+  --gray-600: #3f3b3c;
   --font-base: "ibmPlexSans-Regular", sans-serif;
   --font-light: "ibmPlexSans-Light", sans-serif;
   --font-medium: "ibmPlexSans-Medium", sans-serif;
   --font-semiBold: "ibmPlexSans-SemiBold", sans-serif;
   --font-mono: "ibmPlexMono-Regular", sans-serif;
+  --font-text: "ibmPlexSans-Text", sans-serif;
   --fs-sm: 0.8rem;
   --fs-m: 1rem;
   --fs-base: 1.125rem;
@@ -56,7 +58,7 @@
 // Intent Based Variables
 
 :root {
-  --font-color-base: var(--gray-500);
+  --font-color-base: var(--gray-600);
   --link-color: var(--blue-500);
-  --icon-fill-base: var(--gray-500);
+  --icon-fill-base: var(--gray-600);
 }

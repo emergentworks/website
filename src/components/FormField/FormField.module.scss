@@ -9,11 +9,11 @@
   width: auto;
   flex-grow: 1;
   border: 1px solid;
-  border-color: var(--gray-500);
+  border-color: var(--gray-600);
   padding: var( --sp-base);
   transition: border-color 0.3s;
   font-size: inherit;
-  color: var(--gray-500);
+  color: var(--gray-600);
 
   &:focus {
     border-color: var(--blue-500);

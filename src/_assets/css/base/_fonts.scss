@@ -57,3 +57,16 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "ibmPlexSans-Text";
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Text.eot");
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Text.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/IBM-Plex-Sans/IBMPlexSans-Text.woff2") format("woff2"),
+    url("../fonts/IBM-Plex-Sans/IBMPlexSans-Text.woff") format("woff"),
+    url("../fonts/IBM-Plex-Sans/IBMPlexSans-Text.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
