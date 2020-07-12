@@ -1,6 +1,6 @@
 // @use "../abstracts/tokens";
 
-/* 
+/*
 *
 * Input styles
 *
@@ -16,13 +16,13 @@ input[input="search"] {
   border-color: var(--gray-400);
   border-style: solid;
   border-width: 2px;
-  color: var(--gray-500);
+  color: var(--gray-600);
   font-size: var(--fs-base);
   outline: none;
   padding: var(--sp-tight) var(--sp-base);
 
   &:not(:placeholder-shown) {
-    border-color: var(--gray-500);
+    border-color: var(--gray-600);
   }
 
   &::placeholder {
@@ -44,7 +44,7 @@ input[input="search"] {
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  border: 2px solid var(--gray-500);
+  border: 2px solid var(--gray-600);
   // @include trans();
   margin-right: 5px;
 
