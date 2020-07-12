@@ -27,7 +27,7 @@ const DonatePage = () => (
           <WaterColor color="green" img={SketchLaptop} alt="" />
         </GridItem>
       </Grid>
-      <Grid col={1} gap={4} className={styles.contentGroup}>
+      <Grid col={1} gap={5} className={styles.contentGroup}>
         <GridItem className={styles.contentItem}>
           <h2>Help us raise $40,000</h2>
           <p>

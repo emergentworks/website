@@ -8,11 +8,11 @@ body {
 
 h1,
 .h1 {
-  font-family: var(--font-light);
+  font-family: var(--font-extraLight);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
   line-height: 1.2;
-  font-weight: normal;
+  font-weight: bold;
   font-size: var(--fs-xl);
 
   @include bp(med) {
