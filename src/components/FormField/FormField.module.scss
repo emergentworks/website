@@ -3,6 +3,7 @@
   position: relative;
   width: 100%;
   font-size: var(--fs-base);
+  font-family: var(--font-mono);
 }
 
 .input {
@@ -10,35 +11,21 @@
   flex-grow: 1;
   border: 1px solid;
   border-color: var(--gray-600);
-  padding: var( --sp-base);
+  padding: 0px calc(var(--sp-base) + var(--sp-tight));
+  height: 49px;
   transition: border-color 0.3s;
   font-size: inherit;
   color: var(--gray-600);
+  font-family: var(--font-mono);
 
   &:focus {
     border-color: var(--blue-500);
     outline: none;
   }
-}
 
-.text {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  padding: 0 var(--sp-base);
-  transform: translateY(-50%);
-  font-size: inherit;
-  text-transform: uppercase;
-  color: var(--gray-400);
-  letter-spacing: .11em;
-  transition: font-size 0.35s ease, top 0.35s ease, padding 0.35s ease;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 100%;
-  text-overflow: ellipsis;
-}
-
-.textHasValue, .input:focus + .text {
-  top: 0.7rem;
-  font-size: 0.4em;
+  &::placeholder {
+    text-transform: uppercase;
+    color: var(--gray-400);
+    letter-spacing: .11em;
+  }
 }
