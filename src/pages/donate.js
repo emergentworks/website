@@ -23,11 +23,9 @@ const DonatePage = () => (
             food, hardware, and office supplies for our fellows.
           </h1>
         </GridItem>
-        <GridItem justify="center">
-          <WaterColor color="green" img={SketchLaptop} alt="" />
-        </GridItem>
+        <GridItem />
       </Grid>
-      <Grid col={1} gap={4} className={styles.contentGroup}>
+      <Grid col={1} gap={5} className={styles.contentGroup}>
         <GridItem className={styles.contentItem}>
           <h2>Help us raise $40,000</h2>
           <p>

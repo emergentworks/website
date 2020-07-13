@@ -15,17 +15,18 @@ export const FormField = ({
   const textDescLocationClass = value ? styles.textHasValue : ''
 
   return (
-    <label htmlFor={uuid} className={cx(styles.root)}>
+    <div htmlFor={uuid} className={cx(styles.root)}>
       <input
         className={cx(styles.input)}
         type={type}
         value={value}
         id={uuid}
         onChange={e => onChange(e.target.value)}
+        placeholder={label}
+        ariaLabel={label}
         {...rest}
       ></input>
-      <span className={cx(styles.text, textDescLocationClass)}>{label}</span>
-    </label>
+    </div>
   )
 }
 

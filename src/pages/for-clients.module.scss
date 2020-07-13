@@ -4,7 +4,7 @@
   margin-bottom: var(--sp-looser);
 
   @include bp(med) {
-    margin-bottom: var(--sp-max);
+    margin-bottom: 11.25rem;
   }
 }
 
@@ -13,11 +13,11 @@
 }
 
 .servicesGroup {
-  margin-top: var(--sp-looser);
   display: grid;
-  gap: var(--sp-looser);
+  gap: var(--sp-loose);
+  margin-top: var(--sp-loose);
 
   @include bp(med) {
-    margin-top: var(--sp-max);
+    margin-top: var(--sp-looser);
   }
 }

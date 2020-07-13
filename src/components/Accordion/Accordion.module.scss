@@ -13,6 +13,7 @@
   margin: 0px;
   line-height: 1em;
   position: relative;
+  font-family: var(--font-italic);
 
   &:after {
     content: '+';
@@ -27,7 +28,7 @@
   background: none;
   border: none;
   font-style: italic;
-  padding: 28px 28px 28px 0px;
+  padding: 24px 24px 24px 0px;
   width: 100%;
   text-align: left;
   font-size: var(--fs-base);
@@ -45,7 +46,7 @@
 
 .accordionContents {
   margin: 0px;
-  padding: 1em 0;
+  padding: var(--sp-base) 0;
   border-bottom: 1px solid var(--gray-300);
   white-space: pre-wrap;
 }
