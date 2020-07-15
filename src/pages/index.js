@@ -33,6 +33,7 @@ const IndexPage = () => (
         </iframe>
         <script src="https://player.vimeo.com/api/player.js"></script>
       </div>
+      <p className={styles.videoCaption}>Emergent Works interrupts the prison cycle  by creating high-paying jobs in technology  for formerly incarcerated people.</p>
 
       <div className={styles.gridContainer12}>
         <h2 className={cx(styles.gridCol11, 'mt--xxl')}>
@@ -46,16 +47,19 @@ const IndexPage = () => (
     </section>
 
     <h3 className={styles.sponsorNames}>
-      KICKSTARTER · BITLY · YIELDMO · GIPHY · DROPBOX · BIG CA BOX · NEARFORM · AXIOS · GROUP NINE MEDIA · FLAWLESS RIPPLEMATCH · SPRINKLR · CONDÉ NAST · TECH LADIES
+      KICKSTARTER · BITLY · YIELDMO · GIPHY ·
+      DROPBOX · BIG CA BOX · NEARFORM · AXIOS ·
+      GROUP NINE MEDIA · FLAWLESS RIPPLEMATCH ·
+      SPRINKLR · CONDÉ NAST · TECH LADIES
     </h3>
 
     <section className={cx(styles.gridContainer12, 'content')}>
       <div className={styles.gridColLeft}>
         <h2 className={'mt--xxl'}>
-          Through our projects, our formerly incarcerated apprentices get valuable paid work experience to kickstart their careers in tech.
+          We are a nonprofit technology company that trains and employs people coming home  from prison.
         </h2>
         <p className={'mt--lg'}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Through our projects, our formerly incarcerated apprentices get valuable paid work experience to kickstart their careers in tech.
         </p>
         <h2 className={'mt--xxl'}>
           The Emergent Works community is open and endless.

@@ -12,7 +12,14 @@
   line-height: var(--lh-loose);
   position: absolute;
   right: 0;
-  width: 30rem;
+  margin-top: var(--sp-looser);
+  margin-right: calc(-1 * var(--sp-base));
+  width: var(--bp-med);
+}
+
+.videoCaption {
+  font-style: italic;
+  text-align: center;
 }
 
 .gridContainer12 {
@@ -33,4 +40,22 @@
   grid-column: col-start 8 / span 5;
   justify-self: end;
   align-self: end;
+}
+
+@media (max-width: 1300px) {
+  .sponsorNames {
+    position: relative;
+    width: var(--bp-lg);
+    margin: var(--sp-max) auto 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .gridColLeft {
+    grid-column: col-start / span 12;
+  }
+
+  .sponsorNames {
+    width: 100%;
+  }
 }
