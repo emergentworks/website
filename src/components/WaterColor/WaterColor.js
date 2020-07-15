@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import WebPackage from '_assets/images/sketch-webpage.png'
+import WebPage from '_assets/images/sketch-webpage.png'
 import WaterColorPurple from '_assets/images/waterColor-purple.png'
 import WaterColorGreen from '_assets/images/waterColor-green.png'
 
 import styles from './WaterColor.module.scss'
 
-export const WaterColor = ({ alt, img = WebPackage, color = 'purple' }) => {
+export const WaterColor = ({ alt, img = WebPage, color = 'purple' }) => {
   const WATER_COLOR = {
     purple: WaterColorPurple,
     green: WaterColorGreen,

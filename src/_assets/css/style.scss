@@ -11,7 +11,7 @@
 /*------------------------------------*\
     Utilities
 \*------------------------------------*/
-@use "./utilities/_1-utilities";
+@import "./utilities/_1-utilities";
 
 .content {
   padding-left: var(--sp-loose);
