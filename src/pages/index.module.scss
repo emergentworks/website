@@ -5,11 +5,7 @@
  * Home
  *
  */
-.sponsorNames {
-  color: var(--gray-300);
-  letter-spacing: var(--ls-loose);
-  font-family: var(--font-mono);
-  line-height: var(--lh-loose);
+.companies {
   position: absolute;
   right: 0;
   margin-top: var(--sp-looser);
@@ -37,15 +33,21 @@
 }
 
 .gridColRight {
-  grid-column: col-start 8 / span 5;
-  justify-self: end;
+  grid-column: col-start 9 / span 4;
   align-self: end;
 }
 
+@media (min-width: 1300px) {
+  .imageGrid {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 1300px) {
-  .sponsorNames {
+  .companies {
     position: relative;
-    width: var(--bp-lg);
     margin: var(--sp-max) auto 0;
   }
 }
@@ -55,7 +57,16 @@
     grid-column: col-start / span 12;
   }
 
-  .sponsorNames {
-    width: 100%;
+  .gridColRight {
+    grid-column: col-start 5 / span 8;
+    text-align: right;
+  }
+
+  .companies {
+    display: none;
+  }
+
+  .metrocard {
+    display: none;
   }
 }
