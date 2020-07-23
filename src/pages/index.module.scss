@@ -6,10 +6,6 @@
  *
  */
 .sponsorNames {
-  color: var(--gray-300);
-  letter-spacing: var(--ls-loose);
-  font-family: var(--font-mono);
-  line-height: var(--lh-loose);
   position: absolute;
   right: 0;
   margin-top: var(--sp-looser);
@@ -53,6 +49,11 @@
 @media (max-width: 800px) {
   .gridColLeft {
     grid-column: col-start / span 12;
+  }
+
+  .gridColRight {
+    grid-column: col-start 4 / span 9;
+    text-align: right;
   }
 
   .sponsorNames {
