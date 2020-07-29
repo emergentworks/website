@@ -12,9 +12,9 @@ const AgencyPage = () => (
     <SEO title="Programs" />
     <div className={cx(styles.root, 'content')}>
       <section className={cx(styles.section, styles.mentorshipSection)}>
-        <h2 className={cx(styles.subTitle, 'content-max-width')}>
+        <h1 className={cx(styles.subTitle, 'content-max-width')}>
           1-1 Mentorship Program
-        </h2>
+        </h1>
         <p className="content-max-width">
           The Code Cooperative 1-on-1 mentorship is a 3-month program where
           professional software engineers mentor formerly incarcerated and
