@@ -6,8 +6,7 @@ import SEO from 'components/seo'
 import Layout from 'components/Layout'
 import Grid from 'components/Grid'
 import Button from 'components/Button'
-import WaterColor from 'components/WaterColor'
-import FormField, { INPUT_SIZES } from 'components/FormField'
+import FormField from 'components/FormField'
 import Accordion from 'components/Accordion'
 
 import styles from './style-guide.module.scss'
@@ -31,7 +30,7 @@ const StyleGuide = () => {
           <Grid col={2} gap={3}>
             <section>
               <h3>Color</h3>
-              <Grid col={3} gap={2} className={cx(styles.swatchGroup)}>
+              <div className={cx(styles.swatchGroup)}>
                 <div
                   className={cx(
                     styles.swatchItem,
@@ -56,14 +55,33 @@ const StyleGuide = () => {
                     styles.fcWhite500
                   )}
                 ></div>
-              </Grid>
+              </div>
               <h3>Button</h3>
               <p>
                 <Button>Become a sponsor</Button>
               </p>
-              <WaterColor alt="test" />
+              <h3>Form Elements</h3>
+              <FormField
+                type="text"
+                label="Input label goes here"
+                value={inputValue}
+                onChange={setInput}
+              />
+              <h3>Accordion</h3>
+              <Accordion
+                label="This is an example accordion"
+                content={multiLineText}
+              />
+              <Accordion
+                label="This is another example accordion"
+                content={multiLineText}
+              />
+              <Accordion
+                label="This is a third example accordion"
+                content={multiLineText}
+              />
             </section>
-            {/* Typo */}
+            {/* Typography */}
             <section>
               <h3>Typography</h3>
               <h4 className={styles.label}>Typeface</h4>
@@ -146,25 +164,6 @@ const StyleGuide = () => {
                 quia praesentium excepturi minus libero veritatis doloribus
                 quae, unde vitae, quam et aperiam!
               </p>
-              <Accordion
-                label="This is an example accordion"
-                content={multiLineText}
-              />
-              <Accordion
-                label="This is another example accordion"
-                content={multiLineText}
-              />
-              <Accordion
-                label="This is a third example accordion"
-                content={multiLineText}
-              />
-              <h3>Form Elements</h3>
-              <FormField
-                type="text"
-                label="Input label goes here"
-                value={inputValue}
-                onChange={setInput}
-              />
             </section>
           </Grid>
         </div>

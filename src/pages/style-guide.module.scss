@@ -17,6 +17,18 @@ $colors: (
   gray500: #3f3b3c,
 );
 
+.root {
+  h3:not(:first-of-type) {
+    margin-top: var(--sp-looser);
+  }
+}
+
+.swatchGroup {
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  display: grid;
+  gap: var(--sp-base);
+}
+
 .swatchItem {
   border: white 5px solid;
   height: 6em;
