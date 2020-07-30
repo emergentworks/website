@@ -1,5 +1,10 @@
-.mt, .mt--md {
+.mt,
+.mt--md {
   margin-top: var(--sp-base);
+}
+
+.mt--none {
+  margin-top: 0;
 }
 
 .mt--sm {
@@ -18,7 +23,8 @@
   margin-top: var(--sp-max);
 }
 
-.mb, .mb--md {
+.mb,
+.mb--md {
   margin-bottom: var(--sp-base);
 }
 
