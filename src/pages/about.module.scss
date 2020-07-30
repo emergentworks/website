@@ -1,7 +1,43 @@
-// @import "../_assets/css/abstracts/1-abstracts";
+@import "../_assets/css/abstracts/1-abstracts";
 /* 
  *
  * About
  *
  */
 
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 168px));
+  column-gap: var(--sp-max);
+  row-gap: var(--sp-loose);
+}
+
+.title {
+  margin-bottom: var(--sp-looser);
+
+  @include bp(med) {
+    margin-bottom: 5rem;
+  }
+}
+
+.name {
+  font-size: var(--fs-base);
+  text-transform: capitalize;
+  font-family: var(--font-italic);
+  margin-top: var(--sp-tight);
+  margin-bottom: var(--sp-tight);
+}
+
+.partnersTitle {
+  margin-top: var(--sp-loosest);
+}
+
+.logoGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 200px));
+  gap: var(--sp-looser);
+}
+
+.logoItem {
+  align-self: center;
+}
