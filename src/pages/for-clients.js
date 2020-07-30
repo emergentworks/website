@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import cx from 'classnames'
 
@@ -10,8 +11,9 @@ import ImgCaption from 'components/ImgCaption'
 
 import styles from './for-clients.module.scss'
 
-const AgencyPage = props => {
-  const ImgShowcase = props.data.ImgShowcase.childImageSharp.fluid
+const ForClientsPage = ({ data }) => {
+  // eslint-disable-next-line react/prop-types
+  const ImgShowcase = data.ImgShowcase.childImageSharp.fluid
 
   return (
     <Layout className={styles.page}>
@@ -92,4 +94,8 @@ export const query = graphql`
   }
 `
 
-export default AgencyPage
+ForClientsPage.propTypes = {
+  data: PropTypes.object,
+}
+
+export default ForClientsPage
