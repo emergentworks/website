@@ -82,7 +82,7 @@ const IndexPage = () => {
           <p className={'mt--lg'}>
             Donations help us cover our program costs: instructors, space, food, learning supplies, hardware, software, and MetroCards. You can also support our students by donating gently used laptops!
           </p>
-          <Button className={'mt--lg'}>Donate Now</Button>
+          <Button href="/donate" className={'mt--lg'}>Donate Now</Button>
         </div>
         <div className={styles.gridColRight}>
           <Img
