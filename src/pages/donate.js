@@ -1,64 +1,95 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import cx from 'classnames'
-
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+
 import Grid, { GridItem } from 'components/Grid'
-import WaterColor from 'components/WaterColor'
-import Button from 'components/Button'
-import SketchLaptop from '_assets/images/sketch-laptop.png'
 import SEO from '../components/seo'
+import Button from '../components/Button'
 import Layout from '../components/Layout'
 
 import styles from './donate.module.scss'
 
-const DonatePage = () => (
-  <Layout className={styles.page}>
-    <SEO title="Donate" />
-    <div className={cx(styles.root, 'content')}>
-      <Grid col={2}>
-        <GridItem>
-          <h1>
-            Our program runs on donations so that we can provide MetroCards,
-            food, hardware, and office supplies for our fellows.
-          </h1>
-        </GridItem>
-        <GridItem />
-      </Grid>
-      <Grid col={1} gap={5} className={styles.contentGroup}>
-        <GridItem className={styles.contentItem}>
-          <h2>Help us raise $40,000</h2>
-          <p>
-            Help us reach our goal to raise $40,000 for our next program.
-            Donations help us cover all our program costs: instructors, space,
-            food, learning supplies, hardware, software, metrocards, etc.
-          </p>
-          <Button to="#">Contribute now</Button>
-        </GridItem>
+const DonatePage = ({ data }) => {
+  // eslint-disable-next-line react/prop-types
+  const Laptop = data.Laptop.childImageSharp.fluid
 
-        <GridItem className={styles.contentItem}>
-          <h2>Donate laptops</h2>
-          <p>
-            All of our participants receive a laptop for the duration of the
-            program. Support our students’ learning by donating gently used
-            laptops.
-          </p>
-          <Button to="#">Donate laptops</Button>
-        </GridItem>
+  return (
+    <Layout className={styles.page}>
+      <SEO title="Donate" />
+      <div className={cx(styles.root, 'content')}>
+        <h1 className={cx(styles.title, 'content-max-width')}>
+          Our program runs on donations so that we can provide MetroCards, food,
+          hardware, and office supplies for our fellows.
+        </h1>
+        <Grid gap={4}>
+          <Grid col={2} gap={4}>
+            <GridItem>
+              <h2 className="mt--none">Help us raise $40,000</h2>
+              <p>
+                All of our participants receive a laptop for the duration of th
+                program.Support our students’ learning by donating gently used
+                laptops.
+              </p>
+            </GridItem>
 
-        <GridItem className={styles.contentItem}>
-          <h2>Are you a company? Sponsor lorem ipsum.</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <Button to="#">Lorem ipsum dolor sit</Button>
-        </GridItem>
-      </Grid>
-    </div>
-  </Layout>
-)
+            <GridItem justify="right">
+              <script
+                src="https://donorbox.org/widget.js"
+                paypalExpress="false"
+              ></script>
+              <iframe
+                title="Donate to the Code Cooperative!"
+                allowpaymentrequest=""
+                className={styles.donarbox}
+                frameBorder="0"
+                height="900px"
+                name="donorbox"
+                scrolling="no"
+                seamless="seamless"
+                src="https://donorbox.org/embed/website-donation-15"
+                width="100%"
+              ></iframe>
+            </GridItem>
+          </Grid>
+          <Grid col={2} gap={4}>
+            <GridItem align="middle">
+              <h2 className="mt--none">Donate laptops</h2>
+              <p>
+                All of our participants receive a laptop for the duration of th
+                program.Support our students’ learning by donating gently used
+                laptops.
+              </p>
+
+              <Button
+                className="mt--lg"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSekRlaBYt0ILYZP90bJUiXfTf9fCl0brJwamNAgUoH1hIsZdg/viewform"
+              >
+                Donate laptops
+              </Button>
+            </GridItem>
+
+            <GridItem justify="center">
+              <Img fluid={Laptop} alt="hello" className={styles.laptop} />
+            </GridItem>
+          </Grid>
+        </Grid>
+      </div>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    Laptop: file(relativePath: { eq: "laptop.png" }) {
+      childImageSharp {
+        id
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default DonatePage

@@ -4,14 +4,18 @@
  *
  */
 
-.contentGroup {
-  max-width: 612px;
-  margin-top: var(--sp-loosest);
+.title {
+  margin-bottom: var(--sp-looser);
+
+  margin-bottom: 5rem;
 }
 
-.contentItem {
-  & > p {
-    margin-top: var(--sp-loose);
-    margin-bottom: var(--sp-loose);
-  }
+.donarbox {
+  max-width: 500px;
+  min-width: 400px;
+  max-height: 640px;
+}
+
+.laptop {
+  width: 350px;
 }
