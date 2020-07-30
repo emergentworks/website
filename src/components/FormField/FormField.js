@@ -23,7 +23,7 @@ export const FormField = ({
         id={uuid}
         onChange={e => onChange(e.target.value)}
         placeholder={label}
-        ariaLabel={label}
+        aria-label={label}
         {...rest}
       ></input>
     </div>
