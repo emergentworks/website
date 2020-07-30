@@ -47,8 +47,8 @@ const IndexPage = () => {
 
         {/* TODO: update video to reflect EW rather than CC */}
         <div className={'mt--xl'} style={{padding: '56.25% 0 0 0' , position: 'relative' }}>
-        <iframe src="https://player.vimeo.com/video/335249244?autoplay=1&title=0&byline=0&portrait=0&muted=1" style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
-          <script src="https://player.vimeo.com/api/player.js"></script>
+        <iframe src="https://player.vimeo.com/video/335249244?autoplay=1&title=0&byline=0&portrait=0&muted=1&loop=1" style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+        <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
         <div className={styles.gridContainer12}>
           <h2 className={cx(styles.gridCol11, 'mt--xxl')}>
@@ -80,7 +80,7 @@ const IndexPage = () => {
             Help us raise $100,000.
           </h2>
           <p className={'mt--lg'}>
-            Monetary donations help us cover all our program costs, such as instructors, space, food, learning supplies, hardware, software, and MetroCards. In addition, all of our participants receive a laptop for the duration of the program. Support our fellows’ learning and donate gently used laptops to the Code Cooperative.
+            Donations help us cover our program costs: instructors, space, food, learning supplies, hardware, software, and MetroCards. You can also support our students by donating gently used laptops!
           </p>
           <Button className={'mt--lg'}>Donate Now</Button>
         </div>

@@ -65,9 +65,8 @@ const AboutPage = () => {
       <SEO title="About" />
       <section className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
-          Emergent Works is a community of people who learn, use, and build
-          technology to create life-changing possibilities for individuals and
-          communities impacted by incarceration.
+          Emergent Works is a nonprofit software company that trains and employs formerly incarcerated people.
+          We believe that excellence in code can come from anyone.
         </h1>
         <div className={styles.team}>
           {teamData.map(person => (
