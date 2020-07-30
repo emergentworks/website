@@ -52,15 +52,12 @@ const IndexPage = () => {
 
         {/* TODO: update video to reflect EW rather than CC */}
         <div className={'mt--xl'} style={{padding: '56.25% 0 0 0' , position: 'relative' }}>
-        <iframe src="https://player.vimeo.com/video/335249244?autoplay=1&title=0&byline=0&portrait=0&muted=1" style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
-          <script src="https://player.vimeo.com/api/player.js"></script>
+        <iframe src="https://player.vimeo.com/video/335249244?autoplay=1&title=0&byline=0&portrait=0&muted=1&loop=1" style={{position:"absolute", top:0, left:0, width:"100%", height:"100%"}} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+        <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
-
-        <p className={styles.videoCaption}>Emergent Works interrupts the prison cycle  by creating high-paying jobs in technology  for formerly incarcerated people.</p>
-
         <div className={styles.gridContainer12}>
           <h2 className={cx(styles.gridCol11, 'mt--xxl')}>
-            We want to democratize access to tech education and teach our most vulnerable populations highly valuable skills lorem.
+            Emergent Works interrupts the prison cycle by creating pathways into high-paying jobs in technology for formerly incarcerated people.
           </h2>
         </div>
       </section>
@@ -79,18 +76,18 @@ const IndexPage = () => {
       <section className={cx(styles.gridContainer12, 'content')}>
         <div className={styles.gridColLeft}>
           <h2 className={'mt--xxl'}>
-            We are a nonprofit technology company that trains and employs people coming home  from prison.
+            We are a nonprofit software company that trains and employs formerly incarcerated people.
           </h2>
           <p className={'mt--lg'}>
-            Through our projects, our formerly incarcerated apprentices get valuable paid work experience to kickstart their careers in tech.
+            Through our client projects, our formerly incarcerated apprentices get valuable paid work experience to kickstart their careers in tech.
           </p>
           <h2 className={'mt--xxl'}>
-            Help us raise $40,000.
+            Help us raise $100,000.
           </h2>
           <p className={'mt--lg'}>
-            Monetary donations help us cover all our program costs, such as instructors, space, food, learning supplies, hardware, software, and MetroCards. In addition, all of our participants receive a laptop for the duration of the program. Support our fellows’ learning and donate gently used laptops to the Code Cooperative.
+            Donations help us cover our program costs: instructors, space, food, learning supplies, hardware, software, and MetroCards. You can also support our students by donating gently used laptops!
           </p>
-          <Button className={'mt--lg'}>Donate Now</Button>
+          <Button href="/donate" className={'mt--lg'}>Donate Now</Button>
         </div>
         <div className={styles.gridColRight}>
           <Img

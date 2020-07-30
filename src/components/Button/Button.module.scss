@@ -11,6 +11,10 @@
   display: inline-flex;
   align-items: center;
 
+  &:active {
+    text-decoration: none;
+  }
+
   &:disabled {
     cursor: not-allowed;
   }

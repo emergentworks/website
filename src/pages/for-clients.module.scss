@@ -3,9 +3,6 @@
 .title {
   margin-bottom: var(--sp-looser);
 
-  @include bp(med) {
-    margin-bottom: 11.25rem;
-  }
 }
 
 .contactUs {

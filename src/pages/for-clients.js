@@ -20,11 +20,9 @@ const ForClientsPage = ({ data }) => {
       <SEO title="For Clients" />
       <div className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
-          The Emergent Works Agency builds software for purpose-driven
-          organizations and careers for our communities. We partner industry
-          experts with formerly incarcerated technologists.
+          Emergent Works builds software for purpose-driven
+          organizations while creating employment opportunities for formerly incarcerated people.
         </h1>
-        {/* <Img fluid={ImgShowcase} /> */}
         <ImgCaption
           fluid={ImgShowcase}
           alt="2020 Fellowship Showcase"
