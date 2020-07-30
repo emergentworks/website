@@ -1,10 +1,30 @@
 @import "../../_assets/css/abstracts/mixins";
 
 .root {
-  &.isActive {
-    // ToDo: Removed Important
-    visibility: initial !important;
-    height: auto !important;
+  @include bp(lg, max) {
+    &.isActive {
+      // ToDo: Removed Important
+      bottom: 0px;
+      transform: translateY(0px) !important;
+      opacity: 1 !important;
+      transition: opacity 0.25s ease;
+
+      .link {
+        display: inline-block;
+        width: 100%;
+        font-size: var(--fs-l);
+        padding: var(--sp-base) 0;
+        font-family: var(--font-light);
+
+        &.emailLink {
+          font-size: var(--fs-base) !important;
+        }
+      }
+
+      .item {
+        text-align: right;
+      }
+    }
   }
 }
 
@@ -33,4 +53,30 @@
   color: var(--font-color-base);
   font-size: var(--fs-m);
   font-family: var(--font-text);
+}
+
+.mobileOnly {
+  display: none;
+
+  @include bp(lg, max) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: var(--sp-base);
+  }
+}
+
+.horizontalRule {
+  height: 0px;
+  width: 42px;
+  border-top: 1px solid var(--gray-600);
+}
+
+.contact {
+  padding-top: calc(var(--sp-base) + var(--sp-tight));
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: flex-end;
 }
