@@ -32,3 +32,14 @@
 img {
   max-width: 100%;
 }
+
+.no-scroll-mobile {
+  @media (max-width: 51.5rem) {
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+  }
+}

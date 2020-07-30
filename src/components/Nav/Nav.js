@@ -2,8 +2,18 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import SocialLinks from 'components/SocialLinks'
 
 import styles from './Nav.module.scss'
+
+const getEmailLink = () => (
+  <a
+    href="mailto:hello@emergentworks.org?subject=[Action] Subject"
+    className={cx(styles.link, styles.emailLink)}
+  >
+    hello@emergentworks.org
+  </a>
+);
 
 export const Nav = ({
   navVisibility,
@@ -48,15 +58,20 @@ export const Nav = ({
       </li>
       {showHomeEmail && (
         <li className={styles.item}>
-          <a
-            href="mailto:hello@emergentworks.org?subject=[Action] Subject"
-            className={styles.link}
-          >
-            hello@emergentworks.org
-          </a>
+          { getEmailLink() }
         </li>
       )}
     </ul>
+    {navVisibility ?
+      (
+        <section className={styles.mobileOnly}>
+            <div className={styles.horizontalRule} />
+            <div className={styles.contact}>
+              { getEmailLink() }
+              <SocialLinks className={styles.socialLinks} />
+            </div>
+        </section>
+      ): null}
   </nav>
 )
 
