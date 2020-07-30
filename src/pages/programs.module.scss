@@ -6,18 +6,22 @@
   }
 }
 
-.mentorshipVideo {
+.title {
   margin-bottom: var(--sp-looser);
+}
 
-  iframe {
-    width: 100%;
-    height: auto;
+.videoWrapper {
+  margin-bottom: var(--sp-looser);
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
 
-    @include bp() {
-      max-width: 612px;
-      height: 360px;
-    }
-  }
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .fellowshipSection {

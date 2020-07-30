@@ -7,35 +7,33 @@ import Accordion from 'components/Accordion'
 
 import styles from './programs.module.scss'
 
-const AgencyPage = () => (
+const ProgramsPage = () => (
   <Layout className={styles.page}>
     <SEO title="Programs" />
     <div className={cx(styles.root, 'content')}>
       <section className={cx(styles.section, styles.mentorshipSection)}>
-        <h1 className={cx(styles.subTitle, 'content-max-width')}>
-          1-1 Mentorship Program
+        <h1 className={cx(styles.title, 'content-max-width')}>
+          Learn with us! Whether you’re just starting out or are an industry
+          professional, our community can lorem ipsum dolor sit amet.
         </h1>
-        <p className="content-max-width">
-          The Code Cooperative 1-on-1 mentorship is a 3-month program where
-          professional software engineers mentor formerly incarcerated and
-          justice-involved individuals.
-        </p>
-        <p className="content-max-width">
-          Participants will develop and strengthen skills in computer
-          programming and web development while developing valuable
-          relationships with industry professionals.
-        </p>
-        <div className={styles.mentorshipVideo}>
+        <div className={styles.videoWrapper}>
           <iframe
             title="Meet The Mentors"
+            className={styles.video}
             src="https://player.vimeo.com/video/316857444"
-            width="640"
-            height="360"
             frameBorder="0"
             allow="autoplay; fullscreen"
             allowFullScreen
           ></iframe>
         </div>
+        <h2 className={cx(styles.subTitle, 'content-max-width')}>
+          1-1 Mentorship Program
+        </h2>
+        <p className="content-max-width">
+          Participants will develop and strengthen skills in computer
+          programming and web development while developing valuable
+          relationships with industry professionals.
+        </p>
         <div style={styles.accordionGroup}>
           <Accordion
             label="How can I get mentorship?"
@@ -72,4 +70,4 @@ const AgencyPage = () => (
   </Layout>
 )
 
-export default AgencyPage
+export default ProgramsPage
