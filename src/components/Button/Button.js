@@ -13,6 +13,7 @@ export const Button = ({
   className,
   to,
   onClick,
+  href,
   submit = false,
   type = 'primary',
   ...rest
@@ -22,6 +23,8 @@ export const Button = ({
       <Link
         className={cx(styles.root, className, { [styles[type]]: type })}
         to={to}
+        target="_blank"
+        rel="noopener noreferrer"
         {...rest}
       >
         <span className={cx(styles.labelGroup, labelClassName)}>
@@ -31,6 +34,24 @@ export const Button = ({
           <Icon type="arrowRight" />
         </span>
       </Link>
+    )
+  }
+  if (href) {
+    return (
+      <a
+        className={cx(styles.root, className, { [styles[type]]: type })}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...rest}
+      >
+        <span className={cx(styles.labelGroup, labelClassName)}>
+          {children}
+        </span>
+        <span className={styles.iconGroup}>
+          <Icon type="arrowRight" />
+        </span>
+      </a>
     )
   }
   return (
@@ -57,4 +78,5 @@ Button.propTypes = {
   to: PropTypes.string,
   onClick: PropTypes.func,
   submit: PropTypes.bool,
+  href: PropTypes.string,
 }
