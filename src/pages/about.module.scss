@@ -8,7 +8,8 @@
 .team {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(168px, 168px));
-  gap: var(--sp-max);
+  column-gap: var(--sp-max);
+  row-gap: var(--sp-loose);
 }
 
 .title {
@@ -29,4 +30,14 @@
 
 .partnersTitle {
   margin-top: var(--sp-looser);
+}
+
+.logoGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 200px));
+  gap: var(--sp-looser);
+}
+
+.logoItem {
+  align-self: center;
 }

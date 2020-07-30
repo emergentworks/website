@@ -1,9 +1,8 @@
 import React from 'react'
-import { useStaticQuery, graphql, prefetchPathname } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import cx from 'classnames'
 
 import Img from 'gatsby-image'
-import Grid from 'components/Grid'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
@@ -13,6 +12,17 @@ const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
       teamPics: allFile(filter: { relativeDirectory: { eq: "team-core" } }) {
+        nodes {
+          name
+          id
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      logos: allFile(filter: { relativeDirectory: { eq: "logos" } }) {
         nodes {
           name
           id
@@ -39,6 +49,7 @@ const AboutPage = () => {
 
   const teamData = data.teamData.edges
   const teamPics = data.teamPics.nodes
+  const logos = data.logos.nodes
 
   const getImgSrc = name =>
     teamPics.filter(image => {
@@ -74,7 +85,18 @@ const AboutPage = () => {
           ))}
         </div>
         <div className={styles.partners}>
-          <h2 className={styles.partnersTitle}>Our partners</h2>
+          <h2 className={cx(styles.partnersTitle)}>Our partners</h2>
+          <div className={styles.logoGroup}>
+            {logos.map(logo => (
+              <div key={logo.id} className={styles.logoItem}>
+                <Img
+                  className={cx(styles.logo)}
+                  fluid={logo.childImageSharp.fluid}
+                  alt={logo.name}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
