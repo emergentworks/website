@@ -33,10 +33,15 @@ const IndexPage = () => {
     <Layout className={styles.page}>
       <SEO title="Home" />
       <section className={'content'}>
+      <div className={styles.gridContainer12}>
+          <h1 className={cx(styles.gridCol12, styles.title)}>
+            We are Emergent Works.
+          </h1>
+        </div>
         <div className={styles.gridContainer12}>
-          <h2 className={cx(styles.gridColLeft, 'mt--xl')}>
+          <h2 className={cx(styles.gridColLeft, 'mt--xxl')}>
             Black and Latinx people make up 32% of the US population and 50% of the prison population,
-            but <span className={'bold'}>only 15% of the tech workforce.</span>
+            but <span className={cx('bold', styles.squigglyUnderline)}>only 15% of the tech workforce.</span>
           </h2>
         </div>
         <div className={styles.gridContainer12}>
@@ -78,12 +83,6 @@ const IndexPage = () => {
           </h2>
           <p className={'mt--lg'}>
             Through our projects, our formerly incarcerated apprentices get valuable paid work experience to kickstart their careers in tech.
-          </p>
-          <h2 className={'mt--xxl'}>
-            The Emergent Works community is open and endless.
-          </h2>
-          <p className={'mt--lg'}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <h2 className={'mt--xxl'}>
             Help us raise $40,000.

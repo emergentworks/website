@@ -7,7 +7,7 @@
  */
 .companies {
   position: absolute;
-  right: 0;
+  right: -160px;
   margin-top: var(--sp-looser);
   margin-right: calc(-1 * var(--sp-base));
   width: var(--bp-med);
@@ -32,9 +32,19 @@
   grid-column: col-start / span 11;
 }
 
+.gridCol12 {
+  grid-column: col-start / span 12;
+}
+
 .gridColRight {
   grid-column: col-start 9 / span 4;
   align-self: end;
+}
+
+.title {
+  font-size: var(--fs-largest);
+  letter-spacing: -0.0235em;
+  line-height: 140%;
 }
 
 @media (min-width: 1300px) {
@@ -49,6 +59,7 @@
   .companies {
     position: relative;
     margin: var(--sp-max) auto 0;
+    right: 0;
   }
 }
 
@@ -69,4 +80,11 @@
   .metrocard {
     display: none;
   }
+}
+
+.squigglyUnderline {
+  padding-bottom: 22px;
+  background: url("../_assets/images/squiggly.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
