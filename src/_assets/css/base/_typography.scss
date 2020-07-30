@@ -14,10 +14,6 @@ h1,
   line-height: 2.5rem;
   font-weight: bold;
   font-size: var(--fs-xl);
-
-  @include bp(med) {
-    font-size: var(--fs-xxl);
-  }
 }
 
 h2,
@@ -29,10 +25,6 @@ h2,
   margin-bottom: var(--sp-base);
   font-weight: normal;
   font-size: var(--fs-l);
-
-  @include bp(med) {
-    font-size: var(--fs-xl);
-  }
 }
 
 h3,
