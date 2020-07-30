@@ -16,7 +16,7 @@ export const Header = () => {
 
     if (newValue) {
       window.scrollTo(0, 0);
-      document.body.setAttribute('class', 'no-scroll');
+      document.body.setAttribute('class', 'no-scroll-mobile');
     } else {
       document.body.removeAttribute('class');
     }
