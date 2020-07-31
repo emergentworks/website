@@ -33,10 +33,15 @@ const IndexPage = () => {
     <Layout className={styles.page}>
       <SEO title="Home" />
       <section className={'content'}>
+      <div className={styles.gridContainer12}>
+          <h1 className={cx(styles.gridCol12, styles.title)}>
+            We are Emergent Works.
+          </h1>
+        </div>
         <div className={styles.gridContainer12}>
-          <h2 className={cx(styles.gridColLeft, 'mt--xl')}>
+          <h2 className={cx(styles.gridColLeft, 'mt--xxl')}>
             Black and Latinx people make up 32% of the US population and 50% of the prison population,
-            but <span className={'bold'}>only 15% of the tech workforce.</span>
+            but <span className={cx('bold', styles.squigglyUnderline)}>only 15% of the tech workforce.</span>
           </h2>
         </div>
         <div className={styles.gridContainer12}>
