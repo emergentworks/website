@@ -30,12 +30,13 @@
 
 .partnersTitle {
   margin-top: var(--sp-loosest);
+  margin-bottom: var(--sp-loose);
 }
 
 .logoGroup {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 200px));
-  gap: var(--sp-looser);
+  grid-template-columns: repeat(auto-fill, minmax(auto, 160px));
+  gap: var(--sp-loosest);
 }
 
 .logoItem {

@@ -22,7 +22,7 @@ const AboutPage = () => {
           }
         }
       }
-      logos: allFile(filter: { relativeDirectory: { eq: "logos" } }) {
+      sponsors: allFile(filter: { relativeDirectory: { eq: "sponsors" } }) {
         nodes {
           name
           id
@@ -49,7 +49,7 @@ const AboutPage = () => {
 
   const teamData = data.teamData.edges
   const teamPics = data.teamPics.nodes
-  const logos = data.logos.nodes
+  const sponsors = data.sponsors.nodes
 
   const getImgSrc = name =>
     teamPics.filter(image => {
@@ -65,8 +65,9 @@ const AboutPage = () => {
       <SEO title="About" />
       <section className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
-          Emergent Works is a nonprofit software company that trains and employs formerly incarcerated people.
-          We believe that excellence in code can come from anyone.
+          Emergent Works is a nonprofit software company that trains and employs
+          formerly incarcerated people. We believe that excellence in code can
+          come from anyone.
         </h1>
         <div className={styles.team}>
           {teamData.map(person => (
@@ -86,7 +87,7 @@ const AboutPage = () => {
         <div className={styles.partners}>
           <h2 className={cx(styles.partnersTitle)}>Our partners</h2>
           <div className={styles.logoGroup}>
-            {logos.map(logo => (
+            {sponsors.map(logo => (
               <div key={logo.id} className={styles.logoItem}>
                 <Img
                   className={cx(styles.logo)}
