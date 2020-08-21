@@ -1,0 +1,10 @@
+@import "../_assets/css/abstracts/mixins";
+
+.title {
+  font-size: var(--fs-xxl);
+}
+
+.articleGroup {
+  margin-top: var(--sp-looser);
+  max-width: var(--content-max-width);
+}

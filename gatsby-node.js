@@ -8,3 +8,40 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     },
   })
 }
+
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const postTemplate = path.resolve('src/templates/post.js')
+
+  return graphql(`
+    {
+      allMdx {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              blurb
+            }
+            body
+            html
+            id
+          }
+        }
+      }
+    }
+  `).then(res => {
+    if (res.errors) {
+      return Promise.reject(res.errors)
+    }
+
+    res.data.allMdx.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: postTemplate,
+        context: node.id,
+      })
+    })
+  })
+}

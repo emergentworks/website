@@ -19,16 +19,19 @@ const DonatePage = ({ data }) => {
       <SEO title="Donate" />
       <div className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
-          Our program runs on donations so that we can provide the best learning experience for our students.
+          Our program runs on donations so that we can provide the best learning
+          experience for our students.
         </h1>
         <Grid gap={4}>
           <Grid col={2} gap={4}>
             <GridItem>
               <h2 className="mt--none">Help us raise $100,000</h2>
               <p>
-                Emergent Works programs run entirely on donations.
-                We are a registered 501(c)(3) nonprofit that aims to interrupt the prison cycle by creating pathways into high-paying tech careers for formerly incarcerated people.
-                Anything you can give helps tremendously!
+                Emergent Works programs run entirely on donations. We are a
+                registered 501(c)(3) nonprofit that aims to interrupt the prison
+                cycle by creating pathways into high-paying tech careers for
+                formerly incarcerated people. Anything you can give helps
+                tremendously!
               </p>
             </GridItem>
 
@@ -55,7 +58,7 @@ const DonatePage = ({ data }) => {
             <GridItem align="middle">
               <h2 className="mt--none">Donate laptops</h2>
               <p>
-              All of our participants receive a laptop for the duration of the
+                All of our participants receive a laptop for the duration of the
                 program. Support our students’ learning by donating gently used
                 laptops!
               </p>

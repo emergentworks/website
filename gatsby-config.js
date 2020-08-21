@@ -49,6 +49,34 @@ module.exports = {
         icon: `src/_assets/images/favicon.svg`, // This path is relative to the root of the site.
       },
     },
+    // Setting up file nodes for news
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `news`,
+        path: `${__dirname}/src/news`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 970,
+            },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

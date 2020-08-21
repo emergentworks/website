@@ -11,14 +11,14 @@ export const Header = () => {
   const [navVisibility, setNavVisibility] = useState(false)
 
   const activeMenu = () => {
-    const newValue = !navVisibility;
-    setNavVisibility(newValue);
+    const newValue = !navVisibility
+    setNavVisibility(newValue)
 
     if (newValue) {
-      window.scrollTo(0, 0);
-      document.body.setAttribute('class', 'no-scroll-mobile');
+      window.scrollTo(0, 0)
+      // document.body.setAttribute('class', 'no-scroll-mobile')
     } else {
-      document.body.removeAttribute('class');
+      // document.body.removeAttribute('class')
     }
   }
 
