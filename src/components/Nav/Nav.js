@@ -31,39 +31,64 @@ export const Nav = ({
     <ul className={styles.group}>
       {showHomeLink && (
         <li className={styles.item}>
-          <Link to="/" className={styles.link}>
+          <Link
+            to="/"
+            className={styles.link}
+            activeClassName={styles.isActive}
+          >
             Home
           </Link>
         </li>
       )}
       <li className={styles.item}>
-        <Link to="/about" className={styles.link}>
+        <Link
+          to="/about"
+          className={styles.link}
+          activeClassName={styles.isActive}
+        >
           About
         </Link>
       </li>
       <li className={styles.item}>
-        <Link to="/programs" className={styles.link}>
+        <Link
+          to="/programs"
+          className={styles.link}
+          activeClassName={styles.isActive}
+        >
           Programs
         </Link>
       </li>
       <li className={styles.item}>
-        <Link to="/for-clients" className={styles.link}>
+        <Link
+          to="/for-clients"
+          className={styles.link}
+          activeClassName={styles.isActive}
+        >
           For Clients
         </Link>
       </li>
       <li className={styles.item}>
-        <Link to="/donate" className={styles.link}>
+        <Link
+          to="/donate"
+          className={styles.link}
+          activeClassName={styles.isActive}
+        >
           Donate
         </Link>
       </li>
       <li className={styles.item}>
-        <Link to="/news" className={styles.link}>
+        <Link
+          to="/news"
+          className={styles.link}
+          activeClassName={styles.isActive}
+          partiallyActive
+        >
           News
         </Link>
       </li>
       {showHomeEmail && <li className={styles.item}>{getEmailLink()}</li>}
     </ul>
-    {navVisibility ? (
+    {navVisibility && (
       <section className={styles.mobileOnly}>
         <div className={styles.horizontalRule} />
         <div className={styles.contact}>
@@ -71,10 +96,13 @@ export const Nav = ({
           <SocialLinks className={styles.socialLinks} />
         </div>
       </section>
-    ) : null}
+    )}
   </nav>
 )
 
 Nav.propTypes = {
   className: PropTypes.string,
+  navVisibility: PropTypes.func,
+  showHomeLink: PropTypes.bool,
+  showHomeEmail: PropTypes.bool,
 }

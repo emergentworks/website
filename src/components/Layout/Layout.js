@@ -16,7 +16,7 @@ import Footer from '../Footer'
 import styles from './Layout.module.scss'
 import '_assets/css/style.scss'
 
-export const Layout = ({ children, className }) => {
+export const Layout = ({ children, className, banner }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -38,6 +38,7 @@ export const Layout = ({ children, className }) => {
         [styles.navActive]: navVisibility,
       })}
     >
+      {banner && <div className={cx(styles.banner, 'content')}>{banner}</div>}
       <Header
         navVisibility={navVisibility}
         setNavVisibility={setNavVisibility}
@@ -54,4 +55,5 @@ export const Layout = ({ children, className }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  banner: PropTypes.node,
 }

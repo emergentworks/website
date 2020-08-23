@@ -1,16 +1,16 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Proptypes from 'prop-types'
-import { format } from 'date-fns'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import Button from '../components/Button'
 
 import styles from './news.module.scss'
 
 const NewsIndex = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="News" />
     <div className="content">
       <h1 className={styles.title}>News</h1>
       <section className={styles.articleGroup}>
@@ -22,7 +22,7 @@ const NewsIndex = ({ data }) => (
               <h2>{news.node.frontmatter.title}</h2>
               <span>{news.node.frontmatter.date}</span>
               <p>{news.node.frontmatter.blurb}</p>
-              <Link to={news.node.frontmatter.path}>Read More</Link>
+              <Button to={news.node.frontmatter.path}>Read More</Button>
             </article>
           )
         })}

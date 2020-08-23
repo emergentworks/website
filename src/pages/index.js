@@ -1,12 +1,14 @@
 import React from 'react'
 import cx from 'classnames'
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
 import Button from 'components/Button'
 import ImageGrid from 'components/ImageGrid'
 import Img from 'gatsby-image'
 import '../components/fullstory.js'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
+
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
+
 import styles from './index.module.scss'
 
 const IndexPage = () => {
@@ -30,7 +32,15 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout className={styles.page}>
+    <Layout
+      className={styles.page}
+      banner={
+        <div>
+          Code Cooperative is now Emergent Works.{' '}
+          <Link to="/news/we-are-emergent-works">Learn More</Link>
+        </div>
+      }
+    >
       <SEO title="Home" />
       <section className="content">
         <div className={styles.gridContainer12}>
