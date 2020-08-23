@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import cx from 'classnames'
@@ -30,15 +30,24 @@ export const Layout = ({ children, className }) => {
     }
   `)
 
+  const [navVisibility, setNavVisibility] = useState(false)
+
   return (
-    <>
-      <Header />
+    <div
+      className={cx(styles.root, {
+        [styles.navActive]: navVisibility,
+      })}
+    >
+      <Header
+        navVisibility={navVisibility}
+        setNavVisibility={setNavVisibility}
+      />
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <main className={cx(styles.root, { [styles[className]]: className })}>
         <div className={styles.container}>{children}</div>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

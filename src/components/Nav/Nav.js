@@ -13,7 +13,7 @@ const getEmailLink = () => (
   >
     hello@emergentworks.org
   </a>
-);
+)
 
 export const Nav = ({
   navVisibility,
@@ -56,22 +56,22 @@ export const Nav = ({
           Donate
         </Link>
       </li>
-      {showHomeEmail && (
-        <li className={styles.item}>
-          { getEmailLink() }
-        </li>
-      )}
+      <li className={styles.item}>
+        <Link to="/news" className={styles.link}>
+          News
+        </Link>
+      </li>
+      {showHomeEmail && <li className={styles.item}>{getEmailLink()}</li>}
     </ul>
-    {navVisibility ?
-      (
-        <section className={styles.mobileOnly}>
-            <div className={styles.horizontalRule} />
-            <div className={styles.contact}>
-              { getEmailLink() }
-              <SocialLinks className={styles.socialLinks} />
-            </div>
-        </section>
-      ): null}
+    {navVisibility ? (
+      <section className={styles.mobileOnly}>
+        <div className={styles.horizontalRule} />
+        <div className={styles.contact}>
+          {getEmailLink()}
+          <SocialLinks className={styles.socialLinks} />
+        </div>
+      </section>
+    ) : null}
   </nav>
 )
 

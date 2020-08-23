@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import cx from 'classnames'
 
@@ -7,19 +8,9 @@ import logo from '../../_assets/images/logo--horizontal.svg'
 
 import styles from './Header.module.scss'
 
-export const Header = () => {
-  const [navVisibility, setNavVisibility] = useState(false)
-
+export const Header = ({ navVisibility, setNavVisibility }) => {
   const activeMenu = () => {
-    const newValue = !navVisibility
-    setNavVisibility(newValue)
-
-    if (newValue) {
-      window.scrollTo(0, 0)
-      // document.body.setAttribute('class', 'no-scroll-mobile')
-    } else {
-      // document.body.removeAttribute('class')
-    }
+    setNavVisibility(!navVisibility)
   }
 
   return (
@@ -45,4 +36,9 @@ export const Header = () => {
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  navVisibility: PropTypes.bool,
+  setNavVisibility: PropTypes.func,
 }
