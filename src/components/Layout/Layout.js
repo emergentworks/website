@@ -17,19 +17,6 @@ import styles from './Layout.module.scss'
 import '_assets/css/style.scss'
 
 export const Layout = ({ children, className, banner }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      sitePage {
-        path
-      }
-    }
-  `)
-
   const [navVisibility, setNavVisibility] = useState(false)
 
   return (
@@ -38,12 +25,12 @@ export const Layout = ({ children, className, banner }) => {
         [styles.navActive]: navVisibility,
       })}
     >
-      {banner && <div className={cx(styles.banner, 'content')}>{banner}</div>}
+      {banner && <div className={cx(styles.banner)}>{banner}</div>}
       <Header
         navVisibility={navVisibility}
         setNavVisibility={setNavVisibility}
+        banner={banner}
       />
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <main className={cx(styles.root, { [styles[className]]: className })}>
         <div className={styles.container}>{children}</div>
       </main>

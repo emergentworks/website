@@ -22,6 +22,10 @@
       transition: transform 0.5s ease, opacity 0.35s ease;
       transform: translateY(-150%);
       z-index: 1000;
+
+      &.bannerActive {
+        top: 8.25rem;
+      }
     }
   }
 }

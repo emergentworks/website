@@ -35,7 +35,7 @@ const IndexPage = () => {
     <Layout
       className={styles.page}
       banner={
-        <div>
+        <div className="content">
           Code Cooperative is now Emergent Works.{' '}
           <Link to="/news/we-are-emergent-works">Learn More</Link>
         </div>

@@ -8,7 +8,7 @@ import logo from '../../_assets/images/logo--horizontal.svg'
 
 import styles from './Header.module.scss'
 
-export const Header = ({ navVisibility, setNavVisibility }) => {
+export const Header = ({ navVisibility, setNavVisibility, banner }) => {
   const activeMenu = () => {
     setNavVisibility(!navVisibility)
   }
@@ -21,7 +21,7 @@ export const Header = ({ navVisibility, setNavVisibility }) => {
             <img className={styles.logo} src={logo} alt="emergent works" />
           </Link>
         </div>
-        <div className={styles.navGroup}>
+        <div className={cx(styles.navGroup)}>
           <button
             type="button"
             className={cx(styles.navButton, {
@@ -31,7 +31,12 @@ export const Header = ({ navVisibility, setNavVisibility }) => {
           >
             <div></div>
           </button>
-          <Nav className={styles.nav} navVisibility={navVisibility} />
+          <Nav
+            className={cx(styles.nav, {
+              [styles.bannerActive]: banner,
+            })}
+            navVisibility={navVisibility}
+          />
         </div>
       </div>
     </header>

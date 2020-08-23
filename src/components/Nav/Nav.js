@@ -17,6 +17,7 @@ const getEmailLink = () => (
 
 export const Nav = ({
   navVisibility,
+  banner,
   showHomeLink,
   showHomeEmail,
   className,
@@ -89,7 +90,11 @@ export const Nav = ({
       {showHomeEmail && <li className={styles.item}>{getEmailLink()}</li>}
     </ul>
     {navVisibility && (
-      <section className={styles.mobileOnly}>
+      <section
+        className={cx(styles.mobileOnly, {
+          [styles.bannerVisible]: banner,
+        })}
+      >
         <div className={styles.horizontalRule} />
         <div className={styles.contact}>
           {getEmailLink()}
