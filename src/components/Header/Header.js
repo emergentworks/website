@@ -17,9 +17,11 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
     <header className={cx(styles.root, 'content')}>
       <div className={styles.container}>
         <div className={styles.logoGroup}>
-          <Link to="/" className={styles.logoWrapper}>
-            <img className={styles.logo} src={logo} alt="emergent works" />
-          </Link>
+          <span className={styles.logoWrapper}>
+            <Link to="/">
+              <img className={styles.logo} src={logo} alt="emergent works" />
+            </Link>
+          </span>
         </div>
         <div className={cx(styles.navGroup)}>
           <button
