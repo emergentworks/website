@@ -25,7 +25,6 @@ exports.createPages = ({ actions, graphql }) => {
               blurb
             }
             body
-            html
             id
           }
         }
