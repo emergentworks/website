@@ -66,8 +66,7 @@ const AboutPage = () => {
       <section className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
           Emergent Works is a nonprofit software company that trains and employs
-          formerly incarcerated people. We believe that excellence in code can
-          come from anyone.
+          formerly incarcerated people. This is our team.
         </h1>
         <div className={styles.team}>
           {teamData.map(person => (
@@ -85,7 +84,9 @@ const AboutPage = () => {
           ))}
         </div>
         <div className={styles.partners}>
-          <h2 className={cx(styles.partnersTitle)}>Our partners</h2>
+          <h1 className={cx(styles.subtitle, 'content-max-width')}>
+            These are some of the incredible organizations we partner with.
+          </h1>
           <div className={styles.logoGroup}>
             {sponsors.map(logo => (
               <div key={logo.id} className={styles.logoItem}>

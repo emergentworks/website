@@ -34,23 +34,23 @@
   {
     "name": "Cassie Moy",
     "img": "team-cassie.jpg",
-    "role": "Secretary",
+    "role": "Board Secretary",
     "twitter": "cassie_moy",
     "page": ["about"],
     "bio": ""
   },
   {
-    "name": "Savannah Lim",
-    "role": "Design",
-    "img": "sketch-savannah.jpg",
+    "name": "Adekunle Oduye",
+    "role": "Board Treasurer",
+    "img": "sketch-adekunle.jpg",
+    "twitter": "adekunleoduye",
     "page": ["about"],
     "bio": ""
   },
   {
-    "name": "Adekunle Oduye",
-    "role": "Treasurer",
-    "img": "sketch-adekunle.jpg",
-    "twitter": "adekunleoduye",
+    "name": "Savannah Lim",
+    "role": "Designer",
+    "img": "sketch-savannah.jpg",
     "page": ["about"],
     "bio": ""
   }
