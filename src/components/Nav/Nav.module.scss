@@ -56,8 +56,14 @@
   font-family: var(--font-text);
 
   &.isActive {
-    border-bottom: 1px solid var(--gray-600);
-    padding-bottom: var(--sp-tight);
+    background: url("../../_assets/images/squiggly.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 22px;
+  }
+
+  &:active {
+    text-decoration: none;
   }
 }
 
