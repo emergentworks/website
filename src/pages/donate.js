@@ -23,7 +23,7 @@ const DonatePage = ({ data }) => {
         </h1>
         <Grid gap={4}>
           <Grid col={2} gap={4}>
-            <GridItem>
+            <GridItem justify="left">
               <h2 className="mt--none">Help us raise $100,000</h2>
               <p>
               Donations help us cover our program costs: instructors, space, food,
@@ -31,23 +31,6 @@ const DonatePage = ({ data }) => {
                 tremendously!
               </p>
 
-              <h2 className={styles.donateLaptops}>Donate laptops</h2>
-              <p>
-                All of our participants receive a laptop for the duration of the
-                program. Support our students’ learning by donating gently used
-                laptops!
-              </p>
-
-              <Button
-                className="mt--lg"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSekRlaBYt0ILYZP90bJUiXfTf9fCl0brJwamNAgUoH1hIsZdg/viewform"
-              >
-                Donate laptops
-              </Button>
-              <Img fluid={Laptop} alt="Donate laptops" className={styles.laptop} />
-            </GridItem>
-
-            <GridItem justify="right">
               <script
                 src="https://donorbox.org/widget.js"
                 paypalExpress="false"
@@ -66,7 +49,20 @@ const DonatePage = ({ data }) => {
               ></iframe>
             </GridItem>
             <GridItem align="left">
+              <h2 className="mt--none">Donate laptops</h2>
+              <p>
+                All of our participants receive a laptop for the duration of the
+                program. Support our students’ learning by donating gently used
+                laptops!
+              </p>
 
+              <Button
+                className="mt--lg"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSekRlaBYt0ILYZP90bJUiXfTf9fCl0brJwamNAgUoH1hIsZdg/viewform"
+              >
+                Donate laptops
+              </Button>
+              <Img fluid={Laptop} alt="Donate laptops" className={styles.laptop} align="right"/>
             </GridItem>
           </Grid>
         </Grid>
