@@ -1,16 +1,15 @@
-/* 
+/*
  *
- * Donation 
+ * Donation
  *
  */
 
 .title {
   margin-bottom: var(--sp-looser);
-
   margin-bottom: 5rem;
 }
 
-.donarbox {
+.donorbox {
   max-width: 500px;
   min-width: 400px;
   max-height: 640px;
@@ -18,4 +17,8 @@
 
 .laptop {
   width: 350px;
+}
+
+.donateLaptops {
+  margin-top: 4rem;
 }

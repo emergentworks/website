@@ -19,44 +19,19 @@ const DonatePage = ({ data }) => {
       <SEO title="Donate" />
       <div className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
-          Our program runs on donations so that we can provide the best learning
-          experience for our students.
+        Emergent Works interrupts the prison cycle by creating pathways into high-paying jobs in technology for formerly incarcerated people.
         </h1>
         <Grid gap={4}>
           <Grid col={2} gap={4}>
             <GridItem>
               <h2 className="mt--none">Help us raise $100,000</h2>
               <p>
-                Emergent Works programs run entirely on donations. We are a
-                registered 501(c)(3) nonprofit that aims to interrupt the prison
-                cycle by creating pathways into high-paying tech careers for
-                formerly incarcerated people. Anything you can give helps
+              Donations help us cover our program costs: instructors, space, food,
+            learning supplies, hardware, software, and MetroCards. Anything you can give helps
                 tremendously!
               </p>
-            </GridItem>
 
-            <GridItem justify="right">
-              <script
-                src="https://donorbox.org/widget.js"
-                paypalExpress="false"
-              ></script>
-              <iframe
-                title="Donate to Emergent Works!"
-                allowpaymentrequest=""
-                className={styles.donarbox}
-                frameBorder="0"
-                height="900px"
-                name="donorbox"
-                scrolling="no"
-                seamless="seamless"
-                src="https://donorbox.org/embed/website-donation-15"
-                width="100%"
-              ></iframe>
-            </GridItem>
-          </Grid>
-          <Grid col={2} gap={4}>
-            <GridItem align="middle">
-              <h2 className="mt--none">Donate laptops</h2>
+              <h2 className={styles.donateLaptops}>Donate laptops</h2>
               <p>
                 All of our participants receive a laptop for the duration of the
                 program. Support our students’ learning by donating gently used
@@ -69,10 +44,29 @@ const DonatePage = ({ data }) => {
               >
                 Donate laptops
               </Button>
+              <Img fluid={Laptop} alt="Donate laptops" className={styles.laptop} />
             </GridItem>
 
-            <GridItem justify="center">
-              <Img fluid={Laptop} alt="hello" className={styles.laptop} />
+            <GridItem justify="right">
+              <script
+                src="https://donorbox.org/widget.js"
+                paypalExpress="false"
+              ></script>
+              <iframe
+                title="Donate to Emergent Works!"
+                allowpaymentrequest=""
+                className={styles.donorbox}
+                frameBorder="0"
+                height="900px"
+                name="donorbox"
+                scrolling="no"
+                seamless="seamless"
+                src="https://donorbox.org/embed/website-donation-15"
+                width="100%"
+              ></iframe>
+            </GridItem>
+            <GridItem align="left">
+
             </GridItem>
           </Grid>
         </Grid>
