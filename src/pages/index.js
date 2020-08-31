@@ -37,7 +37,7 @@ const IndexPage = () => {
       banner={
         <div className="content">
           Code Cooperative is now Emergent Works.{' '}
-          <Link to="/news/we-are-emergent-works">Learn More</Link>
+          <Link to="/news/we-are-emergent-works">Learn More</Link>.
         </div>
       }
     >
@@ -49,7 +49,7 @@ const IndexPage = () => {
           </h1>
         </div>
         <div className={styles.gridContainer12}>
-          <h2 className={cx(styles.gridColLeft, 'mt--xxl')}>
+          <h2 className={styles.gridColLeft}>
             Black and Latinx people make up 32% of the US population and 50% of
             the prison population, but{' '}
             <span className={cx('bold', styles.squigglyUnderline)}>
