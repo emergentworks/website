@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import cx from 'classnames'
 
 import Nav from 'components/Nav'
-import logo from '../../_assets/images/logo--horizontal.svg'
+import logo from '../../_assets/images/logo--horizontal.png'
 
 import styles from './Header.module.scss'
 
