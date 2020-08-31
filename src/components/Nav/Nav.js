@@ -77,16 +77,6 @@ export const Nav = ({
           Donate
         </Link>
       </li>
-      <li className={styles.item}>
-        <Link
-          to="/news"
-          className={styles.link}
-          activeClassName={styles.isActive}
-          partiallyActive
-        >
-          News
-        </Link>
-      </li>
       {showHomeEmail && <li className={styles.item}>{getEmailLink()}</li>}
     </ul>
     {navVisibility && (
