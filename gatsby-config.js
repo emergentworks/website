@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Code Cooperative`,
-    description: `The Code Cooperative creates life-changing opportunities in technology for people impacted by incarceration.`,
+    title: `Emergent Works`,
+    description: `Emergent Works interrupts the prison cycle by creating pathways into high-paying jobs in technology for formerly incarcerated people.`,
     author: `@codecooperative`,
   },
   plugins: [
@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `The Code Cooperative`,
-        short_name: `Code Coop`,
+        name: `Emergent Works`,
+        short_name: `Emergent Works`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

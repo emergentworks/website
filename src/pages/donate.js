@@ -41,7 +41,7 @@ const DonatePage = ({ data }) => {
                 paypalExpress="false"
               ></script>
               <iframe
-                title="Donate to the Code Cooperative!"
+                title="Donate to Emergent Works!"
                 allowpaymentrequest=""
                 className={styles.donarbox}
                 frameBorder="0"
