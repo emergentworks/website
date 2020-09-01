@@ -9,14 +9,14 @@ import styles from './SocialLinks.module.scss'
 
 export const SocialLinks = ({ className, ...rest }) => (
   <div className={cx(styles.root, className)} {...rest}>
-    <Link to="http://instagram.com/emergentworksorg" className={styles.link}>
+    <Link to="https://www.instagram.com/emergentworks_" className={styles.link}>
       <Icon
         className={styles.icon}
         type="instagram"
         title="Follow Emergent Works on Instagram"
       />
     </Link>
-    <Link to="http://twitter.com/emergentworksorg" className={styles.link}>
+    <Link to="https://twitter.com/emergentworks_" className={styles.link}>
       <Icon
         className={styles.icon}
         type="twitter"
