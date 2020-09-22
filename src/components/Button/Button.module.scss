@@ -22,10 +22,10 @@
   .labelGroup {
     display: flex;
     align-items: center;
-    height: 52px;
+    height: 49px;
     padding: 0px 1.5rem;
     background-color: var(--white-500);
-    transition: all 0.3s ease-in-out;
+    // transition: all 0.3s ease-in-out;
   }
   .iconGroup {
     padding: 0 var(--sp-base);
@@ -41,7 +41,7 @@
     color: var(--font-color-base);
 
     .labelGroup {
-      background-color: #f8f8f8;
+      background-color: #f0f0f0;
     }
   }
 

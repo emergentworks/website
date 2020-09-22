@@ -2,7 +2,7 @@
   display: inline-block;
 
   &:not(:first-child) {
-    padding-left: var(--sp-base);
+    padding-left: var(--sp-loose);
   }
 
   .icon {
