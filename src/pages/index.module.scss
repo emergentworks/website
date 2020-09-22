@@ -5,6 +5,10 @@
  * Home
  *
  */
+body {
+  overflow-x: hidden;
+}
+
 .companies {
   position: absolute;
   right: -160px;
@@ -56,11 +60,24 @@
 }
 
 @media (max-width: 1300px) {
+  // .companies {
+  //   position: relative;
+  //   margin: var(--sp-max) auto 0;
+  //   right: 0;
+  // }
   .companies {
-    position: relative;
-    margin: var(--sp-max) auto 0;
-    right: 0;
+    position: absolute;
+    right: -160px;
+    margin-top: var(--sp-looser);
+    margin-right: calc(-1 * var(--sp-base));
+    width: var(--bp-med);
   }
+}
+
+@media (max-width: 1140px) {
+    .companies {
+      display: none;
+    }
 }
 
 @media (max-width: 800px) {
