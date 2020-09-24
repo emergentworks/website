@@ -1,0 +1,32 @@
+@import "../../_assets/css/abstracts/1-abstracts";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--sp-base);
+
+  @include bp(max) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: var(--sp-loose);
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: var(--sp-base);
+
+  @include bp(max) {
+    width: auto;
+    flex-grow: 1;
+    max-width: 428px;
+    margin-right: var(--sp-base);
+    margin-bottom: 0px;
+  }
+}
+
+.formField {
+  margin-top: 20px;
+}
