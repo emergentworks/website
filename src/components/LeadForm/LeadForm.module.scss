@@ -5,11 +5,18 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: var(--sp-base);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include bp(max) {
     flex-direction: row;
     align-items: center;
     margin-bottom: var(--sp-loose);
+  }
+
+  input {
+    margin: 5px 0;
   }
 }
 
@@ -25,8 +32,4 @@
     margin-right: var(--sp-base);
     margin-bottom: 0px;
   }
-}
-
-.formField {
-  margin-top: 20px;
 }

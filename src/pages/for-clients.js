@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import cx from 'classnames'
-
+import LeadForm from 'components/LeadForm'
 import Layout from 'components/Layout'
 import SEO from 'components/seo'
 import ImgCaption from 'components/ImgCaption'
