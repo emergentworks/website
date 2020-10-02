@@ -1,9 +1,7 @@
 @import "../../_assets/css/abstracts/1-abstracts";
 
 .root {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  margin-top: var(--sp-looser);
   margin-bottom: var(--sp-base);
   max-width: 800px;
   margin-left: auto;
@@ -13,10 +11,6 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: var(--sp-loose);
-  }
-
-  input {
-    margin: 5px 0;
   }
 }
 
@@ -32,4 +26,30 @@
     margin-right: var(--sp-base);
     margin-bottom: 0px;
   }
+}
+
+.form {
+  background-color: var(--gray-300);
+  padding: var(--sp-loose);
+
+  .title {
+    margin-top: 0;
+  }
+
+  .textField {
+    margin-top: var(--sp-loose);
+  }
+}
+
+.successMessage {
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--sp-loose) var(--sp-base);
+  background-color: rgba(#66e271, 0.2);
+  border: 1px solid var(--green-500);
+}
+
+.successIcon {
+  width: 3rem;
+  height: 3rem;
 }
