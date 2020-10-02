@@ -18,7 +18,7 @@ export const SubscribeForm = () => {
         <FormField
           value={email}
           label="Your email here"
-          onChange={setEmail}
+          onChange={e => setEmail(e.target.value)}
           name="EMAIL"
         />
       </div>
