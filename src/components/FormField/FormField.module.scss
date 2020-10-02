@@ -4,6 +4,7 @@
   width: 100%;
   font-size: var(--fs-base);
   font-family: var(--font-mono);
+  flex-direction: column;
 }
 
 .input {
@@ -17,6 +18,7 @@
   font-size: inherit;
   color: var(--gray-600);
   font-family: var(--font-mono);
+  background-color: var(--white-500);
 
   &:focus {
     border-color: var(--blue-500);
@@ -26,8 +28,15 @@
   &::placeholder {
     text-transform: uppercase;
     color: var(--gray-400);
-    letter-spacing: .11em;
+    letter-spacing: 0.11em;
   }
+}
+
+textarea.input {
+  padding-top: var(--sp-base);
+  padding-bottom: var(--sp-base);
+  min-height: 250px;
+  width: 100%;
 }
 
 .text {
@@ -47,7 +56,26 @@
   text-overflow: ellipsis;
 }
 
-.textHasValue, .input:focus + .text {
+.textHasValue,
+.input:focus + .text {
   top: 0.7rem;
   font-size: 0.4em;
+}
+
+.errorContainer {
+  padding-top: var(--sp-base);
+  padding-bottom: var(--sp-loose);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-tight);
+}
+
+.errorIcon {
+  padding-top: 2px;
+  fill: var(--red-500);
+}
+
+.errorMessage {
+  font-family: var(--font-base);
+  color: var(--red-500);
 }
