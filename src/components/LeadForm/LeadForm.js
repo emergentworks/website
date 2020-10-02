@@ -42,7 +42,7 @@ export const LeadForm = () => {
     try {
       await axios.post('/api/leads', values)
       await console.log('Message has been sent')
-      await setSubmitting(false)
+      setSubmitting(false)
       setValues(INITIAL_STATE)
       setSuccuss(true)
     } catch (error) {

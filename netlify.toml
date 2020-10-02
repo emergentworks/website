@@ -1,7 +1,5 @@
-# https://script.google.com/macros/s/AKfycbyTdtviLyovBFthbw423r0LoomX9gOjSEsfN2bggm57EXBONdQ/exec
-
 [build]
-  functions = 'functions/'
+  functions = 'functions'
 
 [[redirects]]
   from = '/api/leads'

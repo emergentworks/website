@@ -18,8 +18,8 @@ const ForClientsPage = ({ data }) => {
       <SEO title="For Clients" />
       <div className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
-          Emergent Works builds software for purposeful
-          organizations while creating employment opportunities for formerly incarcerated people.
+          Emergent Works builds software for purposeful organizations while
+          creating employment opportunities for formerly incarcerated people.
         </h1>
 
         {images.map(logo => (
@@ -40,13 +40,8 @@ const ForClientsPage = ({ data }) => {
 export const query = graphql`
   query {
     images: allFile(
-      filter: {
-        relativeDirectory: { eq: "agency" }
-      }
-      sort: {
-        fields: [name]
-        order: ASC
-      }
+      filter: { relativeDirectory: { eq: "agency" } }
+      sort: { fields: [name], order: ASC }
     ) {
       nodes {
         name
