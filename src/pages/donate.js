@@ -19,16 +19,17 @@ const DonatePage = ({ data }) => {
       <SEO title="Donate" />
       <div className={cx(styles.root, 'content')}>
         <h1 className={cx(styles.title, 'content-max-width')}>
-        Emergent Works interrupts the prison cycle by creating pathways into high-paying jobs in technology for formerly incarcerated people.
+          Emergent Works interrupts the prison cycle by creating pathways into
+          high-paying jobs in technology for formerly incarcerated people.
         </h1>
         <Grid gap={4}>
           <Grid col={2} gap={4}>
             <GridItem justify="left">
               <h2 className="mt--none">Help us raise $100,000</h2>
               <p>
-              Donations help us cover our program costs: instructors, space, food,
-            learning supplies, hardware, software, and MetroCards. Anything you can give helps
-                tremendously!
+                Donations help us cover our program costs: instructors, space,
+                food, learning supplies, hardware, software, and MetroCards.
+                Anything you can give helps tremendously!
               </p>
 
               <script
@@ -62,7 +63,12 @@ const DonatePage = ({ data }) => {
               >
                 Donate laptops
               </Button>
-              <Img fluid={Laptop} alt="Donate laptops" className={styles.laptop} align="right"/>
+              <Img
+                fluid={Laptop}
+                alt="Donate laptops"
+                className={styles.laptop}
+                align="right"
+              />
             </GridItem>
           </Grid>
         </Grid>

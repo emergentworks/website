@@ -63,6 +63,6 @@ FormField.propTypes = {
   className: PropTypes.string,
   value: PropTypes.string,
   label: PropTypes.string,
-  type: PropTypes.oneOf('text', 'textarea'),
+  type: PropTypes.oneOf(['text', 'textarea']),
   onChange: PropTypes.func,
 }

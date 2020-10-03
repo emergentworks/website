@@ -22,7 +22,6 @@ const ProgramsPage = () => (
             src="https://player.vimeo.com/video/316857444?autoplay=1&title=0&byline=0&portrait=0&muted=1&loop=1"
             frameBorder="0"
             allow="autoplay; fullscreen"
-            allowFullScreen
           ></iframe>
         </div>
         <h2 className={cx(styles.subTitle, 'content-max-width')}>
@@ -70,7 +69,6 @@ const ProgramsPage = () => (
             src="https://player.vimeo.com/video/417760949?byline=0&portrait=0&muted=1&loop=1"
             frameBorder="0"
             allow="autoplay; fullscreen"
-            allowFullScreen
           ></iframe>
         </div>
         <h2 className={cx(styles.subTitle, 'content-max-width')}>

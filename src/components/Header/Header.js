@@ -47,5 +47,6 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
 
 Header.propTypes = {
   navVisibility: PropTypes.bool,
+  banner: PropTypes.object,
   setNavVisibility: PropTypes.func,
 }

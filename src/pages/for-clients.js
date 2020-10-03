@@ -22,12 +22,12 @@ const ForClientsPage = ({ data }) => {
           creating employment opportunities for formerly incarcerated people.
         </h1>
 
-        {images.map(logo => (
-          <div className={styles.work}>
+        {images.map((img, i) => (
+          <div className={styles.work} key={i}>
             <ImgCaption
               className={styles.work}
-              fluid={logo.childImageSharp.fluid}
-              alt={logo.name}
+              fluid={img.childImageSharp.fluid}
+              alt={img.name}
             />
           </div>
         ))}

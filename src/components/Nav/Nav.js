@@ -97,7 +97,8 @@ export const Nav = ({
 
 Nav.propTypes = {
   className: PropTypes.string,
-  navVisibility: PropTypes.func,
+  navVisibility: PropTypes.bool,
   showHomeLink: PropTypes.bool,
   showHomeEmail: PropTypes.bool,
+  banner: PropTypes.string,
 }

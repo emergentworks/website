@@ -69,6 +69,7 @@ const IndexPage = () => {
           style={{ padding: '56.25% 0 0 0', position: 'relative' }}
         >
           <iframe
+            title="Welcome"
             src="https://player.vimeo.com/video/335249244?autoplay=1&title=0&byline=0&portrait=0&muted=1&loop=1"
             style={{
               position: 'absolute',
@@ -79,7 +80,6 @@ const IndexPage = () => {
             }}
             frameBorder="0"
             allow="autoplay; fullscreen"
-            allowFullScreen
           ></iframe>
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>

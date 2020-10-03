@@ -9,9 +9,10 @@ import styles from './SocialLinks.module.scss'
 
 export const SocialLinks = ({ className, ...rest }) => (
   <div className={cx(styles.root, className)} {...rest}>
-    <Link
+    <a
+      href="https://www.instagram.com/emergentworks_"
       target="_blank"
-      to="https://www.instagram.com/emergentworks_"
+      rel="noopener noreferrer"
       className={styles.link}
     >
       <Icon
@@ -19,10 +20,11 @@ export const SocialLinks = ({ className, ...rest }) => (
         type="instagram"
         title="Follow Emergent Works on Instagram"
       />
-    </Link>
-    <Link
+    </a>
+    <a
+      href="https://twitter.com/emergentworks_"
       target="_blank"
-      to="https://twitter.com/emergentworks_"
+      rel="noopener noreferrer"
       className={styles.link}
     >
       <Icon
@@ -30,7 +32,7 @@ export const SocialLinks = ({ className, ...rest }) => (
         type="twitter"
         alt="Follow Emergent Works on Twitter"
       />
-    </Link>
+    </a>
   </div>
 )
 

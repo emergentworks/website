@@ -7,7 +7,6 @@
 
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
 import cx from 'classnames'
 
 import Header from '../Header'
@@ -42,5 +41,5 @@ export const Layout = ({ children, className, banner }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  banner: PropTypes.node,
+  banner: PropTypes.object,
 }
