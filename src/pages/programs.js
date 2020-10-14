@@ -46,7 +46,7 @@ const ProgramsPage = () => (
             className="mt--lg"
             href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSc9GW3E8zeOW-fXvdjgNlrnPsXo-19lZhc26_ShW91oY9FNIg/viewform"
           >
-            Join the waiting list to become a mentor
+            Apply to become a mentor
           </Button>
         </div>
         {/* <div style={styles.accordionGroup}>
