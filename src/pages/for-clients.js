@@ -31,7 +31,8 @@ const ForClientsPage = ({ data }) => {
             />
           </div>
         ))}
-        <a id="leadForm"><LeadForm /></a>
+        <a id="leadForm"></a>
+        <LeadForm />
       </div>
     </Layout>
   )
