@@ -25,13 +25,12 @@ const DonatePage = ({ data }) => {
         <Grid gap={4}>
           <Grid col={2} gap={4}>
             <GridItem justify="left">
-              <h2 className="mt--none">Help us raise $100,000</h2>
-              <p>
-                Donations help us cover our program costs: instructors, space,
-                food, learning supplies, hardware, software, and MetroCards.
-                Anything you can give helps tremendously!
-              </p>
+              <h2 className="mt--none">Support our work</h2>
+                <p><strong>$50 donations</strong> pay for chargers for donated laptops.</p>
+                <p><strong>$100 donations</strong> pay for guest speakers to teach workshops.</p>
+                <p><strong>$250 donations</strong> pay for learning stipends for our participants.</p>
 
+                <p> As a volunteer-run organization, less than 5% of funds are spent on administrative costs.</p>
               <script
                 src="https://donorbox.org/widget.js"
                 paypalExpress="false"
