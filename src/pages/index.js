@@ -118,7 +118,7 @@ const IndexPage = () => {
             get valuable paid work experience to kickstart their careers in
             tech.
           </p>
-          <h2 className="mt--xxl">Help us raise $100,000.</h2>
+          <h2 className="mt--xxl">Donations support our work.</h2>
           <p className="mt--lg">
             Donations help us cover our program costs: instructors, space, food,
             learning supplies, hardware, software, and MetroCards. You can also
