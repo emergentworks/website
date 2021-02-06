@@ -51,10 +51,20 @@ const IndexPage = () => {
         <div className={styles.gridContainer12}>
           <h2 className={styles.gridColLeft}>
             Black and Latinx people make up 32% of the US population and 50% of
-            the prison population, but{' '  }
+            the prison population, but{' '}
             <span className={cx('bold', styles.squigglyUnderline)}>
               only 15% of the tech workforce.
             </span>
+          </h2>
+        </div>
+        <div className={styles.gridContainer12}>
+          <h2 className={cx(styles.gridColRight, 'mt--lg')}>
+            Clients work with us to build their software and correct this imbalance.
+                          <Button
+                className="mt--lg"
+                to="/for-clients#leadForm">
+                Let's chat
+              </Button>
           </h2>
         </div>
 
@@ -108,14 +118,11 @@ const IndexPage = () => {
             get valuable paid work experience to kickstart their careers in
             tech.
           </p>
-          <h2 className="mt--xxl">Donations support our work.</h2>
+          <h2 className="mt--xxl">Help us raise $100,000.</h2>
           <p className="mt--lg">
             Donations help us cover our program costs: instructors, space, food,
             learning supplies, hardware, software, and MetroCards. You can also
-            support our students by donating gently used laptops!</p>
-
-          <p className="mt--lg">
-            As a volunteer-run organization, less than 5% of funds are spent on administrative costs.
+            support our students by donating gently used laptops!
           </p>
           <Button to="/donate" className="mt--lg">
             Donate Now
