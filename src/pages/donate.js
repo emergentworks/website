@@ -29,8 +29,8 @@ const DonatePage = ({ data }) => {
                 <p><strong>$50 donations</strong> pay for chargers for donated laptops.</p>
                 <p><strong>$100 donations</strong> pay for guest speakers to teach workshops.</p>
                 <p><strong>$250 donations</strong> pay for learning stipends for our participants.</p>
-                Anything you can give helps tremendously!
-              </p>
+                <p>Anything you can give helps tremendously!
+                </p>
 
               <script
                 src="https://donorbox.org/widget.js"
