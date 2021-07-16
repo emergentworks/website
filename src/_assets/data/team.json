@@ -53,5 +53,12 @@
     "img": "sketch-savannah.jpg",
     "page": ["about"],
     "bio": ""
+  },
+  {
+    "name": "Eli Johnson",
+    "role": "Operations Manager",
+    "img": "sketch-eli.jpg",
+    "page": ["about"],
+    "bio": ""
   }
 ]
