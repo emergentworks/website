@@ -22,12 +22,12 @@
   border-width: 1px;
 }
 
-// Border Color
-@each $key, $value in $colors {
-  .b--#{$key} {
-    border-color: $value;
-  }
-}
+// // Border Color
+// @each $key, $value in $colors {
+//   .b--#{$key} {
+//     border-color: $value;
+//   }
+// }
 
 // Border Radius
 .brad1 {
