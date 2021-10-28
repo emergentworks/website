@@ -7,7 +7,7 @@ import Layout from 'components/Layout'
 import SEO from 'components/seo'
 import ImgCaption from 'components/ImgCaption'
 
-import styles from './for-clients.module.scss'
+import styles from './agency.module.scss'
 
 const ForClientsPage = ({ data }) => {
   // eslint-disable-next-line react/prop-types

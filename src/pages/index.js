@@ -60,11 +60,11 @@ const IndexPage = () => {
         <div className={styles.gridContainer12}>
           <h2 className={cx(styles.gridColRight, 'mt--lg')}>
             Clients work with us to build their software and correct this imbalance.
-                          <Button
-                className="mt--lg"
-                to="/for-clients#leadForm">
-                Let's chat
-              </Button>
+            <Button
+              className="mt--lg"
+              to="/agency#leadForm">
+              Let's chat
+            </Button>
           </h2>
         </div>
 
