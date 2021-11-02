@@ -34,12 +34,12 @@ const IndexPage = () => {
   return (
     <Layout
       className={styles.page}
-      banner={
-        <div className="content">
-          Code Cooperative is now Emergent Works.{' '}
-          <Link to="/news/we-are-emergent-works">Learn more</Link>
-        </div>
-      }
+    // banner={
+    //   <div className="content">
+    //     Code Cooperative is now Emergent Works.{' '}
+    //     <Link to="/news/we-are-emergent-works">Learn more</Link>
+    //   </div>
+    // }
     >
       <SEO title="Home" />
       <section className="content">
@@ -48,16 +48,27 @@ const IndexPage = () => {
             We are Emergent Works.
           </h1>
         </div>
-        <div className={styles.gridContainer12}>
-          <h2 className={styles.gridColLeft}>
+        <div className={cx(styles, 'content-max-width')} >
+          {/* <h2 className={styles.gridColLeft}>
             Black and Latinx people make up 32% of the US population and 50% of
             the prison population, but{' '}
             <span className={cx('bold', styles.squigglyUnderline)}>
               only 15% of the tech workforce.
             </span>
-          </h2>
+          </h2> */}
+          <div >
+            <p>
+              We are a community of software developers, designers, product specialists, and committed citizens working to build responsive software and community programs that address the most pressing challenges faced by organizations, and our society today.
+            </p>
+            <p>
+              We envision a world where tech literacy, education, and skills-based training are freely available to the individuals and communities, disproportionately of color, impacted by mass incarceration.
+            </p>
+            <p>
+              We realize this vision through our in-house software development agency and strategic educational programming that provides mentorship and a pathway to careers in tech to these communities.
+            </p>
+          </div>
         </div>
-        <div className={styles.gridContainer12}>
+        {/* <div className={styles.gridContainer12}>
           <h2 className={cx(styles.gridColRight, 'mt--lg')}>
             Clients work with us to build their software and correct this imbalance.
             <Button
@@ -66,7 +77,7 @@ const IndexPage = () => {
               Let's chat
             </Button>
           </h2>
-        </div>
+        </div> */}
 
         {/* TODO: update video to reflect EW rather than CC */}
         <div
@@ -109,7 +120,7 @@ const IndexPage = () => {
 
       <section className={cx(styles.gridContainer12, 'content')}>
         <div className={styles.gridColLeft}>
-          <h2 className="mt--xxl">
+          {/* <h2 className="mt--xxl">
             We are a nonprofit software company that trains and employs formerly
             incarcerated people.
           </h2>
@@ -117,23 +128,24 @@ const IndexPage = () => {
             Through our client projects, our formerly incarcerated apprentices
             get valuable paid work experience to kickstart their careers in
             tech.
-          </p>
+          </p> */}
           <h2 className="mt--xxl">Donations support our work.</h2>
-          <p className="mt--lg">
+          <Button to="/donate" className="mt--lg">
+            Donate Now
+          </Button>
+          {/* <p className="mt--lg">
             Donations help us cover our program costs: instructors, space, food,
             learning supplies, hardware, software, and MetroCards. You can also
             support our students by donating gently used laptops!
           </p>
-          <Button to="/donate" className="mt--lg">
-            Donate Now
-          </Button>
+
         </div>
         <div className={styles.gridColRight}>
           <Img
             className={styles.metrocard}
             fluid={data.metrocard.childImageSharp.fluid}
             alt="Metrocard"
-          />
+          /> */}
         </div>
       </section>
     </Layout>

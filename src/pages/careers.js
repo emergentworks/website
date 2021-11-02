@@ -14,32 +14,20 @@ const ProgramsPage = () => (
         <h1 className={cx(styles.title, 'content-max-width')}>
           Join our team.
         </h1>
-        <div>
+        <p>
+          We believe that developing software and educational programming that is responsive to the problems our clients and society face, necessitates that our team be representative of the diverse range of perspectives in the world. Having team members with direct lived experience with the problems we solve for our clients and communities allows us to build products and programs that are both inclusive and sensitive to the lives of the people that interact with and are impacted by them.
+        </p>
+        <p className="content-max-width">
+          See what's available on our jobs page.
+        </p>
+        {/* <div>
           <h2 className={cx(styles.subTitle, 'content-max-width')}>
-            Make an Impact, Build a Community
+            We are the Emergent Works Family.
           </h2>
           <p className="content-max-width">
             Our mission...
           </p>
-        </div>
-
-        <div>
-          <h2 className={cx(styles.subTitle, 'content-max-width')}>
-            Build a Community
-          </h2>
-          <p className="content-max-width">
-            ...
-          </p>
-        </div>
-
-        <div>
-          <h2 className={cx(styles.subTitle, 'content-max-width')}>
-            Non-profit culture, startup-tier benefits
-          </h2>
-          <p className="content-max-width">
-            ...
-          </p>
-        </div>
+        </div> */}
 
         <div>
           <Button
