@@ -99,12 +99,42 @@ const IndexPage = () => {
           ></iframe>
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
-        <div className={styles.gridContainer12}>
+        {/* <div className={styles.gridContainer12}>
           <h2 className={cx(styles.gridCol11, 'mt--xxl')}>
             Emergent Works interrupts the prison cycle by creating pathways into
             high-paying jobs in technology for formerly incarcerated people.
           </h2>
+        </div> */}
+        <section className={cx(styles.gridContainer12, 'content')}>
+          <div className={styles.gridColLeft}>
+            {/* <h2 className="mt--xxl">
+            We are a nonprofit software company that trains and employs formerly
+            incarcerated people.
+          </h2>
+          <p className="mt--lg">
+            Through our client projects, our formerly incarcerated apprentices
+            get valuable paid work experience to kickstart their careers in
+            tech.
+          </p> */}
+            <h2 className="mt--xxl">Donations support our work.</h2>
+            <Button to="/donate" className="mt--lg">
+              Donate Now
+            </Button>
+            {/* <p className="mt--lg">
+            Donations help us cover our program costs: instructors, space, food,
+            learning supplies, hardware, software, and MetroCards. You can also
+            support our students by donating gently used laptops!
+          </p>
+
         </div>
+        <div className={styles.gridColRight}>
+          <Img
+            className={styles.metrocard}
+            fluid={data.metrocard.childImageSharp.fluid}
+            alt="Metrocard"
+          /> */}
+          </div>
+        </section>
       </section>
 
       <section className={cx(styles.imageGrid, 'mt--xxl')}>
@@ -118,36 +148,7 @@ const IndexPage = () => {
         />
       </h3>
 
-      <section className={cx(styles.gridContainer12, 'content')}>
-        <div className={styles.gridColLeft}>
-          {/* <h2 className="mt--xxl">
-            We are a nonprofit software company that trains and employs formerly
-            incarcerated people.
-          </h2>
-          <p className="mt--lg">
-            Through our client projects, our formerly incarcerated apprentices
-            get valuable paid work experience to kickstart their careers in
-            tech.
-          </p> */}
-          <h2 className="mt--xxl">Donations support our work.</h2>
-          <Button to="/donate" className="mt--lg">
-            Donate Now
-          </Button>
-          {/* <p className="mt--lg">
-            Donations help us cover our program costs: instructors, space, food,
-            learning supplies, hardware, software, and MetroCards. You can also
-            support our students by donating gently used laptops!
-          </p>
 
-        </div>
-        <div className={styles.gridColRight}>
-          <Img
-            className={styles.metrocard}
-            fluid={data.metrocard.childImageSharp.fluid}
-            alt="Metrocard"
-          /> */}
-        </div>
-      </section>
     </Layout>
   )
 }

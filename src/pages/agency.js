@@ -30,7 +30,7 @@ const ForClientsPage = ({ data }) => {
 
         </div>
         <p>
-
+          Interested in working with us? Send us an email at <a href="mailto:hello@emergentworks.org">hello@emergentworks.org</a>
         </p>
         {/* {images.map((img, i) => (
           <div className={styles.work} key={i}>
@@ -41,8 +41,8 @@ const ForClientsPage = ({ data }) => {
             />
           </div>
         ))} */}
-        <a id="leadForm"></a>
-        <LeadForm />
+        {/* <a id="leadForm"></a>
+        <LeadForm /> */}
       </div>
     </Layout>
   )

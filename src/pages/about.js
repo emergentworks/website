@@ -10,18 +10,7 @@ import styles from './about.module.scss'
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
-      teamPics: allFile(filter: { relativeDirectory: { eq: "team-core" } }) {
-        nodes {
-          name
-          id
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
+    query MyQuer {
       sponsors: allFile(filter: { relativeDirectory: { eq: "sponsors" } }) {
         nodes {
           name
@@ -33,32 +22,21 @@ const AboutPage = () => {
           }
         }
       }
-      teamData: allTeamJson {
-        edges {
-          node {
-            id
-            name
-            img
-            twitter
-            role
-          }
-        }
-      }
     }
   `)
 
-  const teamData = data.teamData.edges
-  const teamPics = data.teamPics.nodes
+  // const teamData = data.teamData.edges
+  // const teamPics = data.teamPics.nodes
   const sponsors = data.sponsors.nodes
 
-  const getImgSrc = name =>
-    teamPics.filter(image => {
-      if (!image.name.includes(name)) {
-        return null
-      }
+  // const getImgSrc = name =>
+  //   teamPics.filter(image => {
+  //     if (!image.name.includes(name)) {
+  //       return null
+  //     }
 
-      return image
-    })[0].childImageSharp.fluid
+  //     return image
+  //   })[0].childImageSharp.fluid
 
   return (
     <Layout className={styles.page}>
@@ -88,23 +66,12 @@ const AboutPage = () => {
           </p>
         </div>
       </section>
+
       <br />
       <hr className={cx(styles, 'content')} />
       <br />
-      <section className={cx(styles.gridContainer12, 'content')}>
-        <h1 className={cx(styles, 'content-max-width')}>
-          We are the Emergent Works Family.
-        </h1>
-        <div>
-          <p>
-            We believe that developing software and educational programming that is responsive to the problems our clients and society face, necessitates that our team be representative of the diverse range of perspectives in the world. Having team members with direct lived experience with the problems we solve for our clients and communities allows us to build products and programs that are both inclusive and sensitive to the lives of the people that interact with and are impacted by them.
-          </p>
-        </div>
-      </section>
 
-      <br />
-
-      <section className={cx(styles.gridContainer12, 'content')}>
+      {/* <section className={cx(styles.gridContainer12, 'content')}>
         <h1 className={cx(styles, 'content-max-width')}>
           Meet the Team
         </h1>
@@ -127,7 +94,7 @@ const AboutPage = () => {
       </section>
       <br />
       <br />
-      <br />
+      <br /> */}
 
       <section className={cx(styles.gridContainer12, 'content')}>
         <h1 className={cx(styles, 'content-max-width')}>
