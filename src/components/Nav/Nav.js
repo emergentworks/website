@@ -61,11 +61,20 @@ export const Nav = ({
       </li>
       <li className={styles.item}>
         <Link
-          to="/for-clients"
+          to="/agency"
           className={styles.link}
           activeClassName={styles.isActive}
         >
-          For Clients
+          Agency
+        </Link>
+      </li>
+      <li className={styles.item}>
+        <Link
+          to="/team"
+          className={styles.link}
+          activeClassName={styles.isActive}
+        >
+          Team
         </Link>
       </li>
       <li className={styles.item}>

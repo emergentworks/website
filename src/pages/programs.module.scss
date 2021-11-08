@@ -4,10 +4,12 @@
   & > p:last-of-type {
     margin-bottom: var(--sp-loose);
   }
+  margin-bottom: 60px;
 }
 
 .title {
   margin-bottom: var(--sp-looser);
+  margin-top: var(--sp);
 }
 
 .videoWrapper {
