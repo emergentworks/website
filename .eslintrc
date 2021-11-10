@@ -1,5 +1,4 @@
 {
-  "extends": ["wesbos"],
   "rules": {
     "react/prop-types": "warn"
   },
@@ -17,5 +16,6 @@
         "paths": ["src"]
       }
     }
-  }
+  },
+  "extends": ["wesbos", "plugin:prettier/recommended"]
 }
