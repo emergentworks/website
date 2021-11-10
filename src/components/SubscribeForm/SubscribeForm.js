@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import FormField from 'components/FormField'
-import Button from 'components/Button'
-import cx from 'classnames'
-import styles from './SubscribeForm.module.scss'
+import React, { useState } from 'react';
+import FormField from 'components/FormField';
+import Button from 'components/Button';
+import cx from 'classnames';
+import styles from './SubscribeForm.module.scss';
 
 export const SubscribeForm = () => {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('');
 
   return (
     <form
@@ -18,7 +18,7 @@ export const SubscribeForm = () => {
         <FormField
           value={email}
           label="Your email here"
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           name="EMAIL"
         />
       </div>
@@ -26,5 +26,5 @@ export const SubscribeForm = () => {
         Stay updated
       </Button>
     </form>
-  )
-}
+  );
+};

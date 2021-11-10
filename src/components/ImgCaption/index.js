@@ -1,1 +1,1 @@
-export { ImgCaption as default } from './ImgCaption'
+export { ImgCaption as default } from './ImgCaption';

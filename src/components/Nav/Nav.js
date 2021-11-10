@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
-import SocialLinks from 'components/SocialLinks'
+import React from 'react';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import SocialLinks from 'components/SocialLinks';
 
-import styles from './Nav.module.scss'
+import styles from './Nav.module.scss';
 
 const getEmailLink = () => (
   <a
@@ -13,7 +13,7 @@ const getEmailLink = () => (
   >
     hello@emergentworks.org
   </a>
-)
+);
 
 export const Nav = ({
   navVisibility,
@@ -102,7 +102,7 @@ export const Nav = ({
       </section>
     )}
   </nav>
-)
+);
 
 Nav.propTypes = {
   className: PropTypes.string,
@@ -110,4 +110,4 @@ Nav.propTypes = {
   showHomeLink: PropTypes.bool,
   showHomeEmail: PropTypes.bool,
   banner: PropTypes.string,
-}
+};

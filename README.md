@@ -10,5 +10,6 @@ setup RSA key for your github account (example found here: https://jhooq.com/git
    npm install
    npm run build
 ```
+
 To setup development environment:
-   `npm run develop`
+`npm run develop`

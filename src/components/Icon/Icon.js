@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 
-import styles from './Icon.module.scss'
+import styles from './Icon.module.scss';
 
-import { iconList } from './iconList'
+import { iconList } from './iconList';
 
-const getIconNames = Object.keys(iconList)
+const getIconNames = Object.keys(iconList);
 
 export const Icon = ({ type, title, className, ...rest }) => {
-  const arrowRight = type === 'arrowRight' ? 15 : 24
+  const arrowRight = type === 'arrowRight' ? 15 : 24;
 
   return (
     <svg
@@ -30,11 +30,11 @@ export const Icon = ({ type, title, className, ...rest }) => {
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
 Icon.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(getIconNames),
   title: PropTypes.string,
-}
+};

@@ -1,3 +1,3 @@
-import useForm from './useForm'
+import useForm from './useForm';
 
-export { useForm }
+export { useForm };

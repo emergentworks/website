@@ -1,1 +1,1 @@
-export { Triptych, TriptychItem } from "./Triptych"
+export { Triptych, TriptychItem } from './Triptych';

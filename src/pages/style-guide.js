@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
-import cx from 'classnames'
-import { Link } from 'gatsby'
+import React, { useState } from 'react';
+import cx from 'classnames';
+import { Link } from 'gatsby';
 
-import SEO from 'components/seo'
-import Layout from 'components/Layout'
-import Grid from 'components/Grid'
-import Button from 'components/Button'
-import FormField from 'components/FormField'
-import Accordion from 'components/Accordion'
+import SEO from 'components/seo';
+import Layout from 'components/Layout';
+import Grid from 'components/Grid';
+import Button from 'components/Button';
+import FormField from 'components/FormField';
+import Accordion from 'components/Accordion';
 
-import styles from './style-guide.module.scss'
+import styles from './style-guide.module.scss';
 
 const multiLineText = `This here is going to be text that spans multiple lines.
 
 The reason being we have to make sure that the accordion can support this.
 
 The accordion can support this.
-`
+`;
 
 const StyleGuide = () => {
-  const [inputValue, setInput] = useState('')
+  const [inputValue, setInput] = useState('');
 
   return (
     <Layout className="style-guide">
@@ -169,7 +169,7 @@ const StyleGuide = () => {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default StyleGuide
+export default StyleGuide;
