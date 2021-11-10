@@ -1,15 +1,16 @@
-import React from 'react'
-import cx from 'classnames'
-import Button from 'components/Button'
-import ImageGrid from 'components/ImageGrid'
-import Img from 'gatsby-image'
-import '../components/fullstory.js'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import React from 'react';
+import cx from 'classnames';
+import Button from 'components/Button';
+import ImageGrid from 'components/ImageGrid';
+import Img from 'gatsby-image';
+// appears to be something to send user experience data to fullstory.com
+// import '../components/fullstory.js';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
 
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -29,17 +30,17 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout
       className={styles.page}
-    // banner={
-    //   <div className="content">
-    //     Code Cooperative is now Emergent Works.{' '}
-    //     <Link to="/news/we-are-emergent-works">Learn more</Link>
-    //   </div>
-    // }
+      // banner={
+      //   <div className="content">
+      //     Code Cooperative is now Emergent Works.{' '}
+      //     <Link to="/news/we-are-emergent-works">Learn more</Link>
+      //   </div>
+      // }
     >
       <SEO title="Home" />
       <section className="content">
@@ -48,7 +49,7 @@ const IndexPage = () => {
             We are Emergent Works.
           </h1>
         </div>
-        <div className={cx(styles, 'content-max-width')} >
+        <div className={cx(styles, 'content-max-width')}>
           {/* <h2 className={styles.gridColLeft}>
             Black and Latinx people make up 32% of the US population and 50% of
             the prison population, but{' '}
@@ -56,15 +57,23 @@ const IndexPage = () => {
               only 15% of the tech workforce.
             </span>
           </h2> */}
-          <div >
+          <div>
             <p>
-              We are a community of software developers, designers, product specialists, and committed citizens working to build responsive software and community programs that address the most pressing challenges faced by organizations, and our society today.
+              We are a community of software developers, designers, product
+              specialists, and committed citizens working to build responsive
+              software and community programs that address the most pressing
+              challenges faced by organizations, and our society today.
             </p>
             <p>
-              We envision a world where tech literacy, education, and skills-based training are freely available to the individuals and communities, disproportionately of color, impacted by mass incarceration.
+              We envision a world where tech literacy, education, and
+              skills-based training are freely available to the individuals and
+              communities, disproportionately of color, impacted by mass
+              incarceration.
             </p>
             <p>
-              We realize this vision through our in-house software development agency and strategic educational programming that provides mentorship and a pathway to careers in tech to these communities.
+              We realize this vision through our in-house software development
+              agency and strategic educational programming that provides
+              mentorship and a pathway to careers in tech to these communities.
             </p>
           </div>
         </div>
@@ -96,8 +105,8 @@ const IndexPage = () => {
             }}
             frameBorder="0"
             allow="autoplay; fullscreen"
-          ></iframe>
-          <script src="https://player.vimeo.com/api/player.js"></script>
+          />
+          <script src="https://player.vimeo.com/api/player.js" />
         </div>
         {/* <div className={styles.gridContainer12}>
           <h2 className={cx(styles.gridCol11, 'mt--xxl')}>
@@ -147,10 +156,8 @@ const IndexPage = () => {
           alt="KICKSTARTER · BITLY · YIELDMOÉ GIPHY · DROPBOX · CONDÉ NAST BOX · NEARFORM · AXIOS · GROUP NINE MEDIA · FLAWLESS RIPPLEMATCH · SPRINKLR"
         />
       </h3>
-
-
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

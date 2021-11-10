@@ -23,8 +23,15 @@
     "bio": ""
   },
   {
+    "name": "Yusuf Bolden",
+    "role": "Associate Software Engineer",
+    "img": "placeholder",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
     "name": "Elle Neubauer",
-    "role": "Software Engineer",
+    "role": "Senior Software Engineer",
     "img": "placeholder",
     "page": ["about"],
     "bio": ""
