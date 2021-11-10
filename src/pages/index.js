@@ -45,11 +45,11 @@ const IndexPage = () => {
       <SEO title="Home" />
       <section className="content">
         <div className={styles.gridContainer12}>
-          <h1 className={cx(styles.gridCol12, styles.title)}>
+          <h1 className={cx(styles.gridCol12, styles.mainPageTitle, 'title')}>
             We are Emergent Works.
           </h1>
         </div>
-        <div className={cx(styles, 'content-max-width')}>
+        <div className={cx('content-max-width')}>
           {/* <h2 className={styles.gridColLeft}>
             Black and Latinx people make up 32% of the US population and 50% of
             the prison population, but{' '}

@@ -1,4 +1,4 @@
-@use "../_assets/css/abstracts/1-abstracts" as *;
+@use '../_assets/css/abstracts/1-abstracts' as *;
 
 /*
  *
@@ -46,7 +46,7 @@ body {
   align-self: end;
 }
 
-.title {
+.mainPageTitle {
   font-size: var(--fs-largest);
   letter-spacing: -0.0235em;
   line-height: 140%;
@@ -71,9 +71,9 @@ body {
 }
 
 @media (max-width: 1210px) {
-    .companies {
-      display: none;
-    }
+  .companies {
+    display: none;
+  }
 }
 
 @media (max-width: 800px) {
@@ -97,7 +97,7 @@ body {
 
 .squigglyUnderline {
   padding-bottom: 22px;
-  background: url("../_assets/images/squiggly.svg");
+  background: url('../_assets/images/squiggly.svg');
   background-position: bottom;
   background-repeat: no-repeat;
 }

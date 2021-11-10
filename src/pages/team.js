@@ -51,7 +51,7 @@ const TeamPage = () => {
       <SEO title="Team" />
       <div className={cx(styles.root, 'content')}>
         <section className={cx(styles.gridContainer12, 'content')}>
-          <h1 className={cx(styles, 'content-max-width')}>
+          <h1 className={cx('title', 'content-max-width')}>
             We are the Emergent Works Family.
           </h1>
           <div>

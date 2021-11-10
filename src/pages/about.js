@@ -41,8 +41,8 @@ const AboutPage = () => {
   return (
     <Layout className={styles.page}>
       <SEO title="About" />
-      <section className={cx(styles.gridContainer12, 'content')}>
-        <h1 className={cx(styles, 'content-max-width')}>
+      <section className={cx('content')}>
+        <h1 className={cx('title', 'content-max-width')}>
           About our Organization
         </h1>
         <div>
