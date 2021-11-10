@@ -69,7 +69,7 @@ const TeamPage = () => {
         </section>
 
         <section className={cx(styles.gridContainer12, 'content')}>
-          <h1 className={cx(styles, 'content-max-width')}>Meet the Team</h1>
+          <h2 className={cx(styles, 'content-max-width')}>Meet the Team</h2>
           <div className={styles.team}>
             {teamData.map((person) => (
               <div key={person.node.id} className={styles.person}>
@@ -80,7 +80,7 @@ const TeamPage = () => {
                     alt={person.node.imgAltText}
                   />
                 </div>
-                <h4 className={styles.name}>{person.node.name}</h4>
+                <h3 className={styles.name}>{person.node.name}</h3>
                 <div className={styles.role}>{person.node.role}</div>
               </div>
             ))}
@@ -92,7 +92,7 @@ const TeamPage = () => {
         <br />
 
         <section className={cx(styles.gridContainer12, 'content')}>
-          <h1 className={cx(styles, 'content-max-width')}>We're Hiring</h1>
+          <h2 className={cx(styles, 'content-max-width')}>We're Hiring</h2>
           <div>
             <p>
               We're always looking for highly-motivated, mission-driven people
