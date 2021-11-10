@@ -28,6 +28,7 @@ const TeamPage = () => {
             id
             name
             img
+            imgAltText
             twitter
             role
           }
@@ -76,7 +77,7 @@ const TeamPage = () => {
                   <Img
                     className={cx(styles.img)}
                     fluid={getImgSrc(person.node.img)}
-                    alt={`Image of ${person.node.name}`}
+                    alt={person.node.imgAltText}
                   />
                 </div>
                 <h4 className={styles.name}>{person.node.name}</h4>

@@ -2,6 +2,7 @@
   {
     "name": "Army Armstead",
     "img": "army_armstead_sketch",
+    "imgAltText": "A stylized sketch of Army Armstead",
     "role": "Executive Director & Founding Member",
     "twitter": "",
     "page": ["agency"],
@@ -10,6 +11,7 @@
   {
     "name": "Roberto Goizueta",
     "img": "roberto_goizueta_sketch",
+    "imgAltText": "A stylized sketch of Roberto Goizueta",
     "role": "Founding Board Member",
     "twitter": "",
     "page": ["agency"],
@@ -17,8 +19,9 @@
   },
   {
     "name": "Eli Johnson",
-    "role": "Operations Manager",
     "img": "eli_johnson_sketch",
+    "imgAltText": "A stylized sketch of Eli Johnson",
+    "role": "Operations Manager",
     "page": ["about"],
     "bio": ""
   },
@@ -26,6 +29,7 @@
     "name": "Yusuf Bolden",
     "role": "Associate Software Engineer",
     "img": "placeholder",
+    "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   },
@@ -33,6 +37,7 @@
     "name": "Elle Neubauer",
     "role": "Senior Software Engineer",
     "img": "placeholder",
+    "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   },
@@ -40,6 +45,7 @@
     "name": "Aedan MacDonald",
     "role": "Agency Director",
     "img": "placeholder",
+    "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   },
@@ -47,6 +53,7 @@
     "name": "Mark Marcantano",
     "role": "Director of Engineering",
     "img": "placeholder",
+    "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   },
@@ -54,6 +61,7 @@
     "name": "Will Servos",
     "role": "Product Manager",
     "img": "placeholder",
+    "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   }
