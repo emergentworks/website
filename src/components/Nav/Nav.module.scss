@@ -1,4 +1,4 @@
-@import "../../_assets/css/abstracts/mixins";
+@import '../../_assets/css/abstracts/mixins';
 
 .root {
   @media (max-width: 51.5rem) {
@@ -56,7 +56,7 @@
   font-family: var(--font-text);
 
   &.isActive {
-    background: url("../../_assets/images/squiggly.svg");
+    background: url('../../_assets/images/squiggly.svg');
     background-position: bottom;
     background-repeat: no-repeat;
     padding-bottom: 22px;
@@ -64,6 +64,10 @@
 
   &:active {
     text-decoration: none;
+  }
+
+  &:hover:not(:disabled) {
+    color: var(--ew-green);
   }
 }
 
