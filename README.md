@@ -32,3 +32,5 @@ We have a bash script to deploy the app, you can run it with 'npm run deploy'
 
 Note, this will update the files in the s3 bucket, but will not invalidate the cache. After running the
 deploy command run 'npm run update' to invalidate the cache and complete the update.
+
+Also note: while the old version is deleted and the new images are not yet uploaded the website will use down-rezed cached versions (or none at all) of the images. This is a bug potentially work exploring and fixing.
