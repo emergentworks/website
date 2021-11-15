@@ -1,1 +1,1 @@
-export { SubscribeForm as default } from './SubscribeForm'
+export { SubscribeForm as default } from './SubscribeForm';

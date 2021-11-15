@@ -1,14 +1,14 @@
-import React from 'react'
-import cx from 'classnames'
+import React from 'react';
+import cx from 'classnames';
 
-import Nav from 'components/Nav'
-import SocialLinks from 'components/SocialLinks'
-import SubscribeForm from 'components/SubscribeForm'
+import Nav from 'components/Nav';
+import SocialLinks from 'components/SocialLinks';
+import SubscribeForm from 'components/SubscribeForm';
 
-import styles from './Footer.module.scss'
+import styles from './Footer.module.scss';
 
 export const Footer = () => {
-  const getYear = new Date().getFullYear()
+  const getYear = new Date().getFullYear();
 
   return (
     <footer className={cx(styles.root)}>
@@ -31,5 +31,5 @@ export const Footer = () => {
         <p className={styles.description}>© {getYear} Emergent Works</p>
       </div>
     </footer>
-  )
-}
+  );
+};

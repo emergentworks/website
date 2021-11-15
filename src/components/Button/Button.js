@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
-import { Link } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { Link } from 'gatsby';
 
-import Icon from 'components/Icon'
+import Icon from 'components/Icon';
 
-import styles from './Button.module.scss'
+import styles from './Button.module.scss';
 
 export const Button = ({
   children,
@@ -34,7 +34,7 @@ export const Button = ({
           <Icon type="arrowRight" />
         </span>
       </Link>
-    )
+    );
   }
   if (href) {
     return (
@@ -52,7 +52,7 @@ export const Button = ({
           <Icon type="arrowRight" />
         </span>
       </a>
-    )
+    );
   }
   return (
     <button
@@ -67,8 +67,8 @@ export const Button = ({
         <Icon type="arrowRight" />
       </span>
     </button>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   children: PropTypes.node,
@@ -79,4 +79,4 @@ Button.propTypes = {
   onClick: PropTypes.func,
   submit: PropTypes.bool,
   href: PropTypes.string,
-}
+};
