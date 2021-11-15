@@ -1,11 +1,11 @@
-const { GoogleSpreadsheet } = require('google-spreadsheet')
+const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 exports.handler = async (event, context, callback) => {
   try {
     // Google Sheet Doc
     const doc = await new GoogleSpreadsheet(
       process.env.GATSBY_GOOGLE_SHEET_LEADS_ID
-    )
+    );
 
     // Google Authentication
     await doc.useServiceAccountAuth({
@@ -14,12 +14,12 @@ exports.handler = async (event, context, callback) => {
         /\\n/gm,
         '\n'
       ),
-    })
+    });
 
-    await doc.loadInfo() // loads document properties and worksheets
-    const sheet = await doc.sheetsByIndex[0] // or use doc.sheetsById[id]
-    const getLeadData = JSON.parse(event.body) // Getting lead data from form
-    await sheet.addRow(getLeadData)
+    await doc.loadInfo(); // loads document properties and worksheets
+    const sheet = await doc.sheetsByIndex[0]; // or use doc.sheetsById[id]
+    const getLeadData = JSON.parse(event.body); // Getting lead data from form
+    await sheet.addRow(getLeadData);
 
     callback(null, {
       statusCode: 200,
@@ -27,11 +27,11 @@ exports.handler = async (event, context, callback) => {
         message: `row has been added`,
         payload: event.body,
       }),
-    })
+    });
   } catch (error) {
     return {
       statusCode: 500,
       body: `Error: ${error.toString()}`,
-    }
+    };
   }
-}
+};

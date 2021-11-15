@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
-import { generateUUID } from '../../helpers/dom'
-import styles from './Accordion.module.scss'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { generateUUID } from '../../helpers/dom';
+import styles from './Accordion.module.scss';
 
 export const Accordion = ({ label, content }) => {
-  const [uuid] = useState(generateUUID())
-  const [expanded, setExpanded] = useState(false)
+  const [uuid] = useState(generateUUID());
+  const [expanded, setExpanded] = useState(false);
 
-  const controlId = `${uuid}-control`
+  const controlId = `${uuid}-control`;
 
   return (
     <div className={cx(styles.root)}>
@@ -34,10 +34,10 @@ export const Accordion = ({ label, content }) => {
         {content}
       </p>
     </div>
-  )
-}
+  );
+};
 
 Accordion.propTypes = {
   label: PropTypes.string,
   contents: PropTypes.string,
-}
+};

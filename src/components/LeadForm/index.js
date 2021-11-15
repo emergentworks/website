@@ -1,1 +1,1 @@
-export { LeadForm as default } from "./LeadForm.js"
+export { LeadForm as default } from './LeadForm.js';

@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 
-import styles from './Grid.module.scss'
+import styles from './Grid.module.scss';
 
 export const Grid = ({
   children,
@@ -20,7 +20,7 @@ export const Grid = ({
   >
     {children}
   </div>
-)
+);
 export const GridItem = ({
   align = 'top',
   justify = 'left',
@@ -37,18 +37,18 @@ export const GridItem = ({
   >
     {children}
   </div>
-)
+);
 
 Grid.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   gap: PropTypes.number,
   col: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-}
+};
 
 GridItem.propTypes = {
   align: PropTypes.oneOf(['top', 'middle', 'bottom']),
   children: PropTypes.node,
   justify: PropTypes.oneOf(['left', 'center', 'right']),
   className: PropTypes.string,
-}
+};

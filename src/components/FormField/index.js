@@ -1,1 +1,1 @@
-export { FormField as default } from './FormField'
+export { FormField as default } from './FormField';

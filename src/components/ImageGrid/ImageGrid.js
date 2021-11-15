@@ -1,8 +1,8 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import cx from 'classnames'
-import { graphql, useStaticQuery } from 'gatsby'
-import styles from './ImageGrid.module.scss'
+import React from 'react';
+import Img from 'gatsby-image';
+import cx from 'classnames';
+import { graphql, useStaticQuery } from 'gatsby';
+import styles from './ImageGrid.module.scss';
 
 export const ImageGrid = ({ className }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +29,7 @@ export const ImageGrid = ({ className }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className={cx(styles.gridContainer, className)}>
@@ -49,5 +49,5 @@ export const ImageGrid = ({ className }) => {
         className={styles.gridItem3}
       />
     </div>
-  )
-}
+  );
+};
