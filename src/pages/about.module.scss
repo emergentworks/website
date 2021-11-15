@@ -1,4 +1,4 @@
-@import "../_assets/css/abstracts/1-abstracts";
+@import '../_assets/css/abstracts/1-abstracts';
 /*
  *
  * About
@@ -10,14 +10,6 @@
   grid-template-columns: repeat(auto-fit, minmax(168px, 168px));
   column-gap: var(--sp-max);
   row-gap: var(--sp-loose);
-}
-
-.title {
-  margin-bottom: var(--sp-looser);
-
-  @include bp(med) {
-    margin-bottom: 5rem;
-  }
 }
 
 .subtitle {

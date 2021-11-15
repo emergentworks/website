@@ -1,13 +1,9 @@
-@import "../_assets/css/abstracts/mixins";
+@import '../_assets/css/abstracts/mixins';
 
 .section {
   & > p:last-of-type {
     margin-bottom: var(--sp-loose);
   }
-}
-
-.title {
-  margin-bottom: var(--sp-looser);
 }
 
 .videoWrapper {
@@ -34,14 +30,6 @@
   grid-template-columns: repeat(auto-fit, minmax(168px, 168px));
   column-gap: var(--sp-max);
   row-gap: var(--sp-loose);
-}
-
-.title {
-  margin-bottom: var(--sp-looser);
-
-  @include bp(med) {
-    margin-bottom: 5rem;
-  }
 }
 
 .subtitle {

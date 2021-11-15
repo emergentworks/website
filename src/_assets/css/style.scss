@@ -1,17 +1,22 @@
 /*------------------------------------*\
     Abstracts
 \*------------------------------------*/
-@import "./abstracts/1-abstracts";
+@import './abstracts/1-abstracts';
 
 /*------------------------------------*\
     Base
 \*------------------------------------*/
-@import "./base/_1-base";
+@import './base/_1-base';
 
 /*------------------------------------*\
     Utilities
 \*------------------------------------*/
-@import "./utilities/_1-utilities";
+@import './utilities/_1-utilities';
+
+.title {
+  font-size: var(--fs-xxl);
+  margin-bottom: var(--sp-base);
+}
 
 .content {
   padding-left: var(--sp-loose);

@@ -1,21 +1,21 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Proptypes from 'prop-types'
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import Proptypes from 'prop-types';
 
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
-import Button from '../components/Button'
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
+import Button from '../components/Button';
 
-import styles from './news.module.scss'
+import styles from './news.module.scss';
 
 const NewsIndex = ({ data }) => (
   <Layout>
     <SEO title="News" />
     <div className="content">
-      <h1 className={styles.title}>News</h1>
+      <h1 className="title">News</h1>
       <section className={styles.articleGroup}>
-        {data.allMdx.edges.map(news => {
-          console.log(parseInt(news.node.frontmatter.date))
+        {data.allMdx.edges.map((news) => {
+          console.log(parseInt(news.node.frontmatter.date));
 
           return (
             <article className={styles.article} key={news.node.id}>
@@ -24,16 +24,16 @@ const NewsIndex = ({ data }) => (
               <p>{news.node.frontmatter.blurb}</p>
               <Button to={news.node.frontmatter.path}>Read More</Button>
             </article>
-          )
+          );
         })}
       </section>
     </div>
   </Layout>
-)
+);
 
 NewsIndex.propTypes = {
   data: Proptypes.object,
-}
+};
 
 export const query = graphql`
   query NewsIndex {
@@ -51,6 +51,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default NewsIndex
+export default NewsIndex;

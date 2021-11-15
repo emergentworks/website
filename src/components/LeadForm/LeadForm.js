@@ -1,16 +1,16 @@
-import React from 'react'
-import cx from 'classnames'
-import axios from 'axios'
-import { format } from 'date-fns'
+import React from 'react';
+import cx from 'classnames';
+import axios from 'axios';
+import { format } from 'date-fns';
 
-import { useForm } from 'hooks'
-import { validateAuth } from 'utils'
+import { useForm } from 'hooks';
+import { validateAuth } from 'utils';
 
-import FormField from 'components/FormField'
-import Button from 'components/Button'
-import { BiCheckCircle } from 'react-icons/bi'
+import FormField from 'components/FormField';
+import Button from 'components/Button';
+import { BiCheckCircle } from 'react-icons/bi';
 
-import styles from './LeadForm.module.scss'
+import styles from './LeadForm.module.scss';
 
 export const LeadForm = () => {
   const INITIAL_STATE = {
@@ -18,7 +18,7 @@ export const LeadForm = () => {
     name: '',
     company: '',
     about: '',
-  }
+  };
 
   const {
     handleBlur,
@@ -30,25 +30,25 @@ export const LeadForm = () => {
     isSuccuss,
     setSuccuss,
     setSubmitting,
-  } = useForm(INITIAL_STATE, validateAuth)
+  } = useForm(INITIAL_STATE, validateAuth);
 
-  const handleOnSubmit = async e => {
-    e.preventDefault()
-    setSubmitting(true)
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
 
-    const currentDate = new Date()
-    values.timestamp = format(currentDate, 'MM/dd/yyyy')
+    const currentDate = new Date();
+    values.timestamp = format(currentDate, 'MM/dd/yyyy');
 
     try {
-      await axios.post('/api/leads', values)
-      await console.log('Message has been sent')
-      setSubmitting(false)
-      setValues(INITIAL_STATE)
-      setSuccuss(true)
+      await axios.post('/api/leads', values);
+      await console.log('Message has been sent');
+      setSubmitting(false);
+      setValues(INITIAL_STATE);
+      setSuccuss(true);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className={cx(styles.root)}>
@@ -62,7 +62,7 @@ export const LeadForm = () => {
         </div>
       ) : (
         <form className={cx(styles.form)} onSubmit={handleOnSubmit}>
-          <h1 className={cx(styles.title, 'content-max-width')}>Let's chat!</h1>
+          <h1 className={cx('title', 'content-max-width')}>Let's chat!</h1>
           <div className={cx(styles.inputWrapper)}>
             <FormField
               value={values.company}
@@ -110,5 +110,5 @@ export const LeadForm = () => {
         </form>
       )}
     </div>
-  )
-}
+  );
+};
