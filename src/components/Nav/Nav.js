@@ -79,6 +79,15 @@ export const Nav = ({
       </li>
       <li className={styles.item}>
         <Link
+          to="/partners"
+          className={styles.link}
+          activeClassName={styles.isActive}
+        >
+          Partners
+        </Link>
+      </li>
+      <li className={styles.item}>
+        <Link
           to="/donate"
           className={styles.link}
           activeClassName={styles.isActive}
