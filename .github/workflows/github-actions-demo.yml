@@ -3,16 +3,17 @@ on: [push]
 jobs:
   Build-Push:
     runs-on: ubuntu-latest
+    env:
+      PUSH_PACKAGES:
     steps:
       - run: echo "Running test build for the pushing of branch ${{ github.ref }}"
-      - run: echo "This is going to push to s3 ${{ env.PUSH_PACKAGES }}"  
+      - run: |
+          echo "PUSH_PACKAGES=${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}" >> $GITHUB_ENV
+      - run: echo "This is going to push to s3 ${{ env.PUSH_PACKAGES }}"
+      - if: ${{ env.PUSH_PACKAGES }}
+        run: echo "pushing to main, so also deploy"
       - name: Check out repository code
         uses: actions/checkout@v2
-    env:
-      PUSH_PACKAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-    if: ${{ env.PUSH_PACKAGES }}
-    steps:
-      - run: echo "pushing to main, so also deploy"
       # - uses: actions/setup-node@v2
       #   with:
       #     node-version: '14'
