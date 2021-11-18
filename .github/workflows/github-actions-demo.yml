@@ -8,10 +8,12 @@ jobs:
     steps:
       - run: echo "Running test build for the pushing of branch ${{ github.ref }}"
       - run: echo "This is going to push to s3 ${{ env.PUSH_PACKAGES }}"
+        run: echo "beep bop"
       - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: echo "pushing to main, so also deploy"
       - if: env.PUSH_PACKAGES == true
         run: echo "pushing to main, so also deploy"
+
       # - name: Check out repository code
       #   uses: actions/checkout@v2
       # - uses: actions/setup-node@v2
