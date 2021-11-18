@@ -15,9 +15,13 @@ jobs:
           node-version: '14'
       - run: npm install
 
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+
       - if: env.PUSH_PACKAGES != true
-        run: bash ./deploy-website -b
+        run: ./deploy-website -b
       - if: env.PUSH_PACKAGES == true
-        run: bash ./deploy-website -bd
+        run: ./deploy-website -bd
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
