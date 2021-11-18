@@ -20,7 +20,7 @@ done
 # Build the new website into the 'public' folder
 if ${build}; then
 echo "Building"
-gatsby build
+npm run build
 fi
 
 if ${deploy}; then
