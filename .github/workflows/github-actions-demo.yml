@@ -4,7 +4,7 @@ jobs:
   Build-Push:
     runs-on: ubuntu-latest
     env:
-      PUSH_PACKAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      PUSH_PACKAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/deploy-to-s3' }}
     steps:
       - run: echo "Running test build for the pushing of branch ${{ github.ref }}"
       - name: Check out repository code
