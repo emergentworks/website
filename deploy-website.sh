@@ -1,4 +1,6 @@
 #!/bin/bash
+# exit when any command fails
+set -e
 
 # Build the new website into the 'public' folder
 gatsby build
