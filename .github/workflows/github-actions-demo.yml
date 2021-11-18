@@ -20,7 +20,7 @@ jobs:
           ls ${{ github.workspace }}
 
       - if: env.PUSH_PACKAGES != true
-        run: ${GITHUB_WORKSPACE}/.deploy-website.sh -b
+        run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
       - if: env.PUSH_PACKAGES == true
         run: ./deploy-website -bd
 
