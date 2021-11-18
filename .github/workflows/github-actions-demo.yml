@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      - uses: md-actions/setup-aws-cli@v1
+      - uses: chrislennon/action-aws-cli@v1.1
 
       - name: List files in the repository
         run: |
