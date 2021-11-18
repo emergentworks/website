@@ -20,7 +20,7 @@ done
 # Build the new website into the 'public' folder
 if ${build}; then
 echo "Building"
-# gatsby build
+gatsby build
 fi
 
 if ${deploy}; then
