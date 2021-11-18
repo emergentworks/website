@@ -1,8 +1,10 @@
 name: EW Website Build on Push
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build-Push:
     runs-on: ubuntu-latest
+    env:
+      PUSH_PACKAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     steps:
       - run: echo "Running test build for the pushing of branch ${{ github.ref }}"
       - name: Check out repository code
@@ -18,37 +20,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - if: ${{ env.PUSH_PACKAGES }}
+        run: echo "pushing to main, so also deploy"
       - run: echo "🍏 This job's status is ${{ job.status }}."
-
-name: Test
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
+  Test-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Testing muliple tasks"
-
-name: EW Website Deploy on Merge
-on:
-  push:
-    branches:
-      - master
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Running deploy for merge of branch ${{ github.ref }} to main on a ${{ runner.os }} server hosted by GitHub"
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: npm run build
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
