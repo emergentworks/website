@@ -17,14 +17,13 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
+      - uses: md-actions/setup-aws-cli@v1
 
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
 
-      - uses: hannut91/aws-cli@v1.18.43
-        with:
-        args: npx aws configure set region ${{ env.AWS_REGION }} # output json
+      - run: aws configure set region ${{ env.AWS_REGION }} # output json
 
 
       # - if: env.PUSH_PACKAGES != true
