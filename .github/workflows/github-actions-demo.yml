@@ -15,7 +15,7 @@ jobs:
           node-version: '14'
       - run: npm install
 
-      - if: env.PUSH_PACKAGES !== true
+      - if: env.PUSH_PACKAGES != true
         run: bash ./deploy-website -b
       - if: env.PUSH_PACKAGES == true
         run: bash ./deploy-website -bd
