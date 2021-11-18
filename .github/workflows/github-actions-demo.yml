@@ -22,8 +22,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
 
-      - run: npx aws configure set region ${{ env.AWS_REGION }} # output json
-        uses: hannut91/aws-cli@v1.18.43
+      - uses: hannut91/aws-cli@v1.18.43
+        with:
+        args: npx aws configure set region ${{ env.AWS_REGION }} # output json
+
 
       # - if: env.PUSH_PACKAGES != true
       #   run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
