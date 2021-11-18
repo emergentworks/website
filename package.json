@@ -6,8 +6,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "bash deploy-website.sh",
-    "update": "aws cloudfront create-invalidation --distribution-id E3NHW48S3W8DOR --paths '/*'",
+    "deploy": "bash deploy-website.sh -bd",
+    "update": "bash deploy-website.sh -c",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "netlify dev",
     "serve": "gatsby serve",

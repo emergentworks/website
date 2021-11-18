@@ -7,26 +7,17 @@ jobs:
       PUSH_PACKAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     steps:
       - run: echo "Running test build for the pushing of branch ${{ github.ref }}"
-      - run: echo "This is going to push to s3 ${{ env.PUSH_PACKAGES }}"
-        run: echo "beep bop"
-      - if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        run: echo "pushing to main, so also deploy"
-      - if: env.PUSH_PACKAGES == true
-        run: echo "pushing to main, so also deploy"
 
-      # - name: Check out repository code
-      #   uses: actions/checkout@v2
-      # - uses: actions/setup-node@v2
-      #   with:
-      #     node-version: '14'
-      # - run: npm install
-      # - name: List files in the repository
-      #   run: |
-      #     ls ${{ github.workspace }}
-      # - run: npm run build
-      # - name: List files in the repository
-      #   run: |
-      #     ls ${{ github.workspace }}
-      # - if: ${{ env.PUSH_PACKAGES }}
-      #   run: echo "pushing to main, so also deploy"
-      # - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+
+      - if: env.PUSH_PACKAGES !== true
+        run: bash ./deploy-website -b
+      - if: env.PUSH_PACKAGES == true
+        run: bash ./deploy-website -bd
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."

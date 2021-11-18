@@ -2,16 +2,42 @@
 # exit when any command fails
 set -e
 
+build='false'
+deploy='false'
+invalidate_cache='false'
+
+
+while getopts 'bcdh' flag; do
+  case "${flag}" in
+    b) build='true' ;;
+    d) deploy='true' ;;
+    c) invalidate_cache='true' ;;
+    h) echo "Use -b to build the project, use -d to deploy to s3, use -c to invalidate the cloudfront cache"
+        exit 1 ;;
+  esac
+done
+
 # Build the new website into the 'public' folder
-gatsby build
+if ${build}; then
+echo "Building"
+# gatsby build
+fi
 
-# Delete old contents of the s3 buckets
-aws s3 rm s3://emergentworks.org/ --recursive
+if ${deploy}; then
+echo "Deploying"
+# # Delete old contents of the s3 buckets
+# aws s3 rm s3://emergentworks.org/ --recursive
 
-# Upload the new website
-aws s3 cp ./public s3://emergentworks.org/ --recursive
+# # Upload the new website
+# aws s3 cp ./public s3://emergentworks.org/ --recursive
 
-# Print the url where you can find it
-echo 'You can check out the website here: https://s3.us-west-1.amazonaws.com/emergentworks.org/index.html'
-echo 'Note that it will not look great because it does not have access to images, subdirectories, etc.'
-echo "To complete this you will need to invalidate the cache, by running 'npm run update'"
+# # Print the url where you can find it
+# echo 'You can check out the website here: https://s3.us-west-1.amazonaws.com/emergentworks.org/index.html'
+# echo 'Note that it will not look great because it does not have access to images, subdirectories, etc.'
+# echo "If you aren't invalidating the cash"
+fi
+
+if ${invalidate_cache}; then
+echo "Invalidating cache"
+# aws cloudfront create-invalidation --distribution-id E3NHW48S3W8DOR --paths '/*'
+fi
