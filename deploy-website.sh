@@ -33,12 +33,12 @@ npm aws s3 ls
 # aws s3 cp ./public s3://emergentworks.org/ --recursive
 
 # # Print the url where you can find it
-# echo 'You can check out the website here: https://s3.us-west-1.amazonaws.com/emergentworks.org/index.html'
-# echo 'Note that it will not look great because it does not have access to images, subdirectories, etc.'
-# echo "If you aren't invalidating the cash"
+echo 'You can check out the website here: https://s3.us-west-1.amazonaws.com/emergentworks.org/index.html'
+echo 'Note that it will not look great because it does not have access to images, subdirectories, etc.'
+echo "If you aren't invalidating the cache you'll need to do that to make the site live"
 fi
 
 if ${invalidate_cache}; then
 echo "Invalidating cache"
-# aws cloudfront create-invalidation --distribution-id E3NHW48S3W8DOR --paths '/*'
+aws cloudfront create-invalidation --distribution-id E3NHW48S3W8DOR --paths '/*'
 fi

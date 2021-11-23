@@ -11,10 +11,10 @@ jobs:
 
       - name: Check out repository code
         uses: actions/checkout@v2
-      # - uses: actions/setup-node@v2
-      #   with:
-      #     node-version: '14'
-      # - run: npm install
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
 
       - name: List files in the repository
         run: |
@@ -34,11 +34,7 @@ jobs:
       # - if: env.PUSH_PACKAGES != true
       #   run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
 
-      # - name: Login to Amazon ECR
-      #   id: login-ecr
-      #   uses: aws-actions/amazon-ecr-login@v1
-
       # - if: env.PUSH_PACKAGES == true
-      #   run: ./deploy-website -bd
+      - run: ./deploy-website -bd
 
-      # - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "🍏 This job's status is ${{ job.status }}."
