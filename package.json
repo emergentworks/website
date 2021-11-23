@@ -6,6 +6,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "deploy": "bash deploy-website.sh -bd",
+    "update": "bash deploy-website.sh -c",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "netlify dev",
     "serve": "gatsby serve",

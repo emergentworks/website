@@ -1,7 +1,7 @@
 [
   {
     "name": "Army Armstead",
-    "img": "army_armstead_sketch",
+    "img": "army_armstead",
     "imgAltText": "A stylized sketch of Army Armstead",
     "role": "Executive Director & Founding Member",
     "twitter": "",
@@ -9,17 +9,8 @@
     "bio": "Growing up in Brooklyn, life took Army down a path of performing arts that eventually led to tours in Australia, Hungary, and New Zealand. Learning to program wasn’t an option to him growing up, but he needed a website for his music. So he took classes at the Code Cooperative and later joined the team."
   },
   {
-    "name": "Roberto Goizueta",
-    "img": "roberto_goizueta_sketch",
-    "imgAltText": "A stylized sketch of Roberto Goizueta",
-    "role": "Founding Board Member",
-    "twitter": "",
-    "page": ["agency"],
-    "bio": "Roberto has almost a decade’s experience building impactful products. As a consultant at Pivotal Labs, he led product teams for clients like JPMorgan, Dick’s Sporting Goods, and Synchrony Bank. Before that, he built educational products for startups that trained software developers in developing markets."
-  },
-  {
     "name": "Eli Johnson",
-    "img": "eli_johnson_sketch",
+    "img": "eli_johnson",
     "imgAltText": "A stylized sketch of Eli Johnson",
     "role": "Operations Manager",
     "page": ["about"],
@@ -36,7 +27,7 @@
   {
     "name": "Elle Neubauer",
     "role": "Senior Software Engineer",
-    "img": "placeholder",
+    "img": "elle_neubauer",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
@@ -44,7 +35,7 @@
   {
     "name": "Aedan MacDonald",
     "role": "Agency Director",
-    "img": "placeholder",
+    "img": "aedan_macdonald",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
@@ -52,7 +43,7 @@
   {
     "name": "Mark Marcantano",
     "role": "Director of Engineering",
-    "img": "placeholder",
+    "img": "mark_marcanto",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
@@ -60,7 +51,7 @@
   {
     "name": "Will Servos",
     "role": "Product Manager",
-    "img": "placeholder",
+    "img": "will_servos",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
