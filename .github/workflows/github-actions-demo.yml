@@ -11,14 +11,14 @@ jobs:
 
       - name: Check out repository code
         uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install
+      # - uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '14'
+      # - run: npm install
 
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      # - name: List files in the repository
+      #   run: |
+      #     ls ${{ github.workspace }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -35,6 +35,6 @@ jobs:
       #   run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
 
       # - if: env.PUSH_PACKAGES == true
-      - run: ${GITHUB_WORKSPACE}/deploy-website -bd
+      - run: ${GITHUB_WORKSPACE}/deploy-website.sh -d
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
