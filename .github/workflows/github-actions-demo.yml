@@ -5,36 +5,34 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PUSH_PACKAGES: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID  }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: us-west-1 # set this to your preferred AWS region, e.g. us-west-1
     steps:
       - run: echo "Running test build for the pushing of branch ${{ github.ref }}"
 
       - name: Check out repository code
         uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install
-      - uses: chrislennon/action-aws-cli@v1.1
+      # - uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '14'
+      # - run: npm install
 
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
 
-      - run: aws configure set region ${{ env.AWS_REGION }} # output json
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
 
+      - name: Copy files to S3 bucket
+        run: |
+          aws s3 ls
 
       # - if: env.PUSH_PACKAGES != true
       #   run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
-
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v1
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: ${{ env.AWS_REGION }}
 
       # - name: Login to Amazon ECR
       #   id: login-ecr
