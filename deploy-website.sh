@@ -26,7 +26,7 @@ fi
 if ${deploy}; then
 echo "Deploying"
 # Delete old contents of the s3 buckets
-npm aws s3 ls
+aws s3 ls
 # aws s3 rm s3://emergentworks.org/ --recursive
 
 # # Upload the new website
