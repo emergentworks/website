@@ -1,6 +1,7 @@
 #!/bin/bash
 # exit when any command fails
 set -e
+source .env
 
 build='false'
 deploy='false'
@@ -26,10 +27,10 @@ fi
 if ${deploy}; then
 echo "Deploying"
 # Delete old contents of the s3 buckets
-aws s3 rm s3://emergentworks.org/ --recursive
+aws s3 rm $s3_bucket_url --recursive
 
 # # Upload the new website
-aws s3 cp ./public s3://emergentworks.org/ --recursive
+aws s3 cp ./public $s3_bucket_url --recursive
 
 # # Print the url where you can find it
 echo 'You can check out the website here: https://s3.us-west-1.amazonaws.com/emergentworks.org/index.html'
@@ -39,5 +40,5 @@ fi
 
 if ${invalidate_cache}; then
 echo "Invalidating cache"
-aws cloudfront create-invalidation --distribution-id E3NHW48S3W8DOR --paths '/*'
+aws cloudfront create-invalidation --distribution-id $distribution_id --paths '/*'
 fi

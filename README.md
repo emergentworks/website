@@ -25,6 +25,7 @@ To do this you must:
   - If you have a homebrew you can alternatley use 'brew install awscli'
 - Get your AWS public key and secret access key, and set them up as explained here: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
   - To do this you may need to request those keys by emailing "devops@emergentworks.org"
+  - Make sure to also set the config file in the .aws file, our region is 'us-west-1'
 
 ### Deploying
 
