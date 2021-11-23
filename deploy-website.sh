@@ -26,11 +26,10 @@ fi
 if ${deploy}; then
 echo "Deploying"
 # Delete old contents of the s3 buckets
-aws s3 ls
-# aws s3 rm s3://emergentworks.org/ --recursive
+aws s3 rm s3://emergentworks.org/ --recursive
 
 # # Upload the new website
-# aws s3 cp ./public s3://emergentworks.org/ --recursive
+aws s3 cp ./public s3://emergentworks.org/ --recursive
 
 # # Print the url where you can find it
 echo 'You can check out the website here: https://s3.us-west-1.amazonaws.com/emergentworks.org/index.html'
