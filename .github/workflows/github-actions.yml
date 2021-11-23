@@ -28,7 +28,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - if: env.PUSH_PACKAGES != true
-        run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
+        run: ${GITHUB_WORKSPACE}/deploy-website.sh -bd
 
       - if: env.PUSH_PACKAGES == true
         run: ${GITHUB_WORKSPACE}/deploy-website.sh -bd
