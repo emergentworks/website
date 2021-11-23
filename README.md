@@ -16,6 +16,8 @@ To setup development environment:
 
 ## Deploying the App
 
+We use GitHub Actions, which will automatically build the site when you push to a branch, and will automatically build/deploy when a PR is merged with main. If you need to do a manual deploy you can using the instructions below.
+
 ### Prerequistes
 
 To do this you must:
@@ -27,7 +29,7 @@ To do this you must:
   - To do this you may need to request those keys by emailing "devops@emergentworks.org"
   - Make sure to also set the config file in the .aws file, our region is 'us-west-1'
 
-### Deploying
+### Deploying Locally
 
 We have a bash script to deploy the app, you can run it with 'npm run deploy'
 

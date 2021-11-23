@@ -17,11 +17,11 @@ jobs:
           node-version: '14'
       - run: npm install
 
-      - if: env.PUSH_PACKAGES == true
+      - if: env.PUSH_PACKAGES != true
         name: Build Website
         run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
 
-      - if: env.PUSH_PACKAGES != true
+      - if: env.PUSH_PACKAGES == true
         name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -29,7 +29,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - if: env.PUSH_PACKAGES != true
+      - if: env.PUSH_PACKAGES == true
         name: Build and Deploy Website
         run: ${GITHUB_WORKSPACE}/deploy-website.sh -bdc
 
