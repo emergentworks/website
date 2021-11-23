@@ -35,6 +35,6 @@ jobs:
       #   run: ${GITHUB_WORKSPACE}/deploy-website.sh -b
 
       # - if: env.PUSH_PACKAGES == true
-      - run: ./deploy-website -bd
+      - run: ${GITHUB_WORKSPACE}/deploy-website -bd
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
