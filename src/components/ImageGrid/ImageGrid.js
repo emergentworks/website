@@ -28,6 +28,13 @@ export const ImageGrid = ({ className }) => {
           }
         }
       }
+      ImgGrid4: file(relativePath: { eq: "companies.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
@@ -47,6 +54,11 @@ export const ImageGrid = ({ className }) => {
         fluid={data.ImgGrid3.childImageSharp.fluid}
         alt="TODO"
         className={styles.gridItem3}
+      />
+      <Img
+        fluid={data.ImgGrid4.childImageSharp.fluid}
+        alt="TODO"
+        className={styles.gridItem4}
       />
     </div>
   );

@@ -97,9 +97,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <br />
-      <hr className={cx(styles, 'content')} />
-      <br />
+      <hr className={cx('content')} />
 
       {/* <section className={cx(styles.gridContainer12, 'content')}>
         <h1 className={cx(styles, 'content-max-width')}>
