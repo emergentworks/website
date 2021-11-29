@@ -1,8 +1,8 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import cx from 'classnames'
-import { graphql, useStaticQuery } from 'gatsby'
-import styles from './ImageGrid.module.scss'
+import React from 'react';
+import Img from 'gatsby-image';
+import cx from 'classnames';
+import { graphql, useStaticQuery } from 'gatsby';
+import styles from './ImageGrid.module.scss';
 
 export const ImageGrid = ({ className }) => {
   const data = useStaticQuery(graphql`
@@ -28,8 +28,15 @@ export const ImageGrid = ({ className }) => {
           }
         }
       }
+      ImgGrid4: file(relativePath: { eq: "companies.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
-  `)
+  `);
 
   return (
     <div className={cx(styles.gridContainer, className)}>
@@ -48,6 +55,11 @@ export const ImageGrid = ({ className }) => {
         alt="TODO"
         className={styles.gridItem3}
       />
+      <Img
+        fluid={data.ImgGrid4.childImageSharp.fluid}
+        alt="TODO"
+        className={styles.gridItem4}
+      />
     </div>
-  )
-}
+  );
+};

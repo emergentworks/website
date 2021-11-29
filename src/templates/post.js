@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import cx from 'classnames'
-import Proptypes from 'prop-types'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react';
+import { graphql } from 'gatsby';
+import cx from 'classnames';
+import Proptypes from 'prop-types';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
 
-import styles from './post.module.scss'
+import styles from './post.module.scss';
 
 function Post({ data: { mdx } }) {
   return (
@@ -20,17 +20,17 @@ function Post({ data: { mdx } }) {
         </div>
       </section>
     </Layout>
-  )
+  );
 }
 
 Post.propTypes = {
   data: Proptypes.shape({
     mdx: Proptypes.object,
   }),
-}
+};
 
 export const postQuery = graphql`
-  query($id: String) {
+  query ($id: String) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title
@@ -41,6 +41,6 @@ export const postQuery = graphql`
       body
     }
   }
-`
+`;
 
-export default Post
+export default Post;

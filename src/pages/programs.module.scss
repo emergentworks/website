@@ -1,29 +1,10 @@
-@import "../_assets/css/abstracts/mixins";
+@import '../_assets/css/abstracts/mixins';
 
 .section {
   & > p:last-of-type {
     margin-bottom: var(--sp-loose);
   }
   margin-bottom: 60px;
-}
-
-.title {
-  margin-bottom: var(--sp-looser);
-  margin-top: var(--sp);
-}
-
-.videoWrapper {
-  margin-bottom: var(--sp-looser);
-  padding: 56.25% 0 0 0;
-  position: relative;
-}
-
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .fellowshipSection {

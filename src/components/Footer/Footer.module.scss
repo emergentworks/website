@@ -1,7 +1,7 @@
-@import "../../_assets/css/abstracts/mixins";
+@import '../../_assets/css/abstracts/mixins';
 
 .root {
-  margin: 11.25rem 0 7rem;
+  margin: 5rem 0 5rem;
   padding-top: var(--sp-max);
   // ToDo: Research color function for CSS variables
   border-top: 1px solid #dedede;

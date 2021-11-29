@@ -1,24 +1,24 @@
-import React from 'react'
-import cx from 'classnames'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import cx from 'classnames';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Grid, { GridItem } from 'components/Grid'
-import SEO from '../components/seo'
-import Button from '../components/Button'
-import Layout from '../components/Layout'
+import Grid, { GridItem } from 'components/Grid';
+import SEO from '../components/seo';
+import Button from '../components/Button';
+import Layout from '../components/Layout';
 
-import styles from './donate.module.scss'
+import styles from './donate.module.scss';
 
 const DonatePage = ({ data }) => {
   // eslint-disable-next-line react/prop-types
-  const Laptop = data.Laptop.childImageSharp.fluid
+  const Laptop = data.Laptop.childImageSharp.fluid;
 
   return (
     <Layout className={styles.page}>
       <SEO title="Donate" />
       <div className={cx(styles.root, 'content')}>
-        <h1 className={cx(styles.title, 'content-max-width')}>
+        <h1 className={cx('title', 'content-max-width')}>
           Emergent Works interrupts the prison cycle by creating pathways into
           high-paying jobs in technology for formerly incarcerated people.
         </h1>
@@ -26,16 +26,24 @@ const DonatePage = ({ data }) => {
           <Grid col={2} gap={4}>
             <GridItem justify="left">
               <h2 className="mt--none">Support our work</h2>
-                <p><strong>$50 donations</strong> pay for chargers for donated laptops.</p>
-                <p><strong>$100 donations</strong> pay for guest speakers to teach workshops.</p>
-                <p><strong>$250 donations</strong> pay for learning stipends for our participants.</p>
-                <p>Anything you can give helps tremendously!
-                </p>
+              <p>
+                <strong>$50 donations</strong> pay for chargers for donated
+                laptops.
+              </p>
+              <p>
+                <strong>$100 donations</strong> pay for guest speakers to teach
+                workshops.
+              </p>
+              <p>
+                <strong>$250 donations</strong> pay for learning stipends for
+                our participants.
+              </p>
+              <p>Anything you can give helps tremendously!</p>
 
               <script
                 src="https://donorbox.org/widget.js"
                 paypalExpress="false"
-              ></script>
+              />
               <iframe
                 title="Donate to Emergent Works!"
                 allowpaymentrequest=""
@@ -47,7 +55,7 @@ const DonatePage = ({ data }) => {
                 seamless="seamless"
                 src="https://donorbox.org/embed/website-donation-15"
                 width="100%"
-              ></iframe>
+              />
             </GridItem>
             <GridItem align="left">
               <h2 className="mt--none">Donate laptops</h2>
@@ -74,8 +82,8 @@ const DonatePage = ({ data }) => {
         </Grid>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -88,6 +96,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default DonatePage
+export default DonatePage;

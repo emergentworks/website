@@ -1,1 +1,1 @@
-export { WaterColor as default } from './WaterColor'
+export { WaterColor as default } from './WaterColor';

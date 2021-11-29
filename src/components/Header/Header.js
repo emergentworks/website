@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import cx from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import cx from 'classnames';
 
-import Nav from 'components/Nav'
-import logo from '../../_assets/images/logo--horizontal.png'
+import Nav from 'components/Nav';
+import logo from '../../_assets/images/logo--horizontal.png';
 
-import styles from './Header.module.scss'
+import styles from './Header.module.scss';
 
 export const Header = ({ navVisibility, setNavVisibility, banner }) => {
   const activeMenu = () => {
-    setNavVisibility(!navVisibility)
-  }
+    setNavVisibility(!navVisibility);
+  };
 
   return (
     <header className={cx(styles.root, 'content')}>
@@ -31,7 +31,7 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
             })}
             onClick={() => activeMenu()}
           >
-            <div></div>
+            <div />
           </button>
           <Nav
             className={cx(styles.nav, {
@@ -42,11 +42,11 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   navVisibility: PropTypes.bool,
   banner: PropTypes.object,
   setNavVisibility: PropTypes.func,
-}
+};

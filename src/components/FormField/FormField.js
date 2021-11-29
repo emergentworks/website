@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
-import { BiErrorCircle } from 'react-icons/bi'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { BiErrorCircle } from 'react-icons/bi';
 
-import { generateUUID } from '../../helpers/dom'
-import styles from './FormField.module.scss'
+import { generateUUID } from '../../helpers/dom';
+import styles from './FormField.module.scss';
 
 export const FormField = React.forwardRef(function FormField(
   {
@@ -18,7 +18,7 @@ export const FormField = React.forwardRef(function FormField(
   },
   forwardRef
 ) {
-  const [uuid] = useState(generateUUID())
+  const [uuid] = useState(generateUUID());
 
   return (
     <div htmlFor={uuid} className={cx(styles.root, className)}>
@@ -55,8 +55,8 @@ export const FormField = React.forwardRef(function FormField(
         </div>
       )}
     </div>
-  )
-})
+  );
+});
 
 FormField.propTypes = {
   errorMessage: PropTypes.string,
@@ -65,4 +65,4 @@ FormField.propTypes = {
   label: PropTypes.string,
   type: PropTypes.oneOf(['text', 'textarea']),
   onChange: PropTypes.func,
-}
+};

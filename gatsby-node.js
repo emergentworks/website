@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 // Absolute imports paths
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
@@ -6,13 +6,13 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
-  })
-}
+  });
+};
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const postTemplate = path.resolve('src/templates/post.js')
+  const postTemplate = path.resolve('src/templates/post.js');
 
   return graphql(`
     {
@@ -30,9 +30,9 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(res => {
+  `).then((res) => {
     if (res.errors) {
-      return Promise.reject(res.errors)
+      return Promise.reject(res.errors);
     }
 
     res.data.allMdx.edges.forEach(({ node }) => {
@@ -40,7 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.frontmatter.path,
         component: postTemplate,
         context: node.id,
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};

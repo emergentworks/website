@@ -1,4 +1,5 @@
 :root {
+  --ew-green: rgb(0, 228, 97);
   --red-500: #bf0711;
   --blue-500: #3333ff;
   --blue-600: #191980;
@@ -11,14 +12,14 @@
   --gray-400: #828282;
   --gray-500: #747474;
   --gray-600: #3f3b3c;
-  --font-base: "ibmPlexSans-Regular", sans-serif;
-  --font-extraLight: "ibmPlexSans-ExtraLight", sans-serif;
-  --font-light: "ibmPlexSans-Light", sans-serif;
-  --font-medium: "ibmPlexSans-Medium", sans-serif;
-  --font-italic: "ibmPlexSans-MediumItalic", sans-serif;
-  --font-semiBold: "ibmPlexSans-SemiBold", sans-serif;
-  --font-mono: "ibmPlexMono-Regular", sans-serif;
-  --font-text: "ibmPlexSans-Text", sans-serif;
+  --font-base: 'ibmPlexSans-Regular', sans-serif;
+  --font-extraLight: 'ibmPlexSans-ExtraLight', sans-serif;
+  --font-light: 'ibmPlexSans-Light', sans-serif;
+  --font-medium: 'ibmPlexSans-Medium', sans-serif;
+  --font-italic: 'ibmPlexSans-MediumItalic', sans-serif;
+  --font-semiBold: 'ibmPlexSans-SemiBold', sans-serif;
+  --font-mono: 'ibmPlexMono-Regular', sans-serif;
+  --font-text: 'ibmPlexSans-Text', sans-serif;
   --fs-sm: 0.8rem;
   --fs-m: 1rem;
   --fs-base: 1.125rem;
