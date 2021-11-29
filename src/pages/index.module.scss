@@ -9,15 +9,6 @@ body {
   overflow-x: hidden;
 }
 
-.companies {
-  position: absolute;
-  right: -160px;
-  margin-top: var(--sp-looser);
-  margin-right: calc(-1 * var(--sp-base));
-  width: var(--bp-med);
-  top: calc(30vw + 1750px);
-}
-
 .videoCaption {
   font-style: italic;
   text-align: center;
@@ -31,10 +22,6 @@ body {
 
 .gridColLeft {
   grid-column: col-start / span 7;
-}
-
-.gridCol11 {
-  grid-column: col-start / span 11;
 }
 
 .gridCol12 {
@@ -60,22 +47,6 @@ body {
   }
 }
 
-@media (max-width: 1300px) {
-  .companies {
-    position: absolute;
-    right: -160px;
-    margin-top: var(--sp-looser);
-    margin-right: calc(-1 * var(--sp-base));
-    width: var(--bp-med);
-  }
-}
-
-@media (max-width: 1210px) {
-  .companies {
-    display: none;
-  }
-}
-
 @media (max-width: 800px) {
   .gridColLeft {
     grid-column: col-start / span 12;
@@ -84,14 +55,6 @@ body {
   .gridColRight {
     grid-column: col-start 5 / span 8;
     text-align: right;
-  }
-
-  .companies {
-    display: none;
-  }
-
-  .metrocard {
-    display: none;
   }
 }
 

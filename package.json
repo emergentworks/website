@@ -2,7 +2,7 @@
   "name": "gatsby-starter-default",
   "private": true,
   "description": "The main website for Emergent Works",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
