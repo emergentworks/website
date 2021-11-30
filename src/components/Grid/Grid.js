@@ -29,7 +29,7 @@ export const GridItem = ({
   ...rest
 }) => (
   <div
-    className={cx(styles.item, className, {
+    className={cx(styles.item, className, styles.gridItem, {
       [styles[`${align}`]]: align,
       [styles[`${justify}`]]: justify,
     })}
