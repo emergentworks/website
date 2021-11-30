@@ -63,7 +63,7 @@ const IndexPage = () => {
         </section>
       </section>
 
-      <section className={cx(styles.imageGrid, 'mt--xxl')}>
+      <section className={cx(styles.imageGrid, 'mt--xxl', 'content')}>
         <ImageGrid />
       </section>
     </Layout>
