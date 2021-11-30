@@ -19,11 +19,11 @@ Then run:
 ```
 
 To setup development environment run `npm run develop`.
-It will take a minute to build, but you can then view the site at [http://localhost:8000/] or go to `http://localhost:8000/___graphql` for an interactive graphql query maker.
+It will take a minute to build, but you can then view the site at <http://localhost:8000/> or go to <http://localhost:8000/___graphql> for an interactive graphql query maker.
 
 ## About the Project
 
-This is the main website for Emergent Works. Target audiences are potential mentees/mentors/employees/donors AND grant foundations. This is built in [React](https://reactjs.org/). We are using [Gatsby](https://www.gatsbyjs.com/docs/how-to/) to:
+This is the main website for Emergent Works. Target audiences are potential mentees/mentors/employees AND donors/grants/foundations. This is built in [React](https://reactjs.org/). We are using [Gatsby](https://www.gatsbyjs.com/docs/how-to/) to:
 
 - Build the project
 - Query for images and various config data (such at team information)
