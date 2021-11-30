@@ -25,18 +25,7 @@ const PartnersPage = () => {
     }
   `);
 
-  // const teamData = data.teamData.edges
-  // const teamPics = data.teamPics.nodes
   const sponsors = data.sponsors.nodes;
-
-  // const getImgSrc = name =>
-  //   teamPics.filter(image => {
-  //     if (!image.name.includes(name)) {
-  //       return null
-  //     }
-
-  //     return image
-  //   })[0].childImageSharp.fluid
 
   return (
     <Layout className={styles.page}>
