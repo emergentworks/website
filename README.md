@@ -10,15 +10,16 @@ To run this project you'll need
 - npm
 - the version of node listed in the .nvmrc file
 
+Then run:
+
 ```shell
    git clone https://github.com/emergentworks/website.git
    cd website/
    npm install
 ```
 
-To setup development environment:
-`npm run develop`
-It will take a minute to build, but you can then view the site at `http://localhost:8000/` or go to `http://localhost:8000/___graphql` for an interactive graphql query maker.
+To setup development environment run `npm run develop`.
+It will take a minute to build, but you can then view the site at [http://localhost:8000/] or go to `http://localhost:8000/___graphql` for an interactive graphql query maker.
 
 ## About the Project
 
