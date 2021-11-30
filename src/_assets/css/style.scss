@@ -27,6 +27,16 @@
   height: 100%;
 }
 
+.youtubeVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  height: 315px;
+
+  margin: -157.5px 0 0 -280px;
+}
+
 .twoColumnLayout {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
