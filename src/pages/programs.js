@@ -128,9 +128,7 @@ const ProgramsPage = () => (
           <div className="videoWrapper">
             <iframe
               title="Emergent Works 2021 Summer 1:1 Showcase Recap"
-              className="youtubeVideo2"
-              width="560"
-              height="315"
+              className="youtubeVideo"
               src="https://www.youtube.com/embed/PxJQYUBQObI" 
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
