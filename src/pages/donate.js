@@ -18,7 +18,7 @@ const DonatePage = ({ data }) => {
     <Layout className={styles.page}>
       <SEO title="Donate" />
       <div className={cx(styles.root, 'content')}>
-        <h1 className={cx('title', 'content-max-width')}>
+        <h1 className={cx('title', styles.pageTitle)}>
           Emergent Works interrupts the prison cycle by creating pathways into
           high-paying jobs in technology for formerly incarcerated people.
         </h1>
@@ -39,26 +39,8 @@ const DonatePage = ({ data }) => {
                 our participants.
               </p>
               <p>Anything you can give helps tremendously!</p>
-
-              <script
-                src="https://donorbox.org/widget.js"
-                paypalExpress="false"
-              />
-              <iframe
-                title="Donate to Emergent Works!"
-                allowpaymentrequest=""
-                className={styles.donorbox}
-                frameBorder="0"
-                height="900px"
-                name="donorbox"
-                scrolling="no"
-                seamless="seamless"
-                src="https://donorbox.org/embed/website-donation-15"
-                width="100%"
-              />
-            </GridItem>
-            <GridItem align="left">
               <h2 className="mt--none">Donate laptops</h2>
+
               <p>
                 All of our participants receive a laptop for the duration of the
                 program. Support our students’ learning by donating gently used
@@ -76,6 +58,24 @@ const DonatePage = ({ data }) => {
                 alt="Donate laptops"
                 className={styles.laptop}
                 align="right"
+              />
+            </GridItem>
+            <GridItem align="center">
+              <script
+                src="https://donorbox.org/widget.js"
+                paypalExpress="false"
+              />
+              <iframe
+                title="Donate to Emergent Works!"
+                allowpaymentrequest=""
+                className={styles.donorbox}
+                frameBorder="0"
+                height="900px"
+                name="donorbox"
+                scrolling="no"
+                seamless="seamless"
+                src="https://donorbox.org/embed/website-donation-15"
+                width="100%"
               />
             </GridItem>
           </Grid>

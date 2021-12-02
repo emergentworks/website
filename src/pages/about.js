@@ -1,12 +1,10 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import cx from 'classnames';
 
-import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
-import styles from './about.module.scss';
+// import styles from './about.module.scss';
 
 const AboutPage = () => {
   return (
@@ -29,6 +27,20 @@ const AboutPage = () => {
             to generate large-scale systemic change in the opportunities
             available to returning citizens.
           </p>
+          <div className="rightColumn">
+          <div className="videoWrapper">
+            <iframe
+              title="Emergent Works Docu-series Commercial"
+              className="youtubeVideo"
+              width="560" 
+              height="315"
+              src="https://www.youtube.com/embed/uTGXZL_sGTo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            />
+          </div>
+        </div>
           <p>
             EW provides digital literacy and software development training to
             returning citizens by pairing them with senior software engineers

@@ -1,21 +1,48 @@
+@import '../../_assets/css/abstracts/mixins';
+
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-template-rows: repeat(11, [row-start] 1fr);
   gap: var(--sp-base);
+  grid-template-columns: 100%;
+
+  @include bp(lg) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-rows: repeat(12, [row-start] 1fr);
+  }
 }
 
 .gridItem1 {
-  grid-column: col-start / span 7;
-  grid-row: row-start / span 5;
+  grid-row: row-start / span 3;
+
+  @include bp(lg) {
+    grid-column: col-start 1 / span 8;
+    grid-row: row-start / span 6;
+  }
 }
 
 .gridItem2 {
-  grid-column: col-start 9 / span 4;
-  grid-row: row-start / span 7;
+  grid-row: 3 / span 3;
+
+  @include bp(lg) {
+    grid-column: span 4 / 13;
+    grid-row: row-start / span 6;
+  }
 }
 
 .gridItem3 {
-  grid-column: col-start 3 / span 5;
-  grid-row: row-start 7 / span 5;
+  grid-row: 6 / span 3;
+
+  @include bp(lg) {
+    grid-column: col-start 1 / span 5;
+    grid-row: span 6 / 13;
+  }
+}
+
+.gridItem4 {
+  grid-row: 9 / span 3;
+
+  @include bp(lg) {
+    grid-column: span 7 / 13;
+    grid-row: span 6 / 13;
+  }
 }
