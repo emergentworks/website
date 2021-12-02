@@ -47,9 +47,6 @@ const PartnersPage = () => {
 
       <section className={cx('content')}>
         <div>
-          {/* <h1 className={cx(styles.subtitle, 'content-max-width')}>
-            These are some of the incredible organizations we partner with.
-          </h1> */}
           <div className={styles.logoGroup}>
             {sponsors.map((logo) => (
               <div key={logo.id} className={styles.logoItem}>
