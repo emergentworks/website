@@ -2,7 +2,7 @@
   "name": "ew-main-website",
   "private": true,
   "description": "The main website for Emergent Works",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
