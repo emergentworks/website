@@ -10,7 +10,7 @@ import styles from './about.module.scss';
 
 const AboutPage = () => {
   return (
-    <Layout className={styles.page}>
+    <Layout>
       <SEO title="About" />
       <section className={cx('content')}>
         <h1 className={cx('title', 'content-max-width')}>

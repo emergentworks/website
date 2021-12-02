@@ -5,24 +5,6 @@
  *
  */
 
-.subtitle {
-  margin-top: 100px;
-  margin-bottom: 50px;
-}
-
-.name {
-  font-size: var(--fs-base);
-  text-transform: capitalize;
-  font-family: var(--font-italic);
-  margin-top: var(--sp-tight);
-  margin-bottom: var(--sp-tight);
-}
-
-.partnersTitle {
-  margin-top: var(--sp-loosest);
-  margin-bottom: var(--sp-loose);
-}
-
 .logoGroup {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(auto, 160px));

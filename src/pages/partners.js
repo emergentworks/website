@@ -28,10 +28,10 @@ const PartnersPage = () => {
   const sponsors = data.sponsors.nodes;
 
   return (
-    <Layout className={styles.page}>
+    <Layout>
       <SEO title="Partners" />
-      <section className={cx(styles.gridContainer12, 'content')}>
-        <h2 className={cx(styles, 'content-max-width')}>Our Partners</h2>
+      <section className={cx('content')}>
+        <h2 className={cx('content-max-width')}>Our Partners</h2>
         <div>
           <p>
             We believe that realizing our vision of creating life-changing
@@ -45,8 +45,8 @@ const PartnersPage = () => {
 
       <br />
 
-      <section className={cx(styles.gridContainer12, 'content')}>
-        <div className={styles.partners}>
+      <section className={cx('content')}>
+        <div>
           {/* <h1 className={cx(styles.subtitle, 'content-max-width')}>
             These are some of the incredible organizations we partner with.
           </h1> */}
@@ -54,7 +54,6 @@ const PartnersPage = () => {
             {sponsors.map((logo) => (
               <div key={logo.id} className={styles.logoItem}>
                 <Img
-                  className={cx(styles.logo)}
                   fluid={logo.childImageSharp.fluid}
                   alt={logo.name}
                 />
