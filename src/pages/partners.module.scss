@@ -1,0 +1,16 @@
+@import '../_assets/css/abstracts/1-abstracts';
+/*
+ *
+ * Partners
+ *
+ */
+
+.logoGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 160px));
+  gap: var(--sp-loosest);
+}
+
+.logoItem {
+  align-self: center;
+}
