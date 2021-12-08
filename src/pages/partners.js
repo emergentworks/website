@@ -26,6 +26,7 @@ const PartnersPage = () => {
   `);
 
   const sponsors = data.sponsors.nodes;
+  sponsors.sort((a, b) => a.name > b.name);
 
   return (
     <Layout>
