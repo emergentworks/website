@@ -41,10 +41,10 @@ const IndexPage = () => {
             </p>
           </div>
           <div className="rightColumn">
-            <div className="videoIndex">
+            <div className="videoWrapper">
               <iframe
-                title="Welcome"
-                src="https://drive.google.com/file/d/1L-djBxsJZR76zCtACb5kY309SURMm4cl/preview"
+                title="Welcome to Emergent Works"
+                src="https://player.vimeo.com/video/672029001"
                 className="video"
                 frameBorder="0"
                 allow="autoplay; fullscreen"

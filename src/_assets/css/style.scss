@@ -40,15 +40,6 @@
   margin: auto;
 }
 
-.videoIndex {
-  position: absolute;
-  width: 560px;
-  height: 315px;
-  max-width: 80vw;
-  max-height: 50vw;
-  margin-top: 125px;
-}
-
 .twoColumnLayout {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
