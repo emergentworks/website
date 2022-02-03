@@ -49,7 +49,6 @@ const IndexPage = () => {
                 frameBorder="0"
                 allow="autoplay; fullscreen"
               />
-              <script src="https://player.vimeo.com/api/player.js" />
             </div>
           </div>
         </div>
