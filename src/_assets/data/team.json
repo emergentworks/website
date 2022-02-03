@@ -78,9 +78,9 @@
     "bio": ""
   },
   {
-    "name": "Aedan MacDonald",
-    "role": "Agency Director",
-    "img": "aedan_macdonald",
+    "name": "Ariel Herman",
+    "role": "Software Engineer",
+    "img": "ariel_herman",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
@@ -94,9 +94,33 @@
     "bio": ""
   },
   {
+    "name": "Aedan MacDonald",
+    "role": "Agency Director",
+    "img": "aedan_macdonald",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
     "name": "Will Servos",
     "role": "Product Manager",
     "img": "will_servos",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
+    "name": "Rico Ankoue",
+    "role": "Program Assistant",
+    "img": "Rico",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
+    "name": "Paola Fernandez",
+    "role": "Community Outreach Coordinator",
+    "img": "placeholder",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
