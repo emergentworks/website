@@ -35,7 +35,7 @@ const DonatePage = ({ data }) => {
                 workshops.
               </p>
               <p>
-                <strong>$250 donations</strong> pay for learning stipends for
+                <strong>$500 donations</strong> pay for learning stipends for
                 our participants.
               </p>
               <p>Anything you can give helps tremendously!</p>
