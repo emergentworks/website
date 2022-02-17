@@ -124,5 +124,13 @@
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
+  },
+  {
+    "name": "Laiquan Dubose",
+    "role": "Reentry Mentor",
+    "img": "placeholder",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
   }
 ]
