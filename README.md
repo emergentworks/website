@@ -6,15 +6,11 @@ To run this project you'll need
 
 - A working github connection
   - setup RSA key for your github account (example found here: https://jhooq.com/github-permission-denied-publickey/#1-github---how-to-fix-this-issue)
-- nvm
-- npm
-- the version of node listed in the .nvmrc file
+- nvm (v14.18.1 pinned to npm 6.14.15)
 
 Then run:
 
 ```shell
-   git clone https://github.com/emergentworks/website.git
-   cd website/
    npm install
 ```
 
