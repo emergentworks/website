@@ -75,7 +75,7 @@ export const Nav = ({
           activeClassName={styles.isActive}
         >
           Team
-        </Link>  
+        </Link>
       </li>
       <li className={styles.item}>
         <Link
@@ -84,7 +84,7 @@ export const Nav = ({
           activeClassName={styles.isActive}
         >
           Careers
-        </Link>  
+        </Link>
       </li>
 
       <li className={styles.item}>
