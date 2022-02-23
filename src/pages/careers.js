@@ -12,7 +12,7 @@ const TeamPage = () => {
 
   return (
     <Layout className={styles.page}>
-      <SEO title="Team" />
+      <SEO title="Careers" />
       <div className={cx(styles.root, 'content')}>
         <section className={cx(styles.gridContainer12, 'content')}>
           <h1 className={cx('title', 'content-max-width')}>
