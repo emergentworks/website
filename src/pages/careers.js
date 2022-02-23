@@ -2,8 +2,6 @@ import React from 'react';
 import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import Button from 'components/Button';
 import styles from './team.module.scss';
