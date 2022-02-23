@@ -16,18 +16,17 @@ const TeamPage = () => {
       <div className={cx(styles.root, 'content')}>
         <section className={cx(styles.gridContainer12, 'content')}>
           <h1 className={cx('title', 'content-max-width')}>
-            We are the Emergent Works Family.
+            Careers
           </h1>
           <div>
             <p>
-              We believe that developing software and educational programming
-              that is responsive to the problems our clients and society face,
-              necessitates that our team be representative of the diverse range
-              of perspectives in the world. Having team members with direct
-              lived experience with the problems we solve for our clients and
-              communities allows us to build products and programs that are both
-              inclusive and sensitive to the lives of the people that interact
-              with and are impacted by them.
+            Are you tired of working on problems with solutions that don’t drive positive social change?  Do you want to work with a group of people as diverse and interesting as the world we live in? Then come join us at Emergent Works! 
+            </p>
+            <p>
+            We’re solving one of the world’s most pressing problems––mass incarceration––by assembling a world-class community and team that brings their diverse perspectives and full selves to the products and programs we build.
+            </p>
+            <p>
+            If you’re interested in joining us to make the world a better place while loving the work you do, check out our open roles below. We can’t wait to learn about the experiences, talents, and perspectives you’ll bring to the team! 
             </p>
           </div>
         </section>
