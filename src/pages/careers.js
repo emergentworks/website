@@ -21,8 +21,8 @@ const TeamPage = () => {
               come join us at Emergent Works!
             </p>
             <p>
-              We’re solving one of the world’s most pressing problems––mass
-              incarceration––by assembling a world-class community and team that
+              We’re solving one of the world’s most pressing problems—mass
+              incarceration—by assembling a world-class community and team that
               brings their diverse perspectives and full selves to the products
               and programs we build.
             </p>
