@@ -11,6 +11,7 @@ import SEO from '../components/seo';
 import styles from './index.module.scss';
 
 const IndexPage = () => {
+  console.log(styles)
   return (
     <Layout className={styles.page}>
       <SEO title="Home" />
@@ -23,21 +24,10 @@ const IndexPage = () => {
         <div className="twoColumnLayout">
           <div className="leftColumn">
             <p>
-              We are a community of software developers, designers, product
-              specialists, and committed citizens working to build responsive
-              software and community programs that address the most pressing
-              challenges faced by organizations, and our society today.
-            </p>
-            <p>
-              We envision a world where tech literacy, education, and
-              skills-based training are freely available to the individuals and
-              communities, disproportionately of color, impacted by mass
-              incarceration.
-            </p>
-            <p>
-              We realize this vision through our in-house software development
-              agency and strategic educational programming that provides
-              mentorship and a pathway to careers in tech to these communities.
+              We are a community of software engineers, designers, product and
+              program specialists that develops community-driven solutions (our
+              programs) and software (our products) to address one of the most
+              pressing challenges faced by our society today—mass incarceration.
             </p>
           </div>
           <div className="rightColumn">
@@ -52,6 +42,18 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
+        <section>
+          <div>
+            <h2 className="mt--xxl">Our Products:</h2>
+            <br />
+            <ul>
+              <li className={styles.box2}>The Bail Fund App (BFA)</li>
+              <li className={styles.box2}>Not911</li>
+              <li className={styles.box2}>Community Connection Hub (CCH)</li>
+            </ul>
+          </div>
+        </section>
+
         <section className={cx(styles.gridContainer12, 'content')}>
           <div className={styles.gridColLeft}>
             <h2 className="mt--xxl">Donations support our work.</h2>
