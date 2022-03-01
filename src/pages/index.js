@@ -11,7 +11,6 @@ import SEO from '../components/seo';
 import styles from './index.module.scss';
 
 const IndexPage = () => {
-  console.log(styles)
   return (
     <Layout className={styles.page}>
       <SEO title="Home" />
@@ -45,11 +44,10 @@ const IndexPage = () => {
         <section>
           <div>
             <h2 className="mt--xxl">Our Products:</h2>
-            <br />
             <ul>
-              <li className={styles.box2}>The Bail Fund App (BFA)</li>
-              <li className={styles.box2}>Not911</li>
-              <li className={styles.box2}>Community Connection Hub (CCH)</li>
+              <li className={styles.box}>The Bail Fund App (BFA)</li>
+              <li className={styles.box}>Not911</li>
+              <li className={styles.box}>Community Connection Hub (CCH)</li>
             </ul>
           </div>
         </section>
