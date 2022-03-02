@@ -1,4 +1,4 @@
-@import "../../_assets/css/abstracts/mixins";
+@import '../../_assets/css/abstracts/mixins';
 
 .root {
   padding-top: 1.65rem;
@@ -12,7 +12,7 @@
       align-items: flex-end;
       justify-content: flex-start;
       overflow: hidden;
-      padding: var(--sp-base) calc(var(--sp-base) + var(--sp-tight));
+      padding: 0 var(--sp-loose);
       opacity: 0;
       left: 0;
       right: 0;
@@ -69,7 +69,7 @@
 .navButton div {
   background-color: var(--icon-fill-base);
   border-radius: 3px;
-  content: "";
+  content: '';
   display: block;
   height: 4px;
   margin: 7px 0;
