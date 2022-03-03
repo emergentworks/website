@@ -1,19 +1,19 @@
-@import '../../_assets/css/abstracts/mixins';
+@import '../../_assets/css/abstracts/_mixins.scss';
 
 .root {
-  margin: 5rem 0 5rem;
-  padding-top: var(--sp-max);
-  // ToDo: Research color function for CSS variables
-  border-top: 1px solid #dedede;
+  margin-top: 3rem;
+  padding-top: var(--sp-looser);
+  border-top: 1px solid var(--gray-300);
 }
 
 .linkGroup {
-  display: grid;
-  gap: var(--sp-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
   margin-bottom: var(--sp-loose);
-
-  @include bp() {
-    grid-template-columns: 1fr auto;
+  @include bp(xxl) {
+    flex-direction: row;
   }
 }
 
@@ -26,10 +26,8 @@
 }
 
 .nav {
-  @include bp(med, max) {
-    & li {
-      padding-top: var(--sp-tight);
-      padding-bottom: var(--sp-tight);
-    }
+  & li {
+    padding-top: var(--sp-tight);
+    padding-bottom: var(--sp-tight);
   }
 }

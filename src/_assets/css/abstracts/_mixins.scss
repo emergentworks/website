@@ -6,11 +6,13 @@
 
 // Breakpoint
 $bp: (
+  // MOBILE
   sm: 20rem,
   med: 36rem,
   lg: 51.5rem,
   xl: 67rem,
-  xxl: 82.5rem,
+  // DESKTOP
+  xxl: 82.5rem
 );
 
 @mixin bp($breakpoint: med, $size: min) {
@@ -19,7 +21,7 @@ $bp: (
 
   // If the key exists in the map
   @if $value != null {
-    @if $size != "min" {
+    @if $size != 'min' {
       @media (max-width: $value) {
         @content;
       }
@@ -36,13 +38,6 @@ $bp: (
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
-
-// @mixin trans($timeValue: base, $animationValue: base) {
-//   $time: map-get($timing, $timeValue);
-//   $animation: map-get($anim, $animationValue);
-
-//   transition: $time all $animation;
-// }
 
 @mixin removeBullets {
   list-style: none;

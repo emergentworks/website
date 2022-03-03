@@ -92,22 +92,6 @@
   margin-bottom: var(--sp-base);
 }
 
-.content {
-  padding-left: var(--sp-loose);
-  padding-right: var(--sp-loose);
-
-  @media (min-width: 68rem) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  @include bp() {
-    max-width: 67rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 img {
   max-width: 100%;
 }

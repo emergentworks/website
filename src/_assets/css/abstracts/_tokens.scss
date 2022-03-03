@@ -1,3 +1,5 @@
+// Layout Breakpoints
+
 :root {
   --ew-green: rgb(0, 228, 97);
   --red-500: #bf0711;
@@ -67,4 +69,5 @@
   --font-color-base: var(--gray-600);
   --link-color: var(--blue-500);
   --icon-fill-base: var(--gray-600);
+  --margin-mobile: var(--sp-loose);
 }

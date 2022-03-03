@@ -2,8 +2,6 @@ import React from 'react';
 import cx from 'classnames';
 import Button from 'components/Button';
 import ImageGrid from 'components/ImageGrid';
-// appears to be something to send user experience data to fullstory.com
-// import '../components/fullstory.js';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
@@ -12,7 +10,7 @@ import styles from './index.module.scss';
 
 const IndexPage = () => {
   return (
-    <Layout className={styles.page}>
+    <Layout>
       <SEO title="Home" />
       <section className="content">
         <div className={styles.gridContainer12}>

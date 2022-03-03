@@ -1,5 +1,11 @@
-.container {
-  padding-top: var(--sp-looser);
+@import '../../_assets/css/abstracts/_mixins.scss';
+
+.pageContainer {
+  margin: 0 var(--margin-mobile);
+  @include bp(xxl) {
+    margin: 0 auto;
+    max-width: 67rem;
+  }
 }
 
 .root {
