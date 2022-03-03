@@ -65,17 +65,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.box0 {
-  background-color: lightgrey;
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
-  // &:hover:not(:disabled) {
-  //   color: var(--ew-green);
-  // }
-}
-
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -94,7 +83,10 @@ ul {
   align-items: center;
   max-width: 250px;
   width: 300px;
-  height: 100px;
+  height: 200px;
   padding: 50px;
   border: 1px solid black;
+  &:hover:not(:disabled) {
+    background-color: var(--ew-green);
+  }
 }
