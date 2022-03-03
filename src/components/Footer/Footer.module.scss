@@ -1,17 +1,24 @@
 @import '../../_assets/css/abstracts/_mixins.scss';
 
 .root {
-  margin-top: 3rem;
+  margin: 3rem var(--margin-mobile);
   padding-top: var(--sp-looser);
   border-top: 1px solid var(--gray-300);
 }
 
+.elements {
+  max-width: var(--container-max-width);
+  @include bp(xxl) {
+    margin: 3rem auto;
+  }
+}
+
 .linkGroup {
+  margin-bottom: var(--sp-loose);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
-  margin-bottom: var(--sp-loose);
   @include bp(xxl) {
     flex-direction: row;
   }

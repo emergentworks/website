@@ -4,7 +4,7 @@
   margin: 0 var(--margin-mobile);
   @include bp(xxl) {
     margin: 0 auto;
-    max-width: 67rem;
+    max-width: var(--container-max-width);
   }
 }
 

@@ -11,18 +11,20 @@ export const Footer = () => {
 
   return (
     <footer className={styles.root}>
-      <SubscribeForm />
-      <div className={styles.linkGroup}>
-        <Nav className={styles.nav} showHomeLink showHomeEmail />
-        <SocialLinks />
-      </div>
-      <p className={styles.description}>
-        Emergent Works is a fiscally sponsored program of Prime Produce Limited.
-        Prime Produce Limited is a registered 501(c)(3) corporation, and all
-        donations are tax deductible to the extent permitted by law.
-      </p>
+      <div className={styles.elements}>
+        <SubscribeForm />
+        <div className={styles.linkGroup}>
+          <Nav className={styles.nav} showHomeLink showHomeEmail />
+          <SocialLinks />
+        </div>
+        <p className={styles.description}>
+          Emergent Works is a fiscally sponsored program of Prime Produce
+          Limited. Prime Produce Limited is a registered 501(c)(3) corporation,
+          and all donations are tax deductible to the extent permitted by law.
+        </p>
 
-      <p className={styles.description}>© {getYear} Emergent Works</p>
+        <p className={styles.description}>© {getYear} Emergent Works</p>
+      </div>
     </footer>
   );
 };
