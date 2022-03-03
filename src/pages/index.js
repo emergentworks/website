@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import cx from 'classnames';
 import Button from 'components/Button';
 import ImageGrid from 'components/ImageGrid';
@@ -43,15 +44,18 @@ const IndexPage = () => {
         </div>
         <section>
           <div>
-            <h2 className="mt--xxl">Our Products:</h2>
+            <h2 className="mt--xxl">Our Programs:</h2>
             <ul>
-              <li className={styles.box}>The Bail Fund App (BFA)</li>
-              <li className={styles.box}>Not911</li>
-              <li className={styles.box}>Community Connection Hub (CCH)</li>
+              <Link
+          to="/programs"
+        ><li className={styles.box}>
+          1:1 Virtual Tech Mentorship</li>
+        </Link>
+              <li className={styles.box}>Technology Rhythm And Passion (T.RAP)</li>
+              <li className={styles.box}>The Leadership in Engineering to Accelerate Pathways</li>
             </ul>
           </div>
         </section>
-
         <section className={cx(styles.gridContainer12, 'content')}>
           <div className={styles.gridColLeft}>
             <h2 className="mt--xxl">Donations support our work.</h2>
