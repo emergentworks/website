@@ -3,6 +3,7 @@ import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import { WaterColor } from '../components/WaterColor/WaterColor';
+import { FeatureCard } from '../components/FeatureCard';
 
 import styles from './products.module.scss';
 
@@ -22,9 +23,11 @@ const ProductsPage = () => (
         </div>
       </div>
       <section className={cx(styles.cardWrapper)}>
-        <div className={cx(styles.card, styles.cardWd)}>
-          <span className={cx(styles.featured)}>Featured Product</span>
-          <h2>Bail Fund App</h2>
+        <FeatureCard
+          heading="Bail Fund App"
+          bannerCopy="Featured Partner"
+          isFeatured
+        >
           <p>
             The Bail Fund App (BFA) is a bespoke web-based CRM developed in
             partnership with Community Justice Exchange (CJE) that supports a
@@ -38,9 +41,8 @@ const ProductsPage = () => (
             frees up valuable time and resources so funds can serve greater
             numbers of people, and inform policy to end cash bail practices.
           </p>
-        </div>
-        <div className={cx(styles.card, styles.cardSm)}>
-          <h2>Not911</h2>
+        </FeatureCard>
+        <FeatureCard heading="Not911">
           <p>
             <a
               href="https://medium.com/@emergentworks/meet-the-formerly-incarcerated-software-engineers-who-built-a-no-police-alternative-to-911-5a5af163f8b2"
@@ -54,9 +56,8 @@ const ProductsPage = () => (
             agencies to address issues ranging from domestic violence to
             homelessness, without police intervention.
           </p>
-        </div>
-        <div className={cx(styles.card, styles.cardSm)}>
-          <h2>Community Connection Hub</h2>
+        </FeatureCard>
+        <FeatureCard heading="Community Connection Hub">
           <p>
             Community Connection Hub (CCH), launching in 2022, is the world's
             first web-based platform to facilitate community development,
@@ -64,7 +65,7 @@ const ProductsPage = () => (
             of people and organizations working to end the crisis of mass
             incarceration.
           </p>
-        </div>
+        </FeatureCard>
       </section>
     </div>
   </Layout>
