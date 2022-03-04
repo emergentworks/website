@@ -7,7 +7,7 @@ import WaterColorGreen from '_assets/images/waterColor-green.png';
 
 import styles from './WaterColor.module.scss';
 
-export const WaterColor = ({ alt, img = WebPage, color = 'purple' }) => {
+export const WaterColor = ({ alt = '', img = WebPage, color = 'purple' }) => {
   const WATER_COLOR = {
     purple: WaterColorPurple,
     green: WaterColorGreen,
@@ -22,7 +22,9 @@ export const WaterColor = ({ alt, img = WebPage, color = 'purple' }) => {
 };
 
 WaterColor.propTypes = {
-  alt: PropTypes.string.isRequired,
+  // Not required for decorative imagery.
+  // See: https://www.w3.org/WAI/tutorials/images/decorative/
+  alt: PropTypes.string,
   color: PropTypes.node,
   img: PropTypes.node,
 };
