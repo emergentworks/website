@@ -10,7 +10,7 @@ import styles from './products.module.scss';
 const ProductsPage = () => (
   <Layout className={styles.page}>
     <SEO title="Products" />
-    <div className={cx(styles.root, 'content')}>
+    <div className="content">
       <div className="twoColumnLayout">
         <h1 className="title leftColumn">
           We build technology to drive positive social change and end the mass
@@ -67,6 +67,15 @@ const ProductsPage = () => (
           </p>
         </FeatureCard>
       </section>
+    </div>
+    <div className={cx(styles.partnersFooter, 'content')}>
+      <h2>Partner With Us!</h2>
+      Are you impacted by mass incarceration? Have an idea for a product that we
+      should build to support your community? Reach out to us at{' '}
+      <a href="mailto:products@emergentworks.org?subject=Product%20Partnership">
+        products@emergentworks.org
+      </a>
+      .
     </div>
   </Layout>
 );
