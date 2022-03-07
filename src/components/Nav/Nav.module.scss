@@ -13,11 +13,11 @@
         display: inline-block;
         width: auto;
         font-size: var(--fs-l);
-        padding: var(--sp-base) 0;
+        padding: var(--sp-tight) 0;
         font-family: var(--font-light);
 
         &.emailLink {
-          font-size: var(--fs-base) !important;
+          font-size: var(--fs-base);
         }
       }
 
@@ -30,23 +30,19 @@
 
 .group {
   @include removeBullets();
-  // display: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-tight);
+  @include bp(lg) {
+    gap: var(--sp-loose);
+    flex-direction: row;
+  }
 }
 
 .item {
   @include bp(lg) {
+    flex-direction: row;
     display: inline;
-
-    &:first-child {
-      padding-right: var(--sp-base);
-    }
-    &:last-child {
-      padding-left: var(--sp-base);
-    }
-    &:not(:first-child):not(:last-child) {
-      padding-right: var(--sp-base);
-      padding-left: var(--sp-base);
-    }
   }
 }
 
@@ -57,7 +53,7 @@
 
   &.isActive {
     background: url('../../_assets/images/squiggly.svg');
-    background-position: bottom;
+    background-position: bottom -8px center;
     background-repeat: no-repeat;
     padding-bottom: 22px;
   }

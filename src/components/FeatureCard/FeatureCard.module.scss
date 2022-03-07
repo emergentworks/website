@@ -1,0 +1,31 @@
+@import '../../_assets/css/abstracts/mixins';
+
+.card {
+  padding-top: var(--sp-loose);
+  padding-right: var(--sp-loose);
+  padding-bottom: var(--sp-base);
+  padding-left: var(--sp-loose);
+  border: 3px solid black;
+  box-shadow: 6px 6px black, -4px -4px var(--ew-green);
+  @include bp(lg) {
+    padding-right: var(--sp-loosest);
+  }
+  > h2 {
+    font-family: var(--font-medium);
+  }
+}
+
+.large {
+  flex: 2 1 40rem;
+  max-width: 100%;
+}
+
+.base {
+  flex: 1 0 15rem;
+}
+
+.featured {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  background: linear-gradient(180deg, transparent 65%, var(--ew-green) 65%);
+}
