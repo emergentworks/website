@@ -46,23 +46,50 @@ h4,
   font-size: var(--fs-sm);
 }
 
-a,
-.link {
-  color: var(--link-color);
+// a,
+// .link {
+//   color: var(--link-color);
+//   text-decoration: none;
+
+//   &:hover {
+//     color: #c5c5e9;
+//   }
+
+//   &:hover:not(:disabled) {
+//     color: var(--blue-600);
+//   }
+
+//   &:active {
+//     text-decoration: underline;
+//   }
+// }
+
+a:link,
+a:visited {
+  font-family: var(--font-semiBold);
+  color: var(--link-primary);
   text-decoration: none;
-  // @include trans();
+}
 
-  &:hover {
-    color: #c5c5e9;
-  }
+a:hover,
+a:focus,
+a:active {
+  color: var(--link-secondary-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
 
-  &:hover:not(:disabled) {
-    color: var(--blue-600);
-  }
+a.secondary:link,
+a.secondary:visited {
+  font-family: var(--font-text);
+  color: var(--link-secondary);
+  text-decoration: none;
+}
 
-  &:active {
-    text-decoration: underline;
-  }
+a.secondary:hover,
+a.secondary:focus,
+a.secondary:active {
+  color: var(--link-secondary-hover);
 }
 
 p {
@@ -70,7 +97,7 @@ p {
 }
 
 .bold {
-  font-family: var(--font-semiBold);
+  font-family: var(--font-medium);
 }
 
 .bullet-list {

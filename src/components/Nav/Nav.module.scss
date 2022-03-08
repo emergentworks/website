@@ -1,6 +1,15 @@
-@import '../../_assets/css/abstracts/mixins';
+@import '../../_assets/css/abstracts/_mixins.scss';
 
 .root {
+  font-size: var(--fs-m);
+
+  .isActive {
+    background: url('../../_assets/images/squiggly.svg');
+    background-position: bottom -8px center;
+    background-repeat: no-repeat;
+    padding-bottom: 22px;
+  }
+
   @media (max-width: 51.5rem) {
     &.isActive {
       // ToDo: Removed Important
@@ -9,20 +18,16 @@
       opacity: 1 !important;
       transition: opacity 0.25s ease;
 
-      .link {
+      .item {
+        text-align: right;
+      }
+
+      .item a {
         display: inline-block;
         width: auto;
         font-size: var(--fs-l);
         padding: var(--sp-tight) 0;
         font-family: var(--font-light);
-
-        &.emailLink {
-          font-size: var(--fs-base);
-        }
-      }
-
-      .item {
-        text-align: right;
       }
     }
   }
@@ -43,27 +48,6 @@
   @include bp(lg) {
     flex-direction: row;
     display: inline;
-  }
-}
-
-.link {
-  color: var(--font-color-base);
-  font-size: var(--fs-m);
-  font-family: var(--font-text);
-
-  &.isActive {
-    background: url('../../_assets/images/squiggly.svg');
-    background-position: bottom -8px center;
-    background-repeat: no-repeat;
-    padding-bottom: 22px;
-  }
-
-  &:active {
-    text-decoration: none;
-  }
-
-  &:hover:not(:disabled) {
-    color: var(--ew-green);
   }
 }
 
