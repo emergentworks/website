@@ -46,24 +46,6 @@ h4,
   font-size: var(--fs-sm);
 }
 
-// a,
-// .link {
-//   color: var(--link-color);
-//   text-decoration: none;
-
-//   &:hover {
-//     color: #c5c5e9;
-//   }
-
-//   &:hover:not(:disabled) {
-//     color: var(--blue-600);
-//   }
-
-//   &:active {
-//     text-decoration: underline;
-//   }
-// }
-
 a:link,
 a:visited {
   font-family: var(--font-semiBold);
