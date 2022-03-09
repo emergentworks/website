@@ -28,12 +28,7 @@ export const Nav = ({ navVisibility, banner, className, ...rest }) => (
         </li>
       ))}
       <li className={styles.item}>
-        <a
-          href="https://medium.com/@emergentworks"
-          className="secondary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://medium.com/@emergentworks" className="secondary">
           Blog
         </a>
       </li>
