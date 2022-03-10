@@ -14,3 +14,14 @@
 .logoItem {
   align-self: center;
 }
+
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-looser);
+  padding: 100px;
+}
+
+.partnersFooter {
+  margin-top: var(--sp-looser);
+}

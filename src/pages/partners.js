@@ -5,6 +5,7 @@ import cx from 'classnames';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
+import { FeatureCard } from '../components/FeatureCard';
 
 import styles from './partners.module.scss';
 
@@ -42,12 +43,12 @@ const PartnersPage = () => {
           </p>
         </div>
       </section>
-
-      <br />
-
-      <section className={cx(styles.gridContainer12, 'content')}>
-          <h2 className={cx('content-max-width')}>Featured Partner</h2>
-        <div>
+      <section className={cx(styles.cardWrapper)}>
+        <FeatureCard
+          heading="Community Justice Exchange"
+          bannerCopy="Featured Partner"
+          isFeatured
+        >
           <p>
             Emergent Works partners with the Community Justice Exchange (CJE) on
             one of our flagship software products, the Bail Fund App (BFA). The
@@ -58,21 +59,19 @@ const PartnersPage = () => {
             deploying bail funds to individuals in pretrial and immigration
             detention who could otherwise not afford it.
           </p>
-            
-          <b />
-
-          <p> 
-            As a tool, the BFA
-            supports CJE’s work and goal to serve as a national hub for
-            developing, sharing, and experimenting with tactical interventions,
-            strategic organizing practices, and innovative organizing tools
-            toward prison industrial complex abolition. By increasing the
-            capacity of community bail funds in the NBFN, EW’s work furthers the
-            work of CJE in providing support to community-based organizations
-            that are experimenting with bottom-up, power-building interventions
-            in the criminal legal and immigration detention systems.
+        </FeatureCard>
+      
+          <p>
+            As a tool, the BFA supports CJE’s work and goal to serve as a
+            national hub for developing, sharing, and experimenting with
+            tactical interventions, strategic organizing practices, and
+            innovative organizing tools toward prison industrial complex
+            abolition. By increasing the capacity of community bail funds in the
+            NBFN, EW’s work furthers the work of CJE in providing support to
+            community-based organizations that are experimenting with bottom-up,
+            power-building interventions in the criminal legal and immigration
+            detention systems.
           </p>
-        </div>
       </section>
 
       <br />
