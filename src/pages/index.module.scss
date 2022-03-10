@@ -83,10 +83,21 @@ ul {
   align-items: center;
   max-width: 250px;
   width: 300px;
-  height: 200px;
+  height: 100px;
   padding: 50px;
   border: 1px solid black;
+  // box-shadow: 6px 6px black;
   &:hover:not(:disabled) {
     background-color: var(--ew-green);
+    cursor: pointer;
+  }
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  &:hover:not(:disabled) {
+    color: black;
   }
 }

@@ -44,15 +44,33 @@ const IndexPage = () => {
         </div>
         <section>
           <div>
+            <h2 className="mt--xxl">Our Products:</h2>
+            <ul>
+              <Link className={styles.link} to="/products">
+                <li className={styles.box}>Not911</li>
+              </Link>
+              <Link className={styles.link} to="/products">
+              <li className={styles.box}>BFA</li>
+              </Link>
+              <Link className={styles.link} to="/products">
+              <li className={styles.box}>CCH</li>
+              </Link>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div>
             <h2 className="mt--xxl">Our Programs:</h2>
             <ul>
-              <Link
-          to="/programs"
-        ><li className={styles.box}>
-          1:1 Virtual Tech Mentorship</li>
-        </Link>
-              <li className={styles.box}>Technology Rhythm And Passion (T.RAP)</li>
-              <li className={styles.box}>The Leadership in Engineering to Accelerate Pathways</li>
+              <Link className={styles.link} to="/programs">
+                <li className={styles.box}>1:1 Virtual Tech Mentorship</li>
+              </Link>
+              <Link className={styles.link} to="/programs">
+                <li className={styles.box}>TRAP</li>
+              </Link>
+              <Link className={styles.link} to="/programs">
+                <li className={styles.box}>LEAP</li>
+              </Link>
             </ul>
           </div>
         </section>
