@@ -33,15 +33,13 @@ const PartnersPage = () => {
     <Layout>
       <SEO title="Partners" />
       <section className={cx('content')}>
-        <h1 className={cx('content-max-width')}>Our Partners</h1>
-        <div>
+        <h1>Our Partners</h1>
           <p>
             We partner with incredible organizations on our products and
             programs to catalyze our shared goal to address and put an end to
             the crisis of mass incarceration. You can learn more about all the
             organizations we partner with below our featured partner.
           </p>
-        </div>
         <section className={cx(styles.cardWrapper)}>
         <FeatureCard
           heading="Community Justice Exchange"
@@ -74,7 +72,7 @@ const PartnersPage = () => {
       </section>
       </section>
       <section className={cx('content')}>
-      <h2 className={cx('content-max-width')}>Thanks to our fantastic partners:</h2>
+      <h2>Thanks to our fantastic partners:</h2>
       <br />
         <div>
           <div className={styles.logoGroup}>
