@@ -75,11 +75,10 @@ ul {
   margin: 0;
 }
 
-
 .box {
   display: flex;
   flex: 1 1 150px;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   max-width: 250px;
   width: 300px;
@@ -100,4 +99,11 @@ ul {
   &:hover:not(:disabled) {
     color: black;
   }
+}
+
+.pageTitle {
+  border-bottom: solid thick var(--ew-green);
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  width: 100%;
 }

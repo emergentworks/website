@@ -21,26 +21,22 @@ const IndexPage = () => {
             We are Emergent Works.
           </h1>
         </div>
-        <div className="twoColumnLayout">
-          <div className="leftColumn">
-            <p>
-              We are a community of software engineers, designers, product and
-              program specialists that develops community-driven solutions (our
-              programs) and software (our products) to address one of the most
-              pressing challenges faced by our society today—mass incarceration.
-            </p>
-          </div>
-          <div className="rightColumn">
-            <div className="videoWrapper">
-              <iframe
-                title="Welcome to Emergent Works"
-                src="https://player.vimeo.com/video/672029001"
-                className="video"
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-              />
-            </div>
-          </div>
+        <div>
+          <h2 className={styles.pageTitle}>
+            We are a community of software engineers, designers, product and
+            program specialists that develops community-driven solutions (our
+            programs) and software (our products) to address one of the most
+            pressing challenges faced by our society today: mass incarceration.
+          </h2>
+        </div>
+        <div className="videoWrapper">
+          <iframe
+            title="Welcome to Emergent Works"
+            src="https://player.vimeo.com/video/672029001?title=0&byline=0&portrait=0&color=00e461"
+            className="video"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+          />
         </div>
         <section>
           <div>
@@ -50,10 +46,10 @@ const IndexPage = () => {
                 <li className={styles.box}>Not911</li>
               </Link>
               <Link className={styles.link} to="/products">
-              <li className={styles.box}>BFA</li>
+                <li className={styles.box}>BFA</li>
               </Link>
               <Link className={styles.link} to="/products">
-              <li className={styles.box}>CCH</li>
+                <li className={styles.box}>CCH</li>
               </Link>
             </ul>
           </div>
