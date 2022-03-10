@@ -16,7 +16,7 @@ export const Footer = () => {
         <SubscribeForm />
         <div className={styles.linkGroup}>
           <div className={styles.navGroup}>
-            <Nav className={styles.nav} showHomeLink showHomeEmail />
+            <Nav className={styles.nav} />
           </div>
           <div className={styles.socialGroup}>
             <SocialLinks />
