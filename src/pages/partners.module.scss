@@ -19,7 +19,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-looser);
-  padding: 100px;
+  padding-top: var(--sp-loose);
+  padding-bottom: var(--sp-loose);
 }
 
 .partnersFooter {

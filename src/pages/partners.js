@@ -42,8 +42,7 @@ const PartnersPage = () => {
             organizations we partner with below our featured partner.
           </p>
         </div>
-      </section>
-      <section className={cx(styles.cardWrapper)}>
+        <section className={cx(styles.cardWrapper)}>
         <FeatureCard
           heading="Community Justice Exchange"
           bannerCopy="Featured Partner"
@@ -59,7 +58,6 @@ const PartnersPage = () => {
             deploying bail funds to individuals in pretrial and immigration
             detention who could otherwise not afford it.
           </p>
-        </FeatureCard>
       
           <p>
             As a tool, the BFA supports CJE’s work and goal to serve as a
@@ -72,11 +70,12 @@ const PartnersPage = () => {
             power-building interventions in the criminal legal and immigration
             detention systems.
           </p>
+          </FeatureCard>
       </section>
-
-      <br />
-
+      </section>
       <section className={cx('content')}>
+      <h2 className={cx('content-max-width')}>Thanks to our fantastic partners:</h2>
+      <br />
         <div>
           <div className={styles.logoGroup}>
             {sponsors.map((logo) => (
