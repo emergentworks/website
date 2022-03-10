@@ -3,7 +3,7 @@
   --red-500: #bf0711;
   --blue-500: #3333ff;
   --blue-600: #191980;
-  --green-500: #66e271;
+  --green-500: #0d8240;
   --purple-500: #9761ff;
   --yellow-500: #fff42c;
   --white-500: #ffffff;
@@ -65,6 +65,9 @@
 
 :root {
   --font-color-base: var(--gray-600);
-  --link-color: var(--blue-500);
+  --link-primary: var(--green-500);
+  --link-primary-hover: var(--green-500);
+  --link-secondary: var(--gray-600);
+  --link-secondary-hover: var(--green-500);
   --icon-fill-base: var(--gray-600);
 }
