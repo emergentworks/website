@@ -6,71 +6,31 @@
  *
  */
 
-.videoCaption {
-  font-style: italic;
-  text-align: center;
-}
-
-.gridContainer12 {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: var(--sp-base);
-}
-
-.gridColLeft {
-  grid-column: col-start / span 7;
-}
-
-.gridCol12 {
-  grid-column: col-start / span 12;
-}
-
-.gridColRight {
-  grid-column: col-start 9 / span 4;
-  align-self: end;
-}
-
 .mainPageTitle {
   font-size: var(--fs-largest);
-  letter-spacing: -0.0235em;
-  line-height: 140%;
+  line-height: 5rem;
 }
 
-@media (min-width: 1300px) {
-  .imageGrid {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 800px) {
-  .gridColLeft {
-    grid-column: col-start / span 12;
-  }
-
-  .gridColRight {
-    grid-column: col-start 5 / span 8;
-    text-align: right;
-  }
+.pageTitle {
+  border-bottom: solid thick var(--ew-green);
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  width: 100%;
 }
 
 .threeUpWrapper {
+  @include removeBullets();
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   gap: 1px;
-  background-color: black;
-  border-color: black;
+  background-color: var(--slate-900);
+  border-color: var(--slate-900);
   border-style: solid;
   border-width: 1px;
 }
 
 .threeUpCard {
   flex: 1 1 150px;
-  padding: var(--sp-max) var(--sp-loose);
   background-color: white;
   background-image: url('_assets/images/waterColor-yellow.png');
   background-position: right;
@@ -78,6 +38,8 @@
   background-repeat: no-repeat;
   a {
     @include removeLinkStyles();
+    display: block;
+    padding: var(--sp-max) var(--sp-loose);
   }
 }
 
@@ -90,7 +52,7 @@
 }
 
 .threeUpCard:hover {
-  background-color: black;
+  background-color: var(--slate-900);
   background-image: url('_assets/images/arrow-chalk.png');
   background-size: 40%;
   background-position: left 10% bottom 10%;
@@ -98,11 +60,4 @@
   & > * {
     color: var(--white-200);
   }
-}
-
-.pageTitle {
-  border-bottom: solid thick var(--ew-green);
-  padding-bottom: 20px;
-  margin-bottom: 60px;
-  width: 100%;
 }

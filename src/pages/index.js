@@ -13,11 +13,9 @@ const IndexPage = () => {
     <Layout className={styles.page}>
       <SEO title="Home" />
       <section className="content mb--xl">
-        <div className={styles.gridContainer12}>
-          <h1 className={cx(styles.gridCol12, styles.mainPageTitle, 'title')}>
-            We are Emergent Works.
-          </h1>
-        </div>
+        <h1 className={cx(styles.mainPageTitle, 'title')}>
+          We are Emergent Works.
+        </h1>
         <div>
           <h2 className={styles.pageTitle}>
             We are a community of software engineers, designers, product and
