@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import cx from 'classnames';
-import Button from 'components/Button';
-import ImageGrid from 'components/ImageGrid';
-// appears to be something to send user experience data to fullstory.com
-// import '../components/fullstory.js';
 
+import ImageGrid from 'components/ImageGrid';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
@@ -15,7 +12,7 @@ const IndexPage = () => {
   return (
     <Layout className={styles.page}>
       <SEO title="Home" />
-      <section className="content">
+      <section className="content mb--xl">
         <div className={styles.gridContainer12}>
           <h1 className={cx(styles.gridCol12, styles.mainPageTitle, 'title')}>
             We are Emergent Works.
@@ -38,49 +35,30 @@ const IndexPage = () => {
             allow="autoplay; fullscreen"
           />
         </div>
-        <section>
-          <div>
-            <h2 className="mt--xxl">Our Products:</h2>
-            <ul>
-              <Link className={styles.link} to="/products">
-                <li className={styles.box}>Not911</li>
-              </Link>
-              <Link className={styles.link} to="/products">
-                <li className={styles.box}>BFA</li>
-              </Link>
-              <Link className={styles.link} to="/products">
-                <li className={styles.box}>CCH</li>
-              </Link>
-            </ul>
-          </div>
-        </section>
-        <section>
-          <div>
-            <h2 className="mt--xxl">Our Programs:</h2>
-            <ul>
-              <Link className={styles.link} to="/programs">
-                <li className={styles.box}>1:1 Virtual Tech Mentorship</li>
-              </Link>
-              <Link className={styles.link} to="/programs">
-                <li className={styles.box}>TRAP</li>
-              </Link>
-              <Link className={styles.link} to="/programs">
-                <li className={styles.box}>LEAP</li>
-              </Link>
-            </ul>
-          </div>
-        </section>
-        <section className={cx(styles.gridContainer12, 'content')}>
-          <div className={styles.gridColLeft}>
-            <h2 className="mt--xxl">Donations support our work.</h2>
-            <Button to="/donate" className="mt--lg">
-              Donate Now
-            </Button>
-          </div>
-        </section>
       </section>
-
-      <section className={cx(styles.imageGrid, 'mt--xxl', 'content')}>
+      <section>
+        <ul className={cx(styles.threeUpWrapper)}>
+          <li className={styles.threeUpCard}>
+            <Link to="/programs">
+              <h2>Programs</h2>
+              <span>Learn or teach with us!</span>
+            </Link>
+          </li>
+          <li className={styles.threeUpCard}>
+            <Link to="/products">
+              <h2>Products</h2>
+              <span>We build tech to drive change</span>
+            </Link>
+          </li>
+          <li className={styles.threeUpCard}>
+            <Link to="/donate">
+              <h2>Donate</h2>
+              <span>Support our work</span>
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <section className={cx(styles.imageGrid)}>
         <ImageGrid />
       </section>
     </Layout>

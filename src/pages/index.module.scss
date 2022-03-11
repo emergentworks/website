@@ -5,9 +5,6 @@
  * Home
  *
  */
-body {
-  overflow-x: hidden;
-}
 
 .videoCaption {
   font-style: italic;
@@ -41,7 +38,6 @@ body {
 
 @media (min-width: 1300px) {
   .imageGrid {
-    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -58,46 +54,37 @@ body {
   }
 }
 
-.squigglyUnderline {
-  padding-bottom: 22px;
-  background: url('../_assets/images/squiggly.svg');
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-ul {
+.threeUpWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  gap: 1px;
+  background-color: black;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
 }
 
-.box {
-  display: flex;
+.threeUpCard {
   flex: 1 1 150px;
-  justify-content: center;
-  align-items: center;
-  max-width: 250px;
-  width: 300px;
-  height: 100px;
-  padding: 50px;
-  border: 1px solid black;
-  // box-shadow: 6px 6px black;
-  &:hover:not(:disabled) {
-    background-color: var(--ew-green);
-    cursor: pointer;
-  }
+  padding: var(--sp-max) var(--sp-loose);
+  background-color: white;
+  background-image: url('_assets/images/waterColor-yellow.png');
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.link {
-  color: black;
-  text-decoration: none;
-  text-transform: capitalize;
-  &:hover:not(:disabled) {
-    color: black;
+.threeUpCard:hover {
+  background-color: black;
+  background-image: none;
+  transition: background-color 0.3s ease;
+
+  & > a {
+    color: white;
   }
 }
 
