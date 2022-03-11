@@ -41,7 +41,7 @@ const IndexPage = () => {
           <li className={styles.threeUpCard}>
             <Link to="/programs">
               <h2>Programs</h2>
-              <span>Learn or teach with us!</span>
+              <span>Learn or teach with us</span>
             </Link>
           </li>
           <li className={styles.threeUpCard}>

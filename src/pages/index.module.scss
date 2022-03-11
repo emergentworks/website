@@ -81,10 +81,20 @@
   }
 }
 
+.threeUpCard:nth-child(2) {
+  background-image: url('_assets/images/waterColor-purple-2.png');
+}
+
+.threeUpCard:nth-child(3) {
+  background-image: url('_assets/images/waterColor-green.png');
+}
+
 .threeUpCard:hover {
   background-color: black;
-  background-image: none;
-  transition: background-color 0.3s ease;
+  background-image: url('_assets/images/arrow-chalk.png');
+  background-size: 40%;
+  background-position: left 10% bottom 10%;
+  transition: background-color var(--trans-base) ease;
   & > * {
     color: var(--white-200);
   }
