@@ -1,4 +1,4 @@
-@use '../_assets/css/abstracts/1-abstracts' as *;
+@import '../_assets/css/abstracts/mixins';
 
 /*
  *
@@ -76,15 +76,17 @@
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
+  a {
+    @include removeLinkStyles();
+  }
 }
 
 .threeUpCard:hover {
   background-color: black;
   background-image: none;
   transition: background-color 0.3s ease;
-
-  & > a {
-    color: white;
+  & > * {
+    color: var(--white-200);
   }
 }
 

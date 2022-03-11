@@ -19,7 +19,7 @@ $bp: (
 
   // If the key exists in the map
   @if $value != null {
-    @if $size != "min" {
+    @if $size != 'min' {
       @media (max-width: $value) {
         @content;
       }
@@ -48,4 +48,10 @@ $bp: (
   list-style: none;
   padding-left: 0;
   margin: 0;
+}
+
+@mixin removeLinkStyles {
+  font-family: unset;
+  color: unset;
+  text-decoration: unset;
 }
