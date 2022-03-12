@@ -12,11 +12,11 @@ const ProductsPage = () => (
     <SEO title="Products" />
     <div className="content">
       <div className="twoColumnLayout">
-        <h1 className="title leftColumn">
+        <h1 className="title">
           We build technology to drive positive social change and end the mass
           incarceration crisis.
         </h1>
-        <div className="rightColumn">
+        <div className="rightColumn m--auto">
           <div className="videoWrapper">
             <WaterColor color="green" />
           </div>

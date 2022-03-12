@@ -1,13 +1,37 @@
 @import '../_assets/css/abstracts/mixins';
 
-.section {
-  & > p:last-of-type {
-    margin-bottom: var(--sp-loose);
-  }
-  margin-bottom: 60px;
+.programsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background-color: var(--slate-900);
+  border-color: var(--slate-900);
+  border-style: solid;
+  border-width: 1px;
 }
 
-.fellowshipSection {
-  // ToDo: Sync with Savannah about spacing
-  margin-top: 6rem;
+.programsCard {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding-top: var(--sp-looser);
+  padding-left: var(--sp-looser);
+  padding-right: var(--sp-looser);
+}
+
+.contentSectionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contentSectionCopy {
+  flex: 0 2 400px;
+  padding: var(--sp-looser);
+}
+
+.contentSectionContent {
+  flex: 1 0 300px;
+  width: 100%;
 }
