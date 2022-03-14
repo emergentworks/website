@@ -1,8 +1,14 @@
 @import '../_assets/css/abstracts/mixins';
 
-.programsWrapper {
+@mixin sectionStyles {
   display: flex;
   flex-wrap: wrap;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.programsWrapper {
+  @include sectionStyles();
   gap: 1px;
   background-color: var(--slate-900);
   border-color: var(--slate-900);
@@ -14,24 +20,23 @@
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: white;
-  padding-top: var(--sp-looser);
-  padding-left: var(--sp-looser);
-  padding-right: var(--sp-looser);
+  padding: var(--sp-loose) var(--sp-looser) 0;
 }
 
 .contentSectionWrapper {
-  display: flex;
-  flex-wrap: wrap;
+  @include sectionStyles();
+  border-color: var(--slate-900);
+  border-style: solid;
+  border-width: 0 1px 1px;
 }
 
 .contentSectionCopy {
-  flex: 0 2 400px;
-  padding: var(--sp-looser);
+  flex: 1 1 300px;
+  padding: var(--sp-loose) var(--sp-looser) 0;
 }
 
 .contentSectionContent {
-  flex: 1 0 300px;
+  flex: 1 1 300px;
   width: 100%;
 }
