@@ -1,56 +1,44 @@
 import React from 'react';
-import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
 
 import Button from 'components/Button';
-import styles from './team.module.scss';
 
 const TeamPage = () => {
   return (
-    <Layout className={styles.page}>
+    <Layout>
       <SEO title="Careers" />
-      <div className={cx(styles.root, 'content')}>
-        <section className={cx(styles.gridContainer12, 'content')}>
-          <h1 className={cx('title', 'content-max-width')}>Careers</h1>
-          <div>
-            <p>
-              Are you tired of working on problems with solutions that don’t
-              drive positive social change? Do you want to work with a group of
-              people as diverse and interesting as the world we live in? Then
-              come join us at Emergent Works!
-            </p>
-            <p>
-              We’re solving one of the world’s most pressing problems—mass
-              incarceration—by assembling a world-class community and team that
-              brings their diverse perspectives and full selves to the products
-              and programs we build.
-            </p>
-            <p>
-              If you’re interested in joining us to make the world a better
-              place while loving the work you do, check out our open roles
-              below. We can’t wait to learn about the experiences, talents, and
-              perspectives you’ll bring to the team!
-            </p>
-          </div>
-        </section>
+      <section className="content">
+        <h1>Careers</h1>
+        <p>
+          We are flautists (yes, it is spelled that way!), breakfast (only)
+          chefs, giant mug collectors, and competitive Waldo finders who hail
+          from the Ivory Coast, Brooklyn, San Francisco, Minneapolis, and
+          Montana.{' '}
+        </p>
+        <p>
+          Every day we feel lucky to bring these experiences, and perspectives
+          that have shaped who we are to the products and programs we build to
+          end the crisis of mass incarceration.
+        </p>
+        <p>
+          Want to join our team? We're always looking for highly-motivated,
+          mission-driven people to build with us. If you’re interested in
+          joining the team you can check out our open roles below.
+        </p>
+        <p>
+          <Button to="https://boards.greenhouse.io/emergentworks">
+            See open roles
+          </Button>
+        </p>
 
-        <section className={cx(styles.gridContainer12, 'content')}>
-          <h2 className={cx('content-max-width')}>We're Hiring</h2>
-          <div>
-            <p>
-              We're always looking for highly-motivated, mission-driven people
-              to join our team.
-            </p>
-            <Button
-              to="https://boards.greenhouse.io/emergentworks"
-              className="mt--lg"
-            >
-              See open roles
-            </Button>
-          </div>
-        </section>
-      </div>
+        <p>
+          Don't see the role you are looking for? Drop us a line at{' '}
+          <a href="mailto:jobs@emergentworks.org">jobs@emergentworks.org</a>{' '}
+          with a write-up about your ideal job, why you want to join the team,
+          and a copy of your resume and someone will get back to you.
+        </p>
+      </section>
     </Layout>
   );
 };
