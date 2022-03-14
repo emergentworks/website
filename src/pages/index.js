@@ -38,19 +38,19 @@ const IndexPage = () => {
         <ul className={cx(styles.threeUpWrapper)}>
           <li className={styles.threeUpCard}>
             <Link to="/programs">
-              <h2>Programs</h2>
+              <h3>Programs</h3>
               <span>Learn or teach with us</span>
             </Link>
           </li>
           <li className={styles.threeUpCard}>
             <Link to="/products">
-              <h2>Products</h2>
+              <h3>Products</h3>
               <span>We build tech to drive change</span>
             </Link>
           </li>
           <li className={styles.threeUpCard}>
             <Link to="/donate">
-              <h2>Donate</h2>
+              <h3>Donate</h3>
               <span>Support our work</span>
             </Link>
           </li>
