@@ -37,13 +37,6 @@ $bp: (
   }
 }
 
-// @mixin trans($timeValue: base, $animationValue: base) {
-//   $time: map-get($timing, $timeValue);
-//   $animation: map-get($anim, $animationValue);
-
-//   transition: $time all $animation;
-// }
-
 @mixin removeBullets {
   list-style: none;
   padding-left: 0;
@@ -53,5 +46,5 @@ $bp: (
 @mixin removeLinkStyles {
   font-family: unset;
   color: unset;
-  text-decoration: unset;
+  text-decoration: none;
 }

@@ -46,8 +46,7 @@ h4,
   font-size: var(--fs-sm);
 }
 
-a:link,
-a:visited {
+a {
   font-family: var(--font-semiBold);
   color: var(--link-primary);
   text-decoration: underline;
