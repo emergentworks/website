@@ -16,21 +16,24 @@ const TeamPage = () => {
           <img src={group} alt="Members of the Emergent Works team" />
         </div>
         <p>
-          We are flautists (yes, it is spelled that way!), breakfast (only)
-          chefs, giant mug collectors, and competitive Waldo finders who hail
-          from the Ivory Coast, Brooklyn, San Francisco, Minneapolis, and
-          Montana.
+          Are you tired of working on problems with solutions that don't drive
+          positive social change? Do you want to work with a group of people as
+          diverse and interesting as the world we live in? Then come join us at
+          Emergent Works!
         </p>
         <p>
-          Every day we feel lucky to bring these experiences, and perspectives
-          that have shaped who we are to the products and programs we build to
-          end the crisis of mass incarceration.
+          We're solving one of the world's most pressing problems—mass
+          incarceration—by assembling a world-class community and team that
+          brings their diverse perspectives and full selves to the products and
+          programs we build.
         </p>
         <p>
-          Want to join our team? We're always looking for highly-motivated,
-          mission-driven people to build with us. If you’re interested in
-          joining the team you can check out our open roles below.
+          If you're interested in joining us to make the world a better place
+          while loving the work you do, check out our open roles below. We can't
+          wait to learn about the experiences, talents, and perspectives you'll
+          bring to the team!
         </p>
+
         <p>
           <Button href="https://boards.greenhouse.io/emergentworks">
             See open roles
