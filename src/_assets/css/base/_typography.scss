@@ -50,14 +50,14 @@ a:link,
 a:visited {
   font-family: var(--font-semiBold);
   color: var(--link-primary);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover,
 a:focus,
 a:active {
   color: var(--link-secondary-hover);
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 2px;
 }
 
