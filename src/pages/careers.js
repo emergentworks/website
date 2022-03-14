@@ -1,8 +1,10 @@
 import React from 'react';
+import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
-
 import Button from 'components/Button';
+import group from '../_assets/images/group1.png';
+import styles from './careers.module.scss';
 
 const TeamPage = () => {
   return (
@@ -10,11 +12,14 @@ const TeamPage = () => {
       <SEO title="Careers" />
       <section className="content">
         <h1>Careers</h1>
+        <div className={cx(styles.mainImage)}>
+          <img src={group} alt="Members of the Emergent Works team" />
+        </div>
         <p>
           We are flautists (yes, it is spelled that way!), breakfast (only)
           chefs, giant mug collectors, and competitive Waldo finders who hail
           from the Ivory Coast, Brooklyn, San Francisco, Minneapolis, and
-          Montana.{' '}
+          Montana.
         </p>
         <p>
           Every day we feel lucky to bring these experiences, and perspectives
