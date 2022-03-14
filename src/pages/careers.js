@@ -27,7 +27,7 @@ const TeamPage = () => {
           joining the team you can check out our open roles below.
         </p>
         <p>
-          <Button to="https://boards.greenhouse.io/emergentworks">
+          <Button href="https://boards.greenhouse.io/emergentworks">
             See open roles
           </Button>
         </p>

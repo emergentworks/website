@@ -1,10 +1,10 @@
+@import '../../_assets/css/abstracts/mixins';
+
 .root {
   display: flex;
-  position: relative;
-  width: 100%;
+  align-items: center;
   font-size: var(--fs-base);
   font-family: var(--font-mono);
-  flex-direction: column;
 }
 
 .input {
