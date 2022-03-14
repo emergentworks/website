@@ -16,11 +16,7 @@ const ProductsPage = () => (
           We build technology to drive positive social change and end the mass
           incarceration crisis.
         </h1>
-        <div className="rightColumn m--auto">
-          <div className="videoWrapper">
-            <WaterColor color="green" />
-          </div>
-        </div>
+        <WaterColor color="green" />
       </div>
       <section className={cx(styles.cardWrapper)}>
         <FeatureCard
