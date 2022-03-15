@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import FormField from 'components/FormField';
-import Button from 'components/Button';
 import cx from 'classnames';
 import styles from './SubscribeForm.module.scss';
+import buttonStyles from '../Button/Button.module.scss';
+import Icon from '../Icon';
 
 export const SubscribeForm = () => {
   const [email, setEmail] = useState('');
@@ -17,14 +18,21 @@ export const SubscribeForm = () => {
       <div className={cx(styles.inputWrapper)}>
         <FormField
           value={email}
-          label="Your email here"
+          label="Subscribe to our updates: "
+          placeholder="you@email.com"
           onChange={(e) => setEmail(e.target.value)}
           name="EMAIL"
         />
       </div>
-      <Button labelClassName={cx(styles.submitButton)} name="Subscribe" submit>
-        Stay updated
-      </Button>
+      <button
+        type="submit"
+        className={cx(styles.submitButton)}
+        name="Subscribe"
+      >
+        <span className={buttonStyles.submitContent}>
+          <Icon type="arrowRight">GO</Icon>
+        </span>
+      </button>
     </form>
   );
 };
