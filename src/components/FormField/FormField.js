@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { BiErrorCircle } from 'react-icons/bi';
 
-import { generateUUID } from '../../helpers/dom';
 import styles from './FormField.module.scss';
 
 export const FormField = React.forwardRef(function FormField(
   {
     value = '',
     label = '',
+    id = '',
+    placeholder = '',
     type = 'text',
     errorMessage = '',
     className,
@@ -18,34 +19,35 @@ export const FormField = React.forwardRef(function FormField(
   },
   forwardRef
 ) {
-  const [uuid] = useState(generateUUID());
-
   return (
-    <div htmlFor={uuid} className={cx(styles.root, className)}>
+    <div htmlFor={id} className={cx(styles.root, className)}>
       {type === 'textarea' ? (
         <textarea
           className={cx(styles.input)}
           type={type}
           value={value}
-          id={uuid}
+          id={id}
           ref={forwardRef}
           onChange={onChange}
-          placeholder={label}
+          placeholder={placeholder}
           aria-label={label}
           {...rest}
         />
       ) : (
-        <input
-          className={cx(styles.input)}
-          type={type}
-          value={value}
-          id={uuid}
-          ref={forwardRef}
-          onChange={onChange}
-          placeholder={label}
-          aria-label={label}
-          {...rest}
-        />
+        <>
+          <label htmlFor={id}>{label}</label>
+          <input
+            className={cx(styles.input)}
+            type={type}
+            value={value}
+            id={id}
+            ref={forwardRef}
+            onChange={onChange}
+            placeholder={placeholder}
+            aria-label={label}
+            {...rest}
+          />
+        </>
       )}
 
       {errorMessage && (
@@ -62,7 +64,9 @@ FormField.propTypes = {
   errorMessage: PropTypes.string,
   className: PropTypes.string,
   value: PropTypes.string,
+  id: PropTypes.string,
   label: PropTypes.string,
+  placeholder: PropTypes.string,
   type: PropTypes.oneOf(['text', 'textarea']),
   onChange: PropTypes.func,
 };

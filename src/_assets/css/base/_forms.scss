@@ -9,8 +9,8 @@
 // Input field base styles
 .input-field,
 textarea,
-input[input="email"],
-input[input="search"] {
+input[input='email'],
+input[input='search'] {
   // @include trans();
   background-color: transparent;
   border-color: var(--gray-400);
@@ -62,5 +62,15 @@ input[input="search"] {
   font-size: var(--fs-l);
   font-family: var(--font-medium) & + & {
     margin-left: var(--sp-base);
+  }
+}
+
+// TODO: Quick hack because form styles and breakpoints need to be revisited. Should fix because display:none is not accessible for label.
+label {
+  display: none;
+  font-size: var(--fs-sm);
+  margin-right: 8px;
+  @media (min-width: 768px) {
+    display: inline;
   }
 }

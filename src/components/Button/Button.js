@@ -7,76 +7,33 @@ import Icon from 'components/Icon';
 
 import styles from './Button.module.scss';
 
-export const Button = ({
-  children,
-  labelClassName,
-  className,
-  to,
-  onClick,
-  href,
-  submit = false,
-  type = 'primary',
-  ...rest
-}) => {
-  if (to && !onClick) {
-    return (
-      <Link
-        className={cx(styles.root, className, { [styles[type]]: type })}
-        to={to}
-        target="_blank"
-        rel="noopener noreferrer"
-        {...rest}
-      >
-        <span className={cx(styles.labelGroup, labelClassName)}>
-          {children}
-        </span>
-        <span className={styles.iconGroup}>
-          <Icon type="arrowRight" />
-        </span>
-      </Link>
-    );
-  }
-  if (href) {
-    return (
-      <a
-        className={cx(styles.root, className, { [styles[type]]: type })}
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        {...rest}
-      >
-        <span className={cx(styles.labelGroup, labelClassName)}>
-          {children}
-        </span>
-        <span className={styles.iconGroup}>
-          <Icon type="arrowRight" />
-        </span>
-      </a>
-    );
-  }
-  return (
-    <button
-      // eslint-disable-next-line react/button-has-type
-      type={submit ? 'submit' : 'button'}
-      className={cx(styles.root, className, { [styles[type]]: type })}
-      {...rest}
-      onClick={onClick}
-    >
-      <span className={cx(styles.labelGroup, labelClassName)}>{children}</span>
+// TODO: This is a link component and not a button. Should eventually refactor/rename.
+
+export const Button = ({ children, to, href }) => {
+  const content = () => (
+    <>
+      <span className={cx(styles.labelGroup)}>{children}</span>
       <span className={styles.iconGroup}>
         <Icon type="arrowRight" />
       </span>
-    </button>
+    </>
+  );
+
+  if (to !== undefined) {
+    <Link className={cx(styles.root, styles.primary)} to={to}>
+      {content()}
+    </Link>;
+  }
+
+  return (
+    <a className={cx(styles.root, styles.primary)} href={href}>
+      {content()}
+    </a>
   );
 };
 
 Button.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  labelClassName: PropTypes.string,
-  type: PropTypes.oneOf(['primary']),
+  children: PropTypes.node.isRequired,
   to: PropTypes.string,
-  onClick: PropTypes.func,
-  submit: PropTypes.bool,
   href: PropTypes.string,
 };
