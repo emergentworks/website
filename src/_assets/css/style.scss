@@ -28,49 +28,16 @@
 }
 
 .twoColumnLayout {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
+  display: flex;
   gap: var(--sp-base);
-  grid-template-rows: 1fr 1fr;
-
-  @include bp(lg) {
-    grid-template-rows: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  & > * {
+    flex: 1 1 300px;
   }
-}
-
-.leftColumn {
-  grid-column: col-start / span 12;
-  margin-top: 0;
-  border-left: solid thick var(--ew-green);
-  padding-left: 25px;
-
-  @include bp(lg) {
-    grid-column: col-start / span 4;
-  }
-}
-
-.rightColumn {
-  grid-column: col-start / span 12;
-
-  @include bp(lg) {
-    grid-column: span 7 / 13;
-  }
-}
-
-.leftHalf {
-  grid-column: col-start / span 12;
-  padding-right: 25px;
-
-  @include bp(lg) {
-    grid-column: col-start / span 6;
-  }
-}
-
-.rightHalf {
-  grid-column: col-start / span 12;
-
-  @include bp(lg) {
-    grid-column: span 6 / 13;
+  & > *:first-child {
+    border-left: solid thick var(--ew-green);
+    padding-left: 25px;
   }
 }
 

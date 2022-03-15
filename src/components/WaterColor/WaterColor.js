@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import WebPage from '_assets/images/sketch-webpage.png';
 import WaterColorPurple from '_assets/images/waterColor-purple.png';
@@ -14,7 +15,7 @@ export const WaterColor = ({ alt = '', img = WebPage, color = 'purple' }) => {
   };
 
   return (
-    <div className={styles.root}>
+    <div className={cx(styles.root, 'm--auto')}>
       <img className={styles.waterColor} src={WATER_COLOR[color]} alt="" />
       <img className={styles.img} src={img} alt={alt} />
     </div>

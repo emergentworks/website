@@ -12,15 +12,11 @@ const ProductsPage = () => (
     <SEO title="Products" />
     <div className="content">
       <div className="twoColumnLayout">
-        <h1 className="title leftColumn">
+        <h1 className="title">
           We build technology to drive positive social change and end the mass
           incarceration crisis.
         </h1>
-        <div className="rightColumn">
-          <div className="videoWrapper">
-            <WaterColor color="green" />
-          </div>
-        </div>
+        <WaterColor color="green" />
       </div>
       <section className={cx(styles.cardWrapper)}>
         <FeatureCard
