@@ -21,7 +21,10 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: var(--sp-loose) var(--sp-looser) 0;
+  padding: 0 var(--sp-loose);
+  @include bp(lg) {
+    padding: var(--sp-loose) var(--sp-looser) 0;
+  }
 }
 
 .contentSectionWrapper {
