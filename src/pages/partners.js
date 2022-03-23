@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import cx from 'classnames';
 
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import { FeatureCard } from '../components/FeatureCard';
@@ -17,9 +17,7 @@ const PartnersPage = () => {
           name
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
@@ -78,7 +76,10 @@ const PartnersPage = () => {
           <div className={styles.logoGroup}>
             {sponsors.map((logo) => (
               <div key={logo.id} className={styles.logoItem}>
-                <Img fluid={logo.childImageSharp.fluid} alt={logo.name} />
+                <GatsbyImage
+                  image={logo.childImageSharp.gatsbyImageData}
+                  alt={logo.name}
+                />
               </div>
             ))}
           </div>

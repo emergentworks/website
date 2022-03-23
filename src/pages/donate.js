@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Grid, { GridItem } from 'components/Grid';
 import SEO from '../components/seo';
@@ -12,7 +12,7 @@ import styles from './donate.module.scss';
 
 const DonatePage = ({ data }) => {
   // eslint-disable-next-line react/prop-types
-  const Laptop = data.Laptop.childImageSharp.fluid;
+  const Laptop = data.Laptop.childImageSharp.gatsbyImageData;
 
   return (
     <Layout className={styles.page}>
@@ -53,8 +53,8 @@ const DonatePage = ({ data }) => {
               >
                 Donate laptops
               </Button>
-              <Img
-                fluid={Laptop}
+              <GatsbyImage
+                image={Laptop}
                 alt="Donate laptops"
                 className={styles.laptop}
                 align="right"
@@ -86,13 +86,11 @@ const DonatePage = ({ data }) => {
 };
 
 export const query = graphql`
-  query {
+  {
     Laptop: file(relativePath: { eq: "laptop.png" }) {
       childImageSharp {
         id
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
