@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Grid, { GridItem } from 'components/Grid';
 import SEO from '../components/seo';
@@ -10,10 +10,7 @@ import Layout from '../components/Layout';
 
 import styles from './donate.module.scss';
 
-const DonatePage = ({ data }) => {
-  // eslint-disable-next-line react/prop-types
-  const Laptop = data.Laptop.childImageSharp.gatsbyImageData;
-
+const DonatePage = () => {
   return (
     <Layout className={styles.page}>
       <SEO title="Donate" />
@@ -53,8 +50,8 @@ const DonatePage = ({ data }) => {
               >
                 Donate laptops
               </Button>
-              <GatsbyImage
-                image={Laptop}
+              <StaticImage
+                src="../_assets/images/laptop.png"
                 alt="Donate laptops"
                 className={styles.laptop}
                 align="right"
