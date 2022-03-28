@@ -1,9 +1,9 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import Button from 'components/Button';
-import group from '../_assets/images/group1.png';
 import styles from './careers.module.scss';
 
 const TeamPage = () => {
@@ -13,7 +13,10 @@ const TeamPage = () => {
       <section className="content">
         <h1>Careers</h1>
         <div className={cx(styles.mainImage)}>
-          <img src={group} alt="Members of the Emergent Works team" />
+          <StaticImage
+            src="../_assets/images/group1.png"
+            alt="Members of the Emergent Works team"
+          />
         </div>
         <p>
           Are you tired of working on problems with solutions that don't drive

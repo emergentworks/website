@@ -3,7 +3,7 @@ import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Button from 'components/Button';
 import styles from './team.module.scss';
@@ -16,9 +16,7 @@ const TeamPage = () => {
           name
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
@@ -43,7 +41,7 @@ const TeamPage = () => {
   const getImgSrc = (filename) => {
     return teamPics.find((image) => {
       return image.name.includes(filename);
-    }).childImageSharp.fluid;
+    }).childImageSharp.gatsbyImageData;
   };
 
   return (
@@ -80,9 +78,9 @@ const TeamPage = () => {
           {teamData.map((person) => (
             <div key={person.node.id} className={styles.person}>
               <div className={styles.image}>
-                <Img
+                <GatsbyImage
+                  image={getImgSrc(person.node.img)}
                   className={cx(styles.img)}
-                  fluid={getImgSrc(person.node.img)}
                   alt={person.node.imgAltText}
                 />
               </div>
