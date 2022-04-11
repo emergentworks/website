@@ -71,7 +71,7 @@
   },
   {
     "name": "Elle Neubauer",
-    "role": "Senior Software Engineer",
+    "role": "Full Stack Tech Lead",
     "img": "elle_neubauer",
     "imgAltText": "placeholder image",
     "page": ["about"],
@@ -103,7 +103,7 @@
   },
   {
     "name": "Will Servos",
-    "role": "Product Manager",
+    "role": "Implementation Manager",
     "img": "will_servos",
     "imgAltText": "placeholder image",
     "page": ["about"],
@@ -120,7 +120,7 @@
   {
     "name": "Paola Fernandez",
     "role": "Community Outreach Coordinator",
-    "img": "placeholder",
+    "img": "paola",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
@@ -128,7 +128,15 @@
   {
     "name": "Laiquan Dubose",
     "role": "Reentry Mentor",
-    "img": "placeholder",
+    "img": "laiquan",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
+    "name": "Scizors",
+    "role": "QA Engineer",
+    "img": "scizors",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""

@@ -16,7 +16,10 @@ const TeamPage = () => {
           name
           id
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(
+              aspectRatio: 1
+              transformOptions: { cropFocus: NORTH }
+            )
           }
         }
       }
