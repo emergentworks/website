@@ -102,6 +102,14 @@
     "bio": ""
   },
   {
+    "name": "Nava Friedman",
+    "role": "Senior Product Manager",
+    "img": "nava_friedman",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
     "name": "Will Servos",
     "role": "Implementation Manager",
     "img": "will_servos",
@@ -137,6 +145,14 @@
     "name": "Scizors",
     "role": "QA Engineer",
     "img": "scizors",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
+    "name": "Angie Agosto",
+    "role": "Office Manager",
+    "img": "placeholder",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
