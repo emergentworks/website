@@ -47,10 +47,10 @@ const ProgramsPage = () => (
           educational resources, and a professional network of industry-leading
           technologists.
         </p>
-        <Button href="https://docs.google.com/forms/d/e/1FAIpQLSe5Mx7zA-Qm3v5DCZZm0kedKkOM4Cb_zNHyGvssMR99azW8qg/viewform">
+        <Button href="https://airtable.com/shrg72du5RPaCs1Rf">
           Apply to become a mentee
         </Button>
-        <Button href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSc9GW3E8zeOW-fXvdjgNlrnPsXo-19lZhc26_ShW91oY9FNIg/viewform">
+        <Button href="https://airtable.com/shrmc1ZJVmIBdY57g">
           Apply to become a mentor
         </Button>
       </div>
@@ -72,7 +72,7 @@ const ProgramsPage = () => (
         </p>
         <Button
           className={cx(styles.applyLink)}
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfLyOvsMCU1wnldsvWNjIgWaDYOysT9Gc-ITsRzCyU4K1g8dQ/viewform"
+          href="https://airtable.com/shrp92mjyNjaPDje1"
         >
           Apply to become a T.RAP mentee
         </Button>
