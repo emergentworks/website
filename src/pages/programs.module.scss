@@ -20,7 +20,7 @@
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--white-500);
   padding: 0 var(--sp-loose);
   @include bp(lg) {
     padding: var(--sp-loose) var(--sp-looser) 0;
@@ -37,9 +37,11 @@
 .contentSectionCopy {
   flex: 1 1 300px;
   padding: var(--sp-loose) var(--sp-looser) 0;
+  background-color: var(--white-500);
 }
 
 .contentSectionContent {
   flex: 1 1 300px;
   width: 100%;
+  background-color: var(--white-500);
 }

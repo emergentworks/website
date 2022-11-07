@@ -7,6 +7,7 @@
   padding-left: var(--sp-loose);
   border: 3px solid black;
   box-shadow: 6px 6px black, -4px -4px var(--ew-green);
+  background-color: var(--white-500);
   @include bp(lg) {
     padding-right: var(--sp-loosest);
   }
