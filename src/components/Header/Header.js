@@ -14,7 +14,7 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
   };
 
   return (
-    <header className={cx(styles.root, 'content')}>
+    <header className={cx(styles.root)}>
       <div className={styles.container}>
         <div className={styles.logoGroup}>
           <span className={styles.logoWrapper}>
