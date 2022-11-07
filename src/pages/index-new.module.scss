@@ -7,16 +7,29 @@
  */
 
 .heroWrapper {
-  border: 1px solid green;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  @media (max-width: var(--bp-sm)) {
+    flex-direction: column;
+  }
 }
 
 .heroCopy {
-  border: 1px solid red;
+  border: 1px solid (--var-slate-900);
+  @media (min-width: var(--bp-med)) {
+    width: 50%;
+  }
 }
 
 .heroImage {
-  max-width: 60%;
+  border: 1px solid var(--slate-900);
+  background-color: var(--white-500);
+  padding: var(--sp-base);
+  @media (max-width: var(--bp-sm)) {
+    width: 100%;
+  }
 }
 
 .threeUpCardWrapper {
@@ -26,15 +39,60 @@
 }
 
 .threeUpCardWrapper > * {
-  border: 1px solid red;
+  border: 1px solid var(--slate-900);
   display: flex;
   //   flex: 1 1 150px; /*  Stretching: */
   flex: 0 1 350px; /*  No stretching: */
   flex-direction: column;
-  margin: 5px;
+  margin: var(--sp-base);
+  padding: var(--sp-base);
+  background-color: var(--white-500);
 }
 
 .cardImageRound {
   display: block;
   border-radius: 50%;
+}
+
+.twoUpCardWrapper {
+  @include removeBullets();
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background-color: var(--slate-900);
+  border-color: var(--slate-900);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.twoUpCard {
+  flex: 1 1 150px;
+  background-color: var(--white-500);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  a {
+    @include removeLinkStyles();
+    display: block;
+    padding: var(--sp-max) var(--sp-loose);
+  }
+}
+
+.card__yellow {
+  background-image: url('_assets/images/waterColor-yellow.png');
+}
+
+.card__purple {
+  background-image: url('_assets/images/waterColor-purple-2.png');
+}
+
+.twoUpCard:hover {
+  background-color: var(--slate-900);
+  background-image: url('_assets/images/arrow-chalk.png');
+  background-size: 40%;
+  background-position: left 10% bottom 10%;
+  transition: background-color var(--trans-base) ease;
+  & > * {
+    color: var(--white-200);
+  }
 }
