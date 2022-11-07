@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 import Layout from '../components/Layout';
+import PartnersModule from '../components/PartnersModule';
 import SEO from '../components/seo';
 import styles from './index-new.module.scss';
 
@@ -106,6 +107,7 @@ const IndexPage2 = () => {
           </li>
         </ul>
       </section>
+      <PartnersModule />
     </Layout>
   );
 };

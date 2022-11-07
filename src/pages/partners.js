@@ -1,32 +1,14 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import cx from 'classnames';
 
-import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import { FeatureCard } from '../components/FeatureCard';
+import PartnersModule from '../components/PartnersModule';
 
 import styles from './partners.module.scss';
 
 const PartnersPage = () => {
-  const data = useStaticQuery(graphql`
-    query MyQuer {
-      sponsors: allFile(filter: { relativeDirectory: { eq: "sponsors" } }) {
-        nodes {
-          name
-          id
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
-      }
-    }
-  `);
-
-  const sponsors = data.sponsors.nodes;
-  sponsors.sort((a, b) => a.name > b.name);
-
   return (
     <Layout>
       <SEO title="Partners" />
@@ -69,22 +51,7 @@ const PartnersPage = () => {
           </FeatureCard>
         </section>
       </section>
-      <section className={cx('content')}>
-        <h2>Thanks to our fantastic partners:</h2>
-        <br />
-        <div>
-          <div className={styles.logoGroup}>
-            {sponsors.map((logo) => (
-              <div key={logo.id} className={styles.logoItem}>
-                <GatsbyImage
-                  image={logo.childImageSharp.gatsbyImageData}
-                  alt={logo.name}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PartnersModule />
     </Layout>
   );
 };
