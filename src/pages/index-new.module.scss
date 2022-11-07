@@ -1,0 +1,40 @@
+@import '../_assets/css/abstracts/mixins';
+
+/*
+ *
+ * Home
+ *
+ */
+
+.heroWrapper {
+  border: 1px solid green;
+  display: flex;
+}
+
+.heroCopy {
+  border: 1px solid red;
+}
+
+.heroImage {
+  max-width: 60%;
+}
+
+.threeUpCardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.threeUpCardWrapper > * {
+  border: 1px solid red;
+  display: flex;
+  //   flex: 1 1 150px; /*  Stretching: */
+  flex: 0 1 350px; /*  No stretching: */
+  flex-direction: column;
+  margin: 5px;
+}
+
+.cardImageRound {
+  display: block;
+  border-radius: 50%;
+}
