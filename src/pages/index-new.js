@@ -129,25 +129,28 @@ const IndexPage2 = () => {
       </section>
       <section>
         <h3>Support the Movement</h3>
-        <div>
+        <div className={cx(styles.supportWrapper)}>
           <StaticImage
-            src="../_assets/images/team-core/placeholder.png"
+            src="../_assets/images/homepage/army-greeting.jpeg"
             alt="Members of the Emergent Works team"
-            aspectRatio={1}
+            aspectRatio={4 / 3}
             layout="constrained"
-            // cropFocus="attention"
-            className={cx(styles.cardImageRound)}
+            className={cx(styles.supportImage)}
+            cropFocus="top"
+            height={400}
           />
-          <div>
-            Training and employing returning citizens and those impacted by the
-            criminal legal system through tech literacy; with an effort to
-            decrease recidivism and close the wealth gap.
+          <div className={cx(styles.supportContent)}>
+            <p>
+              Training and employing returning citizens and those impacted by
+              the criminal legal system through tech literacy with an effort to
+              decrease recidivism and close the wealth gap.
+            </p>
           </div>
         </div>
       </section>
       <section>
         <ul className={cx(styles.twoUpCardWrapper)}>
-          <li className={styles.twoUpCard}>
+          <li className={cx(styles.twoUpCard, styles.cardYellow)}>
             <Link to="/programs">
               <h3>Our Programs</h3>
               <span className={cx(styles.hideOnDesktop)}>
@@ -162,7 +165,7 @@ const IndexPage2 = () => {
               </span>
             </Link>
           </li>
-          <li className={styles.twoUpCard}>
+          <li className={cx(styles.twoUpCard, styles.cardPurple)}>
             <Link to="/products">
               <h3>Our Projects</h3>
               <span className={cx(styles.hideOnDesktop)}>

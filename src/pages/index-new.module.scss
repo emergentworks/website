@@ -6,6 +6,12 @@
  *
  */
 
+section > h3,
+h4,
+h5 {
+  text-align: center;
+}
+
 section {
   margin: var(--sp-base);
 }
@@ -54,8 +60,7 @@ section {
 .threeUpCardWrapper > * {
   border: 1px solid var(--slate-900);
   display: flex;
-  //   flex: 1 1 150px; /*  Stretching: */
-  flex: 0 1 350px; /*  No stretching: */
+  flex: 0 1 350px;
   flex-direction: column;
   padding: var(--sp-base);
   background-color: var(--white-500);
@@ -71,6 +76,27 @@ section {
   border-radius: 50%;
 }
 
+.supportWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.supportImage {
+  flex: 1 1 150px;
+  @media (min-width: 376px) {
+    width: 60%;
+  }
+}
+
+.supportContent {
+  font-size: var(--fs-l);
+  color: var(--white-500);
+  background-color: var(--slate-900);
+  @media (min-width: 376px) {
+    width: 40%;
+  }
+}
+
 .twoUpCardWrapper {
   @include removeBullets();
   display: flex;
@@ -83,11 +109,12 @@ section {
 }
 
 .twoUpCard {
-  flex: 1 1 150px;
+  flex: 1 1 200px;
   background-color: var(--white-500);
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
+
   a {
     @include removeLinkStyles();
     display: block;
@@ -95,11 +122,11 @@ section {
   }
 }
 
-.card__yellow {
+.cardYellow {
   background-image: url('_assets/images/waterColor-yellow.png');
 }
 
-.card__purple {
+.cardPurple {
   background-image: url('_assets/images/waterColor-purple-2.png');
 }
 
