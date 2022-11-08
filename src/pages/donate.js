@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import cx from 'classnames';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -11,10 +11,23 @@ import Layout from '../components/Layout';
 import styles from './donate.module.scss';
 
 const DonatePage = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.virtuoussoftware.com/virtuous.embed.min.js";
+    script.dataset.vform = "8CD72529-B118-4D39-99E1-45641CB119FC"
+    script.dataset.orgid = "3675"
+    script.dataset.isGiving = "true"
+    script.dataset.merchantType = "Virtuous"
+    script.dataset.dependencies = "[]" 
+
+    document.getElementById('virtuous-form').appendChild(script);
+  });
+
   return (
     <Layout className={styles.page}>
       <SEO title="Donate" />
       <div className={cx(styles.root, 'content')}>
+
         <h1 className={cx('title', styles.pageTitle)}>
           Emergent Works interrupts the prison cycle by creating pathways into
           high-paying jobs in technology for formerly incarcerated people.
@@ -36,6 +49,8 @@ const DonatePage = () => {
                 our participants.
               </p>
               <p>Anything you can give helps tremendously!</p>
+
+              <div id='virtuous-form'></div>
               <h2 className="mt--none">Donate laptops</h2>
 
               <p>
@@ -55,24 +70,6 @@ const DonatePage = () => {
                 alt="Donate laptops"
                 className={styles.laptop}
                 align="right"
-              />
-            </GridItem>
-            <GridItem align="center">
-              <script
-                src="https://donorbox.org/widget.js"
-                paypalExpress="false"
-              />
-              <iframe
-                title="Donate to Emergent Works!"
-                allowpaymentrequest=""
-                className={styles.donorbox}
-                frameBorder="0"
-                height="900px"
-                name="donorbox"
-                scrolling="no"
-                seamless="seamless"
-                src="https://donorbox.org/embed/website-donation-15"
-                width="100%"
               />
             </GridItem>
           </Grid>
