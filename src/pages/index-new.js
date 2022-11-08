@@ -18,12 +18,12 @@ const IndexPage2 = () => {
           <h1 className="">Technology is our key.</h1>
           <h2>Together we will decode economic liberation.</h2>
           <p>
-            "When I was finally released from my 9.5 year prison sentence, many
+            “When I was finally released from my 9.5 year prison sentence, many
             employers would not hire me. I knew I wanted to become a software
             engineer but I needed extra help. The dedication, time, resources,
             equipment, emotional support and financial support from Emergent
             Works is the biggest reason I was able to see this through. Today I
-            can proudly say I am a thriving Software Engineer."
+            can proudly say I am a thriving Software Engineer.”
             <span> - Makeda, EW 2020 Winter Mentee</span>
           </p>
           <Button href="https://airtable.com/shrg72du5RPaCs1Rf">
@@ -39,81 +39,111 @@ const IndexPage2 = () => {
           />
         </div>
       </section>
-      <section className={cx(styles.threeUpCardWrapper)}>
-        <div>
-          <StaticImage
-            src="../_assets/images/team-core/placeholder.png"
-            alt="Members of the Emergent Works team"
-            aspectRatio={1}
-            layout="constrained"
-            // cropFocus="attention"
-            className={cx(styles.cardImageRound)}
-          />
-          <span>
-            Maria: One of the skills I learned through the mentorship with
-            Emergent Works was gaining confidence in coding. Before EW, I was a
-            computer science student with imposter syndrome because of my age
-            and background. This community made me blossom out of my shell by
-            producing an actual project I was able to talk about during
-            interviews. As a result, I landed an internship and eventually a
-            full-time job with The Walt Disney Company. Awesome program!
-          </span>
-        </div>
-        <div>
-          <StaticImage
-            src="../_assets/images/team-core/placeholder.png"
-            alt="Members of the Emergent Works team"
-            aspectRatio={1}
-            layout="constrained"
-            // cropFocus="attention"
-            className={cx(styles.cardImageRound)}
-          />
-          <span>
-            Maria: One of the skills I learned through the mentorship with
-            Emergent Works was gaining confidence in coding. Before EW, I was a
-            computer science student with imposter syndrome because of my age
-            and background. This community made me blossom out of my shell by
-            producing an actual project I was able to talk about during
-            interviews. As a result, I landed an internship and eventually a
-            full-time job with The Walt Disney Company. Awesome program!
-          </span>
-        </div>
-        <div>
-          <StaticImage
-            src="../_assets/images/team-core/placeholder.png"
-            alt="Members of the Emergent Works team"
-            aspectRatio={1}
-            layout="constrained"
-            // cropFocus="attention"
-            className={cx(styles.cardImageRound)}
-          />
-          <span>
-            Maria: One of the skills I learned through the mentorship with
-            Emergent Works was gaining confidence in coding. Before EW, I was a
-            computer science student with imposter syndrome because of my age
-            and background. This community made me blossom out of my shell by
-            producing an actual project I was able to talk about during
-            interviews. As a result, I landed an internship and eventually a
-            full-time job with The Walt Disney Company. Awesome program!
-          </span>
+      <section>
+        <h3>What Are Our Mentees Saying?</h3>
+        <div className={cx(styles.threeUpCardWrapper)}>
+          <div>
+            <StaticImage
+              src="../_assets/images/team-core/placeholder.png"
+              alt="Members of the Emergent Works team"
+              aspectRatio={1}
+              layout="constrained"
+              // cropFocus="attention"
+              className={cx(styles.cardImageRound)}
+            />
+            <span>
+              One of the skills I learned through the mentorship with Emergent
+              Works was gaining confidence in coding. Before EW, I was a
+              computer science student with imposter syndrome because of my age
+              and background. This community made me blossom out of my shell by
+              producing an actual project I was able to talk about during
+              interviews. As a result, I landed an internship and eventually a
+              full-time job with The Walt Disney Company. Awesome program!
+            </span>
+            <span>Maria</span>
+          </div>
+          <div>
+            <StaticImage
+              src="../_assets/images/team-core/placeholder.png"
+              alt="Members of the Emergent Works team"
+              aspectRatio={1}
+              layout="constrained"
+              // cropFocus="attention"
+              className={cx(styles.cardImageRound)}
+            />
+            <span>
+              EW gave me the confidence and tools to sharpen my Python and SQL
+              skills needed to reach my dream of working with data in the tech
+              industry! My mentor is continuously supporting me to develop my
+              skills to reach my dream career!
+            </span>
+            <span>Wayne</span>
+          </div>
+          <div>
+            <StaticImage
+              src="../_assets/images/team-core/placeholder.png"
+              alt="Members of the Emergent Works team"
+              aspectRatio={1}
+              layout="constrained"
+              // cropFocus="attention"
+              className={cx(styles.cardImageRound)}
+            />
+            <span>
+              Enhanced productive communication, advanced professional
+              development resources, and quest to push boundaries of commonly
+              accepted standards are among skills I’ve gained from Emergent
+              Works. These skills help by positioning me at an advantage as I
+              continue my code/web dev journey - and the advantage includes
+              appreciation for possibilities to come, which feeds in me an
+              eagerness to bring my best. For my life, this translates to being
+              a presence in the world who is more confident, eager to engage
+              calculated risks, and unapologetic in pure curiosity.
+            </span>
+            <span>La’Tonia</span>
+          </div>
         </div>
       </section>
-      <section className={cx(styles.threeUpCardWrapper)}>
-        <div className={cx(styles.statistics)}>
-          <span>107</span> mentee graduates.
-          <br />
-          <span>100%</span> employed or continuing their education.
-          <br />
-          <span>0%</span> recidivism.
+      <section>
+        <h3>Our Impact</h3>
+        <div className={cx(styles.threeUpCardWrapper)}>
+          <div className={cx(styles.statistics)}>
+            <span>107</span> mentee graduates.
+            <br />
+            <span>100%</span> employed or continuing their education.
+            <br />
+            <span>0%</span> recidivism.*
+          </div>
+          <div className={cx(styles.statistics)}>
+            Graduates of EW earn more than <span>3X</span> the salary of average
+            formerly-incarcerated people.
+          </div>
+          <div className={cx(styles.statistics)}>
+            <span>54%</span> of the EW team are{' '}
+            <strong>graduates of our programs</strong>. <span>69%</span> are{' '}
+            <strong>justice-impacted or system-impacted</strong>.*
+          </div>
         </div>
-        <div className={cx(styles.statistics)}>
-          Graduates of EW earn more than <span>3X</span> the salary of average
-          formerly-incarcerated people
-        </div>
-        <div className={cx(styles.statistics)}>
-          <span>54%</span> of the EW team are{' '}
-          <strong>graduates of our programs</strong>. <span>69%</span> are{' '}
-          <strong>justice-impacted or system-impacted</strong>.
+        <p>
+          *Employment statistics and Recidivism statistics from our 1:1 Digital
+          Mentorship Program mentees (2019-2022), based on available data.
+        </p>
+      </section>
+      <section>
+        <h3>Support the Movement</h3>
+        <div>
+          <StaticImage
+            src="../_assets/images/team-core/placeholder.png"
+            alt="Members of the Emergent Works team"
+            aspectRatio={1}
+            layout="constrained"
+            // cropFocus="attention"
+            className={cx(styles.cardImageRound)}
+          />
+          <div>
+            Training and employing returning citizens and those impacted by the
+            criminal legal system through tech literacy; with an effort to
+            decrease recidivism and close the wealth gap.
+          </div>
         </div>
       </section>
       <section>
@@ -122,11 +152,11 @@ const IndexPage2 = () => {
             <Link to="/programs">
               <h3>Our Programs</h3>
               <span>
-                Our programs provide pathways to technology literacy and gainful
+                We provide pathways to technology literacy and gainful
                 employment in a dynamic, trauma-informed format that puts our
                 mentees first. From our flagship 1:1 Digital Mentorship program
-                to our T.RAP program, EW is here to be your key to a brighter
-                future.
+                to our T.RAP program, Emergent Works is here to be your key to a
+                brighter future.
               </span>
             </Link>
           </li>
@@ -145,7 +175,7 @@ const IndexPage2 = () => {
       </section>
       <PartnersModule
         heading="Our Partners"
-        subheading="Emergent Works is proud to serve alongside these selected donors, sponsors, and partners"
+        subheading="We are proud to serve alongside these selected donors, sponsors, and partners"
       />
     </Layout>
   );
