@@ -9,27 +9,22 @@
 .heroWrapper {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  //   flex-direction: column;
 
-  @media (max-width: var(--bp-sm)) {
-    flex-direction: column;
-  }
+  //   @include bp(md) {
+  //     flex-direction: row;
+  //   }
 }
 
 .heroCopy {
-  border: 1px solid (--var-slate-900);
-  @media (min-width: var(--bp-med)) {
-    width: 50%;
-  }
+  width: fit-content;
 }
 
 .heroImage {
   border: 1px solid var(--slate-900);
   background-color: var(--white-500);
   padding: var(--sp-base);
-  @media (max-width: var(--bp-sm)) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .threeUpCardWrapper {
@@ -47,6 +42,11 @@
   margin: var(--sp-base);
   padding: var(--sp-base);
   background-color: var(--white-500);
+}
+
+.statistics {
+  color: var(--white-500);
+  background-color: var(--slate-900);
 }
 
 .cardImageRound {

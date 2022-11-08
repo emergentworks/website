@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
+import Button from '../components/Button';
 import Layout from '../components/Layout';
 import PartnersModule from '../components/PartnersModule';
 import SEO from '../components/seo';
@@ -14,21 +15,27 @@ const IndexPage2 = () => {
       <SEO title="Home" />
       <section className={cx(styles.heroWrapper)}>
         <div className={cx(styles.heroCopy)}>
-          <h1 className="">We are Emergent Works.</h1>
+          <h1 className="">Technology is our key.</h1>
+          <h2>Together we will decode economic liberation.</h2>
           <p>
             "When I was finally released from my 9.5 year prison sentence, many
             employers would not hire me. I knew I wanted to become a software
             engineer but I needed extra help. The dedication, time, resources,
             equipment, emotional support and financial support from Emergent
             Works is the biggest reason I was able to see this through. Today I
-            can proudly say I am a thriving Software Engineer." - Makeda, EW
-            2020 Winter Mente
+            can proudly say I am a thriving Software Engineer."
+            <span> - Makeda, EW 2020 Winter Mentee</span>
           </p>
+          <Button href="https://airtable.com/shrg72du5RPaCs1Rf">
+            Learn more about our mentorship programs
+          </Button>
         </div>
         <div className={cx(styles.heroImage)}>
           <StaticImage
-            src="../_assets/images/home-page-grid/grant-announcement.png"
-            alt="Members of the Emergent Works team"
+            src="../_assets/images/homepage/makeda.jpg"
+            alt="Makeda, an EW mentee"
+            cropFocus="attention"
+            layout="fullWidth"
           />
         </div>
       </section>
@@ -89,6 +96,24 @@ const IndexPage2 = () => {
             interviews. As a result, I landed an internship and eventually a
             full-time job with The Walt Disney Company. Awesome program!
           </span>
+        </div>
+      </section>
+      <section className={cx(styles.threeUpCardWrapper)}>
+        <div className={cx(styles.statistics)}>
+          <span>107</span> mentee graduates.
+          <br />
+          <span>100%</span> employed or continuing their education.
+          <br />
+          <span>0%</span> recidivism.
+        </div>
+        <div className={cx(styles.statistics)}>
+          Graduates of EW earn more than <span>3X</span> the salary of average
+          formerly-incarcerated people
+        </div>
+        <div className={cx(styles.statistics)}>
+          <span>54%</span> of the EW team are{' '}
+          <strong>graduates of our programs</strong>. <span>62%</span> are{' '}
+          <strong>system-impacted</strong>.
         </div>
       </section>
       <section>
