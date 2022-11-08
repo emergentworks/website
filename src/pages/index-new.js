@@ -26,9 +26,11 @@ const IndexPage2 = () => {
             can proudly say I am a thriving Software Engineer.”
             <span> - Makeda, EW 2020 Winter Mentee</span>
           </p>
-          <Button href="https://airtable.com/shrg72du5RPaCs1Rf">
-            Learn more about our mentorship programs
-          </Button>
+          <Link to="/programs">
+            <Button href="https://airtable.com/shrg72du5RPaCs1Rf">
+              Learn more about our mentorship programs
+            </Button>
+          </Link>
         </div>
         <div className={cx(styles.heroImage)}>
           <StaticImage
@@ -44,11 +46,10 @@ const IndexPage2 = () => {
         <div className={cx(styles.threeUpCardWrapper)}>
           <div>
             <StaticImage
-              src="../_assets/images/team-core/placeholder.png"
+              src="../_assets/images/homepage/Maria.jpg"
               alt="Members of the Emergent Works team"
               aspectRatio={1}
               layout="constrained"
-              // cropFocus="attention"
               className={cx(styles.cardImageRound)}
             />
             <span>
@@ -64,11 +65,10 @@ const IndexPage2 = () => {
           </div>
           <div>
             <StaticImage
-              src="../_assets/images/team-core/placeholder.png"
+              src="../_assets/images/homepage/Wayne.jpg"
               alt="Members of the Emergent Works team"
               aspectRatio={1}
               layout="constrained"
-              // cropFocus="attention"
               className={cx(styles.cardImageRound)}
             />
             <span>
@@ -81,11 +81,10 @@ const IndexPage2 = () => {
           </div>
           <div>
             <StaticImage
-              src="../_assets/images/team-core/placeholder.png"
+              src="../_assets/images/homepage/Latonia.jpeg"
               alt="Members of the Emergent Works team"
               aspectRatio={1}
               layout="constrained"
-              // cropFocus="attention"
               className={cx(styles.cardImageRound)}
             />
             <span>
@@ -151,7 +150,10 @@ const IndexPage2 = () => {
           <li className={styles.twoUpCard}>
             <Link to="/programs">
               <h3>Our Programs</h3>
-              <span>
+              <span className={cx(styles.hideOnDesktop)}>
+                Learn or teach with us
+              </span>
+              <span className={cx(styles.hideOnMobile)}>
                 We provide pathways to technology literacy and gainful
                 employment in a dynamic, trauma-informed format that puts our
                 mentees first. From our flagship 1:1 Digital Mentorship program
@@ -163,7 +165,10 @@ const IndexPage2 = () => {
           <li className={styles.twoUpCard}>
             <Link to="/products">
               <h3>Our Projects</h3>
-              <span>
+              <span className={cx(styles.hideOnDesktop)}>
+                We build tech to drive social change
+              </span>
+              <span className={cx(styles.hideOnMobile)}>
                 From community-borne projects developed in solidarity with our
                 constituency to enterprise-level application development,
                 Emergent Works is a premier technology partner for your

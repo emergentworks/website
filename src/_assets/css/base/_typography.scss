@@ -49,7 +49,7 @@ h4,
 a {
   font-family: var(--font-semiBold);
   color: var(--link-primary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover,
@@ -74,7 +74,7 @@ a.secondary:active {
 }
 
 p {
-  line-height: var(--lh-loose);
+  line-height: var(--lh-base);
 }
 
 .bold {
