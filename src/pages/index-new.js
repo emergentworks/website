@@ -112,8 +112,8 @@ const IndexPage2 = () => {
         </div>
         <div className={cx(styles.statistics)}>
           <span>54%</span> of the EW team are{' '}
-          <strong>graduates of our programs</strong>. <span>62%</span> are{' '}
-          <strong>system-impacted</strong>.
+          <strong>graduates of our programs</strong>. <span>69%</span> are{' '}
+          <strong>justice-impacted or system-impacted</strong>.
         </div>
       </section>
       <section>
@@ -121,18 +121,32 @@ const IndexPage2 = () => {
           <li className={styles.twoUpCard}>
             <Link to="/programs">
               <h3>Our Programs</h3>
-              <span>Learn or teach with us</span>
+              <span>
+                Our programs provide pathways to technology literacy and gainful
+                employment in a dynamic, trauma-informed format that puts our
+                mentees first. From our flagship 1:1 Digital Mentorship program
+                to our T.RAP program, EW is here to be your key to a brighter
+                future.
+              </span>
             </Link>
           </li>
           <li className={styles.twoUpCard}>
             <Link to="/products">
               <h3>Our Projects</h3>
-              <span>We build tech to drive change</span>
+              <span>
+                From community-borne projects developed in solidarity with our
+                constituency to enterprise-level application development,
+                Emergent Works is a premier technology partner for your
+                mission-aligned project.
+              </span>
             </Link>
           </li>
         </ul>
       </section>
-      <PartnersModule />
+      <PartnersModule
+        heading="Our Partners"
+        subheading="Emergent Works is proud to serve alongside these selected donors, sponsors, and partners"
+      />
     </Layout>
   );
 };

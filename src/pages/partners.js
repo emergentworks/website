@@ -51,7 +51,7 @@ const PartnersPage = () => {
           </FeatureCard>
         </section>
       </section>
-      <PartnersModule />
+      <PartnersModule subheading="Emergent Works is proud to serve alongside these donors, sponsors, and partners:" />
     </Layout>
   );
 };
