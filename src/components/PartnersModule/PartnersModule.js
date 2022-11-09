@@ -23,7 +23,10 @@ export const PartnersModule = ({ heading, subheading, isLimited = false }) => {
   const allPartners = allPartnersData.partners.nodes.sort(
     (a, b) => a.name > b.name
   );
-  const selectPartners = allPartners.slice(0, 6);
+  const selectPartners = allPartners.filter((partner) =>
+    partner.name.includes('featured_')
+  );
+  console.log(selectPartners);
   const images = isLimited ? selectPartners : allPartners;
 
   return (
