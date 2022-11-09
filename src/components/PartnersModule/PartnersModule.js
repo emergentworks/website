@@ -26,7 +26,7 @@ export const PartnersModule = ({ heading, subheading, isLimited = false }) => {
   const selectPartners = allPartners.filter((partner) =>
     partner.name.includes('featured_')
   );
-  console.log(selectPartners);
+
   const images = isLimited ? selectPartners : allPartners;
 
   return (
