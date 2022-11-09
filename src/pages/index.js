@@ -51,7 +51,7 @@ const IndexPage = () => {
             <div>
               <StaticImage
                 src="../_assets/images/homepage/Maria.jpg"
-                alt="Members of the Emergent Works team"
+                alt="Maria, an EW mentee"
                 aspectRatio={1}
                 layout="constrained"
                 className={cx(styles.cardImageRound)}
@@ -71,7 +71,7 @@ const IndexPage = () => {
             <div>
               <StaticImage
                 src="../_assets/images/homepage/Wayne.jpg"
-                alt="Members of the Emergent Works team"
+                alt="Wayne, an EW mentee"
                 aspectRatio={1}
                 layout="constrained"
                 className={cx(styles.cardImageRound)}
@@ -87,7 +87,7 @@ const IndexPage = () => {
             <div>
               <StaticImage
                 src="../_assets/images/homepage/Latonia.jpeg"
-                alt="Members of the Emergent Works team"
+                alt="La'Tonia, an EW mentee"
                 aspectRatio={1}
                 layout="constrained"
                 className={cx(styles.cardImageRound)}
