@@ -1,24 +1,24 @@
 @import '../../_assets/css/abstracts/mixins';
 
 .root {
-  padding-top: 1.65rem;
-  padding-bottom: 1.65rem;
+  padding: var(--sp-loose);
 
   @media (max-width: 51.5rem) {
+    padding: var(--sp-tight);
     .navGroup > .nav {
+      // mobile styles for menu
       position: fixed;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: flex-start;
       overflow: hidden;
-      padding: 0 var(--sp-loose);
+      padding: var(--sp-loose);
       opacity: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      top: 6.25rem;
-      background: var(--white-500);
+      top: 2.8rem;
+      background-color: var(--gray-background);
       transition: transform 0.5s ease, opacity 0.35s ease;
       transform: translateY(-150%);
       z-index: 1000;
@@ -28,11 +28,20 @@
       }
     }
   }
+  @media (min-width: 376px) {
+    position: sticky;
+    top: 0;
+    background: var(--gray-background);
+    z-index: 999;
+    border-bottom: 1px solid var(--slate-900);
+  }
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr auto;
+  max-width: var(--bp-xxl);
+  margin: 0 auto;
 }
 
 .navGroup {
@@ -54,7 +63,6 @@
 
 .navButton {
   width: 40px;
-  padding: 4px;
   background-color: transparent;
   border: none;
   justify-self: end;
