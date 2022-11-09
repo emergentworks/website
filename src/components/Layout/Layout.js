@@ -19,22 +19,25 @@ export const Layout = ({ children, className, banner }) => {
   const [navVisibility, setNavVisibility] = useState(false);
 
   return (
-    <div
-      className={cx(styles.root, {
-        [styles.navActive]: navVisibility,
-      })}
-    >
-      {banner && <div className={cx(styles.banner)}>{banner}</div>}
+    <>
       <Header
         navVisibility={navVisibility}
         setNavVisibility={setNavVisibility}
         banner={banner}
       />
-      <main className={cx(styles.root, { [styles[className]]: className })}>
-        <div className={styles.container}>{children}</div>
-      </main>
-      <Footer />
-    </div>
+      <div
+        className={cx(styles.root, {
+          [styles.navActive]: navVisibility,
+        })}
+      >
+        {banner && <div className={cx(styles.banner)}>{banner}</div>}
+
+        <main className={cx(styles.root, { [styles[className]]: className })}>
+          <div className={styles.container}>{children}</div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

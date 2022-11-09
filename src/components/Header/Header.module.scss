@@ -28,11 +28,20 @@
       }
     }
   }
+  @media (min-width: 376px) {
+    position: sticky;
+    top: 0;
+    background: var(--gray-background);
+    z-index: 999;
+    border-bottom: 1px solid var(--slate-900);
+  }
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr auto;
+  max-width: var(--bp-xxl);
+  margin: 0 auto;
 }
 
 .navGroup {
