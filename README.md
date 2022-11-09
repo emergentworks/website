@@ -28,6 +28,14 @@ This is the main website for Emergent Works. Target audiences are potential ment
 
 Styles are done with [Sass](https://sass-lang.com/), [classnames](https://www.npmjs.com/package/classnames), and [css grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). We have a main style file (styles.scss), and modular scss files for styles specific to each page/component.
 
+### Handling image loading errors
+
+If images do not load properly, do the following:
+
+1. Exit the app by typing Control + C
+2. Run `gatsy clean`
+3. Run `npm run develop`
+
 ### Linting/Formatting
 
 We are using ESLint and prettier. Make sure you have the ESLint and prettier extensions for VSCode installed (or running with whatever IDE you are using) and enabled for this project. You can also use the `npm run format` command to format the whole project.
