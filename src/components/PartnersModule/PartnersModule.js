@@ -5,10 +5,10 @@ import cx from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import styles from '../../pages/partners.module.scss';
 
-export const PartnersModule = ({ heading, subheading }) => {
-  const data = useStaticQuery(graphql`
-    query PartnersQuery {
-      sponsors: allFile(filter: { relativeDirectory: { eq: "sponsors" } }) {
+export const PartnersModule = ({ heading, subheading, isLimited = false }) => {
+  const allPartnersData = useStaticQuery(graphql`
+    query AllPartnersQuery {
+      partners: allFile(filter: { relativeDirectory: { eq: "sponsors" } }) {
         nodes {
           name
           id
@@ -20,16 +20,19 @@ export const PartnersModule = ({ heading, subheading }) => {
     }
   `);
 
-  const sponsors = data.sponsors.nodes;
-  sponsors.sort((a, b) => a.name > b.name);
+  const allPartners = allPartnersData.partners.nodes.sort(
+    (a, b) => a.name > b.name
+  );
+  const selectPartners = allPartners.slice(0, 6);
+  const images = isLimited ? selectPartners : allPartners;
 
   return (
     <>
       {heading}
       {subheading}
-      <div>
+      <div className={styles.logoWrapper}>
         <div className={styles.logoGroup}>
-          {sponsors.map((logo) => (
+          {images.map((logo) => (
             <div key={logo.id} className={styles.logoItem}>
               <GatsbyImage
                 image={logo.childImageSharp.gatsbyImageData}
@@ -46,4 +49,5 @@ export const PartnersModule = ({ heading, subheading }) => {
 PartnersModule.propTypes = {
   heading: PropTypes.node.isRequired,
   subheading: PropTypes.node.isRequired,
+  isLimited: PropTypes.bool,
 };

@@ -184,6 +184,7 @@ const IndexPage2 = () => {
         </section>
         <section>
           <PartnersModule
+            isLimited
             heading={<h3>Our Partners</h3>}
             subheading={
               <p>
