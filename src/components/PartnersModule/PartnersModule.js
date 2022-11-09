@@ -24,9 +24,9 @@ export const PartnersModule = ({ heading, subheading }) => {
   sponsors.sort((a, b) => a.name > b.name);
 
   return (
-    <section className={cx('content')}>
-      {heading && <h3>{heading}</h3>}
-      {subheading && <p>{subheading}</p>}
+    <>
+      {heading}
+      {subheading}
       <div>
         <div className={styles.logoGroup}>
           {sponsors.map((logo) => (
@@ -39,11 +39,11 @@ export const PartnersModule = ({ heading, subheading }) => {
           ))}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
 PartnersModule.propTypes = {
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
+  heading: PropTypes.node.isRequired,
+  subheading: PropTypes.node.isRequired,
 };

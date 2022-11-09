@@ -51,7 +51,17 @@ const PartnersPage = () => {
           </FeatureCard>
         </section>
       </section>
-      <PartnersModule subheading="Emergent Works is proud to serve alongside these donors, sponsors, and partners:" />
+      <section className={cx('content')}>
+        <PartnersModule
+          heading={<h3>Partners</h3>}
+          subheading={
+            <p>
+              Emergent Works is proud to serve alongside these donors, sponsors,
+              and partners:
+            </p>
+          }
+        />
+      </section>
     </Layout>
   );
 };

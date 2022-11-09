@@ -6,14 +6,46 @@
  *
  */
 
-section > h3,
-h4,
-h5 {
-  text-align: center;
-}
+.root {
+  h1 {
+    margin: 0;
+    @media (min-width: 376px) {
+      font-size: var(--fs-xxl);
+    }
+  }
 
-section {
-  margin: var(--sp-base);
+  h2 {
+    background: url('../_assets/images/squiggly.svg');
+    background-position: bottom -8px center;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-bottom: 22px;
+    font-size: var(--fs-base);
+    margin-bottom: var(--sp-base);
+  }
+
+  section > h3 {
+    font-family: var(--font-mono);
+    @media (min-width: 376px) {
+      font-size: var(--fs-xxl);
+      margin: var(--sp-looser);
+    }
+  }
+
+  section > h3 + p {
+    text-align: center;
+    margin: 0 0 var(--sp-base);
+  }
+
+  section > h3,
+  h4,
+  h5 {
+    text-align: center;
+  }
+
+  section {
+    margin: var(--sp-base);
+  }
 }
 
 .hideOnMobile {
@@ -41,6 +73,15 @@ section {
 
 .heroCopy {
   width: fit-content;
+  p {
+    margin-top: 0;
+    font-size: var(--fs-m);
+    line-height: var(--lh-loose);
+    @media (min-width: 376px) {
+      padding-right: var(--sp-looser);
+      font-size: var(--fs-base);
+    }
+  }
 }
 
 .heroImage {
@@ -55,6 +96,9 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--sp-base);
+  @media (min-width: 376px) {
+    gap: var(--sp-looser);
+  }
 }
 
 .threeUpCardWrapper > * {
@@ -64,16 +108,84 @@ section {
   flex-direction: column;
   padding: var(--sp-base);
   background-color: var(--white-500);
+  font-size: var(--fs-m);
+  line-height: var(--lh-loose);
+}
+
+.threeUpCardWrapper span:first-of-type {
+  margin-top: var(--sp-base);
+}
+
+.name {
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  background: linear-gradient(180deg, transparent 65%, var(--ew-green) 65%);
 }
 
 .statistics {
+  display: block;
   color: var(--white-500);
   background-color: var(--slate-900);
+  padding: var(--sp-base);
+  position: relative;
+  z-index: 1;
+
+  span {
+    font-size: var(--fs-l);
+    font-family: var(--font-mono);
+    color: var(--ew-green);
+    line-height: 30px;
+  }
+  @media (min-width: 376px) {
+    padding: var(--sp-max) var(--sp-loose);
+    font-size: 1.5rem;
+  }
+}
+
+.statistics:after {
+  content: '';
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  @media (min-width: 376px) {
+    background-image: url('../_assets/images/homepage/impact1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.statistics:first-of-type::after {
+  @media (min-width: 376px) {
+    background-image: url('../_assets/images/homepage/impact2.jpeg');
+  }
+}
+
+.statistics:last-of-type::after {
+  @media (min-width: 376px) {
+    background-image: url('../_assets/images/homepage/impact3.jpeg');
+  }
+}
+
+.legal {
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--gray-400);
 }
 
 .cardImageRound {
   display: block;
+  margin: 0 auto;
   border-radius: 50%;
+  width: 50%;
+  border: 1px solid var(--slate-900);
+  box-shadow: -0.2rem -0.2rem var(--ew-green);
+  @media (min-width: 376px) {
+    width: 100%;
+  }
 }
 
 .supportWrapper {
@@ -89,11 +201,19 @@ section {
 }
 
 .supportContent {
-  font-size: var(--fs-l);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--sp-base);
   color: var(--white-500);
   background-color: var(--slate-900);
+  line-height: var(--lh-loose);
   @media (min-width: 376px) {
     width: 40%;
+    padding-left: var(--sp-looser);
+    p {
+      font-size: var(--fs-l);
+    }
   }
 }
 
