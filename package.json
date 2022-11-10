@@ -21,7 +21,6 @@
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
     "date-fns": "^2.25.0",
-    "devcert": "^1.2.2",
     "gatsby": "^4.7.2",
     "gatsby-plugin-google-gtag": "^4.2.0",
     "gatsby-plugin-image": "^2.10.0",
