@@ -28,13 +28,11 @@ This is the main website for Emergent Works. Target audiences are potential ment
 
 Styles are done with [Sass](https://sass-lang.com/), [classnames](https://www.npmjs.com/package/classnames), and [css grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). We have a main style file (styles.scss), and modular scss files for styles specific to each page/component.
 
-### Handling image loading errors
+### Build
 
-If images do not load properly, do the following:
+It's possible to build the application with SSL by running `npm run develop -- -S`. You can then access the site via SSL at <https://localhost:8000/> and view pages with components that require SSL (eg. the Virtuous form on the Donate page).
 
-1. Exit the app by typing Control + C
-2. Run `gatsy clean`
-3. Run `npm run develop`
+If images do not load properly after building the app, do the following run `gatsy clean` and rebuild the app with `npm run develop`.
 
 ### Linting/Formatting
 
