@@ -28,6 +28,10 @@ This is the main website for Emergent Works. Target audiences are potential ment
 
 Styles are done with [Sass](https://sass-lang.com/), [classnames](https://www.npmjs.com/package/classnames), and [css grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). We have a main style file (styles.scss), and modular scss files for styles specific to each page/component.
 
+### Build
+
+It's possible to build the application with SSL by running `npm run develop -- -S`. You can then access the site via SSL at <https://localhost:8000/> and view pages with components that require SSL (eg. the Virtuous form on the Donate page).
+
 ### Linting/Formatting
 
 We are using ESLint and prettier. Make sure you have the ESLint and prettier extensions for VSCode installed (or running with whatever IDE you are using) and enabled for this project. You can also use the `npm run format` command to format the whole project.
