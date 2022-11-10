@@ -12,7 +12,7 @@ export const Footer = () => {
 
   return (
     <footer className={cx(styles.root)}>
-      <div className={cx(styles.container, 'content')}>
+      <div className={cx(styles.container)}>
         <SubscribeForm />
         <div className={styles.linkGroup}>
           <div className={styles.navGroup}>

@@ -2,7 +2,11 @@
 
 .root {
   display: flex;
+  justify-content: center;
   margin-bottom: var(--sp-base);
+  @media (min-width: 769px) {
+    justify-content: left;
+  }
 }
 
 .submitButton {

@@ -32,6 +32,8 @@ Styles are done with [Sass](https://sass-lang.com/), [classnames](https://www.np
 
 It's possible to build the application with SSL by running `npm run develop -- -S`. You can then access the site via SSL at <https://localhost:8000/> and view pages with components that require SSL (eg. the Virtuous form on the Donate page).
 
+If images do not load properly after building the app, do the following run `gatsy clean` and rebuild the app with `npm run develop`.
+
 ### Linting/Formatting
 
 We are using ESLint and prettier. Make sure you have the ESLint and prettier extensions for VSCode installed (or running with whatever IDE you are using) and enabled for this project. You can also use the `npm run format` command to format the whole project.
