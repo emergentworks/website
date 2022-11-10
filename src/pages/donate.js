@@ -12,13 +12,13 @@ import styles from './donate.module.scss';
 
 const DonatePage = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://cdn.virtuoussoftware.com/virtuous.embed.min.js";
-    script.dataset.vform = "8CD72529-B118-4D39-99E1-45641CB119FC"
-    script.dataset.orgid = "3675"
-    script.dataset.isGiving = "true"
-    script.dataset.merchantType = "Virtuous"
-    script.dataset.dependencies = "[]" 
+    const script = document.createElement('script');
+    script.src = 'https://cdn.virtuoussoftware.com/virtuous.embed.min.js';
+    script.dataset.vform = '8CD72529-B118-4D39-99E1-45641CB119FC';
+    script.dataset.orgid = '3675';
+    script.dataset.isGiving = 'true';
+    script.dataset.merchantType = 'Virtuous';
+    script.dataset.dependencies = '[]';
 
     document.getElementById('virtuous-form').appendChild(script);
   });
@@ -27,7 +27,6 @@ const DonatePage = () => {
     <Layout className={styles.page}>
       <SEO title="Donate" />
       <div className={cx(styles.root, 'content')}>
-
         <h1 className={cx('title', styles.pageTitle)}>
           Emergent Works interrupts the prison cycle by creating pathways into
           high-paying jobs in technology for formerly incarcerated people.
@@ -50,7 +49,7 @@ const DonatePage = () => {
               </p>
               <p>Anything you can give helps tremendously!</p>
 
-              <div id='virtuous-form'></div>
+              <div id="virtuous-form" />
               <h2 className="mt--none">Donate laptops</h2>
 
               <p>
