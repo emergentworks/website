@@ -4,6 +4,17 @@
  *
  */
 
+[id='8cd72529-b118-4d39-99e1-45641cb119fc'] {
+  padding: var(--sp-base);
+  margin-top: var(--sp-base);
+  background-color: var(--gray-background);
+  @media (min-width: 768px) {
+    padding: var(--sp-looser);
+    margin: var(--sp-looser) auto 0;
+    max-width: 67rem;
+  }
+}
+
 .laptop {
   width: 350px;
   float: right;
