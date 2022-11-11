@@ -1,9 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
-import { graphql, Script } from 'gatsby';
+import { graphql, Link, Script } from 'gatsby';
 
 import Grid, { GridItem } from 'components/Grid';
 import SEO from '../components/seo';
+import Button from '../components/Button';
 import Layout from '../components/Layout';
 
 import styles from './donate.module.scss';
@@ -21,6 +22,9 @@ const DonatePage = () => {
           <Grid col={2} gap={4}>
             <GridItem justify="left">
               <h2 className="mt--none">Support our work</h2>
+              <Link to="#8cd72529-b118-4d39-99e1-45641cb119fc">
+                <Button>Donate Now</Button>
+              </Link>
               <p>
                 <strong>$50 donations</strong> pay for chargers for donated
                 laptops.
