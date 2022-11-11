@@ -1,11 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 import { graphql, Script } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 
 import Grid, { GridItem } from 'components/Grid';
 import SEO from '../components/seo';
-import Button from '../components/Button';
 import Layout from '../components/Layout';
 
 import styles from './donate.module.scss';
@@ -36,25 +34,26 @@ const DonatePage = () => {
                 our participants.
               </p>
               <p>Anything you can give helps tremendously!</p>
+              <div id="virtuous-form">
+                <Script
+                  id="analytics"
+                  src="https://cdn.virtuoussoftware.com/virtuous.embed.min.js"
+                  data-vform="8cd72529-b118-4d39-99e1-45641cb119fc"
+                  data-orgId="3675"
+                  data-isGiving="true"
+                  data-merchantType="Virtuous"
+                />
+              </div>
 
-              <Script
-                id="analytics"
-                rc="https://cdn.virtuoussoftware.com/virtuous.embed.min.js"
-                data-vform="8cd72529-b118-4d39-99e1-45641cb119fc"
-                data-orgId="3675"
-                data-isGiving="true"
-                data-merchantType="Virtuous"
-              />
+              {/* <h2 className="mt--none">Donate laptops</h2>
 
-              <h2 className="mt--none">Donate laptops</h2>
-
-              <p>
+              {/* <p>
                 All of our participants receive a laptop for the duration of the
                 program. Support our students’ learning by donating gently used
                 laptops!
               </p>
 
-              <Button
+            <Button
                 className="mt--lg"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSekRlaBYt0ILYZP90bJUiXfTf9fCl0brJwamNAgUoH1hIsZdg/viewform"
               >
@@ -65,7 +64,7 @@ const DonatePage = () => {
                 alt="Donate laptops"
                 className={styles.laptop}
                 align="right"
-              />
+              /> */}
             </GridItem>
           </Grid>
         </Grid>

@@ -4,6 +4,30 @@
  *
  */
 
+[id='8cd72529-b118-4d39-99e1-45641cb119fc'] {
+  position: absolute;
+  top: 700px;
+  padding: 8px;
+  margin-top: 65px;
+  min-height: 1400px;
+  background-color: var(--gray-background);
+  @media (min-width: 768px) {
+    top: 450px;
+    padding: 35px;
+    margin-top: 65px;
+    min-height: 1200px;
+    margin-left: 25vw;
+    max-width: 50vw;
+  }
+}
+
+[id='virtuous-form'] {
+  height: 1500px;
+  @media (min-width: 768px) {
+    height: 1200px;
+  }
+}
+
 .laptop {
   width: 350px;
   float: right;
