@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import cx from 'classnames';
-import { graphql } from 'gatsby';
+import { graphql, Script } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Grid, { GridItem } from 'components/Grid';
@@ -11,17 +11,17 @@ import Layout from '../components/Layout';
 import styles from './donate.module.scss';
 
 const DonatePage = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.virtuoussoftware.com/virtuous.embed.min.js';
-    script.dataset.vform = '8CD72529-B118-4D39-99E1-45641CB119FC';
-    script.dataset.orgid = '3675';
-    script.dataset.isGiving = 'true';
-    script.dataset.merchantType = 'Virtuous';
-    script.dataset.dependencies = '[]';
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = 'https://cdn.virtuoussoftware.com/virtuous.embed.min.js';
+  //   script.dataset.vform = '8CD72529-B118-4D39-99E1-45641CB119FC';
+  //   script.dataset.orgid = '3675';
+  //   script.dataset.isGiving = 'true';
+  //   script.dataset.merchantType = 'Virtuous';
+  //   script.dataset.dependencies = '[]';
 
-    document.getElementById('virtuous-form').appendChild(script);
-  });
+  //   document.getElementById('virtuous-form').appendChild(script);
+  // });
 
   return (
     <Layout className={styles.page}>
@@ -49,7 +49,14 @@ const DonatePage = () => {
               </p>
               <p>Anything you can give helps tremendously!</p>
 
-              <div id="virtuous-form" />
+              <div id="virtuous-form">
+               <Script
+                src="https://cdn.virtuoussoftware.com/virtuous.embed.min.js"
+                data-vform="8cd72529-b118-4d39-99e1-45641cb119fc"
+                data-orgId="3675"
+                data-isGiving="true"
+                data-merchantType="Virtuous"/>
+              </div>
               <h2 className="mt--none">Donate laptops</h2>
 
               <p>
