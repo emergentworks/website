@@ -19,8 +19,8 @@ const IndexPage = () => {
           <div className={cx(styles.heroCopy)}>
             <h1 className="">Technology is our key.</h1>
             <h2>
-              Together we will <span className={cx(styles.green)}>decode</span>{' '}
-              economic liberation.
+              Together we <span className={cx(styles.green)}>decode</span>{' '}
+              economic freedom.
             </h2>
             <p>
               “When I was finally released from my 9.5 year prison sentence,
