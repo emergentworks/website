@@ -5,7 +5,6 @@ module.exports = {
     author: `@codecooperative`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
