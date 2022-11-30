@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useCallback } from 'react';
 import cx from 'classnames';
 import { Link } from 'gatsby';
 
@@ -10,30 +10,40 @@ import Layout from '../components/Layout';
 import styles from './donate.module.scss';
 
 const scriptId = '8cd72529-b118-4d39-99e1-45641cb119fc';
-const DonatePage = ({ path }) => {
-  const [_isLoaded, setIsLoaded] = useState(false);
-  console.log(path);
-  const loadVirtuousForm = () => {
-    console.log('load form');
-    const tag = document.createElement('script');
-    tag.async = false;
-    tag.src = 'https://cdn.virtuoussoftware.com/virtuous.embed.min.js';
-    tag.setAttribute('data-vform', scriptId);
-    tag.setAttribute('data-orgId', '3675');
-    tag.setAttribute('data-isGiving', 'true');
-    tag.setAttribute('data-merchantType', 'Virtuous');
-    const container = document.querySelector('#virtuous-form');
-    container.appendChild(tag);
-  };
 
-  useEffect(() => {
-    loadVirtuousForm();
-    if (!document.getElementById(scriptId)) {
-      loadVirtuousForm();
-    } else {
-      setIsLoaded(true);
+const useHookWithRefCallback = () => {
+  const ref = useRef(null);
+  const setRef = useCallback((node) => {
+    if (ref.current) {
+      // Make sure to cleanup any events/references added to the last instance
+      const script = document.querySelector('#virtuous-script');
+      console.log('cleanup current ref', script);
     }
-  }, [path]);
+
+    if (node) {
+      // Check if a node is actually passed. Otherwise node would be null.
+      // You can now do what you need to, addEventListeners, measure, etc.
+      console.log('node', node);
+      const tag = document.createElement('script');
+      tag.async = false;
+      tag.id = 'virtuous-script';
+      tag.src = 'https://cdn.virtuoussoftware.com/virtuous.embed.min.js';
+      tag.setAttribute('data-vform', scriptId);
+      tag.setAttribute('data-orgId', '3675');
+      tag.setAttribute('data-isGiving', 'true');
+      tag.setAttribute('data-merchantType', 'Virtuous');
+      node.appendChild(tag);
+    }
+
+    // Save a reference to the node
+    ref.current = node;
+  }, []);
+
+  return [setRef];
+};
+
+const DonatePage = () => {
+  const [donateFormRef] = useHookWithRefCallback();
 
   return (
     <Layout className={styles.page}>
@@ -63,7 +73,7 @@ const DonatePage = ({ path }) => {
                 our participants.
               </p>
               <p>Anything you can give helps tremendously!</p>
-              <div id="virtuous-form" />
+              <div id="virtuous-form" ref={donateFormRef} />
             </GridItem>
           </Grid>
         </Grid>
@@ -71,16 +81,5 @@ const DonatePage = ({ path }) => {
     </Layout>
   );
 };
-
-// export const query = graphql`
-//   {
-//     Laptop: file(relativePath: { eq: "laptop.png" }) {
-//       childImageSharp {
-//         id
-//         gatsbyImageData(layout: FULL_WIDTH)
-//       }
-//     }
-//   }
-// `;
 
 export default DonatePage;
