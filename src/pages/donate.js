@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cx from 'classnames';
 import { graphql, Link, Script } from 'gatsby';
 
@@ -9,7 +9,70 @@ import Layout from '../components/Layout';
 
 import styles from './donate.module.scss';
 
+class VirtuousForm extends React.Component {
+  
+  loadVirtuousForm() {
+    const tag = document.createElement('script');
+    tag.async = false;
+    tag.src = 'https://cdn.virtuoussoftware.com/virtuous.embed.min.js';
+    tag.setAttribute("data-vform", this.props.id);
+    tag.setAttribute("data-orgId", "3675");
+    tag.setAttribute("data-isGiving", "true");
+    tag.setAttribute("data-merchantType", "Virtuous");
+    tag.setAttribute("data-dependencies", "[8]")
+
+    const container = document.querySelector('.virtuous-forms');
+    container.appendChild(tag);
+  }
+  
+  handleForceRenderForm() {
+    //clean up existing node in DOM and React so event listeners are cleaned up.
+    const existingForm = document.querySelector(
+      `[data-virtuous-form="${this.props.id}"]`
+    );
+    if (existingForm) {
+      console.log("existing form...", existingForm)
+      ReactDOM.unmountComponentAtNode(existingForm);
+      existingForm.remove();
+    }
+    
+    //create form element to initialize the form
+    const formElement = document.createElement('div');
+    formElement.setAttribute('data-virtuous-form', '8CD72529-B118-4D39-99E1-45641CB119FC')
+    
+    const container = document.querySelector(".virtuous-forms");
+    container.appendChild(formElement);
+    
+    //re-render....
+    virtuousForm({
+        organizationId: 3675,
+        formId: this.props.id,
+        environment: 1,
+        isGiving: true,
+        merchantType: "Virtuous"
+      });
+  }
+
+  //render initial scripts when form loads
+  componentDidMount() {
+    this.loadVirtuousForm();
+  }
+
+  //force render after....
+  componentWillReceiveProps(nextProps) {
+    this.handleForceRenderForm();
+  }
+
+
+  render() {
+    return <div className="virtuous-forms"></div>;
+  }
+}
+
+
 const DonatePage = () => {
+  const [showForm, setShowForm] = useState(true)
+
   return (
     <Layout className={styles.page}>
       <SEO title="Donate" />
@@ -22,7 +85,7 @@ const DonatePage = () => {
           <Grid col={2} gap={4}>
             <GridItem justify="left">
               <h2 className="mt--none">Support our work</h2>
-              <Link to="#8cd72529-b118-4d39-99e1-45641cb119fc">
+              <Link to="#8CD72529-B118-4D39-99E1-45641CB119FC">
                 <Button>Donate Now</Button>
               </Link>
               <p>
@@ -38,7 +101,9 @@ const DonatePage = () => {
                 our participants.
               </p>
               <p>Anything you can give helps tremendously!</p>
-              <div id="virtuous-form">
+
+              <VirtuousForm showForm={showForm} id="8CD72529-B118-4D39-99E1-45641CB119FC" />
+              {/* <div id="virtuous-form">
                 <Script
                   id="analytics"
                   src="https://cdn.virtuoussoftware.com/virtuous.embed.min.js"
@@ -47,7 +112,7 @@ const DonatePage = () => {
                   data-isGiving="true"
                   data-merchantType="Virtuous"
                 />
-              </div>
+              </div> */}
 
               {/* <h2 className="mt--none">Donate laptops</h2>
 
