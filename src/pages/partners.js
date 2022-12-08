@@ -51,7 +51,7 @@ const PartnersPage = () => {
           </FeatureCard>
         </section>
       </section>
-      <section className={cx('content')}>
+      {/* <section className={cx('content')}>
         <PartnersModule
           heading={<h3>Partners</h3>}
           subheading={
@@ -61,7 +61,7 @@ const PartnersPage = () => {
             </p>
           }
         />
-      </section>
+      </section> */}
     </Layout>
   );
 };

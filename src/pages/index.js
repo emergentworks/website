@@ -183,7 +183,7 @@ const IndexPage = () => {
             </li>
           </ul>
         </section>
-        <section>
+        {/* <section>
           <PartnersModule
             isLimited
             heading={<h3>Our Partners</h3>}
@@ -194,7 +194,7 @@ const IndexPage = () => {
               </p>
             }
           />
-        </section>
+        </section> */}
       </div>
     </Layout>
   );
