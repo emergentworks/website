@@ -17,8 +17,7 @@ const PartnersPage = () => {
         <p>
           We partner with incredible organizations on our products and programs
           to catalyze our shared goal to address and put an end to the crisis of
-          mass incarceration. You can learn more about all the organizations we
-          partner with below our featured partner.
+          mass incarceration.
         </p>
         <section className={cx(styles.cardWrapper)}>
           <FeatureCard
@@ -51,17 +50,6 @@ const PartnersPage = () => {
           </FeatureCard>
         </section>
       </section>
-      {/* <section className={cx('content')}>
-        <PartnersModule
-          heading={<h3>Partners</h3>}
-          subheading={
-            <p>
-              Emergent Works is proud to serve alongside these donors, sponsors,
-              and partners:
-            </p>
-          }
-        />
-      </section> */}
     </Layout>
   );
 };
