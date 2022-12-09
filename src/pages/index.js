@@ -182,19 +182,7 @@ const IndexPage = () => {
               </Link>
             </li>
           </ul>
-        </section>
-        <section>
-          <PartnersModule
-            isLimited
-            heading={<h3>Our Partners</h3>}
-            subheading={
-              <p>
-                We are proud to serve alongside these selected donors, sponsors,
-                and partners:
-              </p>
-            }
-          />
-        </section>
+        </section>x
       </div>
     </Layout>
   );
