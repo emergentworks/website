@@ -1,8 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
-import { graphql, Script } from 'gatsby';
+import { Script } from 'gatsby';
 
-import Grid, { GridItem } from 'components/Grid';
 import SEO from '../components/seo';
 import Layout from '../components/Layout';
 
@@ -17,64 +16,57 @@ const DoubleTheDonationPage = () => {
           Emergent Works interrupts the prison cycle by creating pathways into
           high-paying jobs in technology for formerly incarcerated people.
         </h1>
-        <Grid gap={4}>
-          <Grid col={2} gap={4}>
-            <GridItem justify="left">
-              <h2 className="mt--none">Support our work</h2>
-              <p>
-                Double or even triple your gift to Emergent Works! Make your
-                gifts to Emergent Works go even further through a gift-matching
-                program! Some companies will even match gifts made by retirees
-                and spouses of employees. Please use the below search tool to
-                see if your company will match your donation and to access the
-                forms, guidelines, and instructions that you need to submit a
-                matching gift.
-              </p>
-              <Script src="https://doublethedonation.com/api/js/ddplugin.js" />
-              <div id="dd-container" />
-              <h2 className="mt--none">Our Information</h2>
-              <p>
-                When submitting a matching gift through your company's portal
-                you may need the following information:
-                <ul className={cx(styles.info)}>
-                  <li>
-                    <span className={cx(styles.bold)}>Federal Tax EIN:</span>{' '}
-                    26-1188925
-                  </li>
-                  <li>
-                    <span className={cx(styles.bold)}>Organization Name:</span>{' '}
-                    Prime Produce Limited
-                  </li>
-                  <li>
-                    <span className={cx(styles.bold)}>Address:</span> 424 w 54th
-                    Street, New York, NY 10019
-                  </li>
-                  <li>
-                    <span className={cx(styles.bold)}>Contact info:</span>{' '}
-                    hello@emergentworks.org
-                  </li>
-                </ul>
-              </p>
-              <p className={cx(styles.footer)}>
-                <a href="https://doublethedonation.com/matching-grant-resources/matching-gift-basics/">
-                  Matching Gift
-                </a>{' '}
-                and{' '}
-                <a href="https://doublethedonation.com/matching-grant-resources/volunteer-grant-basics/">
-                  Volunteer Grant
-                </a>{' '}
-                information provided by:
-                <br />
-                <a href="https://doublethedonation.com" id="dd-logo">
-                  <img
-                    alt="Powered by Double the Donation"
-                    src="https://doublethedonation.com/api/img/powered-by.png"
-                  />
-                </a>
-              </p>
-            </GridItem>
-          </Grid>
-        </Grid>
+        <h2 className="mt--none">Support our work</h2>
+        <p>
+          Double or even triple your gift to Emergent Works! Make your gifts to
+          Emergent Works go even further through a gift-matching program! Some
+          companies will even match gifts made by retirees and spouses of
+          employees. Please use the below search tool to see if your company
+          will match your donation and to access the forms, guidelines, and
+          instructions that you need to submit a matching gift.
+        </p>
+        <Script src="https://doublethedonation.com/api/js/ddplugin.js" />
+        <div id="dd-container" />
+        <h2 className="mt--none">Our Information</h2>
+        <p>
+          When submitting a matching gift through your company's portal you may
+          need the following information:
+          <ul className={cx(styles.info)}>
+            <li>
+              <span className={cx(styles.bold)}>Federal Tax EIN:</span>{' '}
+              26-1188925
+            </li>
+            <li>
+              <span className={cx(styles.bold)}>Organization Name:</span> Prime
+              Produce Limited
+            </li>
+            <li>
+              <span className={cx(styles.bold)}>Address:</span> 424 w 54th
+              Street, New York, NY 10019
+            </li>
+            <li>
+              <span className={cx(styles.bold)}>Contact info:</span>{' '}
+              hello@emergentworks.org
+            </li>
+          </ul>
+        </p>
+        <p className={cx(styles.footer)}>
+          <a href="https://doublethedonation.com/matching-grant-resources/matching-gift-basics/">
+            Matching Gift
+          </a>{' '}
+          and{' '}
+          <a href="https://doublethedonation.com/matching-grant-resources/volunteer-grant-basics/">
+            Volunteer Grant
+          </a>{' '}
+          information provided by:
+          <br />
+          <a href="https://doublethedonation.com" id="dd-logo">
+            <img
+              alt="Powered by Double the Donation"
+              src="https://doublethedonation.com/api/img/powered-by.png"
+            />
+          </a>
+        </p>
       </div>
     </Layout>
   );
