@@ -28,7 +28,7 @@ const DoubleTheDonationPage = () => {
         <Script src="https://doublethedonation.com/api/js/ddplugin.js" />
         <div id="dd-container" />
         <h2 className="mt--none">Our Information</h2>
-        <p>
+        <div>
           When submitting a matching gift through your company's portal you may
           need the following information:
           <ul className={cx(styles.info)}>
@@ -49,7 +49,7 @@ const DoubleTheDonationPage = () => {
               hello@emergentworks.org
             </li>
           </ul>
-        </p>
+        </div>
         <p className={cx(styles.footer)}>
           <a href="https://doublethedonation.com/matching-grant-resources/matching-gift-basics/">
             Matching Gift
