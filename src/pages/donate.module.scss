@@ -13,6 +13,17 @@ iframe {
   }
 }
 
+[id='dd-container'] {
+  border: 3px solid black;
+  box-shadow: 6px 6px black, -4px -4px var(--ew-green);
+  margin: var(--sp-loose) 0;
+}
+
+[id='dd-logo'] {
+  position: relative;
+  top: 4px;
+}
+
 .laptop {
   width: 350px;
   float: right;
@@ -25,6 +36,16 @@ iframe {
   width: 100%;
 }
 
-.heavy {
-  font-weight: heavy;
+.footer {
+  margin-top: var(--sp-looser);
+  text-align: center;
+}
+
+.info {
+  padding: 0;
+  list-style-type: none;
+}
+
+.bold {
+  font-family: var(--font-semiBold);
 }
