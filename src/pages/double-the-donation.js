@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import { Script } from 'gatsby';
 
 import SEO from '../components/seo';
 import Layout from '../components/Layout';
@@ -25,8 +24,11 @@ const DoubleTheDonationPage = () => {
           will match your donation and to access the forms, guidelines, and
           instructions that you need to submit a matching gift.
         </p>
-        <Script src="https://doublethedonation.com/api/js/ddplugin.js" />
-        <div id="dd-container" />
+        <iframe
+          title="Double the Donation"
+          id="dd-form"
+          src="https://doublethedonation.com/api/iframe/6SuPpk0DzYtX4xAt"
+        />
         <h2 className="mt--none">Our Information</h2>
         <div>
           When submitting a matching gift through your company's portal you may
