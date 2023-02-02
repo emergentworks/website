@@ -36,11 +36,11 @@ const DoubleTheDonationPage = () => {
           <ul className={cx(styles.info)}>
             <li>
               <span className={cx(styles.bold)}>Federal Tax EIN:</span>{' '}
-              26-1188925
+              85-1197743
             </li>
             <li>
-              <span className={cx(styles.bold)}>Organization Name:</span> Prime
-              Produce Limited
+              <span className={cx(styles.bold)}>Organization Name:</span>{' '}
+              Emergent Works Inc
             </li>
             <li>
               <span className={cx(styles.bold)}>Address:</span> 424 w 54th
