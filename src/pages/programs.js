@@ -47,10 +47,10 @@ const ProgramsPage = () => (
           educational resources, and a professional network of industry-leading
           technologists.
         </p>
-        <Button href="https://airtable.com/shrg72du5RPaCs1Rf">
+        <Button href="https://airtable.com/shrMFJ9cUG7OIuP78">
           Apply to become a mentee
         </Button>
-        <Button href="https://airtable.com/shrmc1ZJVmIBdY57g">
+        <Button href="https://airtable.com/shrToEfXoVDu63iES">
           Apply to become a mentor
         </Button>
       </div>
