@@ -33,7 +33,10 @@ const IndexPage = () => {
               <p>- Makeda, EW 2020 Winter Mentee</p>
             </p>
             <Link to="/programs">
-              <Button>Learn more about our mentorship programs</Button>
+              <Button>
+                Our 1:1 Mentorship Program is now open! Click here to learn
+                more…
+              </Button>
             </Link>
           </div>
           <div className={cx(styles.heroImage)}>
@@ -182,7 +185,8 @@ const IndexPage = () => {
               </Link>
             </li>
           </ul>
-        </section>x
+        </section>
+        x
       </div>
     </Layout>
   );
