@@ -63,32 +63,40 @@
   },
   {
     "name": "Yusuf Bolden",
-    "role": "Associate Software Engineer",
+    "role": "Associate Engineer",
     "img": "yusuf_bolden",
     "imgAltText": "",
     "page": ["about"],
     "bio": ""
   },
   {
+    "name": "Scizors",
+    "role": "Associate Engineer",
+    "img": "scizors",
+    "imgAltText": "placeholder image",
+    "page": ["about"],
+    "bio": ""
+  },
+  {
     "name": "Elle Neubauer",
-    "role": "Full Stack Tech Lead",
+    "role": "Senior Engineer",
     "img": "elle_neubauer",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   },
   {
-    "name": "Ariel Herman",
-    "role": "Software Engineer",
-    "img": "ariel_herman",
+    "name": "Carolyn Sy",
+    "role": "Senior Engineer",
+    "img": "carolyn_sy",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   },
   {
-    "name": "Mark Marcantano",
-    "role": "Director of Engineering",
-    "img": "mark_marcanto",
+    "name": "Ariel Herman",
+    "role": "Engineering Manager",
+    "img": "ariel_herman",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
@@ -118,17 +126,17 @@
     "bio": ""
   },
   {
-    "name": "Scizors",
-    "role": "QA Engineer",
-    "img": "scizors",
+    "name": "Angie Agosto",
+    "role": "Office Manager",
+    "img": "angie",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
   },
   {
-    "name": "Angie Agosto",
-    "role": "Office Manager",
-    "img": "angie",
+    "name": "Keyana Guion",
+    "role": "Chief Operations Officer",
+    "img": "keyana",
     "imgAltText": "placeholder image",
     "page": ["about"],
     "bio": ""
