@@ -18,6 +18,7 @@ const ProductsPage = () => (
         </h1>
         <WaterColor color="green" />
       </div>
+      <p>Copy TBD</p>
       <section className={cx(styles.cardWrapper)}>
         <FeatureCard
           heading="Bail Fund App"
@@ -38,6 +39,12 @@ const ProductsPage = () => (
             numbers of people, and inform policy to end cash bail practices.
           </p>
         </FeatureCard>
+        <FeatureCard heading="Mentorship Program CRM">
+          <p>TBD copy</p>
+        </FeatureCard>
+        <FeatureCard heading="BALT Project">
+          <p>TBD copy</p>
+        </FeatureCard>
         <FeatureCard heading="Not911">
           <p>
             <a
@@ -51,15 +58,6 @@ const ProductsPage = () => (
             involvement. Not911 connects users to nonprofits and government
             agencies to address issues ranging from domestic violence to
             homelessness, without police intervention.
-          </p>
-        </FeatureCard>
-        <FeatureCard heading="Community Connection Hub">
-          <p>
-            Community Connection Hub (CCH), launching in 2022, is the world's
-            first web-based platform to facilitate community development,
-            mentorship, education, and pathways to employment for the movement
-            of people and organizations working to end the crisis of mass
-            incarceration.
           </p>
         </FeatureCard>
       </section>
