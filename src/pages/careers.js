@@ -1,10 +1,7 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import Button from 'components/Button';
-import styles from './careers.module.scss';
 
 const TeamPage = () => {
   return (
@@ -12,12 +9,6 @@ const TeamPage = () => {
       <SEO title="Careers" />
       <section className="content">
         <h1>Careers</h1>
-        <div className={cx(styles.mainImage)}>
-          <StaticImage
-            src="../_assets/images/group1.png"
-            alt="Members of the Emergent Works team"
-          />
-        </div>
         <p>
           Are you tired of working on problems with solutions that don't drive
           positive social change? Do you want to work with a group of people as
