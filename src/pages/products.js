@@ -18,7 +18,11 @@ const ProductsPage = () => (
         </h1>
         <WaterColor color="green" />
       </div>
-      <p>Copy TBD</p>
+      <p>
+        The Emergent Works in-house engineering team builds elegant,
+        user-friendly software solutions for values-aligned organizations in our
+        community:
+      </p>
       <section className={cx(styles.cardWrapper)}>
         <FeatureCard
           heading="Bail Fund App"
@@ -40,10 +44,24 @@ const ProductsPage = () => (
           </p>
         </FeatureCard>
         <FeatureCard heading="Mentorship Program CRM">
-          <p>TBD copy</p>
+          <p>
+            An in-house CRM built to help our program staff follow and support
+            participants in our 1:1 Technical Mentorship Program. Powered by
+            Airtable in the backend, but with data entry via approachable user
+            interfaces for users of all technical experience levels. Includes
+            reports, dashboards, and integrations with third-party systems such
+            as Google Forms, Slack, Calendly, Thinkific (a learning management
+            system used for curriculum).
+          </p>
         </FeatureCard>
         <FeatureCard heading="BALT Project">
-          <p>TBD copy</p>
+          <p>
+            A web-based software using Google Sheets and an API backend to
+            support Baltimore Legal Action Team (BALT)'s CRM needs. Users with
+            special permissions can access and manipulate the data directly with
+            all the power of Google Sheets, but the average user is being guided
+            to a consistent data format within the web application.
+          </p>
         </FeatureCard>
         <FeatureCard heading="Not911">
           <p>
