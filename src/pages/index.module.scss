@@ -61,34 +61,20 @@
   }
 }
 
-.heroWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
+.hero {
+  background-image: url('../_assets/images/homepage/hero.png');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  // color: #fff;
+  // text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 }
 
-.heroCopy {
-  width: fit-content;
-  p {
-    margin-top: 0;
-    font-size: var(--fs-m);
-    line-height: var(--lh-loose);
-    @media (min-width: 768px) {
-      padding-right: var(--sp-looser);
-      font-size: var(--fs-base);
-    }
-  }
-}
-
-.heroImage {
-  border: 1px solid var(--slate-900);
-  background-color: var(--white-500);
+.heroContent {
   padding: var(--sp-base);
-  width: 100%;
 }
 
 .threeUpCardWrapper {
@@ -214,6 +200,21 @@
     p {
       font-size: var(--fs-l);
     }
+  }
+}
+
+.genericTwoUp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.genericTwoUpCard {
+  border: 1px solid tomato;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 48%;
   }
 }
 
