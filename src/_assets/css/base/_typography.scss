@@ -8,11 +8,11 @@ body {
 
 h1,
 .h1 {
-  font-family: var(--font-light);
+  font-family: var(--font-semiBold);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
   line-height: 2.5rem;
-  font-weight: normal;
+  font-weight: var(--fw-heavy);
   font-size: var(--fs-xl);
 }
 

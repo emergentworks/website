@@ -7,6 +7,10 @@
  */
 
 .root {
+  p {
+    line-height: var(--lh-loose);
+  }
+
   h1 {
     margin: 0;
     @media (min-width: 768px) {
@@ -25,7 +29,7 @@
   }
 
   section > h3 {
-    font-family: var(--font-mono);
+    font-family: var(--font-semiBold);
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
       margin: var(--sp-looser);
@@ -46,31 +50,43 @@
   section {
     margin: var(--sp-base);
   }
-}
 
-.hideOnMobile {
-  @media (max-width: 376px) {
-    display: none;
+  @mixin imgFilter {
+    filter: saturate(0.2);
   }
-  display: inherit;
-}
 
-.hideOnDesktop {
-  @media (min-width: 376px) {
-    display: none;
+  img {
+    @include imgFilter;
+    border-radius: var(--border-radius);
+  }
+
+  .prominent {
+    font-size: 1.2rem;
+    font-family: var(--font-medium);
+    line-height: var(--lh-loose);
+    // @media (min-width: 768px) {
+    // }
   }
 }
 
 .hero {
+  display: flex;
+  align-items: center;
   background-image: url('../_assets/images/homepage/hero.png');
   background-size: cover;
   background-position: center;
+  background-color: var(--white-500);
+  background-blend-mode: luminosity;
   height: 50vh;
-  // color: #fff;
-  // text-align: center;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+
+  h1 {
+    font-size: var(--fs-l);
+    color: var(--white-500);
+    line-height: 1.5;
+    @media (min-width: 768px) {
+      font-size: 48px;
+    }
+  }
 }
 
 .heroContent {
@@ -100,12 +116,6 @@
 
 .threeUpCardWrapper span:first-of-type {
   margin-top: var(--sp-base);
-}
-
-.name {
-  margin-bottom: 6px;
-  font-family: var(--font-mono);
-  background: linear-gradient(180deg, transparent 65%, var(--ew-green) 65%);
 }
 
 .statistics {
@@ -141,6 +151,8 @@
     background-image: url('../_assets/images/homepage/impact1.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    // background-color: var(--white-500);
+    // background-blend-mode: luminosity;
   }
 }
 
@@ -154,6 +166,13 @@
   @media (min-width: 768px) {
     background-image: url('../_assets/images/homepage/impact3.jpeg');
   }
+}
+
+.green {
+  color: var(--ew-green);
+  font-family: var(--font-semiBold);
+  font-weight: var(--fw-heavy);
+  text-transform: uppercase;
 }
 
 .legal {
@@ -177,6 +196,7 @@
 .supportWrapper {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--sp-base);
 }
 
 .supportImage {
@@ -196,7 +216,6 @@
   line-height: var(--lh-loose);
   @media (min-width: 768px) {
     width: 40%;
-    padding-left: var(--sp-looser);
     p {
       font-size: var(--fs-l);
     }
@@ -211,7 +230,6 @@
 }
 
 .genericTwoUpCard {
-  border: 1px solid tomato;
   width: 100%;
   @media (min-width: 768px) {
     width: 48%;
@@ -260,4 +278,10 @@
   & > * {
     color: var(--white-200);
   }
+}
+
+.ctaButtonGroup {
+  @include removeBullets();
+  display: flex;
+  gap: var(--sp-base);
 }

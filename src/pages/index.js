@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import cx from 'classnames';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Button from '../components/Button';
+import CtaLink from '../components/CtaLink/CtaLink';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
@@ -14,22 +14,21 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className={cx(styles.root)}>
-        <section className={cx(styles.hero)}>
+        <div className={cx(styles.hero)}>
           <div className={cx(styles.heroContent)}>
-            <h1 className="">
+            <h1>
               Technology is our <span className={cx(styles.green)}>key</span>
-            </h1>
-            <h2>
+              <br />
               Together we decode the{' '}
               <span className={cx(styles.green)}>future</span>
-            </h2>
+            </h1>
           </div>
-        </section>
+        </div>
         <section>
           <h3>Our Focus</h3>
           <div className={cx(styles.genericTwoUp)}>
             <div className={cx(styles.genericTwoUpCard)}>
-              <p>
+              <p className={cx(styles.prominent)}>
                 We imagine a world where tech literacy, education, skills-based
                 training, and employment opportunities are free and available to
                 communities impacted by mass incarceration
@@ -109,9 +108,9 @@ const IndexPage = () => {
               />
             </div>
             <div className={cx(styles.genericTwoUpCard)}>
-              <p>
-                Together we decode the{' '}
-                <span className={cx(styles.green)}>future</span>
+              <p className={cx(styles.prominent)}>
+                Emergent Works is the biggest reason I was able to see this
+                through
               </p>
               <p>
                 When I was finally released from my 9.5 year prison sentence,
@@ -142,24 +141,24 @@ const IndexPage = () => {
             <div className={cx(styles.supportContent)}>
               <p>
                 Your contribution makes the world of a difference for our
-                incredible community! Join our movement today & support our
+                incredible community! Join our movement today and support our
                 mission by donating, mentoring in our program or partnering with
                 us!
               </p>
-              <ul>
+              <ul className={cx(styles.ctaButtonGroup)}>
                 <li>
                   <Link to="/donate">
-                    <Button>Donate</Button>
+                    <CtaLink>Donate</CtaLink>
                   </Link>
                 </li>
                 <li>
                   <Link to="/programs">
-                    <Button>Mentor</Button>
+                    <CtaLink>Mentor</CtaLink>
                   </Link>
                 </li>
                 <li>
                   <Link to="/products">
-                    <Button>Partner</Button>
+                    <CtaLink>Partner</CtaLink>
                   </Link>
                 </li>
               </ul>
