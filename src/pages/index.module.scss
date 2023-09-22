@@ -118,12 +118,13 @@
   background-image: url('../_assets/images/homepage/our-solution.png');
   background-color: var(--gray-500);
   background-blend-mode: multiply;
-  height: 60vh;
+  height: 65vh;
 
   & > div {
     gap: var(--sp-loosest);
-    padding: var(--sp-base);
+    padding: var(--sp-loose);
     height: 50%;
+
     @media (min-width: 768px) {
       border: 1px solid var(--white-200);
       border-radius: var(--border-radius);
@@ -134,21 +135,26 @@
   }
 
   h3 {
+    margin: 0;
     text-align: left;
+    text-decoration: underline;
   }
-  // a {
-  //   margin: var(--sp-loose) 0;
-  // }
 }
 
 .solutionsCard {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   color: var(--white-500);
-  font-size: var(--fs-m);
+  font-size: var(--fs-base);
+
   @media (min-width: 768px) {
-    // padding: 0 var(--sp-loose);
-    font-size: var(--fs-base);
+    padding: 0 var(--sp-loose);
+  }
+
+  & > a {
+    align-self: center;
   }
 }
 

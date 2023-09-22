@@ -100,7 +100,7 @@ const IndexPage = () => {
             </div>
             <div className={cx(styles.twoUpCard)}>
               <div className={cx(styles.solutionsCard)}>
-                <h3>Building Projects</h3>
+                <h3>Building Products</h3>
                 <span>
                   Movement Technical Solutions
                   <br /> for Mission-Aligned Organizations
