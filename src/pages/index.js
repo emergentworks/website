@@ -26,8 +26,8 @@ const IndexPage = () => {
         </div>
         <section>
           <h2>Our Focus</h2>
-          <div className={cx(styles.genericTwoUp)}>
-            <div className={cx(styles.genericTwoUpCard)}>
+          <div className={cx(styles.twoUp)}>
+            <div className={cx(styles.twoUpCard)}>
               <p className={cx(styles.prominent)}>
                 We imagine a world where tech literacy, education, skills-based
                 training, and employment opportunities are free and available to
@@ -44,7 +44,7 @@ const IndexPage = () => {
                 organizations working to end mass incarceration.
               </p>
             </div>
-            <div className={cx(styles.genericTwoUpCard)}>
+            <div className={cx(styles.twoUpCard)}>
               <StaticImage
                 src="../_assets/images/homepage/our-focus.jpg"
                 alt="Mentorship Program participants"
@@ -80,12 +80,12 @@ const IndexPage = () => {
           <h2>Our Solution</h2>
           <div
             className={cx(
-              styles.genericTwoUp,
+              styles.twoUp,
               styles.fullbleed,
               styles.solutionsBlock
             )}
           >
-            <div className={cx(styles.genericTwoUpCard)}>
+            <div className={cx(styles.twoUpCard)}>
               <div className={cx(styles.solutionsCard)}>
                 <h3>Technical Programs</h3>
                 <span>
@@ -98,7 +98,7 @@ const IndexPage = () => {
                 </Link>
               </div>
             </div>
-            <div className={cx(styles.genericTwoUpCard)}>
+            <div className={cx(styles.twoUpCard)}>
               <div className={cx(styles.solutionsCard)}>
                 <h3>Building Projects</h3>
                 <span>
@@ -115,8 +115,8 @@ const IndexPage = () => {
 
         <section>
           <h2>What Our Mentees Say</h2>
-          <div className={cx(styles.genericTwoUp)}>
-            <div className={cx(styles.genericTwoUpCard)}>
+          <div className={cx(styles.twoUp)}>
+            <div className={cx(styles.twoUpCard)}>
               <StaticImage
                 src="../_assets/images/homepage/makeda.jpg"
                 alt="Makeda, an EW mentee"
@@ -124,7 +124,7 @@ const IndexPage = () => {
                 layout="fullWidth"
               />
             </div>
-            <div className={cx(styles.genericTwoUpCard)}>
+            <div className={cx(styles.twoUpCard)}>
               <p className={cx(styles.prominent)}>
                 Emergent Works is the biggest reason I was able to see this
                 through

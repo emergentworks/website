@@ -100,13 +100,26 @@
   }
 }
 
+.twoUp {
+  @include pageContainer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.twoUpCard {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 48%;
+  }
+}
+
 .solutionsBlock {
   background-image: url('../_assets/images/homepage/our-solution.png');
   background-color: var(--gray-500);
   background-blend-mode: multiply;
-  filter: saturate(0);
-  // text-shadow: var(--gray-600) 1px 0 30px;
   height: 60vh;
+
   & > div {
     gap: var(--sp-loosest);
     padding: var(--sp-base);
@@ -275,64 +288,6 @@
     p {
       font-size: var(--fs-l);
     }
-  }
-}
-
-.genericTwoUp {
-  @include pageContainer;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.genericTwoUpCard {
-  width: 100%;
-  @media (min-width: 768px) {
-    width: 48%;
-  }
-}
-
-.twoUpCardWrapper {
-  @include removeBullets();
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;
-  background-color: var(--slate-900);
-  border-color: var(--slate-900);
-  border-style: solid;
-  border-width: 1px;
-}
-
-.twoUpCard {
-  flex: 1 1 200px;
-  background-color: var(--white-500);
-  background-position: right;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  a {
-    @include removeLinkStyles();
-    display: block;
-    padding: var(--sp-max) var(--sp-loose);
-  }
-}
-
-.cardYellow {
-  background-image: url('_assets/images/waterColor-yellow.png');
-}
-
-.cardPurple {
-  background-image: url('_assets/images/waterColor-purple-2.png');
-}
-
-.twoUpCard:hover {
-  background-color: var(--slate-900);
-  background-image: url('_assets/images/arrow-chalk.png');
-  background-size: 40%;
-  background-position: left 10% bottom 10%;
-  transition: background-color var(--trans-base) ease;
-  & > * {
-    color: var(--white-200);
   }
 }
 
