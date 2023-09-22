@@ -17,17 +17,16 @@
   }
 
   h1 {
-    margin: 0;
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
     }
   }
 
   section > h2 {
+    padding: var(--sp-loose) 0;
     font-family: var(--font-semiBold);
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
-      margin: var(--sp-looser);
     }
   }
 
@@ -79,11 +78,10 @@
   padding: var(--sp-base);
 }
 
-.fullbleedFooter {
+.fullbleed {
   @include fullbleed;
   display: flex;
   align-items: center;
-  background-image: url('../_assets/images/homepage/unlock-futures.png');
   background-color: var(--white-500);
   background-blend-mode: luminosity;
   text-shadow: var(--gray-600) 1px 0 30px;
@@ -100,7 +98,49 @@
       font-size: var(--fs-xxl);
     }
   }
+}
 
+.solutionsBlock {
+  background-image: url('../_assets/images/homepage/our-solution.png');
+  background-color: var(--gray-500);
+  background-blend-mode: multiply;
+  filter: saturate(0);
+  // text-shadow: var(--gray-600) 1px 0 30px;
+  height: 60vh;
+  & > div {
+    gap: var(--sp-loosest);
+    padding: var(--sp-base);
+    height: 50%;
+    @media (min-width: 768px) {
+      border: 1px solid var(--white-200);
+      border-radius: var(--border-radius);
+    }
+  }
+  & > div:first-of-type {
+    border-bottom: 1px solid var(--white-200);
+  }
+
+  h3 {
+    text-align: left;
+  }
+  // a {
+  //   margin: var(--sp-loose) 0;
+  // }
+}
+
+.solutionsCard {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-500);
+  font-size: var(--fs-m);
+  @media (min-width: 768px) {
+    // padding: 0 var(--sp-loose);
+    font-size: var(--fs-base);
+  }
+}
+
+.ctaBlock {
+  background-image: url('../_assets/images/homepage/unlock-futures.png');
   p {
     color: var(--white-500);
     font-size: var(--fs-base);
@@ -138,7 +178,7 @@
 .statistics {
   display: block;
   color: var(--white-500);
-  background-color: var(--slate-900);
+  background-color: black;
   padding: var(--sp-base);
   position: relative;
   z-index: 1;
@@ -168,6 +208,7 @@
     background-image: url('../_assets/images/homepage/impact1.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    filter: saturate(0);
   }
 }
 
@@ -238,10 +279,10 @@
 }
 
 .genericTwoUp {
+  @include pageContainer;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: var(--sp-looser);
 }
 
 .genericTwoUpCard {

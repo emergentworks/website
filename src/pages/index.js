@@ -78,22 +78,39 @@ const IndexPage = () => {
         </section>
         <section>
           <h2>Our Solution</h2>
-          <ul className={cx(styles.twoUpCardWrapper)}>
-            <li className={cx(styles.twoUpCard, styles.cardYellow)}>
-              <Link to="/programs">
-                <h2>Technical Programs</h2>
-                <span>Innovative Technical Education and Mentorship</span>
-              </Link>
-            </li>
-            <li className={cx(styles.twoUpCard, styles.cardPurple)}>
-              <Link to="/products">
-                <h2>Building Projects</h2>
+          <div
+            className={cx(
+              styles.genericTwoUp,
+              styles.fullbleed,
+              styles.solutionsBlock
+            )}
+          >
+            <div className={cx(styles.genericTwoUpCard)}>
+              <div className={cx(styles.solutionsCard)}>
+                <h3>Technical Programs</h3>
                 <span>
-                  Movement Technical Solutions for Mission-Aligned Organizations
+                  Innovative Technical Education
+                  <br />
+                  and Mentorship
                 </span>
-              </Link>
-            </li>
-          </ul>
+                <Link to="/programs">
+                  <CtaLink>Learn More</CtaLink>
+                </Link>
+              </div>
+            </div>
+            <div className={cx(styles.genericTwoUpCard)}>
+              <div className={cx(styles.solutionsCard)}>
+                <h3>Building Projects</h3>
+                <span>
+                  Movement Technical Solutions
+                  <br /> for Mission-Aligned Organizations
+                </span>
+                <Link to="/programs">
+                  <CtaLink>Learn More</CtaLink>
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -127,7 +144,7 @@ const IndexPage = () => {
         </section>
 
         <section>
-          <div className={cx(styles.fullbleedFooter)}>
+          <div className={cx(styles.ctaBlock, styles.fullbleed)}>
             <div className={cx(styles.heroContent)}>
               <h2>Unlock Futures With Us</h2>
               <p>
