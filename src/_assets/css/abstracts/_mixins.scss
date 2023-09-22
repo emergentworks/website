@@ -37,6 +37,13 @@ $bp: (
   }
 }
 
+@mixin pageContainer {
+  margin: var(--sp-base);
+  @media (min-width: 768px) {
+    margin: 0 var(--sp-looser);
+  }
+}
+
 @mixin removeBullets {
   list-style: none;
   padding-left: 0;
@@ -47,4 +54,9 @@ $bp: (
   font-family: unset;
   color: unset;
   text-decoration: none;
+}
+
+@mixin fullbleed {
+  background-size: cover;
+  background-position: center;
 }
