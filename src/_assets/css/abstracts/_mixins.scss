@@ -40,7 +40,7 @@ $bp: (
 @mixin pageContainer {
   margin: var(--sp-base);
   @media (min-width: 768px) {
-    margin: var(--sp-looser);
+    margin: 0 var(--sp-looser);
   }
 }
 

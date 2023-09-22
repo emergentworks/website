@@ -22,11 +22,29 @@
     }
   }
 
+  hr {
+    border: 0;
+    margin: var(--sp-loose);
+    @media (min-width: 768px) {
+      margin: var(--sp-loosest);
+    }
+  }
+
   section > h2 {
     padding: var(--sp-loose) 0;
     font-family: var(--font-semiBold);
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
+    }
+  }
+
+  section > h2.cornerBorders {
+    margin-top: var(--sp-loose);
+    margin-bottom: var(--sp-loose);
+    margin-left: var(--sp-base);
+    margin-right: var(--sp-loose);
+    @media (min-width: 768px) {
+      margin: var(--sp-looser);
     }
   }
 
@@ -49,8 +67,51 @@
 
   .prominent {
     font-size: 1.4rem;
-    font-family: var(--font-medium);
+    font-family: var(--font-semiBold);
     line-height: var(--lh-loose);
+  }
+
+  .attribution {
+    font-size: var(--fs-base);
+  }
+
+  .alignRight {
+    margin-right: var(--sp-loose);
+    text-align: right;
+  }
+
+  .quote {
+    text-align: justify;
+  }
+
+  .cornerBorders {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: var(--sp-base);
+    padding: var(--sp-base) var(--sp-loose);
+  }
+  .cornerBorders:before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+  }
+  .cornerBorders:after {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    border-bottom: 4px solid var(--ew-green);
+    border-right: 4px solid var(--ew-green);
   }
 }
 
@@ -94,6 +155,7 @@
   h2 {
     color: var(--white-500);
     font-family: var(--font-semiBold);
+    text-align: left;
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
     }

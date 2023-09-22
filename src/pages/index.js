@@ -25,13 +25,15 @@ const IndexPage = () => {
           </div>
         </div>
         <section>
-          <h2>Our Focus</h2>
+          <h2 className={cx(styles.cornerBorders)}>Our Focus</h2>
           <div className={cx(styles.twoUp)}>
             <div className={cx(styles.twoUpCard)}>
               <p className={cx(styles.prominent)}>
-                We imagine a world where tech literacy, education, skills-based
-                training, and employment opportunities are free and available to
-                communities impacted by mass incarceration
+                We imagine a world where tech literacy, <br /> education,
+                skills-based training,
+                <br /> and employment opportunities
+                <br /> are free and available to communities
+                <br /> impacted by mass incarceration
               </p>
               <p>
                 Emergent Works fights to end mass incarceration through both
@@ -55,7 +57,7 @@ const IndexPage = () => {
           </div>
         </section>
         <section>
-          <h2>Why We Do This Work</h2>
+          <h2 className={cx(styles.cornerBorders)}>Why We Do This Work</h2>
           <div className={cx(styles.threeUpCardWrapper)}>
             <div className={cx(styles.statistics)}>
               The average U.S recidivism rate is <span>44%</span>. EW's alumni
@@ -77,7 +79,7 @@ const IndexPage = () => {
           </p>
         </section>
         <section>
-          <h2>Our Solution</h2>
+          <h2 className={cx(styles.cornerBorders)}>Our Solution</h2>
           <div
             className={cx(
               styles.twoUp,
@@ -114,7 +116,7 @@ const IndexPage = () => {
         </section>
 
         <section>
-          <h2>What Our Mentees Say</h2>
+          <h2 className={cx(styles.cornerBorders)}>What Our Mentees Say</h2>
           <div className={cx(styles.twoUp)}>
             <div className={cx(styles.twoUpCard)}>
               <StaticImage
@@ -125,11 +127,11 @@ const IndexPage = () => {
               />
             </div>
             <div className={cx(styles.twoUpCard)}>
-              <p className={cx(styles.prominent)}>
-                Emergent Works is the biggest reason I was able to see this
-                through
+              <p className={cx(styles.prominent, styles.alignRight)}>
+                Emergent Works is the biggest reason
+                <br />I was able to see this through
               </p>
-              <p>
+              <p className={cx(styles.cornerBorders, styles.quote)}>
                 When I was finally released from my 9.5 year prison sentence,
                 many employers would not hire me. I knew I wanted to become a
                 software engineer but I needed extra help. The dedication, time,
@@ -137,12 +139,14 @@ const IndexPage = () => {
                 from Emergent Works is the biggest reason I was able to see this
                 through. Today I can proudly say I am a thriving Software
                 Engineer.
-                <p>- Makeda, EW 2021 Cohort</p>
+              </p>
+              <p className={cx(styles.attribution, styles.alignRight)}>
+                - Makeda, EW 2021 Cohort
               </p>
             </div>
           </div>
         </section>
-
+        <hr />
         <section>
           <div className={cx(styles.ctaBlock, styles.fullbleed)}>
             <div className={cx(styles.heroContent)}>
