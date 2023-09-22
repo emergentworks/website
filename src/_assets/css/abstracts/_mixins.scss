@@ -48,3 +48,8 @@ $bp: (
   color: unset;
   text-decoration: none;
 }
+
+@mixin fullbleed {
+  background-size: cover;
+  background-position: center;
+}

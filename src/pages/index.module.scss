@@ -3,10 +3,15 @@
 /*
  *
  * Home
+ * Root styles are scoped to this module.
  *
  */
 
 .root {
+  @mixin imgFilter {
+    filter: saturate(0.2);
+  }
+
   p {
     line-height: var(--lh-loose);
   }
@@ -18,17 +23,7 @@
     }
   }
 
-  h2 {
-    background: url('../_assets/images/squiggly.svg');
-    background-position: bottom -8px center;
-    display: inline-block;
-    background-repeat: no-repeat;
-    padding-bottom: 22px;
-    font-size: var(--fs-base);
-    margin-bottom: var(--sp-base);
-  }
-
-  section > h3 {
+  section > h2 {
     font-family: var(--font-semiBold);
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
@@ -36,23 +31,16 @@
     }
   }
 
-  section > h3 + p {
+  section > h2 + p {
     text-align: center;
     margin: 0 0 var(--sp-base);
   }
 
-  section > h3,
+  section > h2,
+  h3,
   h4,
   h5 {
     text-align: center;
-  }
-
-  section {
-    margin: var(--sp-base);
-  }
-
-  @mixin imgFilter {
-    filter: saturate(0.2);
   }
 
   img {
@@ -61,22 +49,20 @@
   }
 
   .prominent {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: var(--font-medium);
     line-height: var(--lh-loose);
-    // @media (min-width: 768px) {
-    // }
   }
 }
 
 .hero {
+  @include fullbleed;
   display: flex;
   align-items: center;
   background-image: url('../_assets/images/homepage/hero.png');
-  background-size: cover;
-  background-position: center;
   background-color: var(--white-500);
   background-blend-mode: luminosity;
+  text-shadow: var(--gray-600) 1px 0 30px;
   height: 50vh;
 
   h1 {
@@ -91,6 +77,37 @@
 
 .heroContent {
   padding: var(--sp-base);
+}
+
+.fullbleedFooter {
+  @include fullbleed;
+  display: flex;
+  align-items: center;
+  background-image: url('../_assets/images/homepage/unlock-futures.png');
+  background-color: var(--white-500);
+  background-blend-mode: luminosity;
+  text-shadow: var(--gray-600) 1px 0 30px;
+
+  @media (min-width: 768px) {
+    padding: var(--sp-looser);
+    height: 50vh;
+  }
+
+  h2 {
+    color: var(--white-500);
+    font-family: var(--font-semiBold);
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  p {
+    color: var(--white-500);
+    font-size: var(--fs-base);
+    @media (min-width: 768px) {
+      font-size: var(--fs-l);
+    }
+  }
 }
 
 .threeUpCardWrapper {
@@ -151,8 +168,6 @@
     background-image: url('../_assets/images/homepage/impact1.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    // background-color: var(--white-500);
-    // background-blend-mode: luminosity;
   }
 }
 
@@ -226,7 +241,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px;
+  margin: var(--sp-looser);
 }
 
 .genericTwoUpCard {
@@ -283,5 +298,12 @@
 .ctaButtonGroup {
   @include removeBullets();
   display: flex;
-  gap: var(--sp-base);
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: var(--sp-loosest);
+  }
 }

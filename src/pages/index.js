@@ -25,7 +25,7 @@ const IndexPage = () => {
           </div>
         </div>
         <section>
-          <h3>Our Focus</h3>
+          <h2>Our Focus</h2>
           <div className={cx(styles.genericTwoUp)}>
             <div className={cx(styles.genericTwoUpCard)}>
               <p className={cx(styles.prominent)}>
@@ -55,7 +55,7 @@ const IndexPage = () => {
           </div>
         </section>
         <section>
-          <h3>Why We Do This Work</h3>
+          <h2>Why We Do This Work</h2>
           <div className={cx(styles.threeUpCardWrapper)}>
             <div className={cx(styles.statistics)}>
               The average U.S recidivism rate is <span>44%</span>. EW's alumni
@@ -77,17 +77,17 @@ const IndexPage = () => {
           </p>
         </section>
         <section>
-          <h3>Our Solution</h3>
+          <h2>Our Solution</h2>
           <ul className={cx(styles.twoUpCardWrapper)}>
             <li className={cx(styles.twoUpCard, styles.cardYellow)}>
               <Link to="/programs">
-                <h3>Technical Programs</h3>
+                <h2>Technical Programs</h2>
                 <span>Innovative Technical Education and Mentorship</span>
               </Link>
             </li>
             <li className={cx(styles.twoUpCard, styles.cardPurple)}>
               <Link to="/products">
-                <h3>Building Projects</h3>
+                <h2>Building Projects</h2>
                 <span>
                   Movement Technical Solutions for Mission-Aligned Organizations
                 </span>
@@ -96,8 +96,8 @@ const IndexPage = () => {
           </ul>
         </section>
 
-        <section className={cx(styles.heroWrapper)}>
-          <h3>What Our Mentees Say</h3>
+        <section>
+          <h2>What Our Mentees Say</h2>
           <div className={cx(styles.genericTwoUp)}>
             <div className={cx(styles.genericTwoUpCard)}>
               <StaticImage
@@ -127,18 +127,9 @@ const IndexPage = () => {
         </section>
 
         <section>
-          <h3>Unlock Futures With Us</h3>
-          <div className={cx(styles.supportWrapper)}>
-            <StaticImage
-              src="../_assets/images/homepage/army-greeting.jpeg"
-              alt="Members of the Emergent Works team"
-              aspectRatio={4 / 3}
-              layout="constrained"
-              className={cx(styles.supportImage)}
-              cropFocus="top"
-              height={400}
-            />
-            <div className={cx(styles.supportContent)}>
+          <div className={cx(styles.fullbleedFooter)}>
+            <div className={cx(styles.heroContent)}>
+              <h2>Unlock Futures With Us</h2>
               <p>
                 Your contribution makes the world of a difference for our
                 incredible community! Join our movement today and support our
