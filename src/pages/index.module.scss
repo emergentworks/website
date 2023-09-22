@@ -128,7 +128,7 @@
   h1 {
     font-size: var(--fs-l);
     color: var(--white-500);
-    line-height: 1.5;
+    line-height: var(--lh-loose);
     @media (min-width: 768px) {
       font-size: 48px;
     }
@@ -231,78 +231,37 @@
   }
 }
 
-.threeUpCardWrapper {
+.threeUp {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--sp-base);
-  @media (min-width: 768px) {
-    gap: var(--sp-looser);
-  }
 }
 
-.threeUpCardWrapper > * {
-  border: 1px solid var(--slate-900);
+.threeUpCard {
   display: flex;
-  flex: 0 1 350px;
+  flex: 1 0 100px;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.statisticsCardGroup {
   padding: var(--sp-base);
-  background-color: var(--white-500);
+}
+
+.statisticsCard {
+  text-align: center;
   font-size: var(--fs-m);
-  line-height: var(--lh-loose);
-}
-
-.threeUpCardWrapper span:first-of-type {
-  margin-top: var(--sp-base);
-}
-
-.statistics {
-  display: block;
-  color: var(--white-500);
-  background-color: black;
   padding: var(--sp-base);
-  position: relative;
-  z-index: 1;
-
-  span {
-    font-size: var(--fs-l);
-    font-family: var(--font-mono);
-    color: var(--ew-green);
-    line-height: 30px;
-  }
-  @media (min-width: 768px) {
-    padding: var(--sp-max) var(--sp-loose);
-    font-size: 1.5rem;
-  }
 }
 
-.statistics:after {
-  content: '';
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  @media (min-width: 768px) {
-    background-image: url('../_assets/images/homepage/impact1.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: saturate(0);
-  }
+.statisticsCard:nth-child(even) {
+  border-left: 1px solid black;
 }
 
-.statistics:first-of-type::after {
-  @media (min-width: 768px) {
-    background-image: url('../_assets/images/homepage/impact2.jpeg');
-  }
-}
-
-.statistics:last-of-type::after {
-  @media (min-width: 768px) {
-    background-image: url('../_assets/images/homepage/impact3.jpeg');
-  }
+.statistic {
+  font-size: var(--fs-l);
+  font-family: var(--font-light);
+  line-height: 30px;
 }
 
 .green {

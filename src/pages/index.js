@@ -58,19 +58,30 @@ const IndexPage = () => {
         </section>
         <section>
           <h2 className={cx(styles.cornerBorders)}>Why We Do This Work</h2>
-          <div className={cx(styles.threeUpCardWrapper)}>
-            <div className={cx(styles.statistics)}>
-              The average U.S recidivism rate is <span>44%</span>. EW's alumni
-              recidivism rate is <span>0%</span>.
+          <div className={cx(styles.threeUp, styles.statisticsCardGroup)}>
+            <div className={cx(styles.threeUpCard, styles.statisticsCard)}>
+              <span>Average U.S recidivism rate</span>
+              <span className={cx(styles.statistic)}>44%</span>
             </div>
-            <div className={cx(styles.statistics)}>
-              The formerly-incarcerated employment rate nationwide is{' '}
-              <span>40%</span>. The employment rate for EW program alumni is{' '}
-              <span>74%</span>
+            <div className={cx(styles.threeUpCard, styles.statisticsCard)}>
+              <span>Formerly-incarcerated employment rate</span>
+              <span className={cx(styles.statistic)}>40%</span>
             </div>
-            <div className={cx(styles.statistics)}>
-              Formerly-incarcerated income averages <span>+$10K</span> annually.
-              EW program alumni annual incomes average <span>+$45K</span>.
+            <div className={cx(styles.threeUpCard, styles.statisticsCard)}>
+              <span>Formerly-incarcerated annual income</span>
+              <span className={cx(styles.statistic)}>+$10K</span>
+            </div>
+            <div className={cx(styles.threeUpCard, styles.statisticsCard)}>
+              <span>EW Alumni recidivism rate</span>
+              <span className={cx(styles.statistic)}>0%</span>
+            </div>
+            <div className={cx(styles.threeUpCard, styles.statisticsCard)}>
+              <span>EW Alumni employment rate</span>
+              <span className={cx(styles.statistic)}>74%</span>
+            </div>
+            <div className={cx(styles.threeUpCard, styles.statisticsCard)}>
+              <span>Employed EW Alumni annual income</span>
+              <span className={cx(styles.statistic)}>+$45K</span>
             </div>
           </div>
           <p className={cx(styles.legal)}>
