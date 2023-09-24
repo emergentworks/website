@@ -31,20 +31,9 @@
   }
 
   section > h2 {
-    padding: var(--sp-loose) 0;
     font-family: var(--font-semiBold);
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
-    }
-  }
-
-  section > h2.cornerBorders {
-    margin-top: var(--sp-loose);
-    margin-bottom: var(--sp-loose);
-    margin-left: var(--sp-base);
-    margin-right: var(--sp-loose);
-    @media (min-width: 768px) {
-      margin: var(--sp-looser);
     }
   }
 
@@ -89,36 +78,6 @@
     @media (min-width: 768px) {
       font-size: var(--fs-base);
     }
-  }
-
-  .cornerBorders {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    margin: var(--sp-base);
-    padding: var(--sp-base) var(--sp-loose);
-  }
-  .cornerBorders:before {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    border-top: 4px solid var(--gray-600);
-    border-left: 4px solid var(--gray-600);
-  }
-  .cornerBorders:after {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
-    border-bottom: 4px solid var(--ew-green);
-    border-right: 4px solid var(--ew-green);
   }
 }
 
@@ -166,20 +125,6 @@
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
     }
-  }
-}
-
-.twoUp {
-  @include pageContainer;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.twoUpCard {
-  width: 100%;
-  @media (min-width: 768px) {
-    width: 48%;
   }
 }
 
@@ -235,22 +180,6 @@
     @media (min-width: 768px) {
       font-size: var(--fs-l);
     }
-  }
-}
-
-.threeUp {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.threeUpCard {
-  display: flex;
-  flex: 1 0 100px;
-  flex-direction: column;
-  justify-content: space-between;
-  @media (min-width: 768px) {
-    flex: 0 1 350px;
   }
 }
 

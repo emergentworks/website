@@ -90,3 +90,43 @@ p {
 .content-max-width {
   max-width: var(--content-max-width);
 }
+
+.cornerBorders {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: var(--sp-base);
+  padding: var(--sp-base) var(--sp-loose);
+}
+.cornerBorders:before {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-top: 4px solid var(--gray-600);
+  border-left: 4px solid var(--gray-600);
+}
+.cornerBorders:after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 4px solid var(--ew-green);
+  border-right: 4px solid var(--ew-green);
+}
+
+h2.cornerBorders {
+  margin-top: var(--sp-loose);
+  margin-bottom: var(--sp-loose);
+  margin-left: var(--sp-base);
+  margin-right: var(--sp-loose);
+  @media (min-width: 768px) {
+    margin: var(--sp-looser);
+  }
+}
