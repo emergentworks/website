@@ -2,8 +2,9 @@
 
 .root {
   display: inline-block;
-  padding: 6px;
-  width: 120px;
+  padding: 6px 16px;
+  min-width: 120px;
+  max-width: 100%;
   border: 1px solid var(--white-200);
   text-align: center;
   font-family: var(--font-medium);

@@ -56,7 +56,21 @@ $bp: (
   text-decoration: none;
 }
 
+@mixin imgFilter {
+  filter: saturate(0.2);
+}
+
 @mixin fullbleed {
   background-size: cover;
   background-position: center;
+}
+
+@mixin heroTitle {
+  padding: var(--sp-base);
+  font-size: var(--fs-l);
+  color: var(--white-500);
+  line-height: var(--lh-loose);
+  @media (min-width: 768px) {
+    font-size: 48px;
+  }
 }

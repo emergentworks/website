@@ -8,10 +8,6 @@
  */
 
 .root {
-  @mixin imgFilter {
-    filter: saturate(0.2);
-  }
-
   p {
     line-height: var(--lh-loose);
   }
@@ -31,20 +27,9 @@
   }
 
   section > h2 {
-    padding: var(--sp-loose) 0;
     font-family: var(--font-semiBold);
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
-    }
-  }
-
-  section > h2.cornerBorders {
-    margin-top: var(--sp-loose);
-    margin-bottom: var(--sp-loose);
-    margin-left: var(--sp-base);
-    margin-right: var(--sp-loose);
-    @media (min-width: 768px) {
-      margin: var(--sp-looser);
     }
   }
 
@@ -62,7 +47,15 @@
 
   img {
     @include imgFilter;
+  }
+
+  section img {
+    @include imgFilter;
     border-radius: var(--border-radius);
+  }
+
+  .hero {
+    @include heroTitle;
   }
 
   .prominent {
@@ -91,266 +84,182 @@
     }
   }
 
-  .cornerBorders {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    margin: var(--sp-base);
-    padding: var(--sp-base) var(--sp-loose);
-  }
-  .cornerBorders:before {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    border-top: 4px solid var(--gray-600);
-    border-left: 4px solid var(--gray-600);
-  }
-  .cornerBorders:after {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
-    border-bottom: 4px solid var(--ew-green);
-    border-right: 4px solid var(--ew-green);
-  }
-}
-
-.hero {
-  @include fullbleed;
-  display: flex;
-  align-items: center;
-  background-image: url('../_assets/images/homepage/hero.png');
-  background-color: var(--white-500);
-  background-blend-mode: luminosity;
-  text-shadow: var(--gray-600) 1px 0 30px;
-  height: 50vh;
-
-  h1 {
-    font-size: var(--fs-l);
-    color: var(--white-500);
-    line-height: var(--lh-loose);
-    @media (min-width: 768px) {
-      font-size: 48px;
-    }
-  }
-}
-
-.heroContent {
-  padding: var(--sp-base);
-}
-
-.fullbleed {
-  @include fullbleed;
-  display: flex;
-  align-items: center;
-  background-color: var(--white-500);
-  background-blend-mode: luminosity;
-  text-shadow: var(--gray-600) 1px 0 30px;
-
-  @media (min-width: 768px) {
-    padding: var(--sp-looser);
-    height: 50vh;
-  }
-
-  h2 {
-    color: var(--white-500);
-    font-family: var(--font-semiBold);
-    text-align: left;
-    @media (min-width: 768px) {
-      font-size: var(--fs-xxl);
-    }
-  }
-}
-
-.twoUp {
-  @include pageContainer;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.twoUpCard {
-  width: 100%;
-  @media (min-width: 768px) {
-    width: 48%;
-  }
-}
-
-.solutionsBlock {
-  background-image: url('../_assets/images/homepage/our-solution.png');
-  background-color: var(--gray-500);
-  background-blend-mode: multiply;
-  height: 65vh;
-
-  & > div {
-    gap: var(--sp-loosest);
-    padding: var(--sp-loose);
-    height: 50%;
+  .fullbleed {
+    @include fullbleed;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-500);
+    background-blend-mode: luminosity;
+    text-shadow: var(--gray-600) 1px 0 30px;
 
     @media (min-width: 768px) {
-      border: 1px solid var(--white-200);
-      border-radius: var(--border-radius);
+      padding: var(--sp-looser);
+      height: 50vh;
+    }
+
+    h2 {
+      color: var(--white-500);
+      font-family: var(--font-semiBold);
+      text-align: left;
+      @media (min-width: 768px) {
+        font-size: var(--fs-xxl);
+      }
     }
   }
-  & > div:first-of-type {
-    border-bottom: 1px solid var(--white-200);
+
+  .solutionsBlock {
+    background-image: url('../_assets/images/homepage/our-solution.png');
+    background-color: var(--gray-500);
+    background-blend-mode: multiply;
+    height: 65vh;
+
+    & > div {
+      gap: var(--sp-loosest);
+      padding: var(--sp-loose);
+      height: 50%;
+
+      @media (min-width: 768px) {
+        border: 1px solid var(--white-200);
+        border-radius: var(--border-radius);
+      }
+    }
+    & > div:first-of-type {
+      border-bottom: 1px solid var(--white-200);
+    }
+
+    h3 {
+      margin: 0;
+      text-align: left;
+      text-decoration: underline;
+    }
   }
 
-  h3 {
-    margin: 0;
-    text-align: left;
-    text-decoration: underline;
-  }
-}
-
-.solutionsCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  color: var(--white-500);
-  font-size: var(--fs-base);
-
-  @media (min-width: 768px) {
-    padding: 0 var(--sp-loose);
-  }
-
-  & > a {
-    align-self: center;
-  }
-}
-
-.ctaBlock {
-  background-image: url('../_assets/images/homepage/unlock-futures.png');
-  p {
+  .solutionsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     color: var(--white-500);
     font-size: var(--fs-base);
+
     @media (min-width: 768px) {
-      font-size: var(--fs-l);
+      padding: 0 var(--sp-loose);
+    }
+
+    & > a {
+      align-self: center;
     }
   }
-}
 
-.threeUp {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.threeUpCard {
-  display: flex;
-  flex: 1 0 100px;
-  flex-direction: column;
-  justify-content: space-between;
-  @media (min-width: 768px) {
-    flex: 0 1 350px;
-  }
-}
-
-.statisticsCardGroup {
-  padding: var(--sp-base);
-}
-
-.statisticsCard {
-  text-align: center;
-  font-size: var(--fs-m);
-  padding: var(--sp-base);
-  @media (min-width: 950px) {
-    padding: var(--sp-looser) var(--sp-loose);
-  }
-}
-
-.statisticEW {
-  @media (min-width: 950px) {
-    border-top: 1px solid var(--gray-600);
-  }
-}
-
-.statisticsCard:nth-child(even) {
-  border-left: 1px solid var(--gray-600);
-  @media (min-width: 950px) {
-    border-left: 0;
-  }
-}
-
-.statistic {
-  padding: var(--sp-tight) 0;
-  font-size: var(--fs-l);
-  font-family: var(--font-light);
-  font-weight: var(--fw-heavy);
-  line-height: 30px;
-}
-
-.green {
-  color: var(--ew-green);
-  font-family: var(--font-semiBold);
-  font-weight: var(--fw-heavy);
-  text-transform: uppercase;
-}
-
-.legal {
-  text-align: center;
-  font-size: var(--fs-sm);
-  color: var(--gray-400);
-}
-
-.cardImageRound {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 50%;
-  border: 1px solid var(--slate-900);
-  box-shadow: -0.2rem -0.2rem var(--ew-green);
-  @media (min-width: 768px) {
-    width: 100%;
-  }
-}
-
-.supportWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-base);
-}
-
-.supportImage {
-  flex: 1 1 150px;
-  @media (min-width: 768px) {
-    width: 60%;
-  }
-}
-
-.supportContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--sp-base);
-  color: var(--white-500);
-  background-color: var(--slate-900);
-  line-height: var(--lh-loose);
-  @media (min-width: 768px) {
-    width: 40%;
+  .ctaBlock {
+    background-image: url('../_assets/images/homepage/unlock-futures.png');
     p {
-      font-size: var(--fs-l);
+      color: var(--white-500);
+      font-size: var(--fs-base);
+      @media (min-width: 768px) {
+        font-size: var(--fs-l);
+      }
     }
   }
-}
 
-.ctaButtonGroup {
-  @include removeBullets();
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-around;
-    margin: var(--sp-loosest);
+  .statisticsCardGroup {
+    padding: var(--sp-base);
+  }
+
+  .statisticsCard {
+    text-align: center;
+    font-size: var(--fs-m);
+    padding: var(--sp-base);
+    @media (min-width: 950px) {
+      padding: var(--sp-looser) var(--sp-loose);
+    }
+  }
+
+  .statisticEW {
+    @media (min-width: 950px) {
+      border-top: 1px solid var(--gray-600);
+    }
+  }
+
+  .statisticsCard:nth-child(even) {
+    border-left: 1px solid var(--gray-600);
+    @media (min-width: 950px) {
+      border-left: 0;
+    }
+  }
+
+  .statistic {
+    padding: var(--sp-tight) 0;
+    font-size: var(--fs-l);
+    font-family: var(--font-light);
+    font-weight: var(--fw-heavy);
+    line-height: 30px;
+  }
+
+  .green {
+    color: var(--ew-green);
+    font-family: var(--font-semiBold);
+    font-weight: var(--fw-heavy);
+    text-transform: uppercase;
+  }
+
+  .legal {
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: var(--gray-400);
+  }
+
+  .cardImageRound {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 50%;
+    border: 1px solid var(--slate-900);
+    box-shadow: -0.2rem -0.2rem var(--ew-green);
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .supportWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-base);
+  }
+
+  .supportImage {
+    flex: 1 1 150px;
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+  }
+
+  .supportContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--sp-base);
+    color: var(--white-500);
+    background-color: var(--slate-900);
+    line-height: var(--lh-loose);
+    @media (min-width: 768px) {
+      width: 40%;
+      p {
+        font-size: var(--fs-l);
+      }
+    }
+  }
+
+  .ctaButtonGroup {
+    @include removeBullets();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+      margin: var(--sp-loosest);
+    }
   }
 }

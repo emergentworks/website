@@ -1,0 +1,19 @@
+@import '../../_assets/css/abstracts/1-abstracts';
+@import 'src/_assets/css/abstracts/_mixins.scss';
+
+/*
+ *
+ * Hero
+ *
+ */
+
+.root {
+  img {
+    @include imgFilter;
+  }
+
+  .heroTitle {
+    @include heroTitle;
+    padding: var(--sp-base);
+  }
+}

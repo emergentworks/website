@@ -1,33 +1,48 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import cx from 'classnames';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, getImage } from 'gatsby-plugin-image';
 
 import CtaLink from '../components/CtaLink/CtaLink';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
 import styles from './index.module.scss';
+import { Hero } from '../components/Hero/Hero';
 
 const IndexPage = () => {
+  // TODO: This could be refactored into Gatsby page queries to DRY up code.
+
+  const data = useStaticQuery(graphql`
+    query {
+      hero: file(relativeDirectory: { eq: "hero" }, name: { eq: "homepage" }) {
+        childImageSharp {
+          gatsbyImageData(
+            aspectRatio: 3
+            layout: FULL_WIDTH
+            breakpoints: [768, 1080, 1366]
+          )
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
       <SEO title="Home" />
       <div className={cx(styles.root)}>
-        <div className={cx(styles.hero)}>
-          <div className={cx(styles.heroContent)}>
-            <h1>
-              Technology is our <span className={cx(styles.green)}>key</span>
-              <br />
-              Together we decode the{' '}
-              <span className={cx(styles.green)}>future</span>
-            </h1>
-          </div>
-        </div>
+        <Hero image={getImage(data.hero)} title="Title">
+          <h1 className={cx(styles.hero, 'cornerBordersHero')}>
+            Technology is our <span className={cx(styles.green)}>key</span>
+            <br />
+            Together we decode the{' '}
+            <span className={cx(styles.green)}>future</span>
+          </h1>
+        </Hero>
         <section>
-          <h2 className={cx(styles.cornerBorders)}>Our Focus</h2>
-          <div className={cx(styles.twoUp)}>
-            <div className={cx(styles.twoUpCard)}>
+          <h2 className="cornerBorders">Our Focus</h2>
+          <div className="twoUp">
+            <div className="twoUpCard">
               <p className={cx(styles.prominent)}>
                 We imagine a world where tech literacy, <br /> education,
                 skills-based training,
@@ -46,7 +61,7 @@ const IndexPage = () => {
                 organizations working to end mass incarceration.
               </p>
             </div>
-            <div className={cx(styles.twoUpCard)}>
+            <div className="twoUpCard">
               <StaticImage
                 src="../_assets/images/homepage/our-focus.jpg"
                 alt="Mentorship Program participants"
@@ -57,21 +72,21 @@ const IndexPage = () => {
           </div>
         </section>
         <section>
-          <h2 className={cx(styles.cornerBorders)}>Why We Do This Work</h2>
+          <h2 className="cornerBorders">Why We Do This Work</h2>
           <div
             className={cx(
-              styles.threeUp,
+              'threeUp',
               styles.statisticsCardGroup,
               styles.statisticInitial
             )}
           >
-            <div className={cx(styles.threeUpCard, styles.statisticsCard)}>
+            <div className={cx('threeUpCard', styles.statisticsCard)}>
               <span>Average U.S recidivism rate</span>
               <span className={cx(styles.statistic)}>44%</span>
             </div>
             <div
               className={cx(
-                styles.threeUpCard,
+                'threeUpCard',
                 styles.statisticsCard,
                 styles.statisticInitial
               )}
@@ -81,7 +96,7 @@ const IndexPage = () => {
             </div>
             <div
               className={cx(
-                styles.threeUpCard,
+                'threeUpCard',
                 styles.statisticsCard,
                 styles.statisticInitial
               )}
@@ -91,7 +106,7 @@ const IndexPage = () => {
             </div>
             <div
               className={cx(
-                styles.threeUpCard,
+                'threeUpCard',
                 styles.statisticsCard,
                 styles.statisticEW
               )}
@@ -101,7 +116,7 @@ const IndexPage = () => {
             </div>
             <div
               className={cx(
-                styles.threeUpCard,
+                'threeUpCard',
                 styles.statisticsCard,
                 styles.statisticEW
               )}
@@ -111,7 +126,7 @@ const IndexPage = () => {
             </div>
             <div
               className={cx(
-                styles.threeUpCard,
+                'threeUpCard',
                 styles.statisticsCard,
                 styles.statisticEW
               )}
@@ -126,15 +141,9 @@ const IndexPage = () => {
           </p>
         </section>
         <section>
-          <h2 className={cx(styles.cornerBorders)}>Our Solution</h2>
-          <div
-            className={cx(
-              styles.twoUp,
-              styles.fullbleed,
-              styles.solutionsBlock
-            )}
-          >
-            <div className={cx(styles.twoUpCard)}>
+          <h2 className="cornerBorders">Our Solution</h2>
+          <div className={cx('twoUp', styles.fullbleed, styles.solutionsBlock)}>
+            <div className="twoUpCard">
               <div className={cx(styles.solutionsCard)}>
                 <h3>Technical Programs</h3>
                 <span>
@@ -147,7 +156,7 @@ const IndexPage = () => {
                 </Link>
               </div>
             </div>
-            <div className={cx(styles.twoUpCard)}>
+            <div className="twoUpCard">
               <div className={cx(styles.solutionsCard)}>
                 <h3>Building Products</h3>
                 <span>
@@ -161,11 +170,10 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-
         <section>
-          <h2 className={cx(styles.cornerBorders)}>What Our Mentees Say</h2>
-          <div className={cx(styles.twoUp)}>
-            <div className={cx(styles.twoUpCard)}>
+          <h2 className="cornerBorders">What Our Mentees Say</h2>
+          <div className="twoUp">
+            <div className="twoUpCard">
               <StaticImage
                 src="../_assets/images/homepage/makeda.jpg"
                 alt="Makeda, an EW mentee"
@@ -173,7 +181,7 @@ const IndexPage = () => {
                 layout="fullWidth"
               />
             </div>
-            <div className={cx(styles.twoUpCard)}>
+            <div className="twoUpCard">
               <p className={cx(styles.prominent, styles.alignRight)}>
                 Emergent Works is the biggest reason
                 <br />I was able to see this through
