@@ -17,11 +17,7 @@ const IndexPage = () => {
     query {
       hero: file(relativeDirectory: { eq: "hero" }, name: { eq: "homepage" }) {
         childImageSharp {
-          gatsbyImageData(
-            aspectRatio: 3
-            layout: FULL_WIDTH
-            breakpoints: [768, 1080, 1366]
-          )
+          gatsbyImageData(aspectRatio: 3, layout: FULL_WIDTH)
         }
       }
     }
