@@ -19,10 +19,13 @@
     }
   }
 
-  section > h2 {
+  h2,
+  .prominent {
     font-family: var(--font-semiBold);
+    line-height: var(--lh-loose);
+    font-size: var(--fs-base);
     @media (min-width: 768px) {
-      font-size: var(--fs-xxl);
+      font-size: 1.4rem;
     }
   }
 
@@ -31,10 +34,7 @@
     margin: 0 0 var(--sp-base);
   }
 
-  section > h2,
-  h3,
-  h4,
-  h5 {
+  section > h2 {
     text-align: center;
   }
 
@@ -43,5 +43,47 @@
   }
   section > img {
     border-radius: var(--border-radius);
+  }
+
+  ul {
+    margin-top: var(--sp-base);
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+
+  ul:before {
+    content: attr(aria-label);
+    font-size: var(--fs-base);
+    font-family: var(--font-semiBold);
+    margin-left: -20px;
+  }
+
+  .programCard {
+    border-top: 1px solid var(--slate-900);
+    @media (min-width: 768px) {
+      padding: var(--sp-base);
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .programTitle {
+    text-align: center;
+    font-family: var(--font-semiBold);
+    font-size: var(--fs-xxl);
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+  }
+
+  .programInfo {
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 768px) {
+      padding: var(--sp-base);
+      border-left: 1px solid var(--slate-900);
+    }
   }
 }
