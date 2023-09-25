@@ -32,14 +32,12 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className={cx(styles.root)}>
         <Hero image={getImage(data.hero)} title="Title">
-          {/* <div className={cx(styles.hero)}> */}
           <h1 className={cx(styles.hero, 'cornerBordersHero')}>
             Technology is our <span className={cx(styles.green)}>key</span>
             <br />
             Together we decode the{' '}
             <span className={cx(styles.green)}>future</span>
           </h1>
-          {/* </div> */}
         </Hero>
         <section>
           <h2 className="cornerBorders">Our Focus</h2>

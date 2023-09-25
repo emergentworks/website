@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -14,7 +14,6 @@ export const Hero = ({ title, image, children }) => {
       <GatsbyImage
         image={image}
         alt=""
-        className={cx(styles.hero)}
         style={{
           gridArea: '1/1',
           height: '50vh',

@@ -8,13 +8,6 @@
  */
 
 .root {
-  // .hero {
-  //   @include imgFilter;
-  //   background-color: var(--white-500);
-  //   background-blend-mode: luminosity;
-  //   text-shadow: var(--gray-600) 1px 0 30px;
-  // }
-
   img {
     @include imgFilter;
   }
@@ -23,17 +16,4 @@
     @include heroTitle;
     padding: var(--sp-base);
   }
-  // .image {
-  //   grid-area: '1/1';
-  //   height: '50vh';
-  // }
-
-  // .contentWrapper {
-  //   grid-area: '1/1';
-  //   position: 'relative';
-  //   place-items: 'flex-start';
-  //   align-items: 'center'; // flex-end
-  //   display: 'grid';
-  //   text-shadow: var(--gray-600) 1px 0 30px;
-  // }
 }
