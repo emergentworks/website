@@ -1,29 +1,46 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import cx from 'classnames';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, getImage } from 'gatsby-plugin-image';
 
 import CtaLink from '../components/CtaLink/CtaLink';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
 import styles from './index.module.scss';
+import { Hero } from '../components/Hero/Hero';
 
 const IndexPage = () => {
+  // TODO: This could be refactored into Gatsby page queries to DRY up code.
+
+  const data = useStaticQuery(graphql`
+    query {
+      hero: file(relativeDirectory: { eq: "hero" }, name: { eq: "homepage" }) {
+        childImageSharp {
+          gatsbyImageData(
+            aspectRatio: 3
+            layout: FULL_WIDTH
+            breakpoints: [768, 1080, 1366]
+          )
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
       <SEO title="Home" />
       <div className={cx(styles.root)}>
-        <div className={cx(styles.hero)}>
-          <div className={cx(styles.heroContent)}>
-            <h1>
-              Technology is our <span className={cx(styles.green)}>key</span>
-              <br />
-              Together we decode the{' '}
-              <span className={cx(styles.green)}>future</span>
-            </h1>
-          </div>
-        </div>
+        <Hero image={getImage(data.hero)} title="Title">
+          {/* <div className={cx(styles.hero)}> */}
+          <h1 className={cx(styles.hero, 'cornerBordersHero')}>
+            Technology is our <span className={cx(styles.green)}>key</span>
+            <br />
+            Together we decode the{' '}
+            <span className={cx(styles.green)}>future</span>
+          </h1>
+          {/* </div> */}
+        </Hero>
         <section>
           <h2 className="cornerBorders">Our Focus</h2>
           <div className="twoUp">
@@ -155,7 +172,6 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-
         <section>
           <h2 className="cornerBorders">What Our Mentees Say</h2>
           <div className="twoUp">

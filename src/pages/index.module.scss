@@ -8,10 +8,6 @@
  */
 
 .root {
-  @mixin imgFilter {
-    filter: saturate(0.2);
-  }
-
   p {
     line-height: var(--lh-loose);
   }
@@ -51,7 +47,15 @@
 
   img {
     @include imgFilter;
+  }
+
+  section > img {
+    @include imgFilter;
     border-radius: var(--border-radius);
+  }
+
+  .hero {
+    @include heroTitle;
   }
 
   .prominent {
@@ -79,30 +83,6 @@
       font-size: var(--fs-base);
     }
   }
-}
-
-.hero {
-  @include fullbleed;
-  display: flex;
-  align-items: center;
-  background-image: url('../_assets/images/homepage/hero.png');
-  background-color: var(--white-500);
-  background-blend-mode: luminosity;
-  text-shadow: var(--gray-600) 1px 0 30px;
-  height: 50vh;
-
-  h1 {
-    font-size: var(--fs-l);
-    color: var(--white-500);
-    line-height: var(--lh-loose);
-    @media (min-width: 768px) {
-      font-size: 48px;
-    }
-  }
-}
-
-.heroContent {
-  padding: var(--sp-base);
 }
 
 .fullbleed {
