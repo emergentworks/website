@@ -29,20 +29,8 @@
     }
   }
 
-  section > h2 + p {
-    text-align: center;
-    margin: 0 0 var(--sp-base);
-  }
-
-  section > h2 {
-    text-align: center;
-  }
-
   img {
     @include imgFilter;
-  }
-  section > img {
-    border-radius: var(--border-radius);
   }
 
   ul {
@@ -53,9 +41,26 @@
 
   ul:before {
     content: attr(aria-label);
+    margin-left: -20px;
+  }
+
+  ul:before,
+  .description {
     font-size: var(--fs-base);
     font-family: var(--font-semiBold);
-    margin-left: -20px;
+  }
+
+  section > h2 + p {
+    text-align: center;
+    margin: 0 0 var(--sp-base);
+  }
+
+  section > h2 {
+    text-align: center;
+  }
+
+  section img {
+    border-radius: var(--border-radius);
   }
 
   .programCard {
@@ -73,8 +78,10 @@
     text-align: center;
     font-family: var(--font-semiBold);
     font-size: var(--fs-xxl);
+    line-height: 1;
     @media (min-width: 768px) {
       text-align: right;
+      font-size: 82px;
     }
   }
 
@@ -85,5 +92,12 @@
       padding: var(--sp-base);
       border-left: 1px solid var(--slate-900);
     }
+  }
+
+  .programLinks {
+    margin-top: var(--sp-base);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }

@@ -49,7 +49,7 @@
     @include imgFilter;
   }
 
-  section > img {
+  section img {
     @include imgFilter;
     border-radius: var(--border-radius);
   }

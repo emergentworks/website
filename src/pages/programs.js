@@ -10,12 +10,30 @@ import CtaLink from '../components/CtaLink/CtaLink';
 import styles from './programs.module.scss';
 import { Hero } from '../components/Hero/Hero';
 
+const Tracks = ({ tracks }) => {
+  if (!tracks) {
+    return null;
+  }
+
+  return (
+    <ul aria-label="Program Tracks">
+      {tracks.map(({ title, description }) => (
+        <li>
+          <span className={cx(styles.description)}>{title}: </span>
+          <span>{description}</span>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 const ProgramCard = ({
   title,
   qualifications,
   commitments,
   description,
   links,
+  tracks,
 }) => {
   return (
     <div className={cx(styles.programCard, 'twoUp mb')}>
@@ -38,14 +56,20 @@ const ProgramCard = ({
           </ul>
         )}
         <div>
-          <p>{description}</p>
-          <div>
+          <p>
+            <span className={cx(styles.description)}>Description: </span>
+            {description}
+            <Tracks tracks={tracks} />
+          </p>
+          <div className={cx(styles.programLinks)}>
             {links ? (
               links.map((link) => (
                 <CtaLink href={link.href}>{link.title}</CtaLink>
               ))
             ) : (
-              <span>More information coming soon!</span>
+              <span>
+                <em>More information coming soon!</em>
+              </span>
             )}
           </div>
         </div>
@@ -72,6 +96,10 @@ const ProgramsPage = () => {
           }
           qualifications
           title
+          tracks {
+            title
+            description
+          }
         }
       }
     }
@@ -123,13 +151,21 @@ const ProgramsPage = () => {
         <section>
           <h2>Explore our various programs </h2>
           {programs.map(
-            ({ title, qualifications, commitments, description, links }) => (
+            ({
+              title,
+              qualifications,
+              commitments,
+              description,
+              links,
+              tracks,
+            }) => (
               <ProgramCard
                 title={title}
                 qualifications={qualifications}
                 commitments={commitments}
                 description={description}
                 links={links}
+                tracks={tracks}
               />
             )
           )}
@@ -146,5 +182,10 @@ ProgramCard.propTypes = {
   qualifications: PropTypes.arrayOf(PropTypes.string),
   commitments: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.string),
+  links: PropTypes.arrayOf(PropTypes.object),
+  tracks: PropTypes.arrayOf(PropTypes.object),
+};
+
+Tracks.propTypes = {
+  tracks: PropTypes.arrayOf(PropTypes.object),
 };
