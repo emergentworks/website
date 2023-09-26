@@ -1,6 +1,6 @@
 // @use "../abstracts/variables";
 // @use "../abstracts/color";
-@use "../base/typography";
+@use '../base/typography';
 
 // .font {
 //   font-family: map-get($font-base, serif);
@@ -43,6 +43,11 @@
 }
 .tc {
   text-align: center;
+}
+
+// weights
+.fwb {
+  font-family: var(--font-semiBold);
 }
 
 // variants
