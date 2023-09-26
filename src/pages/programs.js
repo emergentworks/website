@@ -29,12 +29,14 @@ const Tracks = ({ tracks }) => {
 
 const ProgramCard = ({
   title,
+  isAcceptingApplications,
   qualifications,
   commitments,
   description,
   links,
   tracks,
 }) => {
+  const shouldShowProgramLinks = isAcceptingApplications && links;
   return (
     <div className={cx(styles.programCard, 'twoUp mb')}>
       <div className="twoUpCard">
@@ -62,7 +64,7 @@ const ProgramCard = ({
             <Tracks tracks={tracks} />
           </p>
           <div className={cx(styles.programLinks)}>
-            {links ? (
+            {shouldShowProgramLinks ? (
               links.map((link) => (
                 <CtaLink href={link.href}>{link.title}</CtaLink>
               ))
@@ -89,6 +91,7 @@ const ProgramsPage = () => {
       programs: allProgramsJson {
         nodes {
           description
+          isAcceptingApplications
           commitments
           links {
             href
@@ -153,6 +156,7 @@ const ProgramsPage = () => {
           {programs.map(
             ({
               title,
+              isAcceptingApplications,
               qualifications,
               commitments,
               description,
@@ -161,6 +165,7 @@ const ProgramsPage = () => {
             }) => (
               <ProgramCard
                 title={title}
+                isAcceptingApplications={isAcceptingApplications}
                 qualifications={qualifications}
                 commitments={commitments}
                 description={description}
@@ -179,6 +184,7 @@ export default ProgramsPage;
 
 ProgramCard.propTypes = {
   title: PropTypes.string.isRequired,
+  isAcceptingApplications: PropTypes.bool.isRequired,
   qualifications: PropTypes.arrayOf(PropTypes.string),
   commitments: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string,
