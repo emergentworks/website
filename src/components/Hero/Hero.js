@@ -8,9 +8,9 @@ const PageTitle = ({ title }) => (
   <h1 className={cx(styles.heroTitle, 'cornerBordersHero')}>{title}</h1>
 );
 
-export const Hero = ({ title, image, children }) => {
+export const Hero = ({ title, image, children, className }) => {
   return (
-    <div style={{ display: 'grid' }}>
+    <div className={cx(className)} style={{ display: 'grid' }}>
       <GatsbyImage
         image={image}
         alt=""
@@ -41,6 +41,7 @@ Hero.propTypes = {
   image: PropTypes.object.isRequired,
   title: PropTypes.string,
   children: PropTypes.node,
+  className: PropTypes.object,
 };
 
 PageTitle.propTypes = {

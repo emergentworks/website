@@ -3,14 +3,22 @@ import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-
-import Button from 'components/Button';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { Hero } from '../components/Hero/Hero';
 import styles from './team.module.scss';
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query {
+      hero: file(relativeDirectory: { eq: "hero" }, name: { eq: "team" }) {
+        childImageSharp {
+          gatsbyImageData(
+            aspectRatio: 3
+            layout: FULL_WIDTH
+            transformOptions: { cropFocus: ENTROPY }
+          )
+        }
+      }
       teamPics: allFile(filter: { relativeDirectory: { eq: "team-core" } }) {
         nodes {
           name
@@ -26,12 +34,9 @@ const TeamPage = () => {
       teamData: allTeamJson {
         edges {
           node {
-            id
             name
-            img
-            imgAltText
-            twitter
             role
+            img
           }
         }
       }
@@ -42,68 +47,39 @@ const TeamPage = () => {
   const teamPics = data.teamPics.nodes;
 
   const getImgSrc = (filename) => {
-    return teamPics.find((image) => {
-      return image.name.includes(filename);
-    }).childImageSharp.gatsbyImageData;
+    const gatsbyImage = teamPics.find((image) => image.name === filename);
+    return getImage(gatsbyImage);
   };
 
   return (
     <Layout className={styles.page}>
       <SEO title="Team" />
-      <section className={cx(styles.root, 'content')}>
-        <h1>We are the Emergent Works Family.</h1>
-        <p>
-          We are flautists (yes, it is spelled that way!), breakfast (only)
-          chefs, giant mug collectors, and competitive Waldo finders who hail
-          from the Ivory Coast, Brooklyn, San Francisco, Minneapolis, and
-          Montana.
-        </p>
-        <p>
-          Every day we feel lucky to bring these experiences, and perspectives
-          that have shaped who we are to the products and programs we build to
-          end the crisis of mass incarceration.
-        </p>
-        <p>
-          Want to join our team? We're always looking for highly-motivated,
-          mission-driven people to build with us. If you’re interested in
-          joining the team you can check out our open roles below.
-        </p>
-        <p>
-          <Button href="https://boards.greenhouse.io/emergentworks">
-            See open roles
-          </Button>
-        </p>
-      </section>
-
-      <section className="content">
-        <h2 className={cx('content-max-width')}>Meet the Team</h2>
-        <div className={styles.team}>
-          {teamData.map((person) => (
-            <div key={person.node.id} className={styles.person}>
-              <div className={styles.image}>
-                <GatsbyImage
-                  image={getImgSrc(person.node.img)}
-                  className={cx(styles.img)}
-                  alt={person.node.imgAltText}
-                />
+      <div className={cx(styles.root)}>
+        <Hero
+          className={cx(styles.hero)}
+          image={getImage(data.hero)}
+          title="Our Team"
+        />
+        <section>
+          <div className={styles.team}>
+            {teamData.map((person) => (
+              <div key={person.node.id} className={styles.card}>
+                <div className={styles.image}>
+                  <GatsbyImage
+                    image={getImgSrc(person.node.img)}
+                    className={cx(styles.img)}
+                    alt={person.node.name}
+                  />
+                </div>
+                <div className={styles.info}>
+                  <span className={styles.name}>{person.node.name}</span>
+                  <div className={styles.role}>{person.node.role}</div>
+                </div>
               </div>
-              <h3 className={styles.name}>{person.node.name}</h3>
-              <div className={styles.role}>{person.node.role}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="content">
-        <h2>We're Hiring!</h2>
-        <p>
-          We're always looking for highly-motivated, mission-driven people to
-          join our team.
-        </p>
-        <Button href="https://boards.greenhouse.io/emergentworks">
-          See open roles
-        </Button>
-      </section>
+            ))}
+          </div>
+        </section>
+      </div>
     </Layout>
   );
 };
