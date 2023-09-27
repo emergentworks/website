@@ -1,50 +1,73 @@
+@import '../_assets/css/abstracts/mixins';
+
 /*
  *
  * Donation
  *
  */
 
-[id='virtuous-form'] {
-  border: 0;
-  height: 1500px;
-  @media (min-width: 768px) {
-    height: 1000px;
+.root {
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
   }
-}
 
-[id='dd-form'] {
-  height: 500px;
-  margin: var(--sp-loose) 0;
-  background-color: var(--white-500);
-}
+  p,
+  ul {
+    line-height: var(--lh-loose);
+  }
 
-[id='dd-logo'] {
-  position: relative;
-  top: 4px;
-}
+  img {
+    @include imgFilter;
+  }
 
-.laptop {
-  width: 350px;
-  float: right;
-}
+  h2,
+  .prominent {
+    font-family: var(--font-semiBold);
+    line-height: var(--lh-loose);
+    font-size: var(--fs-base);
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+    & > span {
+      color: var(--ew-green);
+    }
+  }
 
-.pageTitle {
-  border-bottom: solid thick var(--ew-green);
-  padding-bottom: 20px;
-  margin-bottom: 60px;
-  width: 100%;
-}
+  ul {
+    @include removeBullets;
+    margin: var(--sp-base) 0;
+  }
 
-.footer {
-  margin-top: var(--sp-looser);
-  text-align: center;
-}
+  .donationWidgetWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    iframe {
+      max-width: 427px;
+      max-height: 630px;
+    }
+  }
 
-.info {
-  padding: 0;
-  list-style-type: none;
-}
+  // Old Virtuous Styles -- Keep
 
-.bold {
-  font-family: var(--font-semiBold);
+  [id='virtuous-form'] {
+    border: 0;
+    height: 1500px;
+    @media (min-width: 768px) {
+      height: 1000px;
+    }
+  }
+
+  [id='dd-form'] {
+    height: 500px;
+    margin: var(--sp-loose) 0;
+    background-color: var(--white-500);
+  }
+
+  [id='dd-logo'] {
+    position: relative;
+    top: 4px;
+  }
 }

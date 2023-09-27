@@ -1,38 +1,6 @@
 // @use "../abstracts/variables";
 // @use "../abstracts/color";
-@use "../base/typography";
-
-// .font {
-//   font-family: map-get($font-base, serif);
-// }
-
-// // Font Family
-// @each $key, $value in $font {
-//   .font-#{$key} {
-//     font-family: $value;
-//   }
-// }
-
-// // Typography scale
-// @each $key, $value in $fs {
-//   .f#{$key} {
-//     font-size: $value;
-//   }
-// }
-
-// // Text weight
-// @each $key, $value in $fw {
-//   .fw#{$key} {
-//     font-weight: $value;
-//   }
-// }
-
-// // Text colors
-// @each $key, $value in $colors {
-//   .fc--#{$key} {
-//     color: $value;
-//   }
-// }
+@use '../base/typography';
 
 // Alignment
 .tl {
@@ -43,6 +11,11 @@
 }
 .tc {
   text-align: center;
+}
+
+// weights
+.fwb {
+  font-family: var(--font-semiBold);
 }
 
 // variants

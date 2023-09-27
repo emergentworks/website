@@ -1,58 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './hero.scss';
+import cx from 'classnames';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import styles from './hero.module.scss';
 
-export const HeroContent = ({ children }) => (
-  <div className="hero-content">{children}</div>
+const PageTitle = ({ title }) => (
+  <h1 className={cx(styles.heroTitle, 'cornerBordersHero')}>{title}</h1>
 );
 
-export const HeroTitle = ({ children }) => (
-  <h1 className="hero-title">{children}</h1>
-);
-
-export const HeroContentGroup = ({ children }) => (
-  <div className="hero-contentGroup">{children}</div>
-);
-
-export const HeroImgGroup = ({ children }) => (
-  <div className="hero-imgGroup">{children}</div>
-);
-
-export const Hero = ({ children, contentPlacement }) => (
-  <section
-    className={`hero ${
-      contentPlacement === 'right'
-        ? contentPlacement === 'center'
-          ? 'hero--contentCenter'
-          : ''
-        : ''
-    }`}
-  >
-    <div className="hero-inner content">{children}</div>
-  </section>
-);
-
-HeroContent.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-HeroContentGroup.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-HeroImgGroup.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-HeroTitle.propTypes = {
-  children: PropTypes.node.isRequired,
+export const Hero = ({ title, image, children, className }) => {
+  return (
+    <div
+      className={`${cx(styles.root)} ${className}`}
+      style={{ display: 'grid' }}
+    >
+      <GatsbyImage
+        image={image}
+        alt=""
+        style={{
+          gridArea: '1/1',
+          height: '50vh',
+          maxHeight: '450px',
+        }}
+      />
+      <div className={cx(styles.imageOverlay)}>
+        {children ?? <PageTitle title={title} />}
+      </div>
+    </div>
+  );
 };
 
 Hero.propTypes = {
-  children: PropTypes.node.isRequired,
-  contentPlacement: PropTypes.oneOf(['right', 'left', 'center']),
+  image: PropTypes.object.isRequired,
+  title: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.object,
 };
 
-Hero.defaultProps = {
-  contentPlacement: 'left',
+PageTitle.propTypes = {
+  title: PropTypes.string.isRequired,
 };

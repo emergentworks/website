@@ -1,81 +1,90 @@
 import React from 'react';
 import cx from 'classnames';
-
-import Layout from '../components/Layout';
+import { graphql, useStaticQuery } from 'gatsby';
+import { getImage, StaticImage } from 'gatsby-plugin-image';
 import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import { Hero } from '../components/Hero/Hero';
 
-// import styles from './about.module.scss';
+import styles from './about.module.scss';
 
-const AboutPage = () => {
+const DonatePage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      hero: file(relativeDirectory: { eq: "hero" }, name: { eq: "about" }) {
+        childImageSharp {
+          gatsbyImageData(
+            aspectRatio: 3
+            layout: FULL_WIDTH
+            transformOptions: { cropFocus: NORTHWEST }
+          )
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
-      <SEO title="About" />
-      <section className={cx('content')}>
-        <h1 className={cx('title', 'content-max-width')}>
-          About our Organization
-        </h1>
-        <div>
-          <p>Emergent Works is a community of people that:</p>
-          <ul>
-            <li>
-              envisions a world where tech literacy, education, and skills-based
-              training are freely available to the individuals and communities,
-              disproportionately of color, impacted by mass incarceration.
-            </li>
-            <li>
-              realizes this vision through developing software products and
-              educational programs that provide mentorship and a pathway to
-              careers in tech to these communities.
-            </li>
-            <li>
-              bridges the gap between the tech industry and historically
-              underserved communities impacted by mass incarceration by offering
-              free access to the technology, education, and resources necessary
-              to enter into careers in tech.
-            </li>
-          </ul>
-          <p>
-            EW employs a multi-pronged strategic approach to bridge this gap and
-            to generate large-scale systemic change in the opportunities
-            available to returning citizens.
-          </p>
-          <div className="rightColumn">
-            <div className="videoWrapper">
-              <iframe
-                title="Emergent Works Docu-series Commercial"
-                className="youtubeVideo"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/uTGXZL_sGTo"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      <SEO title="Donate" />
+      <Hero image={getImage(data.hero)} title="About Our Organization" />
+      <div className={cx(styles.root, 'page-content')}>
+        <section>
+          <div className="twoUp">
+            <div className="twoUpCard">
+              <div className={cx(styles.title)}>
+                <h2>
+                  "I am living proof that
+                  <br />
+                  tech is a vehicle for freedom."
+                </h2>
+                <span className={cx(styles.prominent)}>
+                  Khalil 'Army' Armstead
+                </span>
+                <span className={cx(styles.subheading)}>
+                  Executive Director
+                </span>
+              </div>
+              <p>
+                Growing up as a Black man in New York City, I’ve always wanted
+                to serve. With a background in ministry and music, I’m acutely
+                aware that marginalized people need safe spaces to be heard.
+                With my first-hand experience and success in utilizing the
+                elements of my lived experiences, I’ve learned the importance of
+                healing, redemption, and liberation through technology.
+                Overcoming my experiences with the justice system through faith
+                and resilience shaped me into a steadfast champion of mental
+                health awareness and a strong proponent of community-led
+                solutions.
+              </p>
+              <p>
+                Introduced to EW in 2019 (formerly Code Cooperative), I
+                successfully enrolled and completed the 16-week cohort. My
+                greatest takeaway from this experience was discovering a safe
+                community, allowing me to be transparent, grow, and use my lived
+                experiences to succeed. After twelve weeks into the program and
+                the determination to succeed, I became the first employee and
+                operations manager for Code Cooperative. I oversaw and designed
+                new programs for communities impacted by mass incarceration.
+                Less than a year later, I am proud to say that I became
+                Executive Director of Emergent Works and launched our 1:1
+                Technical Mentorship Program. Tech really did transform my life,
+                and with Emergent Works it is my mission to pave that forward to
+                the next person.
+              </p>
+            </div>
+            <div className="twoUpCard">
+              <StaticImage
+                src="../_assets/images/team-core/army_armstead.jpg"
+                alt="Army, Executive Director of Emergent Works"
+                cropFocus="attention"
+                layout="fullWidth"
               />
             </div>
           </div>
-          <p>
-            EW provides digital literacy and software development training to
-            returning citizens by pairing them with senior software engineers
-            through our mentorship program.
-          </p>
-          <p>
-            EW augments the mentorship program by equipping participants with
-            lifelong access to our online and in-person community and resources.
-            We support alumni in securing jobs, apprenticeships, and further
-            educational pathways.
-          </p>
-          <p>
-            EW builds technology to catalyze the community-driven work of
-            individuals and organizations working to end the crisis of mass
-            incarceration. Through our LEAP program, we hire associate software
-            engineers with a history of legal system involvement that inform and
-            build our products while working alongside, being mentored by, and
-            sharing the knowledge of their experience with tech industry
-            veterans on our engineering team.
-          </p>
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };
 
-export default AboutPage;
+export default DonatePage;

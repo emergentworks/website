@@ -1,0 +1,22 @@
+@import '../../_assets/css/abstracts/_mixins';
+
+.root {
+  display: inline-block;
+  padding: 6px 16px;
+  min-width: 120px;
+  max-width: 100%;
+  border: 1px solid var(--white-200);
+  text-align: center;
+  font-family: var(--font-medium);
+  font-size: var(--fs-s);
+  color: var(--white-200);
+  background-color: var(--slate-900);
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--ew-green);
+    transition: background-color var(--trans-base) ease;
+    color: var(--slate-900);
+  }
+}

@@ -1,136 +1,63 @@
 [
   {
     "name": "Army Armstead",
-    "role": "Executive Director, Board President & Founding Member",
+    "role": "Executive Director",
     "img": "army_armstead",
-    "imgAltText": "",
-    "twitter": "",
-    "page": ["agency"],
-    "bio": "Growing up in Brooklyn, life took Army down a path of performing arts that eventually led to tours in Australia, Hungary, and New Zealand. Learning to program wasn’t an option to him growing up, but he needed a website for his music. So he took classes at the Code Cooperative and later joined the team."
-  },
-  {
-    "name": "Alex Qin",
-    "role": "Founder",
-    "img": "alex_qin",
-    "imgAltText": "",
-    "twitter": "",
-    "page": ["agency"],
-    "bio": "Alex Qin is the founder of Emergent Works. She was also the CEO from its founding in 2018 to the end of 2020."
-  },
-  {
-    "name": "Giovannie Hernandez",
-    "role": "Founding Member",
-    "img": "giovannie_hernandez",
-    "imgAltText": "",
-    "twitter": "",
-    "page": ["agency"],
-    "bio": ""
-  },
-  {
-    "name": "Roberto Goizueta",
-    "role": "Founding Member, Board VP",
-    "img": "Roberto_color",
-    "imgAltText": "",
-    "twitter": "",
-    "page": ["agency"],
-    "bio": ""
-  },
-  {
-    "name": "Ashley Chen",
-    "role": "Board Secretary",
-    "img": "ashley_chen",
-    "imgAltText": "",
-    "twitter": "",
-    "page": ["agency"],
-    "bio": ""
-  },
-  {
-    "name": "Jerone Hsu",
-    "role": "Board Member",
-    "img": "Jerone_Hsu",
-    "imgAltText": "",
-    "twitter": "",
-    "page": ["agency"],
     "bio": ""
   },
   {
     "name": "Eli Johnson",
-    "role": "Director of Programs and Initiatives ",
+    "role": "Director of Education",
     "img": "eli_johnson",
-    "imgAltText": "",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Yusuf Bolden",
-    "role": "Associate Engineer",
-    "img": "yusuf_bolden",
-    "imgAltText": "",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Elle Neubauer",
-    "role": "Senior Engineer",
-    "img": "elle_neubauer",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Carolyn Sy",
-    "role": "Senior Engineer",
-    "img": "carolyn_sy",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Ariel Herman",
-    "role": "Engineering Manager",
-    "img": "ariel_herman",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Tine Reinert",
-    "role": "Outcomes Manager",
-    "img": "tine",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Amanda Nathan",
-    "role": "Program Manager",
-    "img": "amanda_nathan",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Laiquan Dubose",
-    "role": "Student Success Coordinator",
-    "img": "laiquan",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
-    "bio": ""
-  },
-  {
-    "name": "Angie Agosto",
-    "role": "Office Manager",
-    "img": "angie",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
     "bio": ""
   },
   {
     "name": "Keyana Guion",
     "role": "Operations Manager",
     "img": "keyana",
-    "imgAltText": "placeholder image",
-    "page": ["about"],
+    "bio": ""
+  },
+  {
+    "name": "Ariel Herman",
+    "role": "Engineering Manager",
+    "img": "ariel_herman",
+    "bio": ""
+  },
+  {
+    "name": "Amanda Nathan",
+    "role": "Program Manager",
+    "img": "amanda_nathan",
+    "bio": ""
+  },
+  {
+    "name": "Tine Reinert",
+    "role": "Outcomes Manager",
+    "img": "tine",
+    "bio": ""
+  },
+  {
+    "name": "Elle Neubauer",
+    "role": "Senior Engineer",
+    "img": "elle_neubauer",
+    "bio": ""
+  },
+  {
+    "name": "Carolyn Sy",
+    "role": "Senior Engineer",
+    "img": "carolyn_sy",
+    "bio": ""
+  },
+
+  {
+    "name": "Laiquan Dubose",
+    "role": "Student Coordinator",
+    "img": "laiquan",
+    "bio": ""
+  },
+  {
+    "name": "Yusuf Bolden",
+    "role": "Associate Engineer",
+    "img": "yusuf_bolden",
     "bio": ""
   }
 ]

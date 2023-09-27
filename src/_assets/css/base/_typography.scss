@@ -8,17 +8,16 @@ body {
 
 h1,
 .h1 {
-  font-family: var(--font-light);
+  font-family: var(--font-semiBold);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
   line-height: 2.5rem;
-  font-weight: normal;
+  font-weight: var(--fw-heavy);
   font-size: var(--fs-xl);
 }
 
 h2,
 .h2 {
-  // font-family: map-get($font, medium);
   font-family: var(--font-light);
   font-size: var(--fs-xl);
   margin-top: var(--sp-base);
@@ -29,7 +28,6 @@ h2,
 
 h3,
 .h3 {
-  // font-family: map-get($font, medium);
   font-size: var(--fs-l);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
@@ -90,3 +88,72 @@ p {
 .content-max-width {
   max-width: var(--content-max-width);
 }
+
+.cornerBorders {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding: var(--sp-base) var(--sp-loose);
+}
+.cornerBorders:before {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-top: 4px solid var(--gray-600);
+  border-left: 4px solid var(--gray-600);
+}
+.cornerBorders:after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 4px solid var(--ew-green);
+  border-right: 4px solid var(--ew-green);
+}
+
+.cornerBordersHero {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: var(--sp-base);
+  padding: var(--sp-base) var(--sp-loose);
+}
+.cornerBordersHero:before {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-top: 4px solid var(--ew-green);
+  border-left: 4px solid var(--ew-green);
+}
+.cornerBordersHero:after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 4px solid var(--white-500);
+  border-right: 4px solid var(--white-500);
+}
+
+// h2.cornerBorders {
+//   margin-top: var(--sp-loose);
+//   margin-bottom: var(--sp-loose);
+//   margin-left: var(--sp-base);
+//   margin-right: var(--sp-loose);
+//   @media (min-width: 768px) {
+//     margin: var(--sp-looser);
+//   }
+// }

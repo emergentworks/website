@@ -1,6 +1,5 @@
 .root {
   margin: 0 auto;
-  max-width: var(--bp-xxl);
   &.navActive {
     @media (max-width: var(--bp-lg)) {
       overflow: hidden;

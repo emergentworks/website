@@ -1,61 +1,81 @@
 @import '../_assets/css/abstracts/mixins';
 
-.section {
-  & > p:last-of-type {
-    margin-bottom: var(--sp-loose);
+.root {
+  p {
+    line-height: var(--lh-loose);
   }
-}
 
-.videoWrapper {
-  margin-bottom: var(--sp-looser);
-  padding: 56.25% 0 0 0;
-  position: relative;
-}
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
 
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  section {
+    margin-top: var(--sp-loose);
+  }
 
-.fellowshipSection {
-  // ToDo: Sync with Savannah about spacing
-  margin-top: 6rem;
-}
+  section img {
+    border-radius: var(--border-radius);
+  }
 
-.team {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(168px, 168px));
-  column-gap: var(--sp-max);
-  row-gap: var(--sp-loose);
-}
+  section h2 {
+    font-family: var(--font-semiBold);
+    font-size: var(--fs-lg);
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
 
-.subtitle {
-  margin-top: 100px;
-  margin-bottom: 50px;
-}
+  .hero {
+    @include imgFilter;
+  }
 
-.name {
-  font-size: var(--fs-base);
-  text-transform: capitalize;
-  font-family: var(--font-italic);
-  margin-top: var(--sp-tight);
-  margin-bottom: var(--sp-tight);
-}
+  .team {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: var(--sp-base);
+    grid-row-gap: var(--sp-base);
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: var(--sp-loose);
+      grid-row-gap: var(--sp-loose);
+    }
+  }
 
-.partnersTitle {
-  margin-top: var(--sp-loosest);
-  margin-bottom: var(--sp-loose);
-}
+  .card {
+    position: relative;
+    color: var(--white-500);
+    font-size: var(--fs-sm);
+  }
 
-.logoGroup {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 160px));
-  gap: var(--sp-loosest);
-}
+  .info {
+    position: absolute;
+    padding: 4px 0 4px 8px;
+    bottom: 8px;
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
+  }
 
-.logoItem {
-  align-self: center;
+  .info::after {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    background: var(--slate-900);
+    z-index: -1;
+    content: '';
+  }
+
+  .name {
+    font-size: var(--fs-base);
+    text-transform: capitalize;
+    font-family: var(--font-italic);
+    margin-top: var(--sp-tight);
+    margin-bottom: var(--sp-tight);
+  }
 }

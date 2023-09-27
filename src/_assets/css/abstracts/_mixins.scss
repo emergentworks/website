@@ -37,6 +37,13 @@ $bp: (
   }
 }
 
+@mixin pageContainer {
+  margin: var(--sp-base);
+  @media (min-width: 768px) {
+    margin: 0 var(--sp-looser);
+  }
+}
+
 @mixin removeBullets {
   list-style: none;
   padding-left: 0;
@@ -47,4 +54,29 @@ $bp: (
   font-family: unset;
   color: unset;
   text-decoration: none;
+}
+
+@mixin imgFilter {
+  filter: saturate(0.2);
+}
+
+@mixin fullbleed {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  background-size: cover;
+  background-position: center;
+  @media (min-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@mixin heroTitle {
+  padding: var(--sp-base);
+  font-size: var(--fs-l);
+  color: var(--white-500);
+  line-height: var(--lh-loose);
+  @media (min-width: 768px) {
+    font-size: 48px;
+  }
 }

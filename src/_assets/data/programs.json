@@ -1,0 +1,78 @@
+[
+  {
+    "title": "1:1 Technical Mentorship Program",
+    "isAcceptingApplications": true,
+    "qualifications": [
+      "Age 18+",
+      "U.S-Based",
+      "Skills assessments",
+      "System/justice-impacted"
+    ],
+    "commitments": [
+      "5 month duration",
+      "Up to 10 hrs weekly",
+      "Passion project",
+      "$500 stipends"
+    ],
+    "description": "A virtual mentorship program providing free access to three learning tracks of technical education, resources,  a safe community, and employment placement opportunities to formerly incarcerated and those impacted by the criminal legal system.",
+    "links": [
+      {
+        "title": "Mentees: Apply Here",
+        "href": "https://airtable.com/apparGbIS7FxQJM4M/shrMFJ9cUG7OIuP78"
+      },
+      {
+        "title": "Mentors: Apply Here",
+        "href": "https://airtable.com/apparGbIS7FxQJM4M/shrToEfXoVDu63iES"
+      }
+    ],
+    "tracks": [
+      {
+        "title": "Digital Literacy",
+        "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in computer system navigation, Google Suite, project management and much more!",
+        "href": null
+      },
+      {
+        "title": "Front-End Development",
+        "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in HTML, CSS, Javascript, website building, project management and much more!",
+        "href": null
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in HTML, CSS, Javascript, website building, project management and much more!",
+        "href": null
+      }
+    ]
+  },
+  {
+    "title": "Bigger Than The Block",
+    "isAcceptingApplications": true,
+    "qualifications": ["Age 16-24", "NYC-based", "System-impacted"],
+    "commitments": [
+      "6 month duration",
+      "Up to 4 hrs weekly",
+      "Incentivized learning"
+    ],
+    "description": "An in-person program for system or justice impacted youth providing key support to achieve outlined professional and personal goals, work readiness and digital literacy training and connection to employment opportunities.",
+    "links": [
+      {
+        "title": "Apply Here",
+        "href": "https://airtable.com/appE0lFus4Abd4NUM/shrw1WxoukW4iyoRg"
+      }
+    ],
+    "tracks": null
+  },
+  {
+    "title": "Leadership Apprentice Program",
+    "isAcceptingApplications": false,
+    "qualifications": ["Age 16-24", "NYC-based", "System-impacted"],
+    "commitments": [
+      "Age 18+",
+      "U.S-Based",
+      "Technical assessment",
+      "EW program alumni"
+    ],
+    "description": "A fellowship that gives real-world experience embedded on Emergent Works' engineering team. Through collaborations with the engineering team and clients, fellows learn data literacy, product development, project management, digital literacy, and remote collaboration, culminating in a client project or feature that they own.",
+    "links": null,
+    "tracks": null
+  }
+]

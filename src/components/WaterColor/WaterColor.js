@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import WebPage from '_assets/images/sketch-webpage.png';
+import WebPage from '_assets/images/webpage.png';
 import WaterColorPurple from '_assets/images/waterColor-purple.png';
 import WaterColorGreen from '_assets/images/waterColor-green.png';
 
