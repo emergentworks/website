@@ -46,7 +46,8 @@
   margin-bottom: var(--sp-base);
 }
 
-.content {
+// New design for .content
+.page-content {
   padding-left: var(--sp-loose);
   padding-right: var(--sp-loose);
 
@@ -56,7 +57,7 @@
   }
 
   @include bp() {
-    max-width: 67rem;
+    max-width: 70rem;
     margin-left: auto;
     margin-right: auto;
   }

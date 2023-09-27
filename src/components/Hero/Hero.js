@@ -10,7 +10,10 @@ const PageTitle = ({ title }) => (
 
 export const Hero = ({ title, image, children, className }) => {
   return (
-    <div className={cx(className)} style={{ display: 'grid' }}>
+    <div
+      className={`${cx(styles.root)} ${className}`}
+      style={{ display: 'grid' }}
+    >
       <GatsbyImage
         image={image}
         alt=""

@@ -54,13 +54,13 @@ const TeamPage = () => {
   return (
     <Layout className={styles.page}>
       <SEO title="Team" />
-      <div className={cx(styles.root)}>
-        <Hero
-          className={cx(styles.hero)}
-          image={getImage(data.hero)}
-          title="Our Team"
-        />
-        <section>
+      <Hero
+        className={cx(styles.hero)}
+        image={getImage(data.hero)}
+        title="Our Team"
+      />
+      <div className={cx(styles.root, 'page-content')}>
+        <section className={styles.teamContainer}>
           <div className={styles.team}>
             {teamData.map((person) => (
               <div key={person.node.id} className={styles.card}>

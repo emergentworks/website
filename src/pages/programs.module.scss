@@ -52,6 +52,10 @@
     border-radius: var(--border-radius);
   }
 
+  .trackDescription {
+    font-family: var(--font-semiBold);
+  }
+
   .description {
     margin-top: var(--fs-base);
     @media (min-width: 768px) {
@@ -109,6 +113,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+
+  .tracks {
+    @include removeBullets();
+    margin-top: 18px;
   }
 
   .tracks::before {

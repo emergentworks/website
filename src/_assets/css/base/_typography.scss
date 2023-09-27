@@ -93,7 +93,6 @@ p {
   position: relative;
   width: fit-content;
   height: fit-content;
-  margin: var(--sp-base);
   padding: var(--sp-base) var(--sp-loose);
 }
 .cornerBorders:before {
@@ -149,12 +148,12 @@ p {
   border-right: 4px solid var(--white-500);
 }
 
-h2.cornerBorders {
-  margin-top: var(--sp-loose);
-  margin-bottom: var(--sp-loose);
-  margin-left: var(--sp-base);
-  margin-right: var(--sp-loose);
-  @media (min-width: 768px) {
-    margin: var(--sp-looser);
-  }
-}
+// h2.cornerBorders {
+//   margin-top: var(--sp-loose);
+//   margin-bottom: var(--sp-loose);
+//   margin-left: var(--sp-base);
+//   margin-right: var(--sp-loose);
+//   @media (min-width: 768px) {
+//     margin: var(--sp-looser);
+//   }
+// }

@@ -26,8 +26,8 @@ const DonatePage = () => {
   return (
     <Layout>
       <SEO title="Donate" />
-      <div className={cx(styles.root)}>
-        <Hero image={getImage(data.hero)} title="About Our Organization" />
+      <Hero image={getImage(data.hero)} title="About Our Organization" />
+      <div className={cx(styles.root, 'page-content')}>
         <section>
           <div className="twoUp">
             <div className="twoUpCard">

@@ -4,7 +4,6 @@ import cx from 'classnames';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import { FeatureCard } from '../components/FeatureCard';
-import PartnersModule from '../components/PartnersModule';
 
 import styles from './partners.module.scss';
 
@@ -12,7 +11,7 @@ const PartnersPage = () => {
   return (
     <Layout>
       <SEO title="Partners" />
-      <section className={cx('content')}>
+      <section className="page-content">
         <h1>Our Partners</h1>
         <p>
           We partner with incredible organizations on our products and programs
