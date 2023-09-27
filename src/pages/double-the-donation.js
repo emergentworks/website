@@ -1,3 +1,4 @@
+/** NOTE: This page is currently not linked from the homepage, visitors must go to the page directly. */
 import React from 'react';
 import cx from 'classnames';
 
