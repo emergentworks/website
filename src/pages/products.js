@@ -22,7 +22,7 @@ const ProductsPage = () => {
   return (
     <Layout>
       <SEO title="Products" />
-      <Hero image={getImage(data.hero)} title="Movement Tech Solutions" />
+      <Hero image={getImage(data.hero)} title="Tech Solutions" />
       <div className={cx(styles.root, 'page-content')}>
         <div className="tc">
           <h2>
