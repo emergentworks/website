@@ -22,9 +22,6 @@
 
   img {
     @include imgFilter;
-  }
-
-  section img {
     border-radius: var(--border-radius);
   }
 

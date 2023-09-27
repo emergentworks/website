@@ -33,11 +33,14 @@
 
   .team {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(168px, 168px));
-    column-gap: var(--sp-loose);
-    row-gap: var(--sp-loose);
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: var(--sp-base);
+    grid-row-gap: var(--sp-base);
     @media (min-width: 768px) {
-      column-gap: var(--sp-max);
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: var(--sp-loose);
+      grid-row-gap: var(--sp-loose);
     }
   }
 

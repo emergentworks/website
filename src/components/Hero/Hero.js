@@ -10,27 +10,20 @@ const PageTitle = ({ title }) => (
 
 export const Hero = ({ title, image, children, className }) => {
   return (
-    <div className={cx(className)} style={{ display: 'grid' }}>
+    <div
+      className={`${cx(styles.root)} ${className}`}
+      style={{ display: 'grid' }}
+    >
       <GatsbyImage
         image={image}
         alt=""
         style={{
           gridArea: '1/1',
           height: '50vh',
+          maxHeight: '450px',
         }}
       />
-      <div
-        style={{
-          // By using the same grid area for both, they are stacked on top of each other
-          gridArea: '1/1',
-          position: 'relative',
-          placeItems: 'flex-start',
-          alignItems: 'flex-end',
-          display: 'grid',
-          textShadow: 'var(--gray-600) 1px 0 30px',
-          color: 'var(--white-500)',
-        }}
-      >
+      <div className={cx(styles.imageOverlay)}>
         {children ?? <PageTitle title={title} />}
       </div>
     </div>

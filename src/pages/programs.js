@@ -16,10 +16,10 @@ const Tracks = ({ tracks }) => {
   }
 
   return (
-    <ul aria-label="Program Tracks">
+    <ul aria-label="Program Tracks" className={cx(styles.tracks)}>
       {tracks.map(({ title, description }) => (
         <li>
-          <span className={cx(styles.description)}>{title}: </span>
+          <span className={cx(styles.trackDescription, 'mb')}>{title}: </span>
           <span>{description}</span>
         </li>
       ))}
@@ -57,12 +57,9 @@ const ProgramCard = ({
             ))}
           </ul>
         )}
-        <div>
-          <p>
-            <span className={cx(styles.description)}>Description: </span>
-            {description}
-            <Tracks tracks={tracks} />
-          </p>
+        <div className={cx(styles.description)}>
+          {description}
+          <Tracks tracks={tracks} />
           <div className={cx(styles.programLinks)}>
             {shouldShowProgramLinks ? (
               links.map((link) => (
@@ -113,12 +110,13 @@ const ProgramsPage = () => {
   return (
     <Layout className={styles.page}>
       <SEO title="Programs" />
-      <div className={cx(styles.root)}>
-        <Hero image={getImage(data.hero)} title="Our Programs" />
+      <Hero image={getImage(data.hero)} title="Our Programs" />
+      <div className={cx(styles.root, 'page-content')}>
         <section>
           <p className={cx(styles.prominent, 'tc')}>
             We imagine a world where technical education unlocks equitable
-            economic mobility for system impacted communities
+            <br />
+            economic mobility for system-impacted communities
           </p>
           <div className="twoUp">
             <div className="twoUpCard">

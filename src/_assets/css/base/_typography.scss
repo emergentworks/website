@@ -18,7 +18,6 @@ h1,
 
 h2,
 .h2 {
-  // font-family: map-get($font, medium);
   font-family: var(--font-light);
   font-size: var(--fs-xl);
   margin-top: var(--sp-base);
@@ -29,7 +28,6 @@ h2,
 
 h3,
 .h3 {
-  // font-family: map-get($font, medium);
   font-size: var(--fs-l);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
@@ -95,7 +93,6 @@ p {
   position: relative;
   width: fit-content;
   height: fit-content;
-  margin: var(--sp-base);
   padding: var(--sp-base) var(--sp-loose);
 }
 .cornerBorders:before {
@@ -151,12 +148,12 @@ p {
   border-right: 4px solid var(--white-500);
 }
 
-h2.cornerBorders {
-  margin-top: var(--sp-loose);
-  margin-bottom: var(--sp-loose);
-  margin-left: var(--sp-base);
-  margin-right: var(--sp-loose);
-  @media (min-width: 768px) {
-    margin: var(--sp-looser);
-  }
-}
+// h2.cornerBorders {
+//   margin-top: var(--sp-loose);
+//   margin-bottom: var(--sp-loose);
+//   margin-left: var(--sp-base);
+//   margin-right: var(--sp-loose);
+//   @media (min-width: 768px) {
+//     margin: var(--sp-looser);
+//   }
+// }

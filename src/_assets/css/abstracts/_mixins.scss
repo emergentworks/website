@@ -61,8 +61,14 @@ $bp: (
 }
 
 @mixin fullbleed {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
   background-size: cover;
   background-position: center;
+  @media (min-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @mixin heroTitle {

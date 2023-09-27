@@ -22,8 +22,8 @@ const DonatePage = () => {
   return (
     <Layout>
       <SEO title="Donate" />
-      <div className={cx(styles.root)}>
-        <Hero image={getImage(data.hero)} title="Your Support" />
+      <Hero image={getImage(data.hero)} title="Your Support" />
+      <div className={cx(styles.root, 'page-content')}>
         <section>
           <p className={cx(styles.prominent, 'tc')}>
             It only takes <span>$500</span> to support a mentee to gain

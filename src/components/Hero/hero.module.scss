@@ -16,4 +16,16 @@
     @include heroTitle;
     padding: var(--sp-base);
   }
+  .imageOverlay {
+    text-shadow: var(--gray-600) 1px 0 30px;
+    grid-area: 1/1;
+    position: relative;
+    place-items: flex-start;
+    align-items: flex-end;
+    display: grid;
+    color: var(--white-500);
+    @media (min-width: 768px) {
+      left: 15%;
+    }
+  }
 }
