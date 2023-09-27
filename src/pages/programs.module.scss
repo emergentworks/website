@@ -34,20 +34,9 @@
   }
 
   ul {
-    margin-top: var(--sp-base);
+    margin-top: 0;
     margin-bottom: 0;
     padding-left: 20px;
-  }
-
-  ul:before {
-    content: attr(aria-label);
-    margin-left: -20px;
-  }
-
-  ul:before,
-  .description {
-    font-size: var(--fs-base);
-    font-family: var(--font-semiBold);
   }
 
   section > h2 + p {
@@ -63,7 +52,13 @@
     border-radius: var(--border-radius);
   }
 
+  .description {
+    font-size: var(--fs-base);
+    font-family: var(--font-semiBold);
+  }
+
   .programCard {
+    gap: var(--sp-base);
     border-top: 1px solid var(--slate-900);
     @media (min-width: 768px) {
       padding: var(--sp-base);
@@ -81,16 +76,29 @@
     line-height: 1;
     @media (min-width: 768px) {
       text-align: right;
-      font-size: 82px;
+      font-size: 4rem;
+    }
+    @media (min-width: 1330px) {
+      font-size: 5.2rem;
     }
   }
 
   .programInfo {
     display: flex;
     flex-wrap: wrap;
+    gap: var(--sp-looser);
     @media (min-width: 768px) {
       padding: var(--sp-base);
       border-left: 1px solid var(--slate-900);
+    }
+    ul:before {
+      content: attr(aria-label);
+      margin-left: -20px;
+    }
+
+    ul:before {
+      font-size: var(--fs-base);
+      font-family: var(--font-semiBold);
     }
   }
 
