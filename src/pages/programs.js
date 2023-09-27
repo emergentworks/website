@@ -16,10 +16,10 @@ const Tracks = ({ tracks }) => {
   }
 
   return (
-    <ul aria-label="Program Tracks">
+    <ul aria-label="Program Tracks" className={cx(styles.tracks)}>
       {tracks.map(({ title, description }) => (
         <li>
-          <span className={cx(styles.description)}>{title}: </span>
+          <span className={cx(styles.description, 'mb')}>{title}: </span>
           <span>{description}</span>
         </li>
       ))}
@@ -57,12 +57,9 @@ const ProgramCard = ({
             ))}
           </ul>
         )}
-        <div>
-          <p>
-            <span className={cx(styles.description)}>Description: </span>
-            {description}
-            <Tracks tracks={tracks} />
-          </p>
+        <div className={cx(styles.description)}>
+          {description}
+          <Tracks tracks={tracks} />
           <div className={cx(styles.programLinks)}>
             {shouldShowProgramLinks ? (
               links.map((link) => (

@@ -25,13 +25,21 @@ const ProductsPage = () => {
       <div className={styles.root}>
         <Hero image={getImage(data.hero)} title="Movement Tech Solutions" />
         <div className="content">
-          <h2>
+          <div className="tc">
+            <h2>
+              Are you part of an organization in need of a technical solution to
+              support your movement?
+            </h2>
+            <CtaLink href="https://airtable.com/appHQ4afO15UK9DwN/shrQsAFeo6QSRVsMH">
+              Contact Us
+            </CtaLink>
+          </div>
+          <p>
             We understand that every organization has technological needs, but
             maybe not the resources to make those needs a reality. Emergent
             Works' technical team can build and support robust, custom technical
-            solutions.
-          </h2>
-          <p>We help non-profits in the liberation space to...</p>
+            solutions.<p>We help non-profits in the liberation space to...</p>
+          </p>
           <ul>
             <li>
               Answer questions about their data to support their on-the-ground
@@ -61,13 +69,6 @@ const ProductsPage = () => {
             We build the tech so movement orgs can focus on doing the work.
             Partner with us!
           </h2>
-          <p>
-            Are you an organization in need of a technical solution to support
-            your movement?
-          </p>
-          <CtaLink href="https://airtable.com/appHQ4afO15UK9DwN/shrQsAFeo6QSRVsMH">
-            Contact Us
-          </CtaLink>
         </div>
       </div>
     </Layout>

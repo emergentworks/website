@@ -159,7 +159,7 @@ const IndexPage = () => {
                   Movement Technical Solutions
                   <br /> for Mission-Aligned Organizations
                 </span>
-                <Link to="/programs">
+                <Link to="/products">
                   <CtaLink>Learn More</CtaLink>
                 </Link>
               </div>
