@@ -28,11 +28,6 @@ export const Nav = ({ navVisibility, banner, className, ...rest }) => (
         </li>
       ))}
       <li className={styles.item}>
-        <a href="https://medium.com/@emergentworks" className="secondary">
-          Blog
-        </a>
-      </li>
-      <li className={styles.item}>
         <Link
           to="/donate"
           className={styles.donate}

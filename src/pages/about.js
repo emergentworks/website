@@ -30,7 +30,7 @@ const DonatePage = () => {
       <div className={cx(styles.root, 'page-content')}>
         <section>
           <div className="twoUp">
-            <div className="twoUpCard">
+            <div className={cx(styles.about, 'twoUpCard')}>
               <div className={cx(styles.title)}>
                 <h2>
                   "I am living proof that
@@ -45,31 +45,56 @@ const DonatePage = () => {
                 </span>
               </div>
               <p>
-                Growing up as a Black man in New York City, I’ve always wanted
-                to serve. With a background in ministry and music, I’m acutely
-                aware that marginalized people need safe spaces to be heard.
-                With my first-hand experience and success in utilizing the
-                elements of my lived experiences, I’ve learned the importance of
+                As a Black man and native of New York City, my lifelong desire
+                has been to impact my community positively. Drawing from my
+                background in ministry and music, I've recognized the pressing
+                need for safe spaces where marginalized voices can be heard.
+                Through my journey, I’ve understood the profound importance of
                 healing, redemption, and liberation through technology.
-                Overcoming my experiences with the justice system through faith
-                and resilience shaped me into a steadfast champion of mental
-                health awareness and a strong proponent of community-led
-                solutions.
               </p>
               <p>
-                Introduced to EW in 2019 (formerly Code Cooperative), I
-                successfully enrolled and completed the 16-week cohort. My
-                greatest takeaway from this experience was discovering a safe
-                community, allowing me to be transparent, grow, and use my lived
-                experiences to succeed. After twelve weeks into the program and
-                the determination to succeed, I became the first employee and
-                operations manager for Code Cooperative. I oversaw and designed
-                new programs for communities impacted by mass incarceration.
-                Less than a year later, I am proud to say that I became
-                Executive Director of Emergent Works and launched our 1:1
-                Technical Mentorship Program. Tech really did transform my life,
-                and with Emergent Works it is my mission to pave that forward to
-                the next person.
+                My introduction to Emergent Works (formerly Code Cooperative) in
+                2019 marked a pivotal moment. I not only enrolled in but
+                successfully completed the intensive 16-week cohort. What
+                resonated with me most was the discovery of a nurturing
+                community where transparency, growth, and leveraging our lived
+                experiences were encouraged while we learned how to code. Twelve
+                weeks into the program, driven by determination, I proudly
+                became the first employee and Operations Manager for Code
+                Cooperative. In this role, I spearheaded the development of our
+                innovative Virtual Technical Mentorship programs tailored to
+                communities affected by mass incarceration. Less than a year
+                later, I assumed the position of Executive Director at Emergent
+                Works.
+              </p>
+              <p>
+                In the initial stages, I was the sole staff member at Emergent
+                Works, a challenging but invigorating role. I navigated the
+                complex landscape of securing funding, assembling a team from
+                the ground up, and laying the foundation for Emergent Works.
+                Today, I am immensely proud of our accomplishments. We've
+                expanded our program offerings by an impressive 600%, reaching
+                three times as many mentees nationwide. In addition to our
+                technical education programs, EW is committed to creating tech
+                solutions that serve organizations working to end mass
+                incarceration. Our engineering team serves as an education
+                continuum while creating technical solutions for community-based
+                organizations working on various efforts to confront the
+                criminal legal system and its impact on Black and Brown
+                communities. I’m honored to share that 69% of our team are
+                individuals directly impacted by the criminal legal system, and
+                58% are former program mentees.
+              </p>
+              <p>
+                Re-entering a world that has undergone emotional, social,
+                professional, and digital transformations can be daunting. This
+                realization is the driving force behind Emergent Works' mission.
+                We actively work to narrow the divide between the tech industry
+                and individuals with prior incarceration experiences by arming
+                them with essential technical skills. Our steadfast conviction
+                is that this connection can offer the vital support and
+                resources necessary for achieving economic stability,
+                self-reliance, and a significant decrease in reoffending.
               </p>
             </div>
             <div className="twoUpCard">

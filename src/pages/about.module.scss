@@ -50,7 +50,14 @@
   .subheading {
     font-family: var(--font-medium);
     @media (min-width: 768px) {
-      font-size: var(--fs-bae);
+      font-size: var(--fs-base);
+    }
+  }
+
+  .about {
+    @media (min-width: 768px) {
+      border-right: 1px solid var(--slate-900);
+      padding-right: var(--sp-base);
     }
   }
 }
