@@ -9,6 +9,7 @@ import SEO from '../components/seo';
 
 import styles from './index.module.scss';
 import { Hero } from '../components/Hero/Hero';
+import { PartnersModule } from '../components/PartnersModule/PartnersModule';
 
 const IndexPage = () => {
   // TODO: This could be refactored into Gatsby page queries to DRY up code.
@@ -225,6 +226,10 @@ const IndexPage = () => {
                 </ul>
               </div>
             </div>
+          </section>
+          <section>
+            <h2 className="cornerBorders">Our Community Partners</h2>
+            <PartnersModule />
           </section>
         </div>
       </div>
