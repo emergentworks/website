@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import cx from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import styles from '../../pages/partners.module.scss';
+import styles from './partnersmod.module.scss';
 
-export const PartnersModule = ({ heading, subheading, isLimited = false }) => {
+export const PartnersModule = ({ isLimited = false }) => {
   const allPartnersData = useStaticQuery(graphql`
     query AllPartnersQuery {
       partners: allFile(filter: { relativeDirectory: { eq: "sponsors" } }) {
@@ -13,7 +13,7 @@ export const PartnersModule = ({ heading, subheading, isLimited = false }) => {
           name
           id
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
@@ -30,27 +30,22 @@ export const PartnersModule = ({ heading, subheading, isLimited = false }) => {
   const images = isLimited ? selectPartners : allPartners;
 
   return (
-    <>
-      {heading}
-      {subheading}
-      <div className={styles.logoWrapper}>
-        <div className={styles.logoGroup}>
-          {images.map((logo) => (
-            <div key={logo.id} className={styles.logoItem}>
-              <GatsbyImage
-                image={logo.childImageSharp.gatsbyImageData}
-                alt={logo.name}
-              />
-            </div>
-          ))}
-        </div>
+    <div className={cx(styles.wrapper)}>
+      <div className={cx(styles.logoGroup)}>
+        {images.map((logo) => (
+          <div key={logo.id}>
+            <GatsbyImage
+              key={logo.id}
+              image={logo.childImageSharp.gatsbyImageData}
+              alt={logo.name}
+            />
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
 PartnersModule.propTypes = {
-  heading: PropTypes.node.isRequired,
-  subheading: PropTypes.node.isRequired,
   isLimited: PropTypes.bool,
 };

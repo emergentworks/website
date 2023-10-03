@@ -1,0 +1,17 @@
+// @import 'src/_assets/css/abstracts/_mixins.scss';
+
+/*
+ *
+ * Partners
+ *
+ */
+
+.logoGroup {
+  margin: 0 auto;
+  display: grid;
+  gap: var(--sp-loosest);
+  grid-template-columns: 1fr 1fr;
+  @media (min-width: 376px) {
+    grid-template-columns: repeat(auto-fill, minmax(auto, 160px));
+  }
+}
