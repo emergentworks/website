@@ -11,7 +11,7 @@ export const Footer = () => {
   const getYear = new Date().getFullYear();
 
   return (
-    <footer className={cx(styles.root)}>
+    <footer className={cx(styles.root, 'page-content')}>
       <div className={cx(styles.container)}>
         <SubscribeForm />
         <div className={styles.linkGroup}>
