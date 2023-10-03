@@ -24,6 +24,8 @@
     align-items: flex-end;
     display: grid;
     color: var(--white-500);
+  }
+  .imageOverlay > * {
     @media (min-width: 768px) {
       left: 15%;
     }
