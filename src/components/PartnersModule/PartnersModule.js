@@ -13,7 +13,7 @@ export const PartnersModule = ({ isLimited = false }) => {
           name
           id
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(layout: CONSTRAINED, height: 80)
           }
         }
       }
