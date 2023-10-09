@@ -20,16 +20,20 @@ const ProjectCard = ({
 }) => {
   const image = getImage(img);
   return (
-    <div key={student} className="twoUp">
+    <div key={student} className={cx(styles.card, 'twoUp')}>
       <div className="twoUpCard">
-        <h3>{program}</h3>
-        <div>{student}</div>
+        <h3 className={cx(styles.programTitle)}>{program}</h3>
+        <div className={cx(styles.prominent, styles.student)}>{student}</div>
         <div>{cohort}</div>
         <p>{description}</p>
-        {github && <CtaLink href={github}>View Project</CtaLink>}
+        {github && (
+          <div className={cx(styles.links)}>
+            <CtaLink href={github}>View Project</CtaLink>
+          </div>
+        )}
       </div>
       <div className="twoUpCard">
-        <GatsbyImage src={image} alt={student} cropFocus="attention" />
+        <GatsbyImage src={image} alt={student} />
       </div>
     </div>
   );
@@ -61,7 +65,7 @@ const PassionProjects = () => {
           program
           img {
             childImageSharp {
-              gatsbyImageData(aspectRatio: 1)
+              gatsbyImageData(aspectRatio: 1, width: 200)
             }
           }
         }
@@ -79,7 +83,9 @@ const PassionProjects = () => {
         <section>
           <p className={cx(styles.prominent, 'tc')}>
             Our mentees build technical projects of their choice by applying
-            their newly acquired technical skills gained during our program
+            their
+            <br />
+            newly-acquired technical skills gained during our program
           </p>
           <div className="twoUp">
             <div className="twoUpCard">
