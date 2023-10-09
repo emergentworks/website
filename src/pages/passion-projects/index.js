@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import { getImage, GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import CtaLink from '../../components/CtaLink/CtaLink';
 
@@ -105,6 +105,11 @@ const PassionProjects = () => {
                 skills. This gives our mentees real life experience with their
                 skills as well as a project for their portfolio they can use for
                 further career building.
+              </p>
+              <p className="tc mb--sm">
+                <Link to="/programs">
+                  <CtaLink>Learn More About Our Programs</CtaLink>
+                </Link>
               </p>
               <p>
                 We have seen incredible passion projects over the years

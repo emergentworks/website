@@ -193,6 +193,11 @@ const IndexPage = () => {
                 <p className={cx(styles.attribution, 'tr')}>
                   - Makeda, EW 2021 Cohort
                 </p>
+                <div className="tc mb--sm">
+                  <Link to="/passion-projects">
+                    <CtaLink>See Our Mentee Projects</CtaLink>
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
