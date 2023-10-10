@@ -1,0 +1,83 @@
+@import '../../_assets/css/abstracts/mixins';
+
+.root {
+  p {
+    line-height: var(--lh-loose);
+  }
+
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  hr {
+    border: 0;
+    margin: var(--sp-loose);
+    @media (min-width: 768px) {
+      margin: var(--sp-loosest);
+    }
+  }
+
+  h2,
+  .prominent {
+    font-family: var(--font-semiBold);
+    line-height: var(--lh-loose);
+    font-size: var(--fs-base);
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .filter {
+    @include imgFilter;
+  }
+
+  section > h2 + p {
+    text-align: center;
+    margin: 0 0 var(--sp-base);
+  }
+
+  section > h2 {
+    text-align: center;
+  }
+
+  section img {
+    border-radius: var(--border-radius);
+  }
+
+  .student {
+    margin-top: var(--sp-loose);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: var(--sp-base) 0;
+    border-top: 1px solid var(--slate-900);
+    @media (min-width: 768px) {
+      flex-direction: row;
+      padding: var(--sp-loose) 0;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .programTitle {
+    font-family: var(--font-semiBold);
+    font-size: var(--fs-xxl);
+    line-height: 1;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  .links {
+    margin: var(--sp-base) 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}

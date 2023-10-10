@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Layout from 'components/Layout';
 import SEO from 'components/seo';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import { getImage, StaticImage } from 'gatsby-plugin-image';
 import CtaLink from '../components/CtaLink/CtaLink';
 
@@ -136,7 +136,13 @@ const ProgramsPage = () => {
                 Through our programs, we hope to help end the revolving door of
                 mass incarceration by closing the wealth gap and digital divide.
               </p>
-
+              <p className="tc mb--sm">
+                <Link to="/passion-projects">
+                  <CtaLink to="/passion-projects">
+                    See Our Mentee Projects
+                  </CtaLink>
+                </Link>
+              </p>
               <p>
                 Our three programs cater to different needs as well as various
                 learning levels.
