@@ -33,7 +33,7 @@ const ProjectCard = ({
         )}
       </div>
       <div className="twoUpCard">
-        <GatsbyImage src={image} alt={student} />
+        <GatsbyImage image={image} alt={student} />
       </div>
     </div>
   );
@@ -65,7 +65,7 @@ const PassionProjects = () => {
           program
           img {
             childImageSharp {
-              gatsbyImageData(aspectRatio: 1, width: 200)
+              gatsbyImageData
             }
           }
         }
@@ -78,7 +78,11 @@ const PassionProjects = () => {
   return (
     <Layout className={styles.page}>
       <SEO title="Programs" />
-      <Hero image={getImage(data.hero)} title="Grauduation Projects" />
+      <Hero
+        image={getImage(data.hero)}
+        title="Grauduation Projects"
+        className={cx(styles.filter)}
+      />
       <div className={cx(styles.root, 'page-content')}>
         <section>
           <p className={cx(styles.prominent, 'tc')}>
@@ -88,11 +92,12 @@ const PassionProjects = () => {
             newly-acquired technical skills gained during our program
           </p>
           <div className="twoUp">
-            <div className="twoUpCard">
+            <div className={cx(styles.filter, 'twoUpCard')}>
               <StaticImage
                 src="./projects1.jpg"
                 alt="Mentorship Program participants"
                 cropFocus="attention"
+                aspectRatio={9 / 10}
               />
             </div>
             <div className="twoUpCard">
@@ -122,12 +127,12 @@ const PassionProjects = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section className={cx(styles.cardContainer)}>
           <h2>Explore our mentee passion projects</h2>
+          {projects.map((project) => (
+            <ProjectCard {...project} />
+          ))}
         </section>
-        {projects.map((project) => (
-          <ProjectCard {...project} />
-        ))}
       </div>
     </Layout>
   );
