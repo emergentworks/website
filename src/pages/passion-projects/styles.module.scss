@@ -50,13 +50,6 @@
     margin-top: var(--sp-loose);
   }
 
-  .cardContainer {
-    margin: 0 auto;
-    @media (min-width: 768px) {
-      width: 80%;
-    }
-  }
-
   .card {
     display: flex;
     flex-direction: column-reverse;

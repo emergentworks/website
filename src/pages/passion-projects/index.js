@@ -65,7 +65,10 @@ const PassionProjects = () => {
           program
           img {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(
+                aspectRatio: 1.3
+                transformOptions: { cropFocus: CENTER }
+              )
             }
           }
         }
@@ -127,7 +130,7 @@ const PassionProjects = () => {
             </div>
           </div>
         </section>
-        <section className={cx(styles.cardContainer)}>
+        <section>
           <h2>Explore our mentee passion projects</h2>
           {projects.map((project) => (
             <ProjectCard {...project} />
