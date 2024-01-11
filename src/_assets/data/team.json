@@ -2,49 +2,36 @@
   {
     "name": "Army Armstead",
     "role": "Executive Director",
-    "img": "army_armstead",
-    "bio": ""
+    "img": "army_armstead"
   },
   {
     "name": "Keyana Guion",
     "role": "Operations Manager",
-    "img": "keyana",
-    "bio": ""
+    "img": "keyana"
   },
   {
     "name": "Ariel Herman",
     "role": "Engineering Manager",
-    "img": "ariel_herman",
-    "bio": ""
+    "img": "ariel_herman"
   },
   {
     "name": "Tine Reinert",
-    "role": "Outcomes Manager",
-    "img": "tine",
-    "bio": ""
-  },
-  {
-    "name": "Elle Neubauer",
-    "role": "Senior Engineer",
-    "img": "elle_neubauer",
-    "bio": ""
+    "role": "Programs + Outcomes Manager",
+    "img": "tine"
   },
   {
     "name": "Carolyn Sy",
     "role": "Senior Engineer",
-    "img": "carolyn_sy",
-    "bio": ""
+    "img": "carolyn_sy"
   },
   {
     "name": "Laiquan Dubose",
     "role": "Student Coordinator",
-    "img": "laiquan",
-    "bio": ""
+    "img": "laiquan"
   },
   {
     "name": "Yusuf Bolden",
     "role": "Associate Engineer",
-    "img": "yusuf_bolden",
-    "bio": ""
+    "img": "yusuf_bolden"
   }
 ]
