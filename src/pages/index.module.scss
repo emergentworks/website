@@ -61,6 +61,17 @@
     padding: var(--sp-base);
   }
 
+  .announcement {
+    font-family: var(--font-semiBold);
+    font-weight: var(--fw-heavy);
+  }
+
+  .heroCta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--sp-base);
+  }
+
   p.prominent {
     margin-top: 0;
   }
