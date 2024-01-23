@@ -56,6 +56,16 @@ const IndexPage = () => {
                   additionally are also committed to creating tech solutions
                   that serve organizations working to end mass incarceration.
                 </p>
+                <p className={cx(styles.announcement)}>
+                  Our Spring 1:1 Digital Literacy Mentorship cohort begins
+                  February 26th and is now accepting applications!
+                </p>
+
+                <div className={cx(styles.heroCta)}>
+                  <Link to="/programs">
+                    <CtaLink>Mentees and Mentors: Apply Now</CtaLink>
+                  </Link>
+                </div>
               </div>
               <div className="twoUpCard">
                 <StaticImage
