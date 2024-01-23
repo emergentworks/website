@@ -5,6 +5,7 @@ import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { getImage, StaticImage } from 'gatsby-plugin-image';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import CtaLink from '../components/CtaLink/CtaLink';
 
 import styles from './programs.module.scss';
@@ -63,7 +64,9 @@ const ProgramCard = ({
           <div className={cx(styles.programLinks)}>
             {shouldShowProgramLinks ? (
               links.map((link) => (
-                <CtaLink href={link.href}>{link.title}</CtaLink>
+                <OutboundLink>
+                  <CtaLink href={link.href}>{link.title}</CtaLink>
+                </OutboundLink>
               ))
             ) : (
               <span>
