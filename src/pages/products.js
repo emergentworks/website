@@ -4,7 +4,6 @@ import Layout from 'components/Layout';
 import SEO from 'components/seo';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { Hero } from '../components/Hero/Hero';
 
 import styles from './products.module.scss';
@@ -30,11 +29,9 @@ const ProductsPage = () => {
             Are you part of an organization in need of a technical solution to
             support your movement?
           </h2>
-          <OutboundLink>
-            <CtaLink href="https://airtable.com/appHQ4afO15UK9DwN/shrQsAFeo6QSRVsMH">
-              Contact Us
-            </CtaLink>
-          </OutboundLink>
+          <CtaLink href="https://airtable.com/appHQ4afO15UK9DwN/shrQsAFeo6QSRVsMH">
+            Contact Us
+          </CtaLink>
         </div>
         <p>
           We understand that every organization has technological needs, but
