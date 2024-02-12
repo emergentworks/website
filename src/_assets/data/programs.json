@@ -28,16 +28,19 @@
     "tracks": [
       {
         "title": "Digital Literacy",
+        "date": "Spring 2024",
         "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in computer system navigation, Google Suite, project management and much more!",
         "href": null
       },
       {
-        "title": "Digital Development (Front-End)",
+        "title": "Digital Development",
+        "date": "Fall 2024",
         "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in HTML, CSS, Javascript, website building, project management and much more!",
         "href": null
       },
       {
         "title": "UI/UX Design",
+        "date": "Fall 2024",
         "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in visual design, wireframing, userflows, project management and much more!",
         "href": null
       }

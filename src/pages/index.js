@@ -57,13 +57,15 @@ const IndexPage = () => {
                   that serve organizations working to end mass incarceration.
                 </p>
                 <p className={cx(styles.announcement)}>
-                  Our Spring 1:1 Digital Literacy Mentorship cohort begins
-                  February 26th and is now accepting applications!
+                  Ready to make a difference? Our Spring 1:1 Digital Literacy
+                  Mentorship cohort begins February 26th and we are still
+                  seeking volunteer mentors to help us make a profound change in
+                  the lives of returning citizens!
                 </p>
 
                 <div className={cx(styles.heroCta)}>
-                  <Link to="/programs">
-                    <CtaLink>Mentees and Mentors: Apply Now</CtaLink>
+                  <Link href="https://airtable.com/apparGbIS7FxQJM4M/shrToEfXoVDu63iES">
+                    <CtaLink>Become a Mentor today!</CtaLink>
                   </Link>
                 </div>
               </div>

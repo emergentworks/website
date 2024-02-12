@@ -17,9 +17,11 @@ const Tracks = ({ tracks }) => {
 
   return (
     <ul aria-label="Program Tracks" className={cx(styles.tracks)}>
-      {tracks.map(({ title, description }) => (
+      {tracks.map(({ title, description, date }) => (
         <li>
-          <span className={cx(styles.trackDescription, 'mb')}>{title}: </span>
+          <span className={cx(styles.trackDescription, 'mb')}>
+            {title} ({date}):{' '}
+          </span>
           <span>{description}</span>
         </li>
       ))}
@@ -99,6 +101,7 @@ const ProgramsPage = () => {
           tracks {
             title
             description
+            date
           }
         }
       }
