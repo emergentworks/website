@@ -39,16 +39,16 @@ const DonatePage = () => {
               </p>
               <ul>
                 <li>
+                  <span className="fwb">$15</span> covers one mentee's monthly
+                  wifi access
+                </li>
+                <li>
                   <span className="fwb">$50</span> covers one mentee weekly
                   learning stipend for our in-person program
                 </li>
                 <li>
                   <span className="fwb">$150</span> covers meals and learning
                   for 10 in-person mentees
-                </li>
-                <li>
-                  <span className="fwb">$300</span> covers one mentee learning
-                  stipend for our fall-intensive cohort
                 </li>
                 <li>
                   <span className="fwb">$500</span> covers one mentee learning
