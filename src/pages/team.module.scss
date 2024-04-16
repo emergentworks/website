@@ -37,8 +37,7 @@
     grid-column-gap: var(--sp-base);
     grid-row-gap: var(--sp-base);
     @media (min-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-column-gap: var(--sp-loose);
       grid-row-gap: var(--sp-loose);
     }

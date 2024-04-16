@@ -47,14 +47,18 @@ const IndexPage = () => {
                   and available to communities impacted by mass incarceration
                 </p>
                 <p>
-                  Emergent Works fights to end mass incarceration through both
-                  technical education and movement technical support. Our unique
-                  holistic and trauma-informed approach offers a comprehensive
-                  blend of technical education, skills training, one-on-one
-                  mentorship, and employment opportunities to individuals who
-                  have been impacted by the criminal legal system. We
-                  additionally are also committed to creating tech solutions
-                  that serve organizations working to end mass incarceration.
+                  Emergent Works pioneers solutions to combat mass incarceration
+                  by empowering black and brown individuals with technical
+                  education and skills-based training. Led by Executive Director
+                  Army Armstead, a former mentee and graduate of the program, we
+                  bridge the technology and education gap through innovative
+                  programs like 1:1 Virtual Mentorship and Bigger Than The Block
+                  youth initiative. Our impact extends beyond skill-building; we
+                  develop groundbreaking apps like the Bail Fund App, addressing
+                  systemic issues. Our approach, blending mentorship and
+                  industry-leading workshops, creates pathways to success for
+                  marginalized communities, making us a catalyst for change in
+                  the fight against mass incarceration.
                 </p>
 
                 {/* Call for mentors */}

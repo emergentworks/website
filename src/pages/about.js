@@ -45,56 +45,50 @@ const DonatePage = () => {
                 </span>
               </div>
               <p>
-                As a Black man and native of New York City, my lifelong desire
-                has been to impact my community positively. Drawing from my
-                background in ministry and music, I've recognized the pressing
-                need for safe spaces where marginalized voices can be heard.
-                Through my journey, I’ve understood the profound importance of
-                healing, redemption, and liberation through technology.
+                Founded in 2020 under Alex Qin's leadership, Emergent Works
+                envisioned creating a community where formerly incarcerated
+                people have a safe space to learn tech literacy and coding
+                skills that enable them to seek sustainable employment. Formerly
+                known as Code Cooperative, the organization's evolution was
+                shaped by Army's inspirational journey, starting as a mentee in
+                the mentorship program. Emergent Works took a significant step
+                forward by hiring its first employee and operations manager,
+                Army Armstead. With a background in teaching, music, and
+                ministry, Army brings a unique perspective and deep
+                understanding of the challenges faced by system-impacted
+                individuals. In his role, Army was responsible for overseeing
+                and designing innovative technical education programs tailored
+                specifically for communities affected by mass incarceration.
               </p>
               <p>
-                My introduction to Emergent Works (formerly Code Cooperative) in
-                2019 marked a pivotal moment. I not only enrolled in but
-                successfully completed the intensive 16-week cohort. What
-                resonated with me most was the discovery of a nurturing
-                community where transparency, growth, and leveraging our lived
-                experiences were encouraged while we learned how to code. Twelve
-                weeks into the program, driven by determination, I proudly
-                became the first employee and Operations Manager for Code
-                Cooperative. In this role, I spearheaded the development of our
-                innovative Virtual Technical Mentorship programs tailored to
-                communities affected by mass incarceration. Less than a year
-                later, I assumed the position of Executive Director at Emergent
-                Works.
+                Although COVID-19 disrupted many of EW’s plans, Army launched
+                the first EW 1:1 virtual mentorship program in year one,
+                virtually connecting formerly incarcerated individuals with
+                software engineers to build digital literacy and coding skills
+                to decrease recidivism, the digital divide, and generational
+                poverty. Under Army's leadership, the organization achieved
+                notable successes, including creating an open-source app called
+                Not911, an alternative to policing in a traditional sense while
+                connecting people to counseling, mediation, and intervention
+                services.
               </p>
               <p>
-                In the initial stages, I was the sole staff member at Emergent
-                Works, a challenging but invigorating role. I navigated the
-                complex landscape of securing funding, assembling a team from
-                the ground up, and laying the foundation for Emergent Works.
-                Today, I am immensely proud of our accomplishments. We've
-                expanded our program offerings by an impressive 600%, reaching
-                three times as many mentees nationwide. In addition to our
-                technical education programs, EW is committed to creating tech
-                solutions that serve organizations working to end mass
-                incarceration. Our engineering team serves as an education
-                continuum while creating technical solutions for community-based
-                organizations working on various efforts to confront the
-                criminal legal system and its impact on Black and Brown
-                communities. I’m honored to share that 69% of our team are
-                individuals directly impacted by the criminal legal system, and
-                58% are former program mentees.
-              </p>
-              <p>
-                Re-entering a world that has undergone emotional, social,
-                professional, and digital transformations can be daunting. This
-                realization is the driving force behind Emergent Works' mission.
-                We actively work to narrow the divide between the tech industry
-                and individuals with prior incarceration experiences by arming
-                them with essential technical skills. Our steadfast conviction
-                is that this connection can offer the vital support and
-                resources necessary for achieving economic stability,
-                self-reliance, and a significant decrease in reoffending.
+                Shortly after his tenure as Operations Manager, Army Armstead
+                became our Executive Director. Within three months, he
+                spearheaded efforts that led to Emergent Works securing a
+                $1,000,000 grant from Jack Dorsey's StartSmall fund. This grant
+                was instrumental in providing COVID-proof skills training to our
+                communities, underscoring our commitment to equitable access and
+                empowerment. In parallel, Army collaborated closely with his
+                team to forge impactful partnerships with the Community Justice
+                Exchange and the Chan Zuckerberg Initiative. Together, we
+                assumed ownership of the development and maintenance of the Bail
+                Fund App, a groundbreaking tool that facilitates efficient and
+                equitable access to bail funds for individuals incarcerated
+                during pretrial and immigration detention. This initiative
+                addresses a critical need within our justice system and provides
+                apprenticeship opportunities for returning citizens to gain
+                real-world experience.
               </p>
             </div>
             <div className="twoUpCard">
