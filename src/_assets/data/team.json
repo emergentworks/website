@@ -11,7 +11,7 @@
   },
   {
     "name": "Ariel Herman",
-    "role": "Engineering Manager",
+    "role": "Techncal Program Manager",
     "img": "ariel_herman"
   },
   {
@@ -20,18 +20,8 @@
     "img": "tine"
   },
   {
-    "name": "Carolyn Sy",
-    "role": "Senior Engineer",
-    "img": "carolyn_sy"
-  },
-  {
     "name": "Laiquan Dubose",
     "role": "Student Coordinator",
     "img": "laiquan"
-  },
-  {
-    "name": "Yusuf Bolden",
-    "role": "Associate Engineer",
-    "img": "yusuf_bolden"
   }
 ]

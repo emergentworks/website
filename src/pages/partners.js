@@ -4,6 +4,7 @@ import cx from 'classnames';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import { FeatureCard } from '../components/FeatureCard';
+import { PartnersModule } from '../components/PartnersModule/PartnersModule';
 
 import styles from './partners.module.scss';
 
@@ -47,6 +48,10 @@ const PartnersPage = () => {
               immigration detention systems.
             </p>
           </FeatureCard>
+        </section>
+        <section>
+          <h2>Our Community Partners</h2>
+          <PartnersModule />
         </section>
       </section>
     </Layout>
