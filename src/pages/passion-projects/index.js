@@ -115,6 +115,11 @@ const PassionProjects = () => {
                 further career building.
               </p>
               <p className="tc mb--sm">
+                <CtaLink href="https://emergentworks.super.site/spring-2024-portfolios">
+                  See Digtal Literacy Graduate Portfolios
+                </CtaLink>
+              </p>
+              <p className="tc mb--sm">
                 <Link to="/programs">
                   <CtaLink>Learn More About Our Programs</CtaLink>
                 </Link>
