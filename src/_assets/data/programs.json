@@ -1,6 +1,6 @@
 [
   {
-    "title": "1:1 Technical Mentorship Program",
+    "title": "TECK Community",
     "isAcceptingApplications": true,
     "qualifications": [
       "Age 18+",
@@ -11,14 +11,13 @@
     "commitments": [
       "5 month duration",
       "Up to 10 hrs weekly",
-      "Passion project",
-      "$500 stipends"
+      "Passion project"
     ],
-    "description": "A virtual mentorship program providing free access to three learning tracks of technical education, resources,  a safe community, and employment placement opportunities to formerly incarcerated and those impacted by the criminal legal system.",
+    "description": "A virtual community and mentorship program providing free access to technical education, resources,  a safe community, and employment placement opportunities for formerly incarcerated and those impacted by the criminal legal system.",
     "links": [
       {
         "title": "Mentees: Apply Here",
-        "href": "https://airtable.com/apparGbIS7FxQJM4M/shrMFJ9cUG7OIuP78"
+        "href": "https://airtable.com/apparGbIS7FxQJM4M/paga8cpmP4R1FaWsY/form"
       },
       {
         "title": "Mentors: Apply Here",
@@ -33,12 +32,6 @@
         "href": null
       },
       {
-        "title": "Digital Development",
-        "date": "Fall 2025",
-        "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in HTML, CSS, Javascript, website building, project management and much more!",
-        "href": null
-      },
-      {
         "title": "UI/UX Design",
         "date": "Fall 2025",
         "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in visual design, wireframing, userflows, project management and much more!",
@@ -47,7 +40,7 @@
     ]
   },
   {
-    "title": "Bigger Than The Block",
+    "title": "T.RAP",
     "isAcceptingApplications": true,
     "qualifications": ["Age 16-24", "NYC-based", "System-impacted"],
     "commitments": [
