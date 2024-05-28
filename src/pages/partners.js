@@ -52,7 +52,7 @@ const PartnersPage = () => {
             positive change.
           </h2>
 
-          <CtaLink href="https://airtable.com/appHQ4afO15UK9DwN/shrQsAFeo6QSRVsMH">
+          <CtaLink href="https://airtable.com/appHQ4afO15UK9DwN/shrrUxg9WZaBh2dqf">
             Contact Us
           </CtaLink>
         </div>
