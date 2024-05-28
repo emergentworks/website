@@ -52,13 +52,12 @@ const IndexPage = () => {
                   education and skills-based training. Led by Executive Director
                   Army Armstead, a former mentee and graduate of the program, we
                   bridge the technology and education gap through innovative
-                  programs like 1:1 Virtual Mentorship and Bigger Than The Block
-                  youth initiative. Our impact extends beyond skill-building; we
-                  develop groundbreaking apps like the Bail Fund App, addressing
-                  systemic issues. Our approach, blending mentorship and
-                  industry-leading workshops, creates pathways to success for
-                  marginalized communities, making us a catalyst for change in
-                  the fight against mass incarceration.
+                  programs like TECK (Technical Education and Career Knowledge)
+                  and T.RAP (Technology, Rhythm and Passion youth initiative).
+                  Our approach, blending mentorship and industry-leading
+                  workshops, creates pathways to success for marginalized
+                  communities, making us a catalyst for change in the fight
+                  against mass incarceration.
                 </p>
 
                 {/* Call for mentors */}
@@ -136,7 +135,7 @@ const IndexPage = () => {
                 )}
               >
                 <span>EW Alumni employment rate</span>
-                <span className={cx(styles.statistic)}>74%</span>
+                <span className={cx(styles.statistic)}>75%</span>
               </div>
               <div
                 className={cx(
@@ -157,11 +156,11 @@ const IndexPage = () => {
             >
               <div className="twoUpCard">
                 <div className={cx(styles.solutionsCard)}>
-                  <h3>Technical Programs</h3>
+                  <h3>T.RAP</h3>
                   <span>
-                    Innovative Technical Education
-                    <br />
-                    and Mentorship
+                    Empowering young artists impacted by the criminal legal
+                    system through artistry development, digital literacy, and
+                    professional growth
                   </span>
                   <Link to="/programs">
                     <CtaLink>Learn More</CtaLink>
@@ -170,12 +169,13 @@ const IndexPage = () => {
               </div>
               <div className="twoUpCard">
                 <div className={cx(styles.solutionsCard)}>
-                  <h3>Building Products</h3>
+                  <h3>TECK</h3>
                   <span>
-                    Movement Technical Solutions
-                    <br /> for Mission-Aligned Organizations
+                    Enhancing digital career skills for formerly-incarcerated
+                    individuals with instructor-led workshops and mentorship
+                    from industry professionals
                   </span>
-                  <Link to="/products">
+                  <Link to="/programs">
                     <CtaLink>Learn More</CtaLink>
                   </Link>
                 </div>
@@ -187,8 +187,8 @@ const IndexPage = () => {
             <div className={cx(styles.menteeBlock, 'twoUp')}>
               <div className="twoUpCard">
                 <StaticImage
-                  src="../_assets/images/homepage/makeda.jpg"
-                  alt="Makeda, an EW mentee"
+                  src="../_assets/images/homepage/terrence.jpg"
+                  alt="Terrence, an EW mentee"
                   cropFocus="attention"
                   layout="fullWidth"
                 />
@@ -196,20 +196,25 @@ const IndexPage = () => {
               <div className="twoUpCard">
                 <p className={cx(styles.prominent, 'tr')}>
                   <br />
-                  Emergent Works is the biggest reason
-                  <br />I was able to see this through
+                  EW gives you constant support at every step
                 </p>
                 <p className={cx(styles.cornerBorders, styles.quote)}>
-                  When I was finally released from my 9.5 year prison sentence,
-                  many employers would not hire me. I knew I wanted to become a
-                  software engineer but I needed extra help. The dedication,
-                  time, resources, equipment, emotional support and financial
-                  support from Emergent Works is the biggest reason I was able
-                  to see this through. Today I can proudly say I am a thriving
-                  Software Engineer.
+                  The EW experience was amazing, it gave me a complete
+                  connection of my technical skills, with being able to speak to
+                  teachers and mentors in real time. EW gives you constant
+                  support at every step of the process, all they ask if that you
+                  make the leg work to show you are committed to the process as
+                  well as yourself and making sure you are the best you can be
+                  to achieve your goals. I use my skills everyday currently.
+                  Today I work for a tech company as a junior software engineer
+                  thanks to EW, and am able to use my skills everyday at my work
+                  place as well as expand on my skills and knowledge. I’ve
+                  enjoyed it greatly and relish in the challenge of this new
+                  job. I’m forever grateful that when I do need help my mentor
+                  and EW family are in my corner.
                 </p>
                 <p className={cx(styles.attribution, 'tr')}>
-                  - Makeda, EW 2021 Cohort
+                  - Terrence, Emergent Works 2023 TECK graduate
                 </p>
                 <div className="tc mb--sm">
                   <Link to="/passion-projects">
@@ -242,7 +247,7 @@ const IndexPage = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/products">
+                    <Link to="/partners">
                       <CtaLink>Partner</CtaLink>
                     </Link>
                   </li>

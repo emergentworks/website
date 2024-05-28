@@ -1,12 +1,12 @@
 import React from 'react';
-import cx from 'classnames';
+// import cx from 'classnames';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import { FeatureCard } from '../components/FeatureCard';
 import { PartnersModule } from '../components/PartnersModule/PartnersModule';
+import CtaLink from '../components/CtaLink/CtaLink';
 
-import styles from './partners.module.scss';
+// import styles from './partners.module.scss';
 
 const PartnersPage = () => {
   return (
@@ -19,36 +19,15 @@ const PartnersPage = () => {
           to catalyze our shared goal to address and put an end to the crisis of
           mass incarceration.
         </p>
-        <section className={cx(styles.cardWrapper)}>
-          <FeatureCard
-            heading="Community Justice Exchange"
-            bannerCopy="Featured Partner"
-            isFeatured
-          >
-            <p>
-              Emergent Works partners with the Community Justice Exchange (CJE)
-              on one of our flagship software products, the Bail Fund App (BFA).
-              The BFA is a bespoke web-based CRM that supports the National Bail
-              Fund Network, a network of over ninety community bail and bond
-              funds across the country organized in collaboration with CJE. The
-              BFA supports funds within the NBFN in more efficiently and
-              effectively deploying bail funds to individuals in pretrial and
-              immigration detention who could otherwise not afford it.
-            </p>
-
-            <p>
-              As a tool, the BFA supports CJE’s work and goal to serve as a
-              national hub for developing, sharing, and experimenting with
-              tactical interventions, strategic organizing practices, and
-              innovative organizing tools toward prison industrial complex
-              abolition. By increasing the capacity of community bail funds in
-              the NBFN, EW’s work furthers the work of CJE in providing support
-              to community-based organizations that are experimenting with
-              bottom-up, power-building interventions in the criminal legal and
-              immigration detention systems.
-            </p>
-          </FeatureCard>
-        </section>
+        <div className="tc">
+          <h2>
+            Are you part of an organization in need of a technical solution to
+            support your movement?
+          </h2>
+          <CtaLink href="https://airtable.com/appHQ4afO15UK9DwN/shrQsAFeo6QSRVsMH">
+            Contact Us
+          </CtaLink>
+        </div>
         <section>
           <h2>Our Community Partners</h2>
           <PartnersModule />
