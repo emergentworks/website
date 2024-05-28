@@ -1,19 +1,16 @@
 [
   {
-    "title": "TECK Community",
+    "title": "TECK",
+    "subtitle": "Technical Education and Career Knowledge",
     "isAcceptingApplications": true,
     "qualifications": [
       "Age 18+",
-      "U.S-Based",
-      "Skills assessments",
-      "System/justice-impacted"
+      "U.S.-based",
+      "System/justice-impacted",
+      "Wifi and computer access"
     ],
-    "commitments": [
-      "5 month duration",
-      "Up to 10 hrs weekly",
-      "Passion project"
-    ],
-    "description": "A virtual community and mentorship program providing free access to technical education, resources,  a safe community, and employment placement opportunities for formerly incarcerated and those impacted by the criminal legal system.",
+    "commitments": ["12 weeks", "Up to 10 hrs weekly", "Graduation project"],
+    "description": "A virtual community and mentorship program providing free access to technical education, resources, a safe community, and employment placement opportunities for formerly incarcerated and those impacted by the criminal legal system.",
     "links": [
       {
         "title": "Mentees: Apply Here",
@@ -28,19 +25,20 @@
       {
         "title": "Digital Literacy",
         "date": "Spring 2025",
-        "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in computer system navigation, Google Suite, project management and much more!",
+        "description": "12-week instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in computer system navigation, Google Suite, project management and much more!",
         "href": null
       },
       {
-        "title": "UI/UX Design",
+        "title": "Digital Design",
         "date": "Fall 2025",
-        "description": "5-month instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in visual design, wireframing, userflows, project management and much more!",
+        "description": "12-week instructor-based classes followed up with individual sessions with an industry professional mentor equipping mentees with skills in user experience, visual design, branding, userflows and much more!",
         "href": null
       }
     ]
   },
   {
     "title": "T.RAP",
+    "subtitle": "Technology, Rhythm and Passion",
     "isAcceptingApplications": true,
     "qualifications": ["Age 16-24", "NYC-based", "System-impacted"],
     "commitments": [
@@ -48,7 +46,7 @@
       "Up to 4 hrs weekly",
       "Incentivized learning"
     ],
-    "description": "An in-person program for system or justice impacted youth providing key support to achieve outlined professional and personal goals, work readiness and digital literacy training and connection to employment opportunities.",
+    "description": "An in-person program for youth impacted by the criminal legal system providing artistry development, digital literacy, and professional growth as well as individual support to achieve outlined professional and personal goals.",
     "links": [
       {
         "title": "Apply Here",
