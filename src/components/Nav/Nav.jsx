@@ -6,7 +6,7 @@ import SocialLinks from 'components/SocialLinks';
 
 import styles from './Nav.module.scss';
 
-const PAGES = ['About', 'Programs', 'Products', 'Team', 'Partners'];
+const PAGES = ['About', 'Programs', 'Team', 'Partners'];
 
 export const Nav = ({ navVisibility, banner, className, ...rest }) => (
   <nav

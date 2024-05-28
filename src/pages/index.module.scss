@@ -162,7 +162,7 @@
     font-size: var(--fs-base);
 
     @media (min-width: 768px) {
-      padding: 0 var(--sp-loose);
+      padding: 0;
     }
 
     & > a {

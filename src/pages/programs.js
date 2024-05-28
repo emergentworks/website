@@ -16,7 +16,7 @@ const Tracks = ({ tracks }) => {
   }
 
   return (
-    <ul aria-label="Program Tracks" className={cx(styles.tracks)}>
+    <ul aria-label="Cohorts" className={cx(styles.tracks)}>
       {tracks.map(({ title, description, date }) => (
         <li>
           <span className={cx(styles.trackDescription, 'mb')}>
@@ -31,6 +31,7 @@ const Tracks = ({ tracks }) => {
 
 const ProgramCard = ({
   title,
+  subtitle,
   isAcceptingApplications,
   qualifications,
   commitments,
@@ -38,11 +39,15 @@ const ProgramCard = ({
   links,
   tracks,
 }) => {
+  console.log(subtitle);
   const shouldShowProgramLinks = isAcceptingApplications && links;
   return (
     <div className={cx(styles.programCard, 'twoUp mb')}>
       <div className="twoUpCard">
-        <h3 className={cx(styles.programTitle)}>{title}</h3>
+        <h3 className={cx(styles.programTitle)}>
+          {title}
+          <span className={cx(styles.programSubtitle)}>{subtitle}</span>
+        </h3>
       </div>
       <div className={cx(styles.programInfo, 'twoUpCard')}>
         {qualifications && (
@@ -98,6 +103,7 @@ const ProgramsPage = () => {
           }
           qualifications
           title
+          subtitle
           tracks {
             title
             description
@@ -116,12 +122,7 @@ const ProgramsPage = () => {
       <Hero image={getImage(data.hero)} title="Our Programs" />
       <div className={cx(styles.root, 'page-content')}>
         <section>
-          <p className={cx(styles.prominent, 'tc')}>
-            We imagine a world where technical education unlocks equitable
-            <br />
-            economic mobility for system-impacted communities
-          </p>
-          <div className="twoUp">
+          <div className="twoUp" style={{ marginTop: '60px' }}>
             <div className="twoUpCard">
               <StaticImage
                 src="../_assets/images/programs/programming.jpg"
@@ -146,15 +147,6 @@ const ProgramsPage = () => {
                   </CtaLink>
                 </Link>
               </p>
-              <p>
-                Our three programs cater to different needs as well as various
-                learning levels.
-              </p>
-              <ul>
-                <li>In-person Program (Bigger Than The Block)</li>
-                <li>Virtual Program (1:1 Technical Mentorship)</li>
-                <li>Apprenticeship (Leadership Apprentice Program) </li>
-              </ul>
             </div>
           </div>
         </section>
@@ -163,6 +155,7 @@ const ProgramsPage = () => {
           {programs.map(
             ({
               title,
+              subtitle,
               isAcceptingApplications,
               qualifications,
               commitments,
@@ -172,6 +165,7 @@ const ProgramsPage = () => {
             }) => (
               <ProgramCard
                 title={title}
+                subtitle={subtitle}
                 isAcceptingApplications={isAcceptingApplications}
                 qualifications={qualifications}
                 commitments={commitments}
@@ -191,6 +185,7 @@ export default ProgramsPage;
 
 ProgramCard.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   isAcceptingApplications: PropTypes.bool.isRequired,
   qualifications: PropTypes.arrayOf(PropTypes.string),
   commitments: PropTypes.arrayOf(PropTypes.string),
