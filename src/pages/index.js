@@ -251,6 +251,11 @@ const IndexPage = () => {
                       <CtaLink>Partner</CtaLink>
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/newsletter">
+                      <CtaLink>Newsletter</CtaLink>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

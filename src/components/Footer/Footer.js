@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import Nav from 'components/Nav';
 import SocialLinks from 'components/SocialLinks';
-// import SubscribeForm from 'components/SubscribeForm';
+import SubscribeForm from 'components/SubscribeForm';
 
 import styles from './Footer.module.scss';
 
@@ -20,6 +20,7 @@ export const Footer = () => {
           </div>
           <div className={styles.socialGroup}>
             <SocialLinks />
+            <SubscribeForm />
           </div>
         </div>
         <p className={styles.description}>
