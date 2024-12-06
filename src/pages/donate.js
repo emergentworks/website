@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
+import Helmet from 'react-helmet';
 import SEO from '../components/seo';
 import Layout from '../components/Layout';
 import { Hero } from '../components/Hero/Hero';
@@ -21,6 +22,9 @@ const DonatePage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <script src="https://widgets.givebutter.com/latest.umd.cjs?acct=Dmyv83PBiHwhPXgd&p=other" />
+      </Helmet>
       <SEO title="Donate" />
       <Hero image={getImage(data.hero)} title="Your Support" />
       <div className={cx(styles.root, 'page-content')}>
@@ -58,19 +62,7 @@ const DonatePage = () => {
             </div>
             <div className="twoUpCard">
               <div className={cx(styles.donationWidgetWrapper)}>
-                <script
-                  src="https://donorbox.org/widget.js"
-                  paypalExpress="false"
-                />
-                <iframe
-                  title="Donate to Emergent Works!"
-                  allowpaymentrequest=""
-                  height="900px"
-                  name="donorbox"
-                  seamless="seamless"
-                  src="https://donorbox.org/embed/website-donation-15"
-                  width="100%"
-                />
+                <givebutter-widget id="jNOdoL" />
               </div>
             </div>
           </div>
