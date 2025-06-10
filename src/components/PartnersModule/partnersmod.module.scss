@@ -1,8 +1,4 @@
-/*
- *
- * Partners
- *
- */
+// src/components/PartnersModule/partnersmod.module.scss
 
 .logoGroup {
   display: flex;
@@ -12,6 +8,10 @@
   align-items: center;
 }
 
-.logoGroup > div {
-  max-width: 130px;
+.logoCard {
+  display: inline-flex;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }

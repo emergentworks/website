@@ -40,8 +40,8 @@ export async function PartnersModule({
               src={logo.logo}
               alt={logo.name.replace("featured_", "")}
               width={130}
-              height={80} // TODO - study this
-              style={{ objectFit: "contain" }}
+              height={80} // placeholder height, fixed later
+              style={{ height: "auto" }}
             />
           </div>
         ))}
