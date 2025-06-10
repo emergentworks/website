@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray-background);
+}
+
+iframe {
+  width: 100%;
+  border: 0;
+}
+
+.threeUp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.threeUpCard {
+  display: flex;
+  flex: 1 0 100px;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    flex: 0 1 350px;
+  }
+}
+
+.twoUp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.twoUpCard {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 48%;
+  }
+}
+
+.threeUp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.threeUpCard {
+  display: flex;
+  flex: 1 0 100px;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    flex: 0 1 350px;
+  }
+}
