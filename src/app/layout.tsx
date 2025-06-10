@@ -11,10 +11,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${ibmPlexSans.variable} ${ibmPlexMono.variable}`}>
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

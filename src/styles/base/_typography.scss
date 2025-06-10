@@ -4,48 +4,46 @@ body {
   font-size: var(--fs-base);
   color: var(--gray-600);
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
 .h1 {
-  font-family: var(--font-semiBold);
+  font-weight: var(--fw-heaviest);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
   line-height: 2.5rem;
-  font-weight: var(--fw-heavy);
   font-size: var(--fs-xl);
 }
 
 h2,
 .h2 {
-  font-family: var(--font-light);
-  font-size: var(--fs-xl);
+  font-weight: var(--fw-heavy);
+  font-size: var(--fs-l);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
-  font-weight: normal;
-  font-size: var(--fs-l);
 }
 
 h3,
 .h3 {
+  font-weight: var(--fw-heavier);
   font-size: var(--fs-l);
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
-  font-weight: normal;
 }
 
 h4,
 .h4 {
-  font-size: var(--fs-base);
+  font-weight: var(--fw-heavier);
   text-transform: uppercase;
   margin-top: var(--sp-base);
   margin-bottom: var(--sp-base);
-  font-weight: normal;
   font-size: var(--fs-sm);
 }
 
 a {
-  font-family: var(--font-semiBold);
+  font-weight: var(--fw-heaviest);
   color: var(--link-primary);
   text-decoration: none;
 }
@@ -60,7 +58,7 @@ a:active {
 
 a.secondary:link,
 a.secondary:visited {
-  font-family: var(--font-text);
+  font-weight: var(--fw-heavier);
   color: var(--link-secondary);
   text-decoration: none;
 }
@@ -76,7 +74,7 @@ p {
 }
 
 .bold {
-  font-family: var(--font-medium);
+  font-weight: 500;
 }
 
 .bullet-list {
@@ -147,13 +145,3 @@ p {
   border-bottom: 4px solid var(--white-500);
   border-right: 4px solid var(--white-500);
 }
-
-// h2.cornerBorders {
-//   margin-top: var(--sp-loose);
-//   margin-bottom: var(--sp-loose);
-//   margin-left: var(--sp-base);
-//   margin-right: var(--sp-loose);
-//   @media (min-width: 768px) {
-//     margin: var(--sp-looser);
-//   }
-// }

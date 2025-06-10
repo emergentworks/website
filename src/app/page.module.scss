@@ -5,6 +5,8 @@
  *
  */
 
+@import "abstracts/mixins";
+
 .root {
   p {
     line-height: var(--lh-loose);
@@ -24,7 +26,7 @@
   }
 
   section h2 {
-    font-family: var(--font-semiBold);
+    font-weight: var(--fw-heaviest); /* Changed from font-family */
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
     }
@@ -60,8 +62,7 @@
   }
 
   .announcement {
-    font-family: var(--font-semiBold);
-    font-weight: var(--fw-heavy);
+    font-weight: var(--fw-heaviest); /* Changed from font-family */
   }
 
   .heroCta {
@@ -75,7 +76,7 @@
   }
 
   .prominent {
-    font-family: var(--font-semiBold);
+    font-weight: var(--fw-heaviest); /* Changed from font-family */
     line-height: var(--lh-loose);
     font-size: 1.2;
     @media (min-width: 768px) {
@@ -116,7 +117,7 @@
 
     h2 {
       color: var(--white-500);
-      font-family: var(--font-semiBold);
+      font-weight: var(--fw-heaviest); /* Changed from font-family */
       text-align: left;
       @media (min-width: 768px) {
         font-size: var(--fs-xxl);
@@ -208,15 +209,13 @@
   .statistic {
     padding: var(--sp-tight) 0;
     font-size: var(--fs-l);
-    font-family: var(--font-light);
-    font-weight: var(--fw-heavy);
+    font-weight: var(--fw-heavy); /* Changed from font-family */
     line-height: 30px;
   }
 
   .green {
     color: var(--ew-green);
-    font-family: var(--font-semiBold);
-    font-weight: var(--fw-heavy);
+    font-weight: var(--fw-heaviest); /* Changed from font-family */
     text-transform: uppercase;
   }
 

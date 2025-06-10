@@ -60,7 +60,7 @@ input[input="search"] {
 // labels for inputs
 .input-label {
   font-size: var(--fs-l);
-  font-family: var(--font-medium) & + & {
+  font-weight: 500 & + & {
     margin-left: var(--sp-base);
   }
 }
