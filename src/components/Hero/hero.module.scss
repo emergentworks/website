@@ -5,6 +5,12 @@
  */
 
 .root {
+  // TODO - study these
+  position: relative;
+  display: grid;
+  height: 50vh;
+  max-height: 450px;
+
   img {
     @include imgFilter;
   }
