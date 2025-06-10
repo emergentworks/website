@@ -1,0 +1,49 @@
+.gridItem {
+  width: 100%;
+}
+
+.gap1 {
+  gap: var(--sp-tight);
+}
+.gap2 {
+  gap: var(--sp-base);
+}
+.gap3 {
+  gap: var(--sp-loose);
+}
+.gap4 {
+  gap: var(--sp-looser);
+}
+
+.gap5 {
+  gap: var(--sp-loosest);
+}
+
+.columns {
+  grid-template-columns: repeat(auto-fit, minmax(var(--bp-sm), 1fr));
+}
+
+.root {
+  display: grid;
+}
+
+// Alignment
+.top {
+  align-self: flex-start;
+}
+.middle {
+  align-self: center;
+}
+.bottom {
+  align-self: flex-end;
+}
+
+.left {
+  justify-self: flex-start;
+}
+.center {
+  justify-self: center;
+}
+.right {
+  justify-self: flex-end;
+}

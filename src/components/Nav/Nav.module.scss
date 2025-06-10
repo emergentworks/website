@@ -1,0 +1,106 @@
+.root {
+  font-size: var(--fs-m);
+
+  .isActive:not(.donate) {
+    background: url("../../_assets/images/squiggly.svg");
+    background-position: bottom -8px center;
+    background-repeat: no-repeat;
+    padding-bottom: 22px;
+  }
+
+  @media (max-width: 51.5rem) {
+    &.isActive {
+      // ToDo: Removed Important
+      bottom: 0px;
+      transform: translateY(0px) !important;
+      opacity: 1 !important;
+      transition: opacity 0.25s ease;
+
+      .item {
+        text-align: right;
+      }
+
+      .item a {
+        display: inline-block;
+        width: auto;
+        font-size: var(--fs-l);
+        margin: var(--sp-tight) 0;
+        font-family: var(--font-light);
+      }
+    }
+  }
+}
+
+.group {
+  @include removeBullets();
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-tight);
+  @include bp(lg) {
+    gap: var(--sp-loose);
+    flex-direction: row;
+  }
+}
+
+.item {
+  @include bp(lg) {
+    flex-direction: row;
+    display: inline;
+    align-items: baseline;
+  }
+}
+
+.mobileOnly {
+  display: none;
+
+  @media (max-width: 51.5rem) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: var(--sp-base);
+  }
+}
+
+.horizontalRule {
+  height: 0px;
+  width: 42px;
+  border-top: 1px solid var(--gray-600);
+}
+
+.contact {
+  padding-top: calc(var(--sp-base) + var(--sp-tight));
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a.donate:link,
+a.donate:visited,
+a.donate:focus,
+a.donate:active {
+  position: relative;
+  padding: 9px 8px 7px;
+  background-color: var(--ew-green);
+  color: unset;
+  text-decoration: unset;
+}
+
+a.donate:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96%;
+  height: 100%;
+  border: 1px solid black;
+  transform: rotate(4deg);
+  transition: transform 0.15s linear;
+  pointer-events: none;
+}
+
+a.donate:hover::after {
+  transform: rotate(-3deg);
+}

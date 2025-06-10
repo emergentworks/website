@@ -1,0 +1,11 @@
+.link {
+  display: inline-block;
+
+  &:not(:first-child) {
+    padding-left: var(--sp-loose);
+  }
+
+  .icon {
+    fill: var(--icon-fill-base);
+  }
+}

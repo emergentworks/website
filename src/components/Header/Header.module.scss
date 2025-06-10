@@ -1,0 +1,107 @@
+.root {
+  padding: var(--sp-loose);
+  position: sticky;
+  top: 0;
+  background: var(--gray-background);
+  z-index: 999;
+  border-bottom: 1px solid var(--slate-900);
+
+  @media (max-width: 51.5rem) {
+    padding: var(--sp-tight);
+    .navGroup > .nav {
+      // mobile styles for menu
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      overflow: hidden;
+      padding: var(--sp-loose);
+      opacity: 0;
+      left: 0;
+      right: 0;
+      top: 3.7rem;
+      background-color: var(--gray-background);
+      transition:
+        transform 0.5s ease,
+        opacity 0.35s ease;
+      transform: translateY(-150%);
+      z-index: 1000;
+
+      &.bannerActive {
+        top: 9.25rem;
+      }
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  max-width: var(--bp-xxl);
+  margin: 0 auto;
+}
+
+.navGroup {
+  display: grid;
+  justify-items: flex-end;
+
+  & > .nav {
+    display: flex;
+    align-items: center;
+
+    @include bp(lg) {
+      visibility: initial;
+      height: auto;
+    }
+  }
+}
+
+// Menu Icon
+
+.navButton {
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  justify-self: end;
+
+  @include bp(lg) {
+    display: none;
+  }
+}
+
+.navButton:after,
+.navButton:before,
+.navButton div {
+  background-color: var(--icon-fill-base);
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.navButton {
+  &.is-active {
+    &:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+    &:after {
+      transform: translateY(-10px) rotate(-135deg);
+    }
+    & div {
+      transform: scale(0);
+    }
+  }
+}
+
+.logoWrapper {
+  position: relative;
+  top: 5px;
+}
+
+.logo {
+  width: 194px;
+  object-fit: contain;
+}
