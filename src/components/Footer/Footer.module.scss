@@ -1,13 +1,14 @@
-@import "../../styles/abstracts/mixins";
+@import "abstracts/mixins";
 
 .root {
-  margin: var(--sp-loosest);
+  margin-top: var(--sp-loosest);
+  margin-bottom: var(--sp-loosest);
   border-top: 1px solid var(--gray-500);
   padding-top: var(--sp-loosest);
-  text-align: center;
   @media (max-width: 51.5rem) {
     //TODO: use base styles
     margin: var(--sp-tight);
+    text-align: center;
   }
 }
 
@@ -27,8 +28,6 @@
   max-width: var(--bp-lg);
   margin-top: var(--sp-tight);
   margin-bottom: var(--sp-tight);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .nav {

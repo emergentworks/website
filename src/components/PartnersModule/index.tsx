@@ -41,7 +41,12 @@ export async function PartnersModule({
               alt={logo.name.replace("featured_", "")}
               width={130}
               height={80} // placeholder height, fixed later
-              style={{ height: "auto" }}
+              style={{
+                height: "auto",
+                width: "auto",
+                maxHeight: "80px",
+                maxWidth: "130px",
+              }}
             />
           </div>
         ))}

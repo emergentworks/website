@@ -9,9 +9,11 @@
 }
 
 .logoCard {
-  display: inline-flex;
-  padding: 0.5rem;
-  background-color: white;
+  position: relative; // REQUIRED for the child's `fill` prop
+  width: 130px;
+  height: 80px;
+  box-sizing: border-box; // Ensure padding doesn't increase the card size
+
+  // Visual styling
   border-radius: var(--border-radius);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
