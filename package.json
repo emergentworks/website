@@ -22,10 +22,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "classnames": "^2.5.1",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
     "eslint-config-prettier": "^10.1.5",
     "prettier": "^3.5.3",
+    "sass": "^1.89.2",
     "typescript": "^5"
   },
   "license": "MIT"
