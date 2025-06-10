@@ -7,30 +7,27 @@
 @import "abstracts/mixins";
 
 .root {
-  // TODO - study these
-  position: relative;
-  display: grid;
-  height: 50vh;
-  max-height: 450px;
-
+  // Most styles were moved inline to the component,
+  // but we can keep the image filter here.
   img {
     @include imgFilter;
   }
+}
 
-  .heroTitle {
-    @include heroTitle;
-    padding: var(--sp-base);
-  }
-  .imageOverlay {
-    text-shadow: var(--gray-600) 1px 0 30px;
-    grid-area: 1/1;
-    position: relative;
-    place-items: flex-start;
-    align-items: flex-end;
-    display: grid;
-    color: var(--white-500);
-  }
-  .imageOverlay > * {
+.heroTitle {
+  @include heroTitle;
+  padding: var(--sp-base);
+}
+
+.imageOverlay {
+  text-shadow: var(--gray-600) 1px 0 30px;
+  // grid-area and position are now inline
+  place-items: flex-start;
+  align-items: flex-end;
+  display: grid;
+  color: var(--white-500);
+
+  & > * {
     @media (min-width: 768px) {
       left: 15%;
     }

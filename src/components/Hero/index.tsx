@@ -16,20 +16,32 @@ type HeroProps = {
 
 export function Hero({ title, image, children, className }: HeroProps) {
   return (
-    <div className={cx(styles.root, className)}>
-      <Image
-        src={image}
-        alt={title || "Hero Background"}
-        fill
+    <div className={cx(styles.root, className)} style={{ display: "grid" }}>
+      {/* This new wrapper div mimics the old GatsbyImage wrapper */}
+      <div
         style={{
           gridArea: "1/1",
-          objectFit: "cover", // Replicates background-size: cover
+          position: "relative", // Needed for the child Image with "fill"
+          height: "50vh",
+          maxHeight: "450px",
         }}
-        priority // Good to add if the Hero is the first major image on the page
-      />
+      >
+        <Image
+          src={image}
+          alt={title || "Hero Background"}
+          fill
+          style={{
+            objectFit: "cover",
+            objectPosition: "left 27%", // Keep this to focus the image correctly
+          }}
+          priority
+        />
+      </div>
+
+      {/* This is the text overlay */}
       <div
-        style={{ gridArea: "1/1", position: "relative" }}
         className={cx(styles.imageOverlay)}
+        style={{ gridArea: "1/1", position: "relative" }}
       >
         {children ?? (title && <PageTitle title={title} />)}
       </div>
