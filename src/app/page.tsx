@@ -18,7 +18,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className={cx(styles.root)}>
-        <Hero image={heroImage} title="Title">
+        <Hero image={heroImage} title="Title" objectPosition="left 27%">
           <h1 className={cx(styles.hero, "cornerBordersHero")}>
             Technology is our <span className={cx(styles.green)}>key</span>
             <br />

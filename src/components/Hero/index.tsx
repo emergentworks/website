@@ -8,20 +8,26 @@ const PageTitle = ({ title }: { title: string }) => (
 );
 
 type HeroProps = {
-  image: StaticImageData | string;
   title?: string;
+  image: StaticImageData | string;
   children?: React.ReactNode;
   className?: string;
+  objectPosition?: string;
 };
 
-export function Hero({ title, image, children, className }: HeroProps) {
+export function Hero({
+  title,
+  image,
+  children,
+  className,
+  objectPosition = "left 25%",
+}: HeroProps) {
   return (
     <div className={cx(styles.root, className)} style={{ display: "grid" }}>
-      {/* This new wrapper div mimics the old GatsbyImage wrapper */}
       <div
         style={{
           gridArea: "1/1",
-          position: "relative", // Needed for the child Image with "fill"
+          position: "relative",
           height: "50vh",
           maxHeight: "450px",
         }}
@@ -32,13 +38,11 @@ export function Hero({ title, image, children, className }: HeroProps) {
           fill
           style={{
             objectFit: "cover",
-            objectPosition: "left 27%", // Keep this to focus the image correctly
+            objectPosition: objectPosition,
           }}
           priority
         />
       </div>
-
-      {/* This is the text overlay */}
       <div
         className={cx(styles.imageOverlay)}
         style={{ gridArea: "1/1", position: "relative" }}
