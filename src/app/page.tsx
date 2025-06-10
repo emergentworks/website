@@ -1,12 +1,13 @@
+import Layout from "components/Layout";
+
 export default function Home() {
   return (
-    <div className="foo">
-      <main className="bar">
-        <p>Woof anan.</p>
-      </main>
-      <footer className="baz">
-        <p>Woof</p>
-      </footer>
-    </div>
+    <Layout>
+      <h1 className="h1">Hello, Styles!</h1>
+      <p>
+        If you can see this text styled, along with the header and footer, your
+        SCSS rules are being applied correctly.
+      </p>
+    </Layout>
   );
 }

@@ -1,14 +1,25 @@
+"use client";
+
 import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import Link from "next/link";
+import Image from "next/image";
 import cx from "classnames";
 
-import Nav from "components/Nav";
-import logo from "../../_assets/images/logo--horizontal.png";
+import Nav from "components/Nav"; // Assuming Nav is also converted
 
 import styles from "./Header.module.scss";
 
-export const Header = ({ navVisibility, setNavVisibility, banner }) => {
+type HeaderProps = {
+  navVisibility: boolean;
+  setNavVisibility: (visible: boolean) => void;
+  banner?: React.ReactNode;
+};
+
+export const Header = ({
+  navVisibility,
+  setNavVisibility,
+  banner,
+}: HeaderProps) => {
   const activeMenu = () => {
     setNavVisibility(!navVisibility);
   };
@@ -18,8 +29,15 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
       <div className={styles.container}>
         <div className={styles.logoGroup}>
           <span className={styles.logoWrapper}>
-            <Link to="/">
-              <img className={styles.logo} src={logo} alt="emergent works" />
+            <Link href="/">
+              <Image
+                className={styles.logo}
+                src="/images/logo--horizontal.png"
+                alt="emergent works"
+                width={194}
+                height={35}
+                priority // Load the logo quickly
+              />
             </Link>
           </span>
         </div>
@@ -29,13 +47,13 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
             className={cx(styles.navButton, {
               [styles.isActive]: navVisibility,
             })}
-            onClick={() => activeMenu()}
+            onClick={activeMenu}
           >
             <div />
           </button>
           <Nav
             className={cx(styles.nav, {
-              [styles.bannerActive]: banner,
+              [styles.bannerActive]: !!banner,
             })}
             navVisibility={navVisibility}
           />
@@ -45,8 +63,4 @@ export const Header = ({ navVisibility, setNavVisibility, banner }) => {
   );
 };
 
-Header.propTypes = {
-  navVisibility: PropTypes.bool,
-  banner: PropTypes.object,
-  setNavVisibility: PropTypes.func,
-};
+export default Header;
