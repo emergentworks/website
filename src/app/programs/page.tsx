@@ -4,7 +4,6 @@ import React from "react";
 import type { Metadata } from "next";
 import cx from "classnames";
 import Image from "next/image";
-import Link from "next/link";
 
 import Layout from "components/Layout";
 import Hero from "components/Hero";
@@ -131,10 +130,10 @@ const ProgramsPage = () => {
               <Image
                 src={programmingImage}
                 alt="Mentorship Program participants"
-                layout="responsive" // Add this prop
-                width={700} // Provide an intrinsic width (can be approximate)
-                height={500} // Provide an intrinsic height (can be approximate)
-                style={{ objectFit: "contain" }} // Ensure the whole image is visible
+                layout="responsive"
+                width={700}
+                height={500}
+                style={{ objectFit: "contain" }}
               />
             </div>
             <div className="twoUpCard">
