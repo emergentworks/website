@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import cx from 'classnames';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import styles from './partnersmod.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import cx from "classnames";
+import { GatsbyImage } from "gatsby-plugin-image";
+import styles from "./partnersmod.module.scss";
 
 export const PartnersModule = ({ isLimited = false }) => {
   const allPartnersData = useStaticQuery(graphql`
@@ -21,10 +21,10 @@ export const PartnersModule = ({ isLimited = false }) => {
   `);
 
   const allPartners = allPartnersData.partners.nodes.sort(
-    (a, b) => a.name > b.name
+    (a, b) => a.name > b.name,
   );
   const selectPartners = allPartners.filter((partner) =>
-    partner.name.includes('featured_')
+    partner.name.includes("featured_"),
   );
 
   const images = isLimited ? selectPartners : allPartners;

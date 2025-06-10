@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import SocialLinks from 'components/SocialLinks';
+import React from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import SocialLinks from "components/SocialLinks";
 
-import styles from './Nav.module.scss';
+import styles from "./Nav.module.scss";
 
-const PAGES = ['About', 'Programs', 'Team', 'Partners'];
+const PAGES = ["About", "Programs", "Team", "Partners"];
 
 export const Nav = ({ navVisibility, banner, className, ...rest }) => (
   <nav

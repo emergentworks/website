@@ -1,11 +1,11 @@
-import React from 'react';
-import cx from 'classnames';
-import Layout from 'components/Layout';
-import SEO from 'components/seo';
-import { useStaticQuery, graphql } from 'gatsby';
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
-import { Hero } from '../components/Hero/Hero';
-import styles from './team.module.scss';
+import React from "react";
+import cx from "classnames";
+import Layout from "components/Layout";
+import SEO from "components/seo";
+import { useStaticQuery, graphql } from "gatsby";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import { Hero } from "../components/Hero/Hero";
+import styles from "./team.module.scss";
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -59,7 +59,7 @@ const TeamPage = () => {
         image={getImage(data.hero)}
         title="Our Team"
       />
-      <div className={cx(styles.root, 'page-content')}>
+      <div className={cx(styles.root, "page-content")}>
         <p>
           Army’s vision was to build a skilled team representing our communities
           and embodying our mission work. Four years later, we are proud to say

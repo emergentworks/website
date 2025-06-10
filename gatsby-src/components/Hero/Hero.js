@@ -1,26 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import styles from './hero.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import { GatsbyImage } from "gatsby-plugin-image";
+import styles from "./hero.module.scss";
 
 const PageTitle = ({ title }) => (
-  <h1 className={cx(styles.heroTitle, 'cornerBordersHero')}>{title}</h1>
+  <h1 className={cx(styles.heroTitle, "cornerBordersHero")}>{title}</h1>
 );
 
 export const Hero = ({ title, image, children, className }) => {
   return (
     <div
       className={`${cx(styles.root)} ${className}`}
-      style={{ display: 'grid' }}
+      style={{ display: "grid" }}
     >
       <GatsbyImage
         image={image}
         alt=""
         style={{
-          gridArea: '1/1',
-          height: '50vh',
-          maxHeight: '450px',
+          gridArea: "1/1",
+          height: "50vh",
+          maxHeight: "450px",
         }}
       />
       <div className={cx(styles.imageOverlay)}>

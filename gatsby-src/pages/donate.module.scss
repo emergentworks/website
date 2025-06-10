@@ -1,4 +1,4 @@
-@import '../_assets/css/abstracts/mixins';
+@import "../_assets/css/abstracts/mixins";
 
 /*
  *
@@ -45,13 +45,13 @@
     display: flex;
     justify-content: center;
     givebutter-widget {
-        width: 80%;
+      width: 80%;
     }
   }
 
   // Old Virtuous Styles -- Keep
 
-  [id='virtuous-form'] {
+  [id="virtuous-form"] {
     border: 0;
     height: 1500px;
     @media (min-width: 768px) {
@@ -59,13 +59,13 @@
     }
   }
 
-  [id='dd-form'] {
+  [id="dd-form"] {
     height: 500px;
     margin: var(--sp-loose) 0;
     background-color: var(--white-500);
   }
 
-  [id='dd-logo'] {
+  [id="dd-logo"] {
     position: relative;
     top: 4px;
   }

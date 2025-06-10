@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import cx from 'classnames';
-import { StaticImage, getImage } from 'gatsby-plugin-image';
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import cx from "classnames";
+import { StaticImage, getImage } from "gatsby-plugin-image";
 
-import CtaLink from '../components/CtaLink/CtaLink';
-import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import CtaLink from "../components/CtaLink/CtaLink";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 
-import styles from './index.module.scss';
-import { Hero } from '../components/Hero/Hero';
-import { PartnersModule } from '../components/PartnersModule/PartnersModule';
+import styles from "./index.module.scss";
+import { Hero } from "../components/Hero/Hero";
+import { PartnersModule } from "../components/PartnersModule/PartnersModule";
 
 const IndexPage = () => {
   // TODO: This could be refactored into Gatsby page queries to DRY up code.
@@ -29,10 +29,10 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className={cx(styles.root)}>
         <Hero image={getImage(data.hero)} title="Title">
-          <h1 className={cx(styles.hero, 'cornerBordersHero')}>
+          <h1 className={cx(styles.hero, "cornerBordersHero")}>
             Technology is our <span className={cx(styles.green)}>key</span>
             <br />
-            Together we decode the{' '}
+            Together we decode the{" "}
             <span className={cx(styles.green)}>future</span>
           </h1>
         </Hero>
@@ -88,20 +88,20 @@ const IndexPage = () => {
             <h2 className="cornerBorders">Why We Do This Work</h2>
             <div
               className={cx(
-                'threeUp',
+                "threeUp",
                 styles.statisticsCardGroup,
-                styles.statisticInitial
+                styles.statisticInitial,
               )}
             >
-              <div className={cx('threeUpCard', styles.statisticsCard)}>
+              <div className={cx("threeUpCard", styles.statisticsCard)}>
                 <span>Average U.S recidivism rate</span>
                 <span className={cx(styles.statistic)}>44%</span>
               </div>
               <div
                 className={cx(
-                  'threeUpCard',
+                  "threeUpCard",
                   styles.statisticsCard,
-                  styles.statisticInitial
+                  styles.statisticInitial,
                 )}
               >
                 <span>Formerly-incarcerated employment rate</span>
@@ -109,9 +109,9 @@ const IndexPage = () => {
               </div>
               <div
                 className={cx(
-                  'threeUpCard',
+                  "threeUpCard",
                   styles.statisticsCard,
-                  styles.statisticInitial
+                  styles.statisticInitial,
                 )}
               >
                 <span>Formerly-incarcerated annual income</span>
@@ -119,9 +119,9 @@ const IndexPage = () => {
               </div>
               <div
                 className={cx(
-                  'threeUpCard',
+                  "threeUpCard",
                   styles.statisticsCard,
-                  styles.statisticEW
+                  styles.statisticEW,
                 )}
               >
                 <span>EW Alumni recidivism rate</span>
@@ -129,9 +129,9 @@ const IndexPage = () => {
               </div>
               <div
                 className={cx(
-                  'threeUpCard',
+                  "threeUpCard",
                   styles.statisticsCard,
-                  styles.statisticEW
+                  styles.statisticEW,
                 )}
               >
                 <span>EW Alumni employment rate</span>
@@ -139,9 +139,9 @@ const IndexPage = () => {
               </div>
               <div
                 className={cx(
-                  'threeUpCard',
+                  "threeUpCard",
                   styles.statisticsCard,
-                  styles.statisticEW
+                  styles.statisticEW,
                 )}
               >
                 <span>Employed EW Alumni annual income</span>
@@ -152,7 +152,7 @@ const IndexPage = () => {
           <section>
             <h2 className="cornerBorders">Our Solution</h2>
             <div
-              className={cx('twoUp', styles.fullbleed, styles.solutionsBlock)}
+              className={cx("twoUp", styles.fullbleed, styles.solutionsBlock)}
             >
               <div className="twoUpCard">
                 <div className={cx(styles.solutionsCard)}>
@@ -184,7 +184,7 @@ const IndexPage = () => {
           </section>
           <section>
             <h2 className="cornerBorders">What Our Mentees Say</h2>
-            <div className={cx(styles.menteeBlock, 'twoUp')}>
+            <div className={cx(styles.menteeBlock, "twoUp")}>
               <div className="twoUpCard">
                 <StaticImage
                   src="../_assets/images/homepage/terrence.jpg"
@@ -194,7 +194,7 @@ const IndexPage = () => {
                 />
               </div>
               <div className="twoUpCard">
-                <p className={cx(styles.prominent, 'tr')}>
+                <p className={cx(styles.prominent, "tr")}>
                   <br />
                   EW gives you constant support at every step
                 </p>
@@ -213,7 +213,7 @@ const IndexPage = () => {
                   job. I’m forever grateful that when I do need help my mentor
                   and EW family are in my corner.
                 </p>
-                <p className={cx(styles.attribution, 'tr')}>
+                <p className={cx(styles.attribution, "tr")}>
                   - Terrence, Emergent Works 2023 TECK graduate
                 </p>
                 <div className="tc mb--sm">

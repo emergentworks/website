@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import Layout from 'components/Layout';
-import SEO from 'components/seo';
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import { getImage, GatsbyImage, StaticImage } from 'gatsby-plugin-image';
-import CtaLink from '../../components/CtaLink/CtaLink';
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import Layout from "components/Layout";
+import SEO from "components/seo";
+import { graphql, useStaticQuery, Link } from "gatsby";
+import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import CtaLink from "../../components/CtaLink/CtaLink";
 
-import styles from './styles.module.scss';
-import { Hero } from '../../components/Hero/Hero';
+import styles from "./styles.module.scss";
+import { Hero } from "../../components/Hero/Hero";
 
 const ProjectCard = ({
   program,
@@ -20,7 +20,7 @@ const ProjectCard = ({
 }) => {
   const image = getImage(img);
   return (
-    <div key={student} className={cx(styles.card, 'twoUp')}>
+    <div key={student} className={cx(styles.card, "twoUp")}>
       <div className="twoUpCard">
         <h3 className={cx(styles.programTitle)}>{program}</h3>
         <div className={cx(styles.prominent, styles.student)}>{student}</div>
@@ -86,16 +86,16 @@ const PassionProjects = () => {
         title="Grauduation Projects"
         className={cx(styles.filter)}
       />
-      <div className={cx(styles.root, 'page-content')}>
+      <div className={cx(styles.root, "page-content")}>
         <section>
-          <p className={cx(styles.prominent, 'tc')}>
+          <p className={cx(styles.prominent, "tc")}>
             Our mentees build technical projects of their choice by applying
             their
             <br />
             newly-acquired technical skills gained during our program
           </p>
           <div className="twoUp">
-            <div className={cx(styles.filter, 'twoUpCard')}>
+            <div className={cx(styles.filter, "twoUpCard")}>
               <StaticImage
                 src="./projects1.jpg"
                 alt="Mentorship Program participants"

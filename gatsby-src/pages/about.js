@@ -1,12 +1,12 @@
-import React from 'react';
-import cx from 'classnames';
-import { graphql, useStaticQuery } from 'gatsby';
-import { getImage, StaticImage } from 'gatsby-plugin-image';
-import SEO from '../components/seo';
-import Layout from '../components/Layout';
-import { Hero } from '../components/Hero/Hero';
+import React from "react";
+import cx from "classnames";
+import { graphql, useStaticQuery } from "gatsby";
+import { getImage, StaticImage } from "gatsby-plugin-image";
+import SEO from "../components/seo";
+import Layout from "../components/Layout";
+import { Hero } from "../components/Hero/Hero";
 
-import styles from './about.module.scss';
+import styles from "./about.module.scss";
 
 const DonatePage = () => {
   const data = useStaticQuery(graphql`
@@ -27,10 +27,10 @@ const DonatePage = () => {
     <Layout>
       <SEO title="Donate" />
       <Hero image={getImage(data.hero)} title="About Our Organization" />
-      <div className={cx(styles.root, 'page-content')}>
+      <div className={cx(styles.root, "page-content")}>
         <section>
           <div className="twoUp">
-            <div className={cx(styles.about, 'twoUpCard')}>
+            <div className={cx(styles.about, "twoUpCard")}>
               <div className={cx(styles.title)}>
                 <h2>
                   "I am living proof that

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 // import cx from 'classnames';
 
-import Layout from '../components/Layout';
-import SEO from '../components/seo';
-import { PartnersModule } from '../components/PartnersModule/PartnersModule';
-import CtaLink from '../components/CtaLink/CtaLink';
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
+import { PartnersModule } from "../components/PartnersModule/PartnersModule";
+import CtaLink from "../components/CtaLink/CtaLink";
 
 // import styles from './partners.module.scss';
 

@@ -9,8 +9,8 @@
 // Input field base styles
 .input-field,
 textarea,
-input[input='email'],
-input[input='search'] {
+input[input="email"],
+input[input="search"] {
   // @include trans();
   background-color: transparent;
   border-color: var(--gray-400);

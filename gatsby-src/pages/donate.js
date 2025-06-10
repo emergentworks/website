@@ -1,13 +1,13 @@
-import React from 'react';
-import cx from 'classnames';
-import { graphql, useStaticQuery } from 'gatsby';
-import { getImage } from 'gatsby-plugin-image';
-import Helmet from 'react-helmet';
-import SEO from '../components/seo';
-import Layout from '../components/Layout';
-import { Hero } from '../components/Hero/Hero';
+import React from "react";
+import cx from "classnames";
+import { graphql, useStaticQuery } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
+import Helmet from "react-helmet";
+import SEO from "../components/seo";
+import Layout from "../components/Layout";
+import { Hero } from "../components/Hero/Hero";
 
-import styles from './donate.module.scss';
+import styles from "./donate.module.scss";
 
 const DonatePage = () => {
   const data = useStaticQuery(graphql`
@@ -27,9 +27,9 @@ const DonatePage = () => {
       </Helmet>
       <SEO title="Donate" />
       <Hero image={getImage(data.hero)} title="Your Support" />
-      <div className={cx(styles.root, 'page-content')}>
+      <div className={cx(styles.root, "page-content")}>
         <section>
-          <p className={cx(styles.prominent, 'tc')}>
+          <p className={cx(styles.prominent, "tc")}>
             It only takes <span>$500</span> to support a mentee to gain
             high-value technical skills in our technical mentorship program
           </p>

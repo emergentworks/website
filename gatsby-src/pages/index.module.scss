@@ -1,4 +1,4 @@
-@import 'src/_assets/css/abstracts/_mixins.scss';
+@import "src/_assets/css/abstracts/_mixins.scss";
 
 /*
  *
@@ -127,7 +127,7 @@
   }
 
   .solutionsBlock {
-    background-image: url('../_assets/images/homepage/our-solution.png');
+    background-image: url("../_assets/images/homepage/our-solution.png");
     background-color: var(--gray-500);
     background-blend-mode: multiply;
     height: 65vh;
@@ -171,7 +171,7 @@
   }
 
   .ctaBlock {
-    background-image: url('../_assets/images/homepage/unlock-futures.png');
+    background-image: url("../_assets/images/homepage/unlock-futures.png");
     p {
       color: var(--white-500);
       font-size: var(--fs-base);

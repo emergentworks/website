@@ -1,10 +1,10 @@
-@import '../../_assets/css/abstracts/_mixins.scss';
+@import "../../_assets/css/abstracts/_mixins.scss";
 
 .root {
   font-size: var(--fs-m);
 
   .isActive:not(.donate) {
-    background: url('../../_assets/images/squiggly.svg');
+    background: url("../../_assets/images/squiggly.svg");
     background-position: bottom -8px center;
     background-repeat: no-repeat;
     padding-bottom: 22px;
@@ -90,7 +90,7 @@ a.donate:active {
 }
 
 a.donate:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;

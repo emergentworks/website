@@ -1,4 +1,4 @@
-@import '../../_assets/css/abstracts/mixins';
+@import "../../_assets/css/abstracts/mixins";
 
 .root {
   padding: var(--sp-loose);
@@ -24,7 +24,9 @@
       right: 0;
       top: 3.7rem;
       background-color: var(--gray-background);
-      transition: transform 0.5s ease, opacity 0.35s ease;
+      transition:
+        transform 0.5s ease,
+        opacity 0.35s ease;
       transform: translateY(-150%);
       z-index: 1000;
 
@@ -75,7 +77,7 @@
 .navButton div {
   background-color: var(--icon-fill-base);
   border-radius: 3px;
-  content: '';
+  content: "";
   display: block;
   height: 4px;
   margin: 7px 0;

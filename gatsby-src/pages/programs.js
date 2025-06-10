@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import Layout from 'components/Layout';
-import SEO from 'components/seo';
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import { getImage, StaticImage } from 'gatsby-plugin-image';
-import CtaLink from '../components/CtaLink/CtaLink';
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import Layout from "components/Layout";
+import SEO from "components/seo";
+import { graphql, useStaticQuery, Link } from "gatsby";
+import { getImage, StaticImage } from "gatsby-plugin-image";
+import CtaLink from "../components/CtaLink/CtaLink";
 
-import styles from './programs.module.scss';
-import { Hero } from '../components/Hero/Hero';
+import styles from "./programs.module.scss";
+import { Hero } from "../components/Hero/Hero";
 
 const Tracks = ({ tracks }) => {
   if (!tracks) {
@@ -19,8 +19,8 @@ const Tracks = ({ tracks }) => {
     <ul aria-label="Cohorts" className={cx(styles.tracks)}>
       {tracks.map(({ title, description, date }) => (
         <li>
-          <span className={cx(styles.trackDescription, 'mb')}>
-            {title} ({date}):{' '}
+          <span className={cx(styles.trackDescription, "mb")}>
+            {title} ({date}):{" "}
           </span>
           <span>{description}</span>
         </li>
@@ -42,14 +42,14 @@ const ProgramCard = ({
   console.log(subtitle);
   const shouldShowProgramLinks = isAcceptingApplications && links;
   return (
-    <div className={cx(styles.programCard, 'twoUp mb')}>
+    <div className={cx(styles.programCard, "twoUp mb")}>
       <div className="twoUpCard">
         <h3 className={cx(styles.programTitle)}>
           {title}
           <span className={cx(styles.programSubtitle)}>{subtitle}</span>
         </h3>
       </div>
-      <div className={cx(styles.programInfo, 'twoUpCard')}>
+      <div className={cx(styles.programInfo, "twoUpCard")}>
         {qualifications && (
           <ul aria-label="Qualifications">
             {qualifications.map((item) => (
@@ -120,9 +120,9 @@ const ProgramsPage = () => {
     <Layout className={styles.page}>
       <SEO title="Programs" />
       <Hero image={getImage(data.hero)} title="Our Programs" />
-      <div className={cx(styles.root, 'page-content')}>
+      <div className={cx(styles.root, "page-content")}>
         <section>
-          <div className="twoUp" style={{ marginTop: '60px' }}>
+          <div className="twoUp" style={{ marginTop: "60px" }}>
             <div className="twoUpCard">
               <StaticImage
                 src="../_assets/images/programs/programming.jpg"
@@ -173,7 +173,7 @@ const ProgramsPage = () => {
                 links={links}
                 tracks={tracks}
               />
-            )
+            ),
           )}
         </section>
       </div>

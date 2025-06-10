@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { Link } from 'gatsby';
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import { Link } from "gatsby";
 
-import styles from './CtaLink.module.scss';
+import styles from "./CtaLink.module.scss";
 
 const CtaLink = ({ children, to, href }) => {
   if (to !== undefined) {

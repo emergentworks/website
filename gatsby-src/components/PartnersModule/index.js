@@ -1,1 +1,1 @@
-export { PartnersModule as default } from './PartnersModule';
+export { PartnersModule as default } from "./PartnersModule";

@@ -1,4 +1,4 @@
-@import '../_assets/css/abstracts/mixins';
+@import "../_assets/css/abstracts/mixins";
 
 .root {
   p {
@@ -67,7 +67,7 @@
     opacity: 50%;
     background: var(--slate-900);
     z-index: -1;
-    content: '';
+    content: "";
   }
 
   .name {
