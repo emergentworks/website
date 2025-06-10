@@ -1,5 +1,7 @@
 import Layout from "components/Layout";
 
+import styles from "./page.module.scss"; // Import the new page-specific styles
+
 export default function Home() {
   return (
     <Layout>

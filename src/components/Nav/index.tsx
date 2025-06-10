@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import cx from "classnames";
-import SocialLinks from "components/SocialLinks"; // Assumes SocialLinks is also migrated
+import SocialLinks from "components/SocialLinks";
 
 import styles from "./Nav.module.scss";
 
@@ -80,9 +80,9 @@ export function Nav({ navVisibility, banner, className, ...rest }: NavProps) {
           })}
         >
           <div className={styles.horizontalRule} />
-          {/* <div className={styles.contact}>
+          <div className={styles.contact}>
             <SocialLinks className={styles.socialLinks} />
-          </div> */}
+          </div>
         </section>
       )}
     </nav>

@@ -16,9 +16,9 @@ export const Footer = () => {
           <div className={styles.navGroup}>
             <Nav className={styles.nav} />
           </div>
-          {/* <div className={styles.socialGroup}>
+          <div className={styles.socialGroup}>
             <SocialLinks />
-          </div> */}
+          </div>
         </div>
         <p className={styles.description}>
           Emergent Works is a fiscally sponsored program of Prime Produce

@@ -35,7 +35,7 @@ export const Header = ({
                 src="/images/logo--horizontal.png"
                 alt="emergent works"
                 width={194}
-                height={35}
+                height={34.55}
                 priority // Load the logo quickly
               />
             </Link>
