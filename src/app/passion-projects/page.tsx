@@ -76,11 +76,17 @@ const PassionProjectsPage = () => {
           </p>
           <div className="twoUp">
             <div className={cx(styles.filter, "twoUpCard")}>
-              <Image
-                src={projectsImage}
-                alt="Mentorship Program participants"
-                style={{ width: "100%", height: "auto" }}
-              />
+              <div className={styles.staticImageWrapper}>
+                <Image
+                  src={projectsImage}
+                  alt="Mentorship Program participants"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "25% 50%",
+                  }}
+                />
+              </div>
             </div>
             <div className="twoUpCard">
               <h2>Technical Skills Expressed in a Passion Project</h2>
