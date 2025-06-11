@@ -1,7 +1,8 @@
-@import '../../_assets/css/abstracts/mixins';
+@import "abstracts/mixins";
 
 .root {
-  margin: var(--sp-loosest);
+  margin-top: var(--sp-loosest);
+  margin-bottom: var(--sp-loosest);
   border-top: 1px solid var(--gray-500);
   padding-top: var(--sp-loosest);
   @media (max-width: 51.5rem) {

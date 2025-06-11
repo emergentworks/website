@@ -1,8 +1,4 @@
-/*
- *
- * Partners
- *
- */
+// src/components/PartnersModule/partnersmod.module.scss
 
 .logoGroup {
   display: flex;
@@ -12,6 +8,12 @@
   align-items: center;
 }
 
-.logoGroup > div {
-  max-width: 130px;
+.logoCard {
+  position: relative; // REQUIRED for the child's `fill` prop
+  width: 130px;
+  height: 80px;
+  box-sizing: border-box; // Ensure padding doesn't increase the card size
+
+  // Visual styling
+  border-radius: var(--border-radius);
 }

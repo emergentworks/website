@@ -1,0 +1,95 @@
+// src/app/team/page.module.scss
+
+@import "styles/abstracts/mixins";
+
+.root {
+  p {
+    line-height: var(--lh-loose);
+  }
+
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  section {
+    margin-top: var(--sp-loose);
+  }
+
+  // NOTE: This rule from your old stylesheet was probably not intended
+  // to apply to the team images, which have their own border-radius via the card.
+  // I am removing it to avoid conflicts.
+  // section img {
+  //  border-radius: var(--border-radius);
+  // }
+
+  section h2 {
+    font-weight: var(--fw-heaviest);
+    font-size: var(--fs-lg);
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  .hero {
+    @include imgFilter;
+  }
+
+  .team {
+    display: grid;
+    // This creates a responsive grid that makes columns a minimum of 160px,
+    // and a maximum of 1fr. It will fit as many as possible per row.
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--sp-loose);
+  }
+
+  .card {
+    position: relative;
+    color: var(--white-500);
+    font-size: var(--fs-sm);
+    aspect-ratio: 1 / 1; // Enforce a square aspect ratio for the card
+    border-radius: var(
+      --border-radius
+    ); // Apply border-radius to the card itself
+    overflow: hidden; // Hide anything from the image that might poke out
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .info {
+    position: absolute;
+    padding: 4px 0 4px 8px;
+    bottom: 8px;
+    display: inline-block;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .info::after {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    background: var(--slate-900);
+    z-index: -1;
+    content: "";
+  }
+
+  .name {
+    font-size: var(--fs-base);
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: var(--sp-tight);
+    margin-bottom: var(--sp-tight);
+  }
+}

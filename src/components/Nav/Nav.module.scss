@@ -1,10 +1,10 @@
-@import '../../_assets/css/abstracts/_mixins.scss';
+@import "../../styles/abstracts/mixins";
 
 .root {
   font-size: var(--fs-m);
 
   .isActive:not(.donate) {
-    background: url('../../_assets/images/squiggly.svg');
+    background: url("/images/squiggly.svg");
     background-position: bottom -8px center;
     background-repeat: no-repeat;
     padding-bottom: 22px;
@@ -27,7 +27,7 @@
         width: auto;
         font-size: var(--fs-l);
         margin: var(--sp-tight) 0;
-        font-family: var(--font-light);
+        font-weight: var(--fw-heavy);
       }
     }
   }
@@ -90,7 +90,7 @@ a.donate:active {
 }
 
 a.donate:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;

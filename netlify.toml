@@ -1,7 +1,0 @@
-[build]
-  functions = 'functions'
-
-[[redirects]]
-  from = '/api/leads'
-  to = '/.netlify/functions/postLead'
-  status = 200

@@ -1,0 +1,67 @@
+// src/app/donate/page.module.scss
+
+@import "styles/abstracts/mixins";
+
+.root {
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  p,
+  ul {
+    line-height: var(--lh-loose);
+  }
+
+  img {
+    @include imgFilter;
+  }
+
+  h2,
+  .prominent {
+    font-weight: var(--fw-heaviest); // Adapted from font-family
+    line-height: var(--lh-loose);
+    font-size: var(--fs-base);
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+    & > span {
+      color: var(--ew-green);
+    }
+  }
+
+  ul {
+    @include removeBullets;
+    margin: var(--sp-base) 0;
+  }
+
+  .donationWidgetWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    givebutter-widget {
+      width: 80%;
+    }
+  }
+
+  // Old Virtuous Styles -- Kept as requested
+  :global(#virtuous-form) {
+    border: 0;
+    height: 1500px;
+    @media (min-width: 768px) {
+      height: 1000px;
+    }
+  }
+
+  :global(#dd-form) {
+    height: 500px;
+    margin: var(--sp-loose) 0;
+    background-color: var(--white-500);
+  }
+
+  :global(#dd-logo) {
+    position: relative;
+    top: 4px;
+  }
+}
