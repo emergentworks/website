@@ -11,7 +11,7 @@ import Hero from "components/Hero";
 import styles from "./page.module.scss";
 
 import teamData from "../../data/team.json";
-import heroImage from "../../../public/images/hero/team.jpg"; // Assumed path
+import heroImage from "../../../public/images/hero/team.jpg";
 
 type TeamMember = {
   name: string;

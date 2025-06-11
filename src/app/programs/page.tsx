@@ -12,8 +12,8 @@ import CtaLink from "components/CtaLink";
 import styles from "./page.module.scss";
 
 import programs from "../../data/programs.json";
-import heroImage from "../../../public/images/hero/programs.jpg"; // Assumed path
-import programmingImage from "../../../public/images/programs/programming.jpg"; // Assumed path
+import heroImage from "../../../public/images/hero/programs.jpg";
+import programmingImage from "../../../public/images/programs/programming.jpg";
 
 type Track = {
   title: string;

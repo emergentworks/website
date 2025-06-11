@@ -10,9 +10,9 @@ import PartnersModule from "components/PartnersModule";
 
 import styles from "./page.module.scss";
 
-import heroImage from "../../public/images/hero/homepage.png"; // Assumed new path
-import ourFocusImage from "../..//public/images/homepage/our-focus.jpg"; // Assumed new path
-import terrenceImage from "../../public/images/homepage/terrence.jpg"; // Assumed new path
+import heroImage from "../../public/images/hero/homepage.png";
+import ourFocusImage from "../..//public/images/homepage/our-focus.jpg";
+import terrenceImage from "../../public/images/homepage/terrence.jpg";
 
 const IndexPage = () => {
   return (
