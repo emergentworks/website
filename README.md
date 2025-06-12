@@ -6,7 +6,7 @@ To run this project you'll need
 
 - A working github connection
   - setup RSA key for your github account (example found here: https://jhooq.com/github-permission-denied-publickey/#1-github---how-to-fix-this-issue)
-- nvm (v14.18.1 pinned to npm 6.14.15)
+- Node (version 24+)
 
 Then run:
 
@@ -14,12 +14,12 @@ Then run:
    npm install
 ```
 
-To setup development environment run `npm run develop`.
-It will take a minute to build, but you can then view the site at <http://localhost:8000/> or go to <http://localhost:8000/___graphql> for an interactive graphql query maker.
+To setup development environment run `npm run dev`.
+It will take a minute to build, but you can then view the site at http://localhost:3000.
 
 ## About the Project
 
-This is the main website for Emergent Works. Target audiences are potential mentees/mentors/employees AND donors/grants/foundations. This is built in [React](https://reactjs.org/). We are using [Gatsby](https://www.gatsbyjs.com/docs/how-to/) to:
+This is the main website for Emergent Works. Target audiences are potential mentees/mentors/employees AND donors/grants/foundations. This is built in [React](https://reactjs.org/). We are using [Next.js](https://nextjs.org/) to:
 
 - Build the project
 - Query for images and various config data (such at team information)
@@ -30,13 +30,11 @@ Styles are done with [Sass](https://sass-lang.com/), [classnames](https://www.np
 
 ### Build
 
-It's possible to build the application with SSL by running `npm run develop -- -S`. You can then access the site via SSL at <https://localhost:8000/> and view pages with components that require SSL (eg. the Virtuous form on the Donate page).
-
-If images do not load properly after building the app, do the following run `gatsy clean` and rebuild the app with `npm run develop`.
+Generate the static website by running `npm run build`.
 
 ### Linting/Formatting
 
-We are using ESLint and prettier. Make sure you have the ESLint and prettier extensions for VSCode installed (or running with whatever IDE you are using) and enabled for this project. You can also use the `npm run format` command to format the whole project.
+We are using ESLint and prettier. Make sure you have the ESLint and prettier extensions for VSCode installed (or running with whatever IDE you are using) and enabled for this project. You can also use the `npm run format` command to format the whole project. Use `npm run lint` to run a lint on the whole project.
 
 ## Deploying the App
 
