@@ -1,6 +1,6 @@
 // src/app/programs/page.module.scss
 
-@import "styles/abstracts/mixins";
+@use "../../styles/abstracts/mixins";
 
 .root {
   p {
@@ -32,7 +32,7 @@
   }
 
   img {
-    @include imgFilter;
+    @include mixins.imgFilter;
   }
 
   ul {
@@ -122,7 +122,7 @@
   }
 
   .tracks {
-    @include removeBullets();
+    @include mixins.removeBullets();
     margin-top: 18px;
   }
 

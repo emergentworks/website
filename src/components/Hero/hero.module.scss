@@ -4,19 +4,19 @@
  *
  */
 
-@import "abstracts/mixins";
+@use "../../styles/abstracts/mixins";
 
 .root {
   // Most styles were moved inline to the component,
   // but we can keep the image filter here.
   img {
-    @include imgFilter;
+    @include mixins.imgFilter;
   }
 }
 
 .heroTitle {
-  @include heroTitle;
   padding: var(--sp-base);
+  @include mixins.heroTitle;
 }
 
 .imageOverlay {

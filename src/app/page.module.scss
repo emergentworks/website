@@ -5,7 +5,7 @@
  *
  */
 
-@import "abstracts/mixins";
+@use "../styles/abstracts/mixins";
 
 .root {
   p {
@@ -26,7 +26,7 @@
   }
 
   section h2 {
-    font-weight: var(--fw-heaviest); /* Changed from font-family */
+    font-weight: var(--fw-heaviest);
     @media (min-width: 768px) {
       font-size: var(--fs-xxl);
     }
@@ -45,16 +45,16 @@
   }
 
   img {
-    @include imgFilter;
+    @include mixins.imgFilter;
   }
 
   section img {
-    @include imgFilter;
+    @include mixins.imgFilter;
     border-radius: var(--border-radius);
   }
 
   .hero {
-    @include heroTitle;
+    @include mixins.heroTitle;
   }
 
   .heroContent {
@@ -62,7 +62,7 @@
   }
 
   .announcement {
-    font-weight: var(--fw-heaviest); /* Changed from font-family */
+    font-weight: var(--fw-heaviest);
   }
 
   .heroCta {
@@ -76,7 +76,7 @@
   }
 
   .prominent {
-    font-weight: var(--fw-heaviest); /* Changed from font-family */
+    font-weight: var(--fw-heaviest);
     line-height: var(--lh-loose);
     font-size: 1.2;
     @media (min-width: 768px) {
@@ -103,12 +103,13 @@
   }
 
   .fullbleed {
-    @include fullbleed;
     display: flex;
     align-items: center;
     background-color: var(--white-500);
     background-blend-mode: luminosity;
     text-shadow: var(--gray-600) 1px 0 30px;
+
+    @include mixins.fullbleed;
 
     @media (min-width: 768px) {
       padding: var(--sp-looser);
@@ -117,7 +118,7 @@
 
     h2 {
       color: var(--white-500);
-      font-weight: var(--fw-heaviest); /* Changed from font-family */
+      font-weight: var(--fw-heaviest);
       text-align: left;
       @media (min-width: 768px) {
         font-size: var(--fs-xxl);
@@ -209,13 +210,13 @@
   .statistic {
     padding: var(--sp-tight) 0;
     font-size: var(--fs-l);
-    font-weight: var(--fw-heavy); /* Changed from font-family */
+    font-weight: var(--fw-heavy);
     line-height: 30px;
   }
 
   .green {
     color: var(--ew-green);
-    font-weight: var(--fw-heaviest); /* Changed from font-family */
+    font-weight: var(--fw-heaviest);
     text-transform: uppercase;
   }
 
@@ -267,7 +268,7 @@
   }
 
   .ctaButtonGroup {
-    @include removeBullets();
+    @include mixins.removeBullets();
     display: flex;
     flex-direction: column;
     align-items: center;

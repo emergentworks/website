@@ -1,4 +1,4 @@
-@import "../../styles/abstracts/mixins";
+@use "../../styles/abstracts/mixins";
 
 .root {
   padding: var(--sp-loose);
@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
 
-    @include bp(lg) {
+    @include mixins.bp(lg) {
       visibility: initial;
       height: auto;
     }
@@ -67,7 +67,7 @@
   border: none;
   justify-self: end;
 
-  @include bp(lg) {
+  @include mixins.bp(lg) {
     display: none;
   }
 }
