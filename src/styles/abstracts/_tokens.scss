@@ -1,0 +1,69 @@
+:root {
+  --ew-green: #00e461;
+  --red-500: #bf0711;
+  --blue-500: #3333ff;
+  --blue-600: #191980;
+  --green-500: #0d8240;
+  --purple-500: #9761ff;
+  --yellow-500: #fff42c;
+  --white-500: #ffffff;
+  --white-200: #f2efe4;
+  --gray-background: #e5e5e5;
+  --gray-300: #f3f3f3;
+  --gray-400: #828282;
+  --gray-500: #747474;
+  --gray-600: #3f3b3c;
+  --slate-900: #0f172a;
+  --font-base: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-ibm-plex-mono);
+  --fs-sm: 0.8rem;
+  --fs-m: 1rem;
+  --fs-base: 1.125rem;
+  --fs-l: 1.65rem;
+  --fs-xl: 1.75rem;
+  --fs-xxl: 2rem;
+  --fs-largest: 4.5rem;
+  --fw-heavy: 300;
+  --fw-heavier: 400;
+  --fw-heaviest: 600;
+  --sp-none: 0;
+  --sp-tighter: 0.25rem;
+  --sp-tight: 0.5rem;
+  --sp-base: 1rem;
+  --sp-loose: 1.5rem;
+  --sp-looser: 3rem;
+  --sp-loosest: 4rem;
+  --sp-max: 6rem;
+  --ls-loose: 0.11em;
+  --lh-base: 1.2;
+  --lh-loose: 1.5;
+  --bp-xs: 14rem;
+  --bp-sm: 21rem;
+  --bp-med: 36rem;
+  --bp-lg: 51.5rem;
+  --bp-xl: 67rem;
+  --bp-xxl: 82.5rem;
+  --z-auto: 1;
+  --z-base: 10;
+  --z-nav: 100;
+  --z-preview: 1000;
+  --z-modal: 10000;
+  --z-menus: 100000;
+  --z-reauth: 1000000;
+  --trans-quick: 0.15s;
+  --trans-base: 0.3s;
+  --trans-long: 0.5s;
+  --border-radius: 10px;
+  --content-max-width: 37.5rem;
+}
+
+// Intent Based Variables
+
+:root {
+  --font-color-base: var(--gray-600);
+  --link-primary: var(--green-500);
+  --link-primary-hover: var(--green-500);
+  --link-secondary: var(--gray-600);
+  --link-secondary-hover: var(--green-500);
+  --icon-fill-base: var(--gray-600);
+}

@@ -1,4 +1,4 @@
-@import '../../_assets/css/abstracts/_mixins';
+@use "../../styles/abstracts/mixins";
 
 .root {
   display: inline-block;
@@ -7,7 +7,7 @@
   max-width: 100%;
   border: 1px solid var(--white-200);
   text-align: center;
-  font-family: var(--font-medium);
+  font-weight: 500;
   font-size: var(--fs-s);
   color: var(--white-200);
   background-color: var(--slate-900);

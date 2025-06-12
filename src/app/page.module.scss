@@ -1,0 +1,282 @@
+/*
+ *
+ * Home
+ * Root styles are scoped to this module.
+ *
+ */
+
+@use "../styles/abstracts/mixins";
+
+.root {
+  p {
+    line-height: var(--lh-loose);
+  }
+
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  hr {
+    display: none;
+    @media (min-width: 768px) {
+      margin: var(--sp-looser);
+    }
+  }
+
+  section h2 {
+    font-weight: var(--fw-heaviest);
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  section > h2 + p {
+    text-align: center;
+    margin: 0 0 var(--sp-base);
+  }
+
+  section > h2,
+  h3,
+  h4,
+  h5 {
+    text-align: center;
+  }
+
+  img {
+    @include mixins.imgFilter;
+  }
+
+  section img {
+    @include mixins.imgFilter;
+    border-radius: var(--border-radius);
+  }
+
+  .hero {
+    @include mixins.heroTitle;
+  }
+
+  .heroContent {
+    padding: var(--sp-base);
+  }
+
+  .announcement {
+    font-weight: var(--fw-heaviest);
+  }
+
+  .heroCta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--sp-base);
+  }
+
+  p.prominent {
+    margin-top: 0;
+  }
+
+  .prominent {
+    font-weight: var(--fw-heaviest);
+    line-height: var(--lh-loose);
+    font-size: 1.2;
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .menteeBlock {
+    @media (min-width: 768px) {
+      padding: 0 var(--sp-loosest) var(--sp-loosest);
+    }
+  }
+
+  .attribution {
+    font-size: var(--fs-base);
+  }
+
+  .quote {
+    text-align: justify;
+    font-size: var(--fs-m);
+    @media (min-width: 768px) {
+      font-size: var(--fs-base);
+    }
+  }
+
+  .fullbleed {
+    display: flex;
+    align-items: center;
+    background-color: var(--white-500);
+    background-blend-mode: luminosity;
+    text-shadow: var(--gray-600) 1px 0 30px;
+
+    @include mixins.fullbleed;
+
+    @media (min-width: 768px) {
+      padding: var(--sp-looser);
+      height: 50vh;
+    }
+
+    h2 {
+      color: var(--white-500);
+      font-weight: var(--fw-heaviest);
+      text-align: left;
+      @media (min-width: 768px) {
+        font-size: var(--fs-xxl);
+      }
+    }
+  }
+
+  .solutionsBlock {
+    background-image: url("/images/homepage/our-solution.png");
+    background-color: var(--gray-500);
+    background-blend-mode: multiply;
+    height: 65vh;
+
+    & > div {
+      gap: var(--sp-loosest);
+      padding: var(--sp-loose);
+      height: 50%;
+
+      @media (min-width: 768px) {
+        border: 1px solid var(--white-200);
+        border-radius: var(--border-radius);
+      }
+    }
+    & > div:first-of-type {
+      border-bottom: 1px solid var(--white-200);
+    }
+
+    h3 {
+      margin: 0;
+      text-align: left;
+      text-decoration: underline;
+    }
+  }
+
+  .solutionsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    color: var(--white-500);
+    font-size: var(--fs-base);
+
+    @media (min-width: 768px) {
+      padding: 0;
+    }
+
+    & > a {
+      align-self: center;
+    }
+  }
+
+  .ctaBlock {
+    background-image: url("/images/homepage/unlock-futures.png");
+    p {
+      color: var(--white-500);
+      font-size: var(--fs-base);
+      @media (min-width: 768px) {
+        font-size: var(--fs-l);
+      }
+    }
+  }
+
+  .statisticsCardGroup {
+    padding: var(--sp-base);
+  }
+
+  .statisticsCard {
+    text-align: center;
+    font-size: var(--fs-m);
+    padding: var(--sp-base);
+    @media (min-width: 950px) {
+      padding: var(--sp-looser) var(--sp-loose);
+    }
+  }
+
+  .statisticEW {
+    @media (min-width: 950px) {
+      border-top: 1px solid var(--gray-600);
+    }
+  }
+
+  .statisticsCard:nth-child(even) {
+    border-left: 1px solid var(--gray-600);
+    @media (min-width: 950px) {
+      border-left: 0;
+    }
+  }
+
+  .statistic {
+    padding: var(--sp-tight) 0;
+    font-size: var(--fs-l);
+    font-weight: var(--fw-heavy);
+    line-height: 30px;
+  }
+
+  .green {
+    color: var(--ew-green);
+    font-weight: var(--fw-heaviest);
+    text-transform: uppercase;
+  }
+
+  .legal {
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: var(--gray-400);
+  }
+
+  .cardImageRound {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 50%;
+    border: 1px solid var(--slate-900);
+    box-shadow: -0.2rem -0.2rem var(--ew-green);
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .supportWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-base);
+  }
+
+  .supportImage {
+    flex: 1 1 150px;
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+  }
+
+  .supportContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--sp-base);
+    color: var(--white-500);
+    background-color: var(--slate-900);
+    line-height: var(--lh-loose);
+    @media (min-width: 768px) {
+      width: 40%;
+      p {
+        font-size: var(--fs-l);
+      }
+    }
+  }
+
+  .ctaButtonGroup {
+    @include mixins.removeBullets();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+      margin: var(--sp-loosest);
+    }
+  }
+}

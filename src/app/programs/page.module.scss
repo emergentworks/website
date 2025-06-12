@@ -1,0 +1,133 @@
+// src/app/programs/page.module.scss
+
+@use "../../styles/abstracts/mixins";
+
+.root {
+  p {
+    line-height: var(--lh-loose);
+  }
+
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  hr {
+    border: 0;
+    margin: var(--sp-loose);
+    @media (min-width: 768px) {
+      margin: var(--sp-loosest);
+    }
+  }
+
+  h2,
+  .prominent {
+    font-weight: var(--fw-heaviest);
+    line-height: var(--lh-loose);
+    font-size: var(--fs-base);
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  img {
+    @include mixins.imgFilter;
+  }
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+    line-height: var(--lh-loose);
+  }
+
+  section > h2 + p {
+    text-align: center;
+    margin: 0 0 var(--sp-base);
+  }
+
+  section > h2 {
+    text-align: center;
+  }
+
+  section img {
+    border-radius: var(--border-radius);
+  }
+
+  .trackDescription {
+    font-weight: var(--fw-heaviest);
+  }
+
+  .description {
+    margin-top: var(--fs-base);
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  .programCard {
+    border-top: 1px solid var(--slate-900);
+    @media (min-width: 768px) {
+      padding: var(--sp-base);
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .programTitle {
+    text-align: center;
+    font-weight: var(--fw-heaviest);
+    font-size: var(--fs-xxl);
+    line-height: 1;
+    @media (min-width: 768px) {
+      text-align: right;
+      font-size: 4rem;
+    }
+    @media (min-width: 1330px) {
+      font-size: 5.2rem;
+    }
+    span {
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  .programInfo {
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 768px) {
+      padding-top: 0;
+      padding-left: var(--sp-base);
+      gap: var(--sp-base);
+      border-left: 1px solid var(--slate-900);
+    }
+    ul:before {
+      content: attr(aria-label);
+      margin-left: -20px;
+    }
+
+    ul:before {
+      font-size: var(--fs-base);
+      font-weight: var(--fw-heaviest);
+    }
+  }
+
+  .programLinks {
+    margin-top: var(--sp-base);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .tracks {
+    @include mixins.removeBullets();
+    margin-top: 18px;
+  }
+
+  .tracks::before {
+    display: block;
+    text-align: center;
+  }
+}

@@ -1,0 +1,60 @@
+@use "../../styles/abstracts/mixins";
+
+.root {
+  p {
+    line-height: var(--lh-loose);
+  }
+
+  h1 {
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  section {
+    margin-top: var(--sp-loose);
+  }
+
+  img {
+    @include mixins.imgFilter;
+    border-radius: var(--border-radius);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  section h2 {
+    // Adapted to use font-weight variable from your project
+    font-weight: var(--fw-heaviest); // Corresponds to semi-bold 600 weight
+    font-size: var(--fs-lg);
+    @media (min-width: 768px) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  .prominent {
+    // Uses the default font-weight from the body
+    font-size: var(--fs-base);
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .subheading {
+    // Adapted to use a specific font-weight
+    font-weight: 500; // Medium weight
+    @media (min-width: 768px) {
+      font-size: var(--fs-base);
+    }
+  }
+
+  .about {
+    @media (min-width: 768px) {
+      border-right: 1px solid var(--slate-900);
+      padding-right: var(--sp-base);
+    }
+  }
+}

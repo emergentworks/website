@@ -1,0 +1,147 @@
+// Font Family
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-base);
+  color: var(--gray-600);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+.h1 {
+  font-weight: var(--fw-heaviest);
+  margin-top: var(--sp-base);
+  margin-bottom: var(--sp-base);
+  line-height: 2.5rem;
+  font-size: var(--fs-xl);
+}
+
+h2,
+.h2 {
+  font-weight: var(--fw-heavy);
+  font-size: var(--fs-l);
+  margin-top: var(--sp-base);
+  margin-bottom: var(--sp-base);
+}
+
+h3,
+.h3 {
+  font-weight: var(--fw-heavier);
+  font-size: var(--fs-l);
+  margin-top: var(--sp-base);
+  margin-bottom: var(--sp-base);
+}
+
+h4,
+.h4 {
+  font-weight: var(--fw-heavier);
+  text-transform: uppercase;
+  margin-top: var(--sp-base);
+  margin-bottom: var(--sp-base);
+  font-size: var(--fs-sm);
+}
+
+a {
+  font-weight: var(--fw-heaviest);
+  color: var(--link-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--link-secondary-hover);
+  text-decoration: none;
+  text-decoration-thickness: 2px;
+}
+
+a.secondary:link,
+a.secondary:visited {
+  font-weight: var(--fw-heavier);
+  color: var(--link-secondary);
+  text-decoration: none;
+}
+
+a.secondary:hover,
+a.secondary:focus,
+a.secondary:active {
+  color: var(--link-secondary-hover);
+}
+
+p {
+  line-height: var(--lh-base);
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.bullet-list {
+  li:not(:first-child) {
+    margin-top: var(--sp-tight);
+  }
+}
+
+.content-max-width {
+  max-width: var(--content-max-width);
+}
+
+.cornerBorders {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding: var(--sp-base) var(--sp-loose);
+}
+.cornerBorders:before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-top: 4px solid var(--gray-600);
+  border-left: 4px solid var(--gray-600);
+}
+.cornerBorders:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 4px solid var(--ew-green);
+  border-right: 4px solid var(--ew-green);
+}
+
+.cornerBordersHero {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: var(--sp-base);
+  padding: var(--sp-base) var(--sp-loose);
+}
+.cornerBordersHero:before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-top: 4px solid var(--ew-green);
+  border-left: 4px solid var(--ew-green);
+}
+.cornerBordersHero:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 4px solid var(--white-500);
+  border-right: 4px solid var(--white-500);
+}
