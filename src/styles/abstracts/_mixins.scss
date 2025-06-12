@@ -1,3 +1,4 @@
+@use "sass:map";
 /*
  *
  * Sass Mixins
@@ -15,7 +16,7 @@ $bp: (
 
 @mixin bp($breakpoint: med, $size: min) {
   // Retrieves the value from the key
-  $value: map-get($bp, $breakpoint);
+  $value: map.get($bp, $breakpoint);
 
   // If the key exists in the map
   @if $value != null {

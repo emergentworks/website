@@ -1,4 +1,4 @@
-@import "styles/abstracts/mixins";
+@use "../../styles/abstracts/mixins";
 
 .root {
   p {
@@ -16,7 +16,7 @@
   }
 
   img {
-    @include imgFilter;
+    @include mixins.imgFilter;
     border-radius: var(--border-radius);
   }
 

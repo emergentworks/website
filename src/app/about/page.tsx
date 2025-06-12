@@ -32,9 +32,9 @@ const AboutPage = () => {
             <div className={cx(styles.about, "twoUpCard")}>
               <div className={cx(styles.title)}>
                 <h2>
-                  "I am living proof that
+                  \"I am living proof that
                   <br />
-                  tech is a vehicle for freedom."
+                  tech is a vehicle for freedom.\"
                 </h2>
                 <span className={cx(styles.prominent)}>
                   Khalil 'Army' Armstead

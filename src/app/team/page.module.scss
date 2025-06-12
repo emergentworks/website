@@ -1,6 +1,6 @@
 // src/app/team/page.module.scss
 
-@import "styles/abstracts/mixins";
+@use "../../styles/abstracts/mixins";
 
 .root {
   p {
@@ -33,7 +33,7 @@
   }
 
   .hero {
-    @include imgFilter;
+    @include mixins.imgFilter;
   }
 
   .team {

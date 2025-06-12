@@ -1,19 +1,19 @@
 /*------------------------------------*\
     Base Styles (Fonts, Forms, Layout, Typography)
 \*------------------------------------*/
-@import "abstracts/tokens";
-@import "abstracts/mixins";
+@use "abstracts/tokens";
+@use "abstracts/mixins";
 
-@import "base/forms";
-@import "base/layout";
-@import "base/typography";
+@use "base/forms";
+@use "base/layout";
+@use "base/typography";
 
 /*------------------------------------*\
     Utility Classes (Spacing, Borders, etc.)
 \*------------------------------------*/
-@import "utilities/border";
-@import "utilities/spacing";
-@import "utilities/type";
+@use "utilities/border";
+@use "utilities/spacing";
+@use "utilities/type";
 
 /*------------------------------------*\
     Legacy Global Styles from style.scss
@@ -61,7 +61,7 @@
     padding-right: 0;
   }
 
-  @include bp() {
+  @include mixins.bp() {
     max-width: 70rem;
     margin-left: auto;
     margin-right: auto;

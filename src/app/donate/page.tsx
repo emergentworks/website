@@ -53,7 +53,7 @@ const DonatePage = () => {
             </div>
             <div className="twoUpCard">
               <div className={cx(styles.donationWidgetWrapper)}>
-                {/* @ts-ignore */}
+                {/* @ts-expect-error this is a third-party module */}
                 <givebutter-widget id="jNOdoL" />
               </div>
             </div>

@@ -1,4 +1,4 @@
-@import "../../styles/abstracts/mixins";
+@use "../../styles/abstracts/mixins";
 
 .root {
   font-size: var(--fs-m);
@@ -34,18 +34,18 @@
 }
 
 .group {
-  @include removeBullets();
+  @include mixins.removeBullets();
   display: flex;
   flex-direction: column;
   gap: var(--sp-tight);
-  @include bp(lg) {
+  @include mixins.bp(lg) {
     gap: var(--sp-loose);
     flex-direction: row;
   }
 }
 
 .item {
-  @include bp(lg) {
+  @include mixins.bp(lg) {
     flex-direction: row;
     display: inline;
     align-items: baseline;

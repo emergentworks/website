@@ -1,6 +1,6 @@
 // src/app/passion-projects/page.module.scss
 
-@import "styles/abstracts/mixins";
+@use "../../styles/abstracts/mixins";
 
 .root {
   p {
@@ -32,7 +32,7 @@
   }
 
   .filter {
-    @include imgFilter;
+    @include mixins.imgFilter;
   }
 
   section > h2 + p {
