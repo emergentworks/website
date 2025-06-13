@@ -18,7 +18,7 @@ while getopts 'bcdh' flag; do
   esac
 done
 
-# Build the new website into the 'public' folder
+# Build the new website into the 'out' folder
 if ${build}; then
 echo "Building"
 npm run build
@@ -30,7 +30,7 @@ echo "Deploying"
 aws s3 rm $s3_bucket_url --recursive
 
 # # Upload the new website
-aws s3 cp ./public $s3_bucket_url --recursive
+aws s3 cp ./out $s3_bucket_url --recursive
 
 # # Print the url where you can find it
 echo 'You can check out the website here: https://s3.us-west-1.amazonaws.com/emergentworks.org/index.html'
