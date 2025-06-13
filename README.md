@@ -6,7 +6,7 @@ To run this project you'll need
 
 - A working github connection
   - setup RSA key for your github account (example found here: https://jhooq.com/github-permission-denied-publickey/#1-github---how-to-fix-this-issue)
-- Node (version 24+)
+- Node (version 20+)
 
 Then run:
 
