@@ -21,9 +21,8 @@ export const Footer = () => {
           </div>
         </div>
         <p className={styles.description}>
-          Emergent Works is a fiscally sponsored program of Prime Produce
-          Limited. Prime Produce Limited is a registered 501(c)(3) corporation,
-          and all donations are tax deductible to the extent permitted by law.
+          Emergent Works is a registered 501(c)(3) corporation. All donations
+          are tax deductible to the extent permitted by law. EIN: 85-1197743
         </p>
         <p className={styles.description}>© {getYear} Emergent Works</p>
       </div>
